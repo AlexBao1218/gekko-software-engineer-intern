@@ -59,3 +59,20 @@ An inline verification snippet initially parsed Compose's newline-delimited JSON
 User request: confirm the screenshot means startup succeeded and finish all underlying configuration without starting the assignment. Codex verified the existing API health response, dependencies and idle Docker container state. Adopted one test configuration line, `pythonpath = .` in `q1_api/pytest.ini`, to resolve the previously reproduced root import error. With `PYTHONPATH` removed, the prescribed root test command passes the existing single scaffold test. This supersedes the prior open test-path issue; original configuration is preserved in the upstream archive.
 
 Affected files: `q1_api/pytest.ini`, `START_HERE.zh-CN.md`, `ENVIRONMENT_REPORT.zh-CN.md`, `TOOLS.md`, `AI_LOG.md`, and ignored local evidence. No application behavior, business tests, database design, complete Q3 deployment or personal reflection was written. The user's running API was retained; no additional tools installed or submission actions taken.
+
+
+## Project analysis and task decomposition, 2026-10-12
+
+| Field | Description |
+|---|---|
+| Tool or model | OpenAI Codex; exact model build not asserted |
+| Prompt or record | Alex asked to analyze the internship assessment, split the work, manage Git, and preserve the process and solution rationale; clarified that a full week remains. See PROJECT_PLAN.zh-CN.md and WORK_LOG.zh-CN.md. |
+| Affected files | PROJECT_PLAN.zh-CN.md, WORK_LOG.zh-CN.md, q2_integration/evidence/2026-10-12-contract-probe.json, AI_LOG.md, TOOLS.md |
+
+### Adopted output
+
+Saved an AI-assisted analysis and proposed task map for review: SQLite and one API worker, durable pending OCR recovery, separate original/OCR fields, transactional export snapshots, stable delivery keys, module acceptance gates, operations evidence, and interview exercises. These are proposals, not implemented or user-approved architecture. Read the original contracts and ran isolated localhost requests against unchanged mock handlers; preserved raw synthetic evidence. Re-ran the single scaffold test (1 passed). Created local branch codex/assessment-plan and committed the seven pre-existing environment setup changes as f1ab81c, separately from analysis documentation.
+
+### Changes and rejected output
+
+Did not implement application features, install dependencies, modify the original mocks, fill personal REFLECTION answers, create a public fork, push, or send a submission. Distinguished a 20-attempt diagnostic sample from final application failure-rate measurement. Did not treat a short diagnostic timeout as the application timeout. Preserved the assessment's module-level commit requirement instead of planning one commit per small task. An initial documentation patch failed its context check without modifying files; split the edits and retried. Alex must review the proposed choices and personally verify understanding of subsequent code.

@@ -1,0 +1,436 @@
+{
+  "date_hkt": "2026-10-12",
+  "purpose": "pre-design diagnostic only; not application acceptance",
+  "base_commit": "d17c972e811d36f92f9dd43506aff836785a7501",
+  "csv": {
+    "rows": 50,
+    "accepted": 43,
+    "rejected": [
+      {
+        "csv_line": 6,
+        "case_ref": "APPL-2026-0005",
+        "errors": [
+          "dob: invalid YYYY-MM-DD date"
+        ]
+      },
+      {
+        "csv_line": 13,
+        "case_ref": "APPL-2026-0012",
+        "errors": [
+          "applicant_name: required"
+        ]
+      },
+      {
+        "csv_line": 18,
+        "case_ref": "APPL-2026-0007",
+        "errors": [
+          "case_ref: duplicate within file"
+        ]
+      },
+      {
+        "csv_line": 19,
+        "case_ref": "APPL-2026-0018",
+        "errors": [
+          "dob: invalid YYYY-MM-DD date"
+        ]
+      },
+      {
+        "csv_line": 28,
+        "case_ref": "APPL-2026-0027",
+        "errors": [
+          "dob: invalid YYYY-MM-DD date"
+        ]
+      },
+      {
+        "csv_line": 41,
+        "case_ref": "APPL-2026-0040",
+        "errors": [
+          "applicant_name: required"
+        ]
+      },
+      {
+        "csv_line": 48,
+        "case_ref": "APPL-2026-0031",
+        "errors": [
+          "case_ref: duplicate within file"
+        ]
+      }
+    ],
+    "accepted_badscans": 5,
+    "note": "diagnostic validation policy; no application import endpoint exists"
+  },
+  "ocr": {
+    "seed": 42,
+    "configured_fail_rate": 0.2,
+    "configured_hang_rate": 0.1,
+    "configured_hang_seconds": 600.0,
+    "diagnostic_client_timeout_seconds": 0.3,
+    "readable_attempt_count": 20,
+    "readable_outcome_counts": {
+      "ok": 10,
+      "error_500": 6,
+      "hang": 4
+    },
+    "repeated_success_fields_equal": true,
+    "attempts": [
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 2.56
+      },
+      {
+        "status": 500,
+        "body": {
+          "error": "internal OCR engine error (transient)"
+        },
+        "elapsed_ms": 1.09
+      },
+      {
+        "status": "client_timeout",
+        "elapsed_ms": 303.17
+      },
+      {
+        "status": "client_timeout",
+        "elapsed_ms": 307.59
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 5.09
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 1.98
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 2.49
+      },
+      {
+        "status": 500,
+        "body": {
+          "error": "internal OCR engine error (transient)"
+        },
+        "elapsed_ms": 1.86
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 1.32
+      },
+      {
+        "status": 500,
+        "body": {
+          "error": "internal OCR engine error (transient)"
+        },
+        "elapsed_ms": 1.35
+      },
+      {
+        "status": "client_timeout",
+        "elapsed_ms": 302.74
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 4.81
+      },
+      {
+        "status": 500,
+        "body": {
+          "error": "internal OCR engine error (transient)"
+        },
+        "elapsed_ms": 2.63
+      },
+      {
+        "status": 500,
+        "body": {
+          "error": "internal OCR engine error (transient)"
+        },
+        "elapsed_ms": 1.49
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 1.51
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 1.37
+      },
+      {
+        "status": "client_timeout",
+        "elapsed_ms": 302.28
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 1.81
+      },
+      {
+        "status": 200,
+        "body": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "elapsed_ms": 1.16
+      },
+      {
+        "status": 500,
+        "body": {
+          "error": "internal OCR engine error (transient)"
+        },
+        "elapsed_ms": 1.63
+      }
+    ],
+    "unreadable": {
+      "status": 422,
+      "body": {
+        "error": "cannot read identity-card fields from 'ID_BADSCAN_probe.jpg' (scan quality)"
+      }
+    },
+    "debug_requests": [
+      {
+        "seq": 1,
+        "case_id": "PROBE-01",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816626.928
+      },
+      {
+        "seq": 2,
+        "case_id": "PROBE-02",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "error_500",
+        "ts": 1791816626.93
+      },
+      {
+        "seq": 3,
+        "case_id": "PROBE-03",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "hang",
+        "ts": 1791816626.931
+      },
+      {
+        "seq": 4,
+        "case_id": "PROBE-04",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "hang",
+        "ts": 1791816627.237
+      },
+      {
+        "seq": 5,
+        "case_id": "PROBE-05",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816627.545
+      },
+      {
+        "seq": 6,
+        "case_id": "PROBE-06",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816627.547
+      },
+      {
+        "seq": 7,
+        "case_id": "PROBE-07",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816627.55
+      },
+      {
+        "seq": 8,
+        "case_id": "PROBE-08",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "error_500",
+        "ts": 1791816627.552
+      },
+      {
+        "seq": 9,
+        "case_id": "PROBE-09",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816627.553
+      },
+      {
+        "seq": 10,
+        "case_id": "PROBE-10",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "error_500",
+        "ts": 1791816627.555
+      },
+      {
+        "seq": 11,
+        "case_id": "PROBE-11",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "hang",
+        "ts": 1791816627.556
+      },
+      {
+        "seq": 12,
+        "case_id": "PROBE-12",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816627.861
+      },
+      {
+        "seq": 13,
+        "case_id": "PROBE-13",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "error_500",
+        "ts": 1791816627.865
+      },
+      {
+        "seq": 14,
+        "case_id": "PROBE-14",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "error_500",
+        "ts": 1791816627.866
+      },
+      {
+        "seq": 15,
+        "case_id": "PROBE-15",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816627.868
+      },
+      {
+        "seq": 16,
+        "case_id": "PROBE-16",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816627.869
+      },
+      {
+        "seq": 17,
+        "case_id": "PROBE-17",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "hang",
+        "ts": 1791816627.871
+      },
+      {
+        "seq": 18,
+        "case_id": "PROBE-18",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816628.173
+      },
+      {
+        "seq": 19,
+        "case_id": "PROBE-19",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "ok",
+        "ts": 1791816628.174
+      },
+      {
+        "seq": 20,
+        "case_id": "PROBE-20",
+        "image_ref": "id_scan_0001.jpg",
+        "outcome": "error_500",
+        "ts": 1791816628.176
+      },
+      {
+        "seq": 21,
+        "case_id": "PROBE-BAD",
+        "image_ref": "ID_BADSCAN_probe.jpg",
+        "outcome": "unreadable",
+        "ts": 1791816628.177
+      }
+    ]
+  },
+  "onboarding": {
+    "seed": 7,
+    "configured_fail_rate": 0.2,
+    "configured_lost_rate": 0.15,
+    "configured_lost_seconds": 120.0,
+    "diagnostic_client_timeout_seconds": 0.3,
+    "attempts": [
+      {
+        "status": "client_timeout"
+      },
+      {
+        "status": 200,
+        "body": {
+          "delivery_id": "DLV-0001",
+          "idempotency_key": "analysis-export-20261012-001",
+          "file_name": "analysis-probe.csv",
+          "sha256": "dc6bf8734500934e0a2466342634c95950127a97fe1537c3bd45376c3674a21b",
+          "ingested_at": 1791816628,
+          "attempts": 2,
+          "deduplicated": true
+        }
+      }
+    ],
+    "debug_deliveries": [
+      {
+        "delivery_id": "DLV-0001",
+        "idempotency_key": "analysis-export-20261012-001",
+        "file_name": "analysis-probe.csv",
+        "sha256": "dc6bf8734500934e0a2466342634c95950127a97fe1537c3bd45376c3674a21b",
+        "ingested_at": 1791816628,
+        "attempts": 2
+      }
+    ],
+    "receipt_sha_matches": true
+  }
+}

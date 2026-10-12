@@ -33,3 +33,14 @@ Environment observations: dependency check passed; native API and both mocks pas
 ## Follow-up: finish underlying configuration, 2026-10-12
 
 OpenAI Codex added `pythonpath = .` to `q1_api/pytest.ini` after the user requested all underlying configuration without starting assignment implementation. The root pytest command now passes the existing single import test with `PYTHONPATH` removed. The user-started API returned HTTP 200 with `{"status":"ok"}` and was left running. Updated handoff documents and factual records; no business code, new tests, dependency installation, database choice or submission action. Evidence: `.gekko-setup/pytest-config-fixed-20261012.txt` and `.gekko-setup/environment-followup-20261012.json`.
+
+
+## Project analysis, 2026-10-12
+
+| Tool or source | Use | Files materially influenced |
+|---|---|---|
+| OpenAI Codex with the local brainstorming skill | Requirement analysis, proposed architecture, task and acceptance map, Git workflow, interview preparation and factual work log | PROJECT_PLAN.zh-CN.md, WORK_LOG.zh-CN.md, AI_LOG.md, this record |
+| Original repository README, module READMEs, mock contracts and unchanged mock source at d17c972 | Assessment constraints, deterministic OCR, injected failures, receipt and idempotency behavior | Analysis documents and contract-probe evidence |
+| Existing Python, httpx, pytest, Git | CSV diagnostic, isolated localhost mock requests, raw debug evidence, scaffold test, local branch and setup baseline commit | q2_integration/evidence/2026-10-12-contract-probe.json and work log |
+
+No additional external documentation, dependency installation, business implementation, remote publishing or application submission in this analysis session. Proposals remain subject to Alex's review.
