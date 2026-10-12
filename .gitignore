@@ -1,0 +1,16 @@
+# Local Python and environment verification artifacts
+.venv/
+.gekko-setup/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+# Never commit local configuration or credentials
+.env
+.env.*
+!.env.example
+# Local runtime state
+*.db
+*.sqlite
+*.sqlite3
+*.log
