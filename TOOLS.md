@@ -44,3 +44,8 @@ OpenAI Codex added `pythonpath = .` to `q1_api/pytest.ini` after the user reques
 | Existing Python, httpx, pytest, Git | CSV diagnostic, isolated localhost mock requests, raw debug evidence, scaffold test, local branch and setup baseline commit | q2_integration/evidence/2026-10-12-contract-probe.json and work log |
 
 No additional external documentation, dependency installation, business implementation, remote publishing or application submission in this analysis session. Proposals remain subject to Alex's review.
+
+
+## Higher-standard scoring review, 2026-10-12
+
+OpenAI Codex used the local original README/module requirements/mock contracts and existing brainstorming workflow to audit scoring coverage and revise acceptance criteria. Python standard arithmetic verified explicitly labelled theoretical retry-exhaustion estimates. Files influenced: ACCEPTANCE.zh-CN.md, PROJECT_PLAN.zh-CN.md, WORK_LOG.zh-CN.md and AI_LOG.md. No new external source, dependency, business code, remote publication or submission.

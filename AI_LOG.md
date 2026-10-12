@@ -76,3 +76,10 @@ Saved an AI-assisted analysis and proposed task map for review: SQLite and one A
 ### Changes and rejected output
 
 Did not implement application features, install dependencies, modify the original mocks, fill personal REFLECTION answers, create a public fork, push, or send a submission. Distinguished a 20-attempt diagnostic sample from final application failure-rate measurement. Did not treat a short diagnostic timeout as the application timeout. Preserved the assessment's module-level commit requirement instead of planning one commit per small task. An initial documentation patch failed its context check without modifying files; split the edits and retried. Alex must review the proposed choices and personally verify understanding of subsequent code.
+
+
+## Higher-standard scoring review, 2026-10-12
+
+User requested a higher-quality submission aligned with grading and a review of whether the existing plan met that standard. Codex reread the local rubric and contracts, created ACCEPTANCE.zh-CN.md with nine core sub-question gates plus CI, and revised PROJECT_PLAN.zh-CN.md. Changes include actual first-start sample seeding, stricter OCR recovery equivalence, normal-process retry eligibility, measured retry-budget selection, explicit export content/delivery states, reproducible evidence and interview exercises. WORK_LOG records the review.
+
+The 26.59% (4 attempts) and 2.73% (6 attempts) batch-exhaustion figures are calculated estimates under independent 30% per-attempt transient failures over 38 readable cases, not observed measurements. No new mock experiment or business implementation occurred. The SQLite/single-worker proposal remains a recommendation. No predicted score, architecture approval, final validation or personal understanding is asserted. Previous suggestions about sample-file-only seeding, optional retry_failed and accepting an unexplained recovery mismatch were strengthened rather than silently retained.
