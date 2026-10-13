@@ -49,6 +49,26 @@ there is no production OCR bypass. Real OCR and export lifecycle remain Q2.
 The module acceptance commands and exact results are recorded in
 `q1_api/evidence/` and `WORK_LOG.zh-CN.md`.
 
+### Q1 follow-up: approval edge cases (2026-10-13)
+
+Added 45 checks, bringing the suite to 157 passing tests. Eight concurrency
+scenarios repeated ten times passed (400 review requests); two real API processes
+also serialized competing reviews correctly. Actual killed writer processes
+verified rollback before commit and persistent state/no duplicate record after
+commit. Update failures and a read lock blocking COMMIT also rolled back safely.
+These drills do not simulate power loss, storage corruption or sustained load.
+
+Found that default JSON parsing silently selected the final duplicate field.
+Six regression tests failed before a review-only duplicate-field dependency
+was added; duplicate stage/decision now returns 422 before any state change.
+Other new tests verify existing behavior, not additional claimed RED cycles.
+See `q1_api/evidence/Q1-REVIEW-EDGE-CASES.zh-CN.md` for the complete list and evidence.
+
+Limits: no authentication/roles/two-person separation, actor/reason capture,
+tamper-resistant audit log, request replay or versioned approval of edited data.
+Returning a case to an earlier stage is intentionally unavailable under the
+current terminal-rejection rules. Real OCR/export race checks remain Q2.
+
 ### OCR recovery
 
 Not completed: Q2 OCR recovery has not been implemented or validated.

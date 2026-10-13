@@ -6,6 +6,10 @@ Q1 证据：[干净快照 pytest 输出](q1_api/evidence/q1-clean-snapshot-pytes
 
 来源：[原题评分与提交要求](README.md)、[OCR](mock_ocr/README.md)、[开户](mock_onboarding/README.md)。本文中的“加强项”是为提高可信度自设的标准，不是出题方额外评分细则。
 
+Q1 后续复审：新增 45 项审批边界检查，修复重复 JSON 字段歧义，全套 157 项通过。
+完整情况及尚缺的权限/审计能力见 [审批特殊情况核验](q1_api/evidence/Q1-REVIEW-EDGE-CASES.zh-CN.md)。
+原 112 项快照是历史模块证据；本轮证据和源码指纹单独保存，不覆盖旧结果。
+
 ## 1. 对原规划的判断
 
 架构选择合理，原先的验收定义还不够严格。SQLite 是题目明确接受的选择，没有依据声称选 MongoDB 会自动多得分。保持一个 API、少量职责清楚的模块及可解释代码，符合题目的范围控制要求。

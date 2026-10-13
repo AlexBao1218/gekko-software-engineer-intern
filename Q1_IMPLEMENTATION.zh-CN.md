@@ -118,3 +118,11 @@ Files: 新增 app/workflow.py 和 tests/test_review.py；扩展 models.py、db.p
 Pydantic 2 API 是直接依赖，requirements 补充 pydantic>=2.0，防止依赖环境仍保留 v1；它原已随 FastAPI 安装，未另加新技术栈。新建隔离目录和 Python 环境，仅从仓库 requirements 安装，最终同一代码快照 **112 passed, 1 warning in 3.83s**。正式 Q1 提交后再克隆实际 commit 验证并记录本机结果，避免为记录 commit hash 本身新增 Q1 提交。
 
 审查范围决定：Q2/Q3 和未来状态迁移留到对应模块；本轮已额外完成旧 T1 DB 兼容性和新环境快照验证。不能用这些验证宣称 Alex 已理解代码，也不能宣称 Linux CI/整个系统验收完成。详细评分核对见 q1_api/evidence/Q1-ACCEPTANCE-20261013.md。
+
+### 后续审批特殊情况复审（2026-10-13）
+
+原 T1/T2 已统一提交为 `6ee40ef`，并通过提交后干净克隆测试。
+用户另要求专项审查：新增 45 项输入、并发、提交故障与真实进程崩溃检查。
+发现重复 JSON 字段静默覆盖，六项先失败后修复；全套现为 157 项通过。
+保留原提交，补强以独立修复提交记录，不重写历史。
+具体结果与能力边界见 [特殊情况清单](q1_api/evidence/Q1-REVIEW-EDGE-CASES.zh-CN.md)。

@@ -1,0 +1,54 @@
+{
+  "base_commit": "6ee40ef2c3e9f0923031c83cccdf36487a146272",
+  "scope": "Historical pre-fix characterization on base commit, plus verification of duplicate-field fix; authentication intentionally unchanged",
+  "results": [
+    {
+      "probe": "duplicate-decision",
+      "request_body": "{\"stage\":1,\"decision\":\"reject\",\"decision\":\"approve\"}",
+      "http_status": 200,
+      "resulting_status": "stage1_approved",
+      "reviews": 1
+    },
+    {
+      "probe": "duplicate-stage",
+      "request_body": "{\"stage\":2,\"stage\":1,\"decision\":\"approve\"}",
+      "http_status": 200,
+      "resulting_status": "stage1_approved",
+      "reviews": 1
+    },
+    {
+      "probe": "without-authentication",
+      "stage": 1,
+      "http_status": 200,
+      "resulting_status": "stage1_approved"
+    },
+    {
+      "probe": "without-authentication",
+      "stage": 2,
+      "http_status": 200,
+      "resulting_status": "stage2_approved"
+    }
+  ],
+  "after_fix": [
+    {
+      "probe": "duplicate-decision",
+      "http_status": 422,
+      "detail": {
+        "code": "duplicate_json_field",
+        "message": "Review JSON must not repeat a field."
+      },
+      "stored_status": "ocr_done",
+      "reviews": 0
+    },
+    {
+      "probe": "duplicate-stage",
+      "http_status": 422,
+      "detail": {
+        "code": "duplicate_json_field",
+        "message": "Review JSON must not repeat a field."
+      },
+      "stored_status": "ocr_done",
+      "reviews": 0
+    }
+  ]
+}

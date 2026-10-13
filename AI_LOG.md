@@ -86,3 +86,23 @@ User asked to continue two-stage review, explain rules, test approvals/rejection
 Initial 56 review tests failed against missing features, then 107 total tests passed. Native review verification brought this to 108. A read-only reviewer agent, dispatched under the requesting-code-review skill, found one P2: default framework validation serialization can turn nonfinite/surrogate inputs into 500s. Four regression tests reproduced it; a safe type/loc/msg-only validation handler fixed it. Reviewer also verified older T1 database compatibility; stale fixture comment corrected. Final suite and an independently installed clean source snapshot each passed 112 tests with one documented unsuppressed TestClient/httpx deprecation warning. No second review is claimed after the test-verified fix.
 
 Scope remains Q1; OCR is a transparent DB fixture in tests, with no production bypass. Q2/Q3/CI and personal code understanding remain open. This session unifies T1/T2 as one Q1 module commit; no push or submission. Commit-specific clone verification is recorded locally after commit to avoid circular hash edits. Details and tested-source fingerprints are in WORK_LOG and q1_api/evidence.
+
+## Q1 approval edge-case follow-up, 2026-10-13
+
+User asked whether approval was fully qualified and requested tests plus an explicit
+special-case list. Codex rechecked the rubric and baseline 6ee40ef, added 45 real
+API/SQLite fault and concurrency checks, and documented production-scope limitations.
+No new reviewer agent was used. TDD/debugging/verification skills guided the targeted fix.
+
+Default JSON decoding silently took the last duplicate stage/decision. Six tests
+reproduced 200 instead of 422 before a review-only duplicate-field dependency fixed
+the ambiguity. Other 39 checks validate existing behavior; they are not claimed as
+RED-to-GREEN implementation. Full suite: 157 passed, one existing warning. Ten extra
+rounds of eight concurrency scenarios (400 requests) passed. Tests include two real
+API processes and actual killed database writers at controlled commit boundaries.
+
+The report distinguishes same-stage concurrency from valid ordered cross-stage
+success and simulated unknown commit outcome from real network/power failure.
+Authentication, role separation, reviewer identity/reasons, tamper-resistant logs,
+Q2 races and Q3 deployment checks are explicitly unfinished. Preserve the original
+module commit with a follow-up fix/verification commit; no history rewrite or push.

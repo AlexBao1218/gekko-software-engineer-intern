@@ -5,12 +5,13 @@ Organize application modules within this package. The repository README
 defines fixed paths and names in section 2.
 """
 from contextlib import asynccontextmanager
+import json
 import logging
 import os
 from pathlib import Path
 import sqlite3
 
-from fastapi import FastAPI, File, HTTPException, Query, Request, UploadFile
+from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, UploadFile
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
@@ -96,7 +97,26 @@ def list_cases(batch_id: str, request: Request, status: CaseStatus | None = None
     return require_batch(request.app.state.database.list_cases(batch_id, status, page, page_size))
 
 
-@app.post('/api/cases/{case_id}/review', response_model=ReviewResult)
+async def reject_duplicate_review_fields(request: Request):
+    # The default JSON decoder discards earlier duplicate keys before model validation.
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise HTTPException(422, detail={'code': 'duplicate_json_field',
+                                               'message': 'Review JSON must not repeat a field.'})
+            result[key] = value
+        return result
+
+    try:
+        json.loads(await request.body(), object_pairs_hook=unique_object)
+    except (ValueError, UnicodeError, RecursionError):
+        # Syntax/encoding/type failures stay with FastAPI's normal body validation.
+        pass
+
+
+@app.post('/api/cases/{case_id}/review', response_model=ReviewResult,
+          dependencies=[Depends(reject_duplicate_review_fields)])
 def review_case(case_id: str, review: ReviewRequest, request: Request):
     try:
         result = request.app.state.database.review_case(case_id, review.stage, review.decision)

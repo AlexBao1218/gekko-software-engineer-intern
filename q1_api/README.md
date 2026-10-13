@@ -97,6 +97,9 @@ current_status, stage and decision. This includes pending/failed OCR, skipping
 stage 1, repeating/reversing an earlier decision, and either rejected state.
 Unknown cases return 404. Missing/unknown properties, invalid decisions,
 non-integer stages (including booleans, strings and floats) return 422.
+Duplicate JSON field names also return 422 (`code=duplicate_json_field`), even
+when their values match or the field name is written with a Unicode escape.
+The API never silently chooses one of two review decisions in the same body.
 
 HTTP 200 returns the updated case and a `review` object containing stage,
 decision, previous_status, new_status and UTC reviewed_at. The database keeps
@@ -144,3 +147,12 @@ simultaneous same/opposite decisions at both stages, audit-insert rollback,
 and persistence. Native HTTP tests additionally cover reviews and their records
 across actual API process restart. The OCR and export parts of the full system
 lifecycle will be verified in Q2.
+
+Additional edge-case verification covers eight-way conflicts, simultaneous
+different stages, two actual API processes sharing storage, commit-blocking
+reader locks, update failure and killed writers before/after commit. See the
+[full case list and limits](evidence/Q1-REVIEW-EDGE-CASES.zh-CN.md).
+Two different stages can both succeed when stage 1 approval commits first.
+If a response is lost after commit, re-query the case; retry returns 409 rather
+than replaying the original response. Authentication, actor separation,
+review reasons and tamper-resistant audit storage are not implemented.
