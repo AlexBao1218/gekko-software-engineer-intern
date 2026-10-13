@@ -9,6 +9,8 @@ from uuid import uuid4
 from .imports import ParsedImport
 from .models import CaseStatus
 from .workflow import InvalidTransition, next_review_status
+from .ocr_store import initialize_ocr_schema
+from .exports import initialize_export_schema
 
 
 class Database:
@@ -65,6 +67,8 @@ class Database:
                     reviewed_at TEXT NOT NULL
                 );
             ''')
+            initialize_ocr_schema(connection)
+            initialize_export_schema(connection)
 
     def import_batch(self, parsed: ParsedImport) -> dict:
         batch_id = str(uuid4())
@@ -93,6 +97,15 @@ class Database:
         counts.update({row['status']: row['count'] for row in connection.execute(
             'SELECT status, COUNT(*) AS count FROM cases WHERE batch_id = ? GROUP BY status', (batch_id,))})
         result['status_counts'] = counts
+        run = connection.execute('SELECT * FROM ocr_runs WHERE batch_id=? ORDER BY rowid DESC LIMIT 1',
+                                 (batch_id,)).fetchone()
+        result['ocr_run'] = dict(run) if run else None
+        return result
+
+    @staticmethod
+    def _case_details(row):
+        result = dict(row)
+        result['ocr_fields'] = json.loads(result['ocr_fields']) if result['ocr_fields'] else None
         return result
 
     def get_batch(self, batch_id: str) -> dict | None:
@@ -113,7 +126,7 @@ class Database:
             total = connection.execute(f'SELECT COUNT(*) FROM cases WHERE {where}', parameters).fetchone()[0]
             offset = (page - 1) * page_size
             # Very large user page numbers must not overflow SQLite's signed integer binding.
-            items = [] if offset >= total else [dict(row) for row in connection.execute(
+            items = [] if offset >= total else [self._case_details(row) for row in connection.execute(
                 f'SELECT * FROM cases WHERE {where} ORDER BY row_number LIMIT ? OFFSET ?',
                 [*parameters, page_size, offset])]
             return {'items': items, 'total': total, 'page': page, 'page_size': page_size}
@@ -137,4 +150,4 @@ class Database:
                 (case_id, stage, decision, previous_status, new_status, reviewed_at)
                 VALUES (:case_id, :stage, :decision, :previous_status, :new_status, :reviewed_at)
             ''', {'case_id': case_id, **record})
-            return {**dict(row), 'status': target.value, 'review': record}
+            return {**self._case_details(row), 'status': target.value, 'review': record}

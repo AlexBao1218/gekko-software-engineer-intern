@@ -10,15 +10,24 @@ import logging
 import os
 from pathlib import Path
 import sqlite3
+import asyncio
+
+import httpx
 
 from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, UploadFile
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response
 
 from .db import Database
 from .imports import InvalidCSV, parse_csv
 from .models import BatchDetail, CasePage, CaseStatus, ReviewRequest, ReviewResult
 from .workflow import InvalidTransition
+from .ocr import OCRManager
+from .ocr_client import OCRSettings
+from .delivery import DeliveryManager
+from .delivery_client import DeliverySettings
+from .exports import MissingOCRFields
+from .models import ExportDetail, ExportResult
 
 
 MAX_UPLOAD_BYTES = 2 * 1024 * 1024
@@ -31,7 +40,19 @@ async def lifespan(app: FastAPI):
     database = Database(Path(os.environ.get('DATABASE_PATH', str(default))))
     database.initialize()
     app.state.database = database
-    yield
+    settings = OCRSettings.from_env()
+    async with httpx.AsyncClient(trust_env=False) as http_client:
+        manager = OCRManager(database, settings, http_client)
+        await asyncio.to_thread(manager.store.interrupt_runs)
+        app.state.ocr = manager
+        delivery = DeliveryManager(database, DeliverySettings.from_env(), http_client)
+        await delivery.start()
+        app.state.delivery = delivery
+        try:
+            yield
+        finally:
+            await delivery.close()
+            await manager.close()
 
 
 app = FastAPI(title="Securities Account Identity Verification", lifespan=lifespan)
@@ -88,7 +109,12 @@ def require_batch(result):
 
 @app.get('/api/batches/{batch_id}', response_model=BatchDetail)
 def get_batch(batch_id: str, request: Request):
-    return require_batch(request.app.state.database.get_batch(batch_id))
+    return require_batch(request.app.state.ocr.get_batch(batch_id))
+
+
+@app.post('/api/batches/{batch_id}/process', status_code=202, response_model=BatchDetail)
+async def process_batch(batch_id: str, request: Request):
+    return require_batch(await request.app.state.ocr.start(batch_id))
 
 
 @app.get('/api/batches/{batch_id}/cases', response_model=CasePage)
@@ -124,4 +150,49 @@ def review_case(case_id: str, review: ReviewRequest, request: Request):
         raise HTTPException(409, detail=exc.detail) from exc
     if result is None:
         raise HTTPException(404, detail={'code': 'case_not_found', 'message': 'Case does not exist.'})
+    return result
+
+
+@app.post('/api/batches/{batch_id}/export', status_code=202, response_model=ExportResult,
+          response_model_exclude_unset=True)
+async def export_batch(batch_id: str, request: Request):
+    try:
+        result = require_batch(await asyncio.to_thread(request.app.state.delivery.store.create, batch_id))
+        request.app.state.delivery.wake.set()
+    except MissingOCRFields as exc:
+        raise HTTPException(409, detail={'code': 'missing_ocr_fields', 'message': str(exc)}) from exc
+    if result['export'] is None:
+        # Keep the explicit empty result shape even with response-model filtering.
+        return JSONResponse(status_code=200, content=result)
+    return result
+
+
+@app.get('/api/batches/{batch_id}/exports', response_model=list[ExportDetail],
+         response_model_exclude_unset=True)
+def list_exports(batch_id: str, request: Request):
+    return require_batch(request.app.state.delivery.store.list_batch(batch_id))
+
+
+def require_export(result):
+    if result is None:
+        raise HTTPException(404, detail={'code': 'export_not_found', 'message': 'Export does not exist.'})
+    return result
+
+
+@app.get('/api/exports/{export_id}', response_model=ExportDetail, response_model_exclude_unset=True)
+def get_export(export_id: str, request: Request):
+    return require_export(request.app.state.delivery.store.get(export_id))
+
+
+@app.get('/api/exports/{export_id}/download')
+def download_export(export_id: str, request: Request):
+    export = require_export(request.app.state.delivery.store.get(export_id))
+    return Response(content=export['content'], media_type='text/csv', headers={
+        'Content-Disposition': f'attachment; filename="{export["file_name"]}"'})
+
+
+@app.post('/api/exports/{export_id}/deliver', status_code=202, response_model=ExportDetail, response_model_exclude_unset=True)
+async def retry_delivery(export_id: str, request: Request):
+    result = require_export(await asyncio.to_thread(request.app.state.delivery.store.retry, export_id))
+    request.app.state.delivery.wake.set()
     return result

@@ -1,0 +1,341 @@
+{
+  "seed": 42,
+  "mock_config": {
+    "OCR_FAIL_RATE": "0.2",
+    "OCR_HANG_RATE": "0.1",
+    "OCR_HANG_SECONDS": "600"
+  },
+  "timeout_seconds": 1,
+  "client_attempts": [
+    {
+      "request": 1,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.001246542000444606
+    },
+    {
+      "request": 2,
+      "status_code": 500,
+      "response": {
+        "error": "internal OCR engine error (transient)"
+      },
+      "elapsed_seconds": 0.0013373330002650619
+    },
+    {
+      "request": 3,
+      "timeout": true,
+      "elapsed_seconds": 1.0025866659998428
+    },
+    {
+      "request": 4,
+      "timeout": true,
+      "elapsed_seconds": 1.0031665000133216
+    },
+    {
+      "request": 5,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0017293329874519259
+    },
+    {
+      "request": 6,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0010607500153128058
+    },
+    {
+      "request": 7,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0010693749936763197
+    },
+    {
+      "request": 8,
+      "status_code": 500,
+      "response": {
+        "error": "internal OCR engine error (transient)"
+      },
+      "elapsed_seconds": 0.000926957989577204
+    },
+    {
+      "request": 9,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0009388749895151705
+    },
+    {
+      "request": 10,
+      "status_code": 500,
+      "response": {
+        "error": "internal OCR engine error (transient)"
+      },
+      "elapsed_seconds": 0.0008490420004818588
+    },
+    {
+      "request": 11,
+      "timeout": true,
+      "elapsed_seconds": 1.00279391699587
+    },
+    {
+      "request": 12,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0011874589836224914
+    },
+    {
+      "request": 13,
+      "status_code": 500,
+      "response": {
+        "error": "internal OCR engine error (transient)"
+      },
+      "elapsed_seconds": 0.0010350419906899333
+    },
+    {
+      "request": 14,
+      "status_code": 500,
+      "response": {
+        "error": "internal OCR engine error (transient)"
+      },
+      "elapsed_seconds": 0.0009275000193156302
+    },
+    {
+      "request": 15,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0009485830087214708
+    },
+    {
+      "request": 16,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0009910000080708414
+    },
+    {
+      "request": 17,
+      "timeout": true,
+      "elapsed_seconds": 1.0040856249979697
+    },
+    {
+      "request": 18,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0033837500086519867
+    },
+    {
+      "request": 19,
+      "status_code": 200,
+      "response": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "elapsed_seconds": 0.0023608749906998128
+    },
+    {
+      "request": 20,
+      "status_code": 500,
+      "response": {
+        "error": "internal OCR engine error (transient)"
+      },
+      "elapsed_seconds": 0.002244207978947088
+    }
+  ],
+  "requests": [
+    {
+      "seq": 1,
+      "case_id": "probe-0",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877697.6
+    },
+    {
+      "seq": 2,
+      "case_id": "probe-1",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "error_500",
+      "ts": 1791877697.601
+    },
+    {
+      "seq": 3,
+      "case_id": "probe-2",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "hang",
+      "ts": 1791877697.603
+    },
+    {
+      "seq": 4,
+      "case_id": "probe-3",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "hang",
+      "ts": 1791877698.606
+    },
+    {
+      "seq": 5,
+      "case_id": "probe-4",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877699.609
+    },
+    {
+      "seq": 6,
+      "case_id": "probe-5",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877699.61
+    },
+    {
+      "seq": 7,
+      "case_id": "probe-6",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877699.611
+    },
+    {
+      "seq": 8,
+      "case_id": "probe-7",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "error_500",
+      "ts": 1791877699.612
+    },
+    {
+      "seq": 9,
+      "case_id": "probe-8",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877699.613
+    },
+    {
+      "seq": 10,
+      "case_id": "probe-9",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "error_500",
+      "ts": 1791877699.614
+    },
+    {
+      "seq": 11,
+      "case_id": "probe-10",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "hang",
+      "ts": 1791877699.615
+    },
+    {
+      "seq": 12,
+      "case_id": "probe-11",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877700.618
+    },
+    {
+      "seq": 13,
+      "case_id": "probe-12",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "error_500",
+      "ts": 1791877700.619
+    },
+    {
+      "seq": 14,
+      "case_id": "probe-13",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "error_500",
+      "ts": 1791877700.62
+    },
+    {
+      "seq": 15,
+      "case_id": "probe-14",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877700.621
+    },
+    {
+      "seq": 16,
+      "case_id": "probe-15",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877700.622
+    },
+    {
+      "seq": 17,
+      "case_id": "probe-16",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "hang",
+      "ts": 1791877700.623
+    },
+    {
+      "seq": 18,
+      "case_id": "probe-17",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877701.629
+    },
+    {
+      "seq": 19,
+      "case_id": "probe-18",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877701.631
+    },
+    {
+      "seq": 20,
+      "case_id": "probe-19",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "error_500",
+      "ts": 1791877701.633
+    }
+  ]
+}

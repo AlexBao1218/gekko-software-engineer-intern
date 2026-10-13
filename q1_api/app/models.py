@@ -27,6 +27,25 @@ class RowRejection(BaseModel):
     errors: list[FieldError]
 
 
+class OCRRunDetail(BaseModel):
+    id: str
+    batch_id: str
+    status: Literal['running', 'completed', 'failed', 'interrupted']
+    error: str | None = None
+    total: int
+    completed: int
+    created_at: str
+    finished_at: str | None = None
+
+
+class OCRFields(BaseModel):
+    id_number: str
+    full_name: str
+    dob: str
+    issue_date: str
+    confidence: float
+
+
 class BatchDetail(BaseModel):
     id: str
     created_at: str
@@ -35,6 +54,7 @@ class BatchDetail(BaseModel):
     rejected_count: int
     rejected_rows: list[RowRejection]
     status_counts: dict[CaseStatus, int]
+    ocr_run: OCRRunDetail | None = None
 
 
 class CaseDetail(BaseModel):
@@ -48,6 +68,11 @@ class CaseDetail(BaseModel):
     issue_date: str
     image_ref: str
     status: CaseStatus
+    ocr_fields: OCRFields | None = None
+    ocr_error: str | None = None
+    ocr_error_code: str | None = None
+    ocr_retryable: bool = False
+    ocr_attempts: int = 0
 
 
 class CasePage(BaseModel):
@@ -71,3 +96,34 @@ class ReviewRecord(ReviewRequest):
 
 class ReviewResult(CaseDetail):
     review: ReviewRecord
+
+
+class DeliveryReceipt(BaseModel):
+    delivery_id: str
+    idempotency_key: str
+    file_name: str
+    sha256: str
+    ingested_at: int
+    attempts: int
+    deduplicated: bool | None = None
+
+
+class ExportDetail(BaseModel):
+    id: str
+    batch_id: str
+    created_at: str
+    file_name: str
+    idempotency_key: str
+    sha256: str
+    row_count: int
+    status: Literal['pending', 'delivering', 'delivered', 'failed']
+    attempts: int
+    receipt: DeliveryReceipt | None = None
+    error_code: str | None = None
+    error: str | None = None
+    retryable: bool
+
+
+class ExportResult(BaseModel):
+    count: int
+    export: ExportDetail | None = None

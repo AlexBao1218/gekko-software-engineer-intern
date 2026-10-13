@@ -1,0 +1,1555 @@
+{
+  "seed": 42,
+  "max_attempts": 4,
+  "mock_config": {
+    "OCR_FAIL_RATE": "0.2",
+    "OCR_HANG_RATE": "0.1",
+    "OCR_HANG_SECONDS": "600"
+  },
+  "api_config": {
+    "OCR_TIMEOUT_SECONDS": "1",
+    "OCR_BACKOFF_SECONDS": "0.1",
+    "OCR_BACKOFF_CAP_SECONDS": "0.5"
+  },
+  "pass": false,
+  "trigger_seconds": 0.0031581669754814357,
+  "elapsed_seconds": 14.31711874998291,
+  "batch": {
+    "id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+    "created_at": "2026-10-13T07:39:24.023599+00:00",
+    "total_rows": 50,
+    "accepted_count": 43,
+    "rejected_count": 7,
+    "rejected_rows": [
+      {
+        "row": 6,
+        "case_ref": "APPL-2026-0005",
+        "errors": [
+          {
+            "field": "dob",
+            "message": "Use a valid date in YYYY-MM-DD format."
+          }
+        ]
+      },
+      {
+        "row": 13,
+        "case_ref": "APPL-2026-0012",
+        "errors": [
+          {
+            "field": "applicant_name",
+            "message": "This field is required."
+          }
+        ]
+      },
+      {
+        "row": 18,
+        "case_ref": "APPL-2026-0007",
+        "errors": [
+          {
+            "field": "case_ref",
+            "message": "Duplicate case_ref in this file."
+          }
+        ]
+      },
+      {
+        "row": 19,
+        "case_ref": "APPL-2026-0018",
+        "errors": [
+          {
+            "field": "dob",
+            "message": "Use a valid date in YYYY-MM-DD format."
+          }
+        ]
+      },
+      {
+        "row": 28,
+        "case_ref": "APPL-2026-0027",
+        "errors": [
+          {
+            "field": "dob",
+            "message": "Use a valid date in YYYY-MM-DD format."
+          }
+        ]
+      },
+      {
+        "row": 41,
+        "case_ref": "APPL-2026-0040",
+        "errors": [
+          {
+            "field": "applicant_name",
+            "message": "This field is required."
+          }
+        ]
+      },
+      {
+        "row": 48,
+        "case_ref": "APPL-2026-0031",
+        "errors": [
+          {
+            "field": "case_ref",
+            "message": "Duplicate case_ref in this file."
+          }
+        ]
+      }
+    ],
+    "status_counts": {
+      "pending": 0,
+      "ocr_done": 37,
+      "ocr_failed": 6,
+      "stage1_approved": 0,
+      "stage1_rejected": 0,
+      "stage2_approved": 0,
+      "stage2_rejected": 0,
+      "exported": 0
+    },
+    "ocr_run": {
+      "id": "f3b4e65c-0414-4806-93c4-70d6cc9dcacf",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "status": "completed",
+      "error": null,
+      "total": 43,
+      "completed": 43,
+      "created_at": "2026-10-13T07:39:24.028004+00:00",
+      "finished_at": "2026-10-13T07:39:38.319736+00:00"
+    }
+  },
+  "cases": [
+    {
+      "id": "512cec9f-71bc-4c9e-9b68-48314ff9cfe8",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 2,
+      "case_ref": "APPL-2026-0001",
+      "applicant_name": "Test Applicant 001",
+      "id_number": "TEST-ID-000001",
+      "dob": "1961-02-02",
+      "issue_date": "2021-02-02",
+      "image_ref": "id_scan_0001.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-830454",
+        "full_name": "Test Applicant 0454",
+        "dob": "1969-11-19",
+        "issue_date": "2020-06-06",
+        "confidence": 0.94
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "dedd9584-51be-4c4e-8ca8-50934a4a1c28",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 3,
+      "case_ref": "APPL-2026-0002",
+      "applicant_name": "Test Applicant 002",
+      "id_number": "TEST-ID-000002",
+      "dob": "1962-03-03",
+      "issue_date": "2022-03-03",
+      "image_ref": "id_scan_0002.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-776170",
+        "full_name": "Test Applicant 6170",
+        "dob": "1955-10-12",
+        "issue_date": "2017-10-20",
+        "confidence": 0.9
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 4
+    },
+    {
+      "id": "4b3c4808-ca3c-4c80-a658-f4aa7a04c2ed",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 4,
+      "case_ref": "APPL-2026-0003",
+      "applicant_name": "Test Applicant 003",
+      "id_number": "TEST-ID-000003",
+      "dob": "1963-04-04",
+      "issue_date": "2023-04-04",
+      "image_ref": "id_scan_0003.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-225059",
+        "full_name": "Test Applicant 5059",
+        "dob": "1959-09-02",
+        "issue_date": "2024-02-05",
+        "confidence": 0.99
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "0f6fa1c6-b675-4fef-a5d1-6629c944fd45",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 5,
+      "case_ref": "APPL-2026-0004",
+      "applicant_name": "Test Applicant 004",
+      "id_number": "TEST-ID-000004",
+      "dob": "1964-05-05",
+      "issue_date": "2024-05-05",
+      "image_ref": "id_scan_0004.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-755606",
+        "full_name": "Test Applicant 5606",
+        "dob": "1956-10-02",
+        "issue_date": "2024-12-25",
+        "confidence": 0.86
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "28439344-b988-4c7a-9d0d-d26e399c9dac",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 7,
+      "case_ref": "APPL-2026-0006",
+      "applicant_name": "Test Applicant 006",
+      "id_number": "TEST-ID-000006",
+      "dob": "1966-07-07",
+      "issue_date": "2020-07-07",
+      "image_ref": "id_scan_0006.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-145515",
+        "full_name": "Test Applicant 5515",
+        "dob": "1975-10-09",
+        "issue_date": "2024-10-21",
+        "confidence": 0.95
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 2
+    },
+    {
+      "id": "e96a29a3-51dc-4540-b76e-08f2c7c44358",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 8,
+      "case_ref": "APPL-2026-0007",
+      "applicant_name": "Test Applicant 007",
+      "id_number": "TEST-ID-000007",
+      "dob": "1967-08-08",
+      "issue_date": "2021-08-08",
+      "image_ref": "id_scan_0007.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-737121",
+        "full_name": "Test Applicant 7121",
+        "dob": "1966-09-09",
+        "issue_date": "2020-09-09",
+        "confidence": 0.81
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 3
+    },
+    {
+      "id": "dd3261c9-bb2d-4c07-b802-78a53eabc9c4",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 9,
+      "case_ref": "APPL-2026-0008",
+      "applicant_name": "Test Applicant 008",
+      "id_number": "TEST-ID-000008",
+      "dob": "1968-09-09",
+      "issue_date": "2022-09-09",
+      "image_ref": "id_scan_0008.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-702482",
+        "full_name": "Test Applicant 2482",
+        "dob": "1977-12-01",
+        "issue_date": "2018-11-10",
+        "confidence": 0.82
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 3
+    },
+    {
+      "id": "4bfc1048-9666-4e3a-8792-0b71c6dc3aad",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 10,
+      "case_ref": "APPL-2026-0009",
+      "applicant_name": "Test Applicant 009",
+      "id_number": "TEST-ID-000009",
+      "dob": "1969-10-10",
+      "issue_date": "2023-10-10",
+      "image_ref": "id_badscan_0009.jpg",
+      "status": "ocr_failed",
+      "ocr_fields": null,
+      "ocr_error": "cannot read identity-card fields from 'id_badscan_0009.jpg' (scan quality)",
+      "ocr_error_code": "http_422",
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "d7865edd-f545-4afe-ab34-dfbf1f3d13ff",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 11,
+      "case_ref": "APPL-2026-0010",
+      "applicant_name": "Test Applicant 010",
+      "id_number": "TEST-ID-000010",
+      "dob": "1970-11-11",
+      "issue_date": "2024-11-11",
+      "image_ref": "id_scan_0010.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-227483",
+        "full_name": "Test Applicant 7483",
+        "dob": "1998-08-13",
+        "issue_date": "2025-11-21",
+        "confidence": 0.83
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "e58b9673-27a0-4852-927e-654ee0168202",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 12,
+      "case_ref": "APPL-2026-0011",
+      "applicant_name": "Test Applicant 011",
+      "id_number": "TEST-ID-000011",
+      "dob": "1971-12-12",
+      "issue_date": "2025-12-12",
+      "image_ref": "id_scan_0011.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-680675",
+        "full_name": "Test Applicant 0675",
+        "dob": "1995-12-24",
+        "issue_date": "2023-06-25",
+        "confidence": 0.95
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 2
+    },
+    {
+      "id": "820d3bd5-1c59-4a56-b3f7-c36b117caa7d",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 14,
+      "case_ref": "APPL-2026-0013",
+      "applicant_name": "Test Applicant 013",
+      "id_number": "TEST-ID-000013",
+      "dob": "1973-02-14",
+      "issue_date": "2021-02-14",
+      "image_ref": "id_scan_0013.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-521539",
+        "full_name": "Test Applicant 1539",
+        "dob": "1979-05-14",
+        "issue_date": "2019-08-26",
+        "confidence": 0.99
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "99d0f24d-6118-4144-bd0f-3daea5f28b41",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 15,
+      "case_ref": "APPL-2026-0014",
+      "applicant_name": "Test Applicant 014",
+      "id_number": "TEST-ID-000014",
+      "dob": "1974-03-15",
+      "issue_date": "2022-03-15",
+      "image_ref": "id_scan_0014.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-111864",
+        "full_name": "Test Applicant 1864",
+        "dob": "1984-06-08",
+        "issue_date": "2025-08-03",
+        "confidence": 0.84
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 2
+    },
+    {
+      "id": "ac4eb526-0b08-4e74-8790-81568dd6daf1",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 16,
+      "case_ref": "APPL-2026-0015",
+      "applicant_name": "Test Applicant 015",
+      "id_number": "TEST-ID-000015",
+      "dob": "1975-04-16",
+      "issue_date": "2023-04-16",
+      "image_ref": "id_scan_0015.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-603457",
+        "full_name": "Test Applicant 3457",
+        "dob": "1997-09-07",
+        "issue_date": "2025-12-03",
+        "confidence": 0.97
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "a6659d3f-7d9e-450b-b074-277f3e718059",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 17,
+      "case_ref": "APPL-2026-0016",
+      "applicant_name": "Test Applicant 016",
+      "id_number": "TEST-ID-000016",
+      "dob": "1976-05-17",
+      "issue_date": "2024-05-17",
+      "image_ref": "id_badscan_0016.jpg",
+      "status": "ocr_failed",
+      "ocr_fields": null,
+      "ocr_error": "cannot read identity-card fields from 'id_badscan_0016.jpg' (scan quality)",
+      "ocr_error_code": "http_422",
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "600e3d43-06c6-4c61-afdc-41e19a24bd5d",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 20,
+      "case_ref": "APPL-2026-0019",
+      "applicant_name": "Test Applicant 019",
+      "id_number": "TEST-ID-000019",
+      "dob": "1979-08-20",
+      "issue_date": "2021-08-20",
+      "image_ref": "id_scan_0019.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-432969",
+        "full_name": "Test Applicant 2969",
+        "dob": "1969-04-02",
+        "issue_date": "2017-06-19",
+        "confidence": 0.89
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "049d5c60-65bd-4fa7-9a41-f81e4f9821a0",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 21,
+      "case_ref": "APPL-2026-0020",
+      "applicant_name": "Test Applicant 020",
+      "id_number": "TEST-ID-000020",
+      "dob": "1980-09-21",
+      "issue_date": "2022-09-21",
+      "image_ref": "id_scan_0020.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-185514",
+        "full_name": "Test Applicant 5514",
+        "dob": "1969-06-12",
+        "issue_date": "2016-02-11",
+        "confidence": 0.94
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 2
+    },
+    {
+      "id": "e83f7150-c3fc-443f-8059-43c02b81faa5",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 22,
+      "case_ref": "APPL-2026-0021",
+      "applicant_name": "Test Applicant 021",
+      "id_number": "TEST-ID-000021",
+      "dob": "1981-10-22",
+      "issue_date": "2023-10-22",
+      "image_ref": "id_scan_0021.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-494261",
+        "full_name": "Test Applicant 4261",
+        "dob": "1971-05-15",
+        "issue_date": "2021-01-03",
+        "confidence": 0.81
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "3ce9bca4-e619-4953-87f0-d79737ec5320",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 23,
+      "case_ref": "APPL-2026-0022",
+      "applicant_name": "Test Applicant 022",
+      "id_number": "TEST-ID-000022",
+      "dob": "1982-11-23",
+      "issue_date": "2024-11-23",
+      "image_ref": "id_scan_0022.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-276929",
+        "full_name": "Test Applicant 6929",
+        "dob": "1989-02-02",
+        "issue_date": "2019-10-14",
+        "confidence": 0.89
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 3
+    },
+    {
+      "id": "efbbae31-0785-4b53-95e7-78e5f6d1d543",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 24,
+      "case_ref": "APPL-2026-0023",
+      "applicant_name": "Test Applicant 023",
+      "id_number": "TEST-ID-000023",
+      "dob": "1983-12-24",
+      "issue_date": "2025-12-24",
+      "image_ref": "id_scan_0023.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-347166",
+        "full_name": "Test Applicant 7166",
+        "dob": "1981-06-20",
+        "issue_date": "2019-03-15",
+        "confidence": 0.86
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "427074f0-013c-4c09-ad5f-14e4ade26f93",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 25,
+      "case_ref": "APPL-2026-0024",
+      "applicant_name": "Test Applicant 024",
+      "id_number": "TEST-ID-000024",
+      "dob": "1984-01-25",
+      "issue_date": "2020-01-25",
+      "image_ref": "id_badscan_0024.jpg",
+      "status": "ocr_failed",
+      "ocr_fields": null,
+      "ocr_error": "cannot read identity-card fields from 'id_badscan_0024.jpg' (scan quality)",
+      "ocr_error_code": "http_422",
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "f47fe09f-3a9e-4c84-9cc9-db0757ac8fd9",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 26,
+      "case_ref": "APPL-2026-0025",
+      "applicant_name": "Test Applicant 025",
+      "id_number": "TEST-ID-000025",
+      "dob": "1985-02-26",
+      "issue_date": "2021-02-26",
+      "image_ref": "id_scan_0025.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-208784",
+        "full_name": "Test Applicant 8784",
+        "dob": "1974-11-09",
+        "issue_date": "2021-10-04",
+        "confidence": 0.84
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "e568ba23-8cd6-4f3c-899e-f58c8702b2ad",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 27,
+      "case_ref": "APPL-2026-0026",
+      "applicant_name": "Test Applicant 026",
+      "id_number": "TEST-ID-000026",
+      "dob": "1986-03-27",
+      "issue_date": "2022-03-27",
+      "image_ref": "id_scan_0026.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-159667",
+        "full_name": "Test Applicant 9667",
+        "dob": "1997-10-17",
+        "issue_date": "2022-09-24",
+        "confidence": 0.87
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "c9ef2b89-1f95-4df2-9884-a04e2c19aed9",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 29,
+      "case_ref": "APPL-2026-0028",
+      "applicant_name": "Test Applicant 028",
+      "id_number": "TEST-ID-000028",
+      "dob": "1988-05-01",
+      "issue_date": "2024-05-01",
+      "image_ref": "id_scan_0028.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-638069",
+        "full_name": "Test Applicant 8069",
+        "dob": "1959-09-01",
+        "issue_date": "2017-06-16",
+        "confidence": 0.89
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "9f020d11-981d-4da5-9697-66c2a4e0eead",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 30,
+      "case_ref": "APPL-2026-0029",
+      "applicant_name": "Test Applicant 029",
+      "id_number": "TEST-ID-000029",
+      "dob": "1989-06-02",
+      "issue_date": "2025-06-02",
+      "image_ref": "id_scan_0029.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-236932",
+        "full_name": "Test Applicant 6932",
+        "dob": "1997-06-12",
+        "issue_date": "2022-01-12",
+        "confidence": 0.92
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "16671549-7035-4b32-ab7d-a6553461212a",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 31,
+      "case_ref": "APPL-2026-0030",
+      "applicant_name": "Test Applicant 030",
+      "id_number": "TEST-ID-000030",
+      "dob": "1990-07-03",
+      "issue_date": "2020-07-03",
+      "image_ref": "id_scan_0030.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-111168",
+        "full_name": "Test Applicant 1168",
+        "dob": "1963-04-20",
+        "issue_date": "2018-04-11",
+        "confidence": 0.88
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "27df2d01-ab1b-4fc7-bd90-ba0bdf76b938",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 32,
+      "case_ref": "APPL-2026-0031",
+      "applicant_name": "Test Applicant 031",
+      "id_number": "TEST-ID-000031",
+      "dob": "1991-08-04",
+      "issue_date": "2021-08-04",
+      "image_ref": "id_scan_0031.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-343207",
+        "full_name": "Test Applicant 3207",
+        "dob": "1982-09-08",
+        "issue_date": "2020-07-20",
+        "confidence": 0.87
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "99efedc5-2093-41ec-be7c-552a8e245648",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 33,
+      "case_ref": "APPL-2026-0032",
+      "applicant_name": "Test Applicant 032",
+      "id_number": "TEST-ID-000032",
+      "dob": "1992-09-05",
+      "issue_date": "2022-09-05",
+      "image_ref": "id_scan_0032.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-459438",
+        "full_name": "Test Applicant 9438",
+        "dob": "1978-08-14",
+        "issue_date": "2021-09-20",
+        "confidence": 0.98
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "2af3d401-a218-4012-8dd3-3eaf6ca57f5e",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 34,
+      "case_ref": "APPL-2026-0033",
+      "applicant_name": "Test Applicant 033",
+      "id_number": "TEST-ID-000033",
+      "dob": "1993-10-06",
+      "issue_date": "2023-10-06",
+      "image_ref": "id_scan_0033.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-350275",
+        "full_name": "Test Applicant 0275",
+        "dob": "1985-01-13",
+        "issue_date": "2019-05-19",
+        "confidence": 0.95
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "954c38d6-3ab5-4a5d-968a-f58703a3670b",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 35,
+      "case_ref": "APPL-2026-0034",
+      "applicant_name": "Test Applicant 034",
+      "id_number": "TEST-ID-000034",
+      "dob": "1994-11-07",
+      "issue_date": "2024-11-07",
+      "image_ref": "id_scan_0034.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-613507",
+        "full_name": "Test Applicant 3507",
+        "dob": "1967-07-13",
+        "issue_date": "2022-11-01",
+        "confidence": 0.87
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "5c0a6741-714f-43ee-8ee5-c17f37221591",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 36,
+      "case_ref": "APPL-2026-0035",
+      "applicant_name": "Test Applicant 035",
+      "id_number": "TEST-ID-000035",
+      "dob": "1960-12-08",
+      "issue_date": "2025-12-08",
+      "image_ref": "id_scan_0035.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-196179",
+        "full_name": "Test Applicant 6179",
+        "dob": "1969-11-15",
+        "issue_date": "2025-04-08",
+        "confidence": 0.99
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "146c6be7-e350-45d8-bfc9-a8673f6c62db",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 37,
+      "case_ref": "APPL-2026-0036",
+      "applicant_name": "Test Applicant 036",
+      "id_number": "TEST-ID-000036",
+      "dob": "1961-01-09",
+      "issue_date": "2020-01-09",
+      "image_ref": "id_scan_0036.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-526186",
+        "full_name": "Test Applicant 6186",
+        "dob": "1991-09-07",
+        "issue_date": "2024-02-26",
+        "confidence": 0.86
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "2ec86025-aee5-4df1-88ad-af35995c7837",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 38,
+      "case_ref": "APPL-2026-0037",
+      "applicant_name": "Test Applicant 037",
+      "id_number": "TEST-ID-000037",
+      "dob": "1962-02-10",
+      "issue_date": "2021-02-10",
+      "image_ref": "id_badscan_0037.jpg",
+      "status": "ocr_failed",
+      "ocr_fields": null,
+      "ocr_error": "cannot read identity-card fields from 'id_badscan_0037.jpg' (scan quality)",
+      "ocr_error_code": "http_422",
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "c0b84b9f-0e80-4e9d-802e-01f7edfa2860",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 39,
+      "case_ref": "APPL-2026-0038",
+      "applicant_name": "Test Applicant 038",
+      "id_number": "TEST-ID-000038",
+      "dob": "1963-03-11",
+      "issue_date": "2022-03-11",
+      "image_ref": "id_scan_0038.jpg",
+      "status": "ocr_failed",
+      "ocr_fields": null,
+      "ocr_error": "OCR service returned HTTP 500",
+      "ocr_error_code": "http_500",
+      "ocr_retryable": true,
+      "ocr_attempts": 4
+    },
+    {
+      "id": "aa76f07c-0614-4c3a-9769-11087ed9c551",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 40,
+      "case_ref": "APPL-2026-0039",
+      "applicant_name": "Test Applicant 039",
+      "id_number": "TEST-ID-000039",
+      "dob": "1964-04-12",
+      "issue_date": "2023-04-12",
+      "image_ref": "id_scan_0039.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-510345",
+        "full_name": "Test Applicant 0345",
+        "dob": "1990-04-22",
+        "issue_date": "2022-04-14",
+        "confidence": 0.85
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 4
+    },
+    {
+      "id": "34f64ea9-e18f-4939-8f6e-707b333ce616",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 42,
+      "case_ref": "APPL-2026-0041",
+      "applicant_name": "Test Applicant 041",
+      "id_number": "TEST-ID-000041",
+      "dob": "1966-06-14",
+      "issue_date": "2025-06-14",
+      "image_ref": "id_scan_0041.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-263910",
+        "full_name": "Test Applicant 3910",
+        "dob": "1975-06-19",
+        "issue_date": "2018-04-03",
+        "confidence": 0.9
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "c3aade32-1fe2-4704-963e-d73031a2cac9",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 43,
+      "case_ref": "APPL-2026-0042",
+      "applicant_name": "Test Applicant 042",
+      "id_number": "TEST-ID-000042",
+      "dob": "1967-07-15",
+      "issue_date": "2020-07-15",
+      "image_ref": "id_scan_0042.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-599193",
+        "full_name": "Test Applicant 9193",
+        "dob": "1963-11-13",
+        "issue_date": "2024-08-03",
+        "confidence": 0.93
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "24c3c877-b71c-4864-9305-54999c7cff0f",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 44,
+      "case_ref": "APPL-2026-0043",
+      "applicant_name": "Test Applicant 043",
+      "id_number": "TEST-ID-000043",
+      "dob": "1968-08-16",
+      "issue_date": "2021-08-16",
+      "image_ref": "id_scan_0043.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-686132",
+        "full_name": "Test Applicant 6132",
+        "dob": "1962-01-04",
+        "issue_date": "2022-08-28",
+        "confidence": 0.92
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 3
+    },
+    {
+      "id": "ce62c791-0aa7-4181-8284-e140968fdc83",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 45,
+      "case_ref": "APPL-2026-0044",
+      "applicant_name": "Test Applicant 044",
+      "id_number": "TEST-ID-000044",
+      "dob": "1969-09-17",
+      "issue_date": "2022-09-17",
+      "image_ref": "id_badscan_0044.jpg",
+      "status": "ocr_failed",
+      "ocr_fields": null,
+      "ocr_error": "cannot read identity-card fields from 'id_badscan_0044.jpg' (scan quality)",
+      "ocr_error_code": "http_422",
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "7aa00590-294b-433c-a5e9-663fc2caa740",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 46,
+      "case_ref": "APPL-2026-0045",
+      "applicant_name": "Test Applicant 045",
+      "id_number": "TEST-ID-000045",
+      "dob": "1970-10-18",
+      "issue_date": "2023-10-18",
+      "image_ref": "id_scan_0045.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-530481",
+        "full_name": "Test Applicant 0481",
+        "dob": "1966-01-19",
+        "issue_date": "2021-11-16",
+        "confidence": 0.81
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "bc4c1eae-4b61-4b6c-9cf3-23a835ffcbed",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 47,
+      "case_ref": "APPL-2026-0046",
+      "applicant_name": "Test Applicant 046",
+      "id_number": "TEST-ID-000046",
+      "dob": "1971-11-19",
+      "issue_date": "2024-11-19",
+      "image_ref": "id_scan_0046.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-910827",
+        "full_name": "Test Applicant 0827",
+        "dob": "1972-07-27",
+        "issue_date": "2023-06-03",
+        "confidence": 0.87
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    },
+    {
+      "id": "55a6350e-af4b-4359-b411-9a22ed237596",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 49,
+      "case_ref": "APPL-2026-0048",
+      "applicant_name": "Test Applicant 048",
+      "id_number": "TEST-ID-000048",
+      "dob": "1973-01-21",
+      "issue_date": "2020-01-21",
+      "image_ref": "id_scan_0048.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-549255",
+        "full_name": "Test Applicant 9255",
+        "dob": "1975-02-18",
+        "issue_date": "2022-08-24",
+        "confidence": 0.95
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 2
+    },
+    {
+      "id": "0e36a876-c585-4372-8f15-35ce6364a9bf",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 50,
+      "case_ref": "APPL-2026-0049",
+      "applicant_name": "Test Applicant 049",
+      "id_number": "TEST-ID-000049",
+      "dob": "1974-02-22",
+      "issue_date": "2021-02-22",
+      "image_ref": "id_scan_0049.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-275351",
+        "full_name": "Test Applicant 5351",
+        "dob": "1986-06-01",
+        "issue_date": "2017-11-22",
+        "confidence": 0.91
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 2
+    },
+    {
+      "id": "10d2be72-1d8c-4ecf-8a7a-035da8fe77b6",
+      "batch_id": "d42d2d6f-2a2d-4d37-9ef2-080340ade1d7",
+      "row_number": 51,
+      "case_ref": "APPL-2026-0050",
+      "applicant_name": "Test Applicant 050",
+      "id_number": "TEST-ID-000050",
+      "dob": "1975-03-23",
+      "issue_date": "2022-03-23",
+      "image_ref": "id_scan_0050.jpg",
+      "status": "ocr_done",
+      "ocr_fields": {
+        "id_number": "TEST-ID-331246",
+        "full_name": "Test Applicant 1246",
+        "dob": "1991-12-16",
+        "issue_date": "2024-11-20",
+        "confidence": 0.86
+      },
+      "ocr_error": null,
+      "ocr_error_code": null,
+      "ocr_retryable": false,
+      "ocr_attempts": 1
+    }
+  ],
+  "requests": [
+    {
+      "seq": 1,
+      "case_id": "512cec9f-71bc-4c9e-9b68-48314ff9cfe8",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791877164.033
+    },
+    {
+      "seq": 2,
+      "case_id": "dedd9584-51be-4c4e-8ca8-50934a4a1c28",
+      "image_ref": "id_scan_0002.jpg",
+      "outcome": "error_500",
+      "ts": 1791877164.036
+    },
+    {
+      "seq": 3,
+      "case_id": "dedd9584-51be-4c4e-8ca8-50934a4a1c28",
+      "image_ref": "id_scan_0002.jpg",
+      "outcome": "hang",
+      "ts": 1791877164.141
+    },
+    {
+      "seq": 4,
+      "case_id": "dedd9584-51be-4c4e-8ca8-50934a4a1c28",
+      "image_ref": "id_scan_0002.jpg",
+      "outcome": "hang",
+      "ts": 1791877165.35
+    },
+    {
+      "seq": 5,
+      "case_id": "dedd9584-51be-4c4e-8ca8-50934a4a1c28",
+      "image_ref": "id_scan_0002.jpg",
+      "outcome": "ok",
+      "ts": 1791877166.759
+    },
+    {
+      "seq": 6,
+      "case_id": "4b3c4808-ca3c-4c80-a658-f4aa7a04c2ed",
+      "image_ref": "id_scan_0003.jpg",
+      "outcome": "ok",
+      "ts": 1791877166.767
+    },
+    {
+      "seq": 7,
+      "case_id": "0f6fa1c6-b675-4fef-a5d1-6629c944fd45",
+      "image_ref": "id_scan_0004.jpg",
+      "outcome": "ok",
+      "ts": 1791877166.773
+    },
+    {
+      "seq": 8,
+      "case_id": "28439344-b988-4c7a-9d0d-d26e399c9dac",
+      "image_ref": "id_scan_0006.jpg",
+      "outcome": "error_500",
+      "ts": 1791877166.781
+    },
+    {
+      "seq": 9,
+      "case_id": "28439344-b988-4c7a-9d0d-d26e399c9dac",
+      "image_ref": "id_scan_0006.jpg",
+      "outcome": "ok",
+      "ts": 1791877166.889
+    },
+    {
+      "seq": 10,
+      "case_id": "e96a29a3-51dc-4540-b76e-08f2c7c44358",
+      "image_ref": "id_scan_0007.jpg",
+      "outcome": "error_500",
+      "ts": 1791877166.894
+    },
+    {
+      "seq": 11,
+      "case_id": "e96a29a3-51dc-4540-b76e-08f2c7c44358",
+      "image_ref": "id_scan_0007.jpg",
+      "outcome": "hang",
+      "ts": 1791877167.003
+    },
+    {
+      "seq": 12,
+      "case_id": "e96a29a3-51dc-4540-b76e-08f2c7c44358",
+      "image_ref": "id_scan_0007.jpg",
+      "outcome": "ok",
+      "ts": 1791877168.207
+    },
+    {
+      "seq": 13,
+      "case_id": "dd3261c9-bb2d-4c07-b802-78a53eabc9c4",
+      "image_ref": "id_scan_0008.jpg",
+      "outcome": "error_500",
+      "ts": 1791877168.213
+    },
+    {
+      "seq": 14,
+      "case_id": "dd3261c9-bb2d-4c07-b802-78a53eabc9c4",
+      "image_ref": "id_scan_0008.jpg",
+      "outcome": "error_500",
+      "ts": 1791877168.32
+    },
+    {
+      "seq": 15,
+      "case_id": "dd3261c9-bb2d-4c07-b802-78a53eabc9c4",
+      "image_ref": "id_scan_0008.jpg",
+      "outcome": "ok",
+      "ts": 1791877168.527
+    },
+    {
+      "seq": 16,
+      "case_id": "4bfc1048-9666-4e3a-8792-0b71c6dc3aad",
+      "image_ref": "id_badscan_0009.jpg",
+      "outcome": "unreadable",
+      "ts": 1791877168.531
+    },
+    {
+      "seq": 17,
+      "case_id": "d7865edd-f545-4afe-ab34-dfbf1f3d13ff",
+      "image_ref": "id_scan_0010.jpg",
+      "outcome": "ok",
+      "ts": 1791877168.535
+    },
+    {
+      "seq": 18,
+      "case_id": "e58b9673-27a0-4852-927e-654ee0168202",
+      "image_ref": "id_scan_0011.jpg",
+      "outcome": "hang",
+      "ts": 1791877168.539
+    },
+    {
+      "seq": 19,
+      "case_id": "e58b9673-27a0-4852-927e-654ee0168202",
+      "image_ref": "id_scan_0011.jpg",
+      "outcome": "ok",
+      "ts": 1791877169.645
+    },
+    {
+      "seq": 20,
+      "case_id": "820d3bd5-1c59-4a56-b3f7-c36b117caa7d",
+      "image_ref": "id_scan_0013.jpg",
+      "outcome": "ok",
+      "ts": 1791877169.652
+    },
+    {
+      "seq": 21,
+      "case_id": "99d0f24d-6118-4144-bd0f-3daea5f28b41",
+      "image_ref": "id_scan_0014.jpg",
+      "outcome": "error_500",
+      "ts": 1791877169.658
+    },
+    {
+      "seq": 22,
+      "case_id": "99d0f24d-6118-4144-bd0f-3daea5f28b41",
+      "image_ref": "id_scan_0014.jpg",
+      "outcome": "ok",
+      "ts": 1791877169.767
+    },
+    {
+      "seq": 23,
+      "case_id": "ac4eb526-0b08-4e74-8790-81568dd6daf1",
+      "image_ref": "id_scan_0015.jpg",
+      "outcome": "ok",
+      "ts": 1791877169.772
+    },
+    {
+      "seq": 24,
+      "case_id": "a6659d3f-7d9e-450b-b074-277f3e718059",
+      "image_ref": "id_badscan_0016.jpg",
+      "outcome": "unreadable",
+      "ts": 1791877169.777
+    },
+    {
+      "seq": 25,
+      "case_id": "600e3d43-06c6-4c61-afdc-41e19a24bd5d",
+      "image_ref": "id_scan_0019.jpg",
+      "outcome": "ok",
+      "ts": 1791877169.781
+    },
+    {
+      "seq": 26,
+      "case_id": "049d5c60-65bd-4fa7-9a41-f81e4f9821a0",
+      "image_ref": "id_scan_0020.jpg",
+      "outcome": "error_500",
+      "ts": 1791877169.784
+    },
+    {
+      "seq": 27,
+      "case_id": "049d5c60-65bd-4fa7-9a41-f81e4f9821a0",
+      "image_ref": "id_scan_0020.jpg",
+      "outcome": "ok",
+      "ts": 1791877169.89
+    },
+    {
+      "seq": 28,
+      "case_id": "e83f7150-c3fc-443f-8059-43c02b81faa5",
+      "image_ref": "id_scan_0021.jpg",
+      "outcome": "ok",
+      "ts": 1791877169.894
+    },
+    {
+      "seq": 29,
+      "case_id": "3ce9bca4-e619-4953-87f0-d79737ec5320",
+      "image_ref": "id_scan_0022.jpg",
+      "outcome": "error_500",
+      "ts": 1791877169.897
+    },
+    {
+      "seq": 30,
+      "case_id": "3ce9bca4-e619-4953-87f0-d79737ec5320",
+      "image_ref": "id_scan_0022.jpg",
+      "outcome": "error_500",
+      "ts": 1791877170.003
+    },
+    {
+      "seq": 31,
+      "case_id": "3ce9bca4-e619-4953-87f0-d79737ec5320",
+      "image_ref": "id_scan_0022.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.211
+    },
+    {
+      "seq": 32,
+      "case_id": "efbbae31-0785-4b53-95e7-78e5f6d1d543",
+      "image_ref": "id_scan_0023.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.215
+    },
+    {
+      "seq": 33,
+      "case_id": "427074f0-013c-4c09-ad5f-14e4ade26f93",
+      "image_ref": "id_badscan_0024.jpg",
+      "outcome": "unreadable",
+      "ts": 1791877170.221
+    },
+    {
+      "seq": 34,
+      "case_id": "f47fe09f-3a9e-4c84-9cc9-db0757ac8fd9",
+      "image_ref": "id_scan_0025.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.225
+    },
+    {
+      "seq": 35,
+      "case_id": "e568ba23-8cd6-4f3c-899e-f58c8702b2ad",
+      "image_ref": "id_scan_0026.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.229
+    },
+    {
+      "seq": 36,
+      "case_id": "c9ef2b89-1f95-4df2-9884-a04e2c19aed9",
+      "image_ref": "id_scan_0028.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.232
+    },
+    {
+      "seq": 37,
+      "case_id": "9f020d11-981d-4da5-9697-66c2a4e0eead",
+      "image_ref": "id_scan_0029.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.236
+    },
+    {
+      "seq": 38,
+      "case_id": "16671549-7035-4b32-ab7d-a6553461212a",
+      "image_ref": "id_scan_0030.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.24
+    },
+    {
+      "seq": 39,
+      "case_id": "27df2d01-ab1b-4fc7-bd90-ba0bdf76b938",
+      "image_ref": "id_scan_0031.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.244
+    },
+    {
+      "seq": 40,
+      "case_id": "99efedc5-2093-41ec-be7c-552a8e245648",
+      "image_ref": "id_scan_0032.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.248
+    },
+    {
+      "seq": 41,
+      "case_id": "2af3d401-a218-4012-8dd3-3eaf6ca57f5e",
+      "image_ref": "id_scan_0033.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.251
+    },
+    {
+      "seq": 42,
+      "case_id": "954c38d6-3ab5-4a5d-968a-f58703a3670b",
+      "image_ref": "id_scan_0034.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.255
+    },
+    {
+      "seq": 43,
+      "case_id": "5c0a6741-714f-43ee-8ee5-c17f37221591",
+      "image_ref": "id_scan_0035.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.259
+    },
+    {
+      "seq": 44,
+      "case_id": "146c6be7-e350-45d8-bfc9-a8673f6c62db",
+      "image_ref": "id_scan_0036.jpg",
+      "outcome": "ok",
+      "ts": 1791877170.262
+    },
+    {
+      "seq": 45,
+      "case_id": "2ec86025-aee5-4df1-88ad-af35995c7837",
+      "image_ref": "id_badscan_0037.jpg",
+      "outcome": "unreadable",
+      "ts": 1791877170.265
+    },
+    {
+      "seq": 46,
+      "case_id": "c0b84b9f-0e80-4e9d-802e-01f7edfa2860",
+      "image_ref": "id_scan_0038.jpg",
+      "outcome": "error_500",
+      "ts": 1791877170.268
+    },
+    {
+      "seq": 47,
+      "case_id": "c0b84b9f-0e80-4e9d-802e-01f7edfa2860",
+      "image_ref": "id_scan_0038.jpg",
+      "outcome": "hang",
+      "ts": 1791877170.374
+    },
+    {
+      "seq": 48,
+      "case_id": "c0b84b9f-0e80-4e9d-802e-01f7edfa2860",
+      "image_ref": "id_scan_0038.jpg",
+      "outcome": "hang",
+      "ts": 1791877171.58
+    },
+    {
+      "seq": 49,
+      "case_id": "c0b84b9f-0e80-4e9d-802e-01f7edfa2860",
+      "image_ref": "id_scan_0038.jpg",
+      "outcome": "error_500",
+      "ts": 1791877172.99
+    },
+    {
+      "seq": 50,
+      "case_id": "aa76f07c-0614-4c3a-9769-11087ed9c551",
+      "image_ref": "id_scan_0039.jpg",
+      "outcome": "hang",
+      "ts": 1791877172.998
+    },
+    {
+      "seq": 51,
+      "case_id": "aa76f07c-0614-4c3a-9769-11087ed9c551",
+      "image_ref": "id_scan_0039.jpg",
+      "outcome": "error_500",
+      "ts": 1791877174.106
+    },
+    {
+      "seq": 52,
+      "case_id": "aa76f07c-0614-4c3a-9769-11087ed9c551",
+      "image_ref": "id_scan_0039.jpg",
+      "outcome": "hang",
+      "ts": 1791877174.317
+    },
+    {
+      "seq": 53,
+      "case_id": "aa76f07c-0614-4c3a-9769-11087ed9c551",
+      "image_ref": "id_scan_0039.jpg",
+      "outcome": "ok",
+      "ts": 1791877175.727
+    },
+    {
+      "seq": 54,
+      "case_id": "34f64ea9-e18f-4939-8f6e-707b333ce616",
+      "image_ref": "id_scan_0041.jpg",
+      "outcome": "ok",
+      "ts": 1791877175.735
+    },
+    {
+      "seq": 55,
+      "case_id": "c3aade32-1fe2-4704-963e-d73031a2cac9",
+      "image_ref": "id_scan_0042.jpg",
+      "outcome": "ok",
+      "ts": 1791877175.741
+    },
+    {
+      "seq": 56,
+      "case_id": "24c3c877-b71c-4864-9305-54999c7cff0f",
+      "image_ref": "id_scan_0043.jpg",
+      "outcome": "hang",
+      "ts": 1791877175.747
+    },
+    {
+      "seq": 57,
+      "case_id": "24c3c877-b71c-4864-9305-54999c7cff0f",
+      "image_ref": "id_scan_0043.jpg",
+      "outcome": "hang",
+      "ts": 1791877176.855
+    },
+    {
+      "seq": 58,
+      "case_id": "24c3c877-b71c-4864-9305-54999c7cff0f",
+      "image_ref": "id_scan_0043.jpg",
+      "outcome": "ok",
+      "ts": 1791877178.067
+    },
+    {
+      "seq": 59,
+      "case_id": "ce62c791-0aa7-4181-8284-e140968fdc83",
+      "image_ref": "id_badscan_0044.jpg",
+      "outcome": "unreadable",
+      "ts": 1791877178.074
+    },
+    {
+      "seq": 60,
+      "case_id": "7aa00590-294b-433c-a5e9-663fc2caa740",
+      "image_ref": "id_scan_0045.jpg",
+      "outcome": "ok",
+      "ts": 1791877178.078
+    },
+    {
+      "seq": 61,
+      "case_id": "bc4c1eae-4b61-4b6c-9cf3-23a835ffcbed",
+      "image_ref": "id_scan_0046.jpg",
+      "outcome": "ok",
+      "ts": 1791877178.083
+    },
+    {
+      "seq": 62,
+      "case_id": "55a6350e-af4b-4359-b411-9a22ed237596",
+      "image_ref": "id_scan_0048.jpg",
+      "outcome": "error_500",
+      "ts": 1791877178.087
+    },
+    {
+      "seq": 63,
+      "case_id": "55a6350e-af4b-4359-b411-9a22ed237596",
+      "image_ref": "id_scan_0048.jpg",
+      "outcome": "ok",
+      "ts": 1791877178.192
+    },
+    {
+      "seq": 64,
+      "case_id": "0e36a876-c585-4372-8f15-35ce6364a9bf",
+      "image_ref": "id_scan_0049.jpg",
+      "outcome": "error_500",
+      "ts": 1791877178.197
+    },
+    {
+      "seq": 65,
+      "case_id": "0e36a876-c585-4372-8f15-35ce6364a9bf",
+      "image_ref": "id_scan_0049.jpg",
+      "outcome": "ok",
+      "ts": 1791877178.307
+    },
+    {
+      "seq": 66,
+      "case_id": "10d2be72-1d8c-4ecf-8a7a-035da8fe77b6",
+      "image_ref": "id_scan_0050.jpg",
+      "outcome": "ok",
+      "ts": 1791877178.316
+    }
+  ],
+  "summary": {
+    "all_attempts": 66,
+    "readable_attempts": 61,
+    "readable_outcomes": {
+      "ok": 37,
+      "error_500": 14,
+      "hang": 10
+    },
+    "readable_outcome_rates": {
+      "ok": 0.6065573770491803,
+      "error_500": 0.22950819672131148,
+      "hang": 0.16393442622950818
+    },
+    "unreadable_attempts": 5,
+    "terminal_counts": {
+      "ocr_done": 37,
+      "ocr_failed": 6
+    },
+    "retryable_exhausted": 1
+  }
+}

@@ -1,8 +1,8 @@
 # 高标准验收与评分对照
 
-2026-10-12 制定，2026-10-13 更新。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。Q1 导入/查询/审核已验证，Q2/Q3/CI 尚待实现与验收。
+2026-10-12 制定，2026-10-13 更新。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。Q1 与完整 Q2 已验证，Q3/CI 尚待实现与验收。
 
-Q1 证据：[干净快照 pytest 输出](q1_api/evidence/q1-clean-snapshot-pytest-20261013.txt)、[审核测试](q1_api/tests/test_review.py)、[原生进程重启测试](q1_api/tests/test_native_process.py)、[模块核对表](q1_api/evidence/Q1-ACCEPTANCE-20261013.md)、[过程记录](WORK_LOG.zh-CN.md)。Q1 范围内的生命周期以数据库 fixture 提供 OCR 完成状态；实际 OCR 与导出仍待 Q2，不能宣称整个系统端到端完成。
+Q1 历史证据：[干净快照 pytest 输出](q1_api/evidence/q1-clean-snapshot-pytest-20261013.txt)、[审核测试](q1_api/tests/test_review.py)、[原生进程重启测试](q1_api/tests/test_native_process.py)、[模块核对表](q1_api/evidence/Q1-ACCEPTANCE-20261013.md)、[过程记录](WORK_LOG.zh-CN.md)。Q1独立测试用OCR fixture；本轮已补真实OCR/两级审核和故障恢复，见 [Q2.1/Q2.2核验](q2_integration/evidence/OCR-ACCEPTANCE.zh-CN.md)。本轮完整原生流程（含导出/交付）也已验证，见 [Q2完整核验](q2_integration/evidence/Q2-ACCEPTANCE-20261013.md)；容器部署/备份仍未完成。
 
 来源：[原题评分与提交要求](README.md)、[OCR](mock_ocr/README.md)、[开户](mock_onboarding/README.md)。本文中的“加强项”是为提高可信度自设的标准，不是出题方额外评分细则。
 
@@ -66,7 +66,7 @@ smoke test 必须另行上传一个新批次，使用响应返回的 ID 完整�
 
 CSV 字段必须在 T5 开始前写入明确合约：建议 `case_ref,applicant_name,id_number,dob,issue_date,image_ref,ocr_full_name,ocr_id_number,ocr_dob,ocr_issue_date,ocr_confidence`；原始六列保留申请值，OCR 列使用保存的 OCR 结果。以 case_ref 稳定排序，UTF-8、固定换行、标准 CSV 引号规则；不依据未定义的人工纠错字段生成内容。mock 不限制 schema，此为应用自选约定。
 
-每案最多属于一个 export（数据库约束）。`exported` 表示已纳入不可变快照，不等于远端已交付。单独报告 delivery 的 pending/delivered/failed 及最后错误、尝试次数、receipt；空导出、交付失败和未知收件状态不能都返回一个含糊 success。
+每案最多属于一个 export（数据库约束）。`exported` 表示已纳入不可变快照，不等于远端已交付。单独报告 delivery 的 pending/delivering/delivered/failed 及最后错误、尝试次数、receipt；空导出、交付失败和未知收件状态不能都返回一个含糊 success。
 
 单次交付同样设置明确 timeout、有限尝试/退避及耗尽处理。远端 500 重试，超时按未知结果处理并复用原键，400 及回执不匹配停止自动重试并报告原因。重启后能够查询未确认 export 并通过 deliver 端点恢复，不要求创建新导出。验证全程使用同一 mock 实例维护其去重记录。
 

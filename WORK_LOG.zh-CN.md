@@ -172,3 +172,70 @@ Q2/Q3/CI/最终公开 fork 尚未完成。Alex 仍需亲自解释或修改状态
 完整特殊情况、32 组合表、HTTP 结果、权限/审计/OCR/导出/部署限制见 `q1_api/evidence/Q1-REVIEW-EDGE-CASES.zh-CN.md`；原始全套输出、并发重复输出、前后探测和源文件指纹在相同目录。认证/角色/两人分离非核心 Q1 范围，目前确实缺失；同一客户端可以顺序完成两级。未开始 Q2/Q3，也未做本轮独立代理审查。
 
 Git：保留原 Q1 模块提交，按原计划“必要修复如实保留”追加一次修复/验证提交，不 amend/squash、不 push。提交后实际克隆验证记录到 `.gekko-setup/q1-edge-final-clone-verification.json`，避免文档 hash 自引用。结论只限本轮核验的 Q1 审批行为，不宣称生产级完全合格。
+
+## 2026-10-13：Q2 T3/T4 OCR 接入、审批保护与故障恢复
+
+用户授权继续Q2 OCR/恢复，合理使用子agent，并强调不覆盖已审批状态。本轮在`c6b8f9d`干净基线上实施Q2.1/Q2.2；不实现Q2.3、不调整既有审批规则、不另开用户对话。主线程集成，三个有明确文件边界的子agent分别做合同核对/最终只读审查、OCR客户端及测试、原生故障实验。新建Q2_OCR_IMPLEMENTATION.zh-CN.md记录接口与进度。
+
+### 实现及理由
+
+- OCRClient只做一次有界请求；显式阶段timeout和总deadline，64KiB响应上限，严格校验五字段；400/422/坏成功响应不自动重试，5xx/429/超时/网络故障可重试。结果和原申请字段分开。
+- OCRManager生命周期拥有任务和HTTPclient；注册锁防重复同批任务，全局串行且最多四个活动/排队批次，超量429。同步SQLite工作放到线程，网络等待不持有事务。
+- cases追加OCR结果/错误/次数/token；ocr_runs、ocr_attempts持久保存进度与已观测历史。旧Q1数据库幂等增列，保留原案件及审核记录。
+- 仅pending/可重试ocr_failed可领取。回写时在事务中同时匹配原状态和run token；结果、状态、尝试历史原子提交。旧成功、旧失败、取消后仍运行的SQLite线程不能覆盖人工审批或新运行结果。
+- 保持案件pending而非引入processing；重启把未结束运行标interrupted。任务异常标可见错误和可重试失败；错误落库遇DB锁时保留进程内待协调信息，下一次成功GET/process落库。存储恢复和单worker是明确前提。
+
+### 测试和修复过程
+
+1. 客户端初始91项因模块缺失RED，实施后GREEN；补理由净化1项RED→GREEN；主线程审查发现异常Unicode结果会污染API响应、Python3.10异步timeout异常类别不同，7项新回归RED（含正常Unicode对照），修复后客户端100项通过。
+2. 主线程18项工作流初始RED（缺少调度/端点），实施后18通过；追加旧token、事务回滚、八路触发、队列容量、生命周期取消等验证。
+3. DB持锁且后台异常时，错误落库本身失败，测试复现运行一直显示running；补延后协调后转绿。
+4. 补真实旧Q1结构迁移、取消后仍执行DB线程、全拒绝空批次、真实退避间隔等。独立审查P2复现“取消触发领取但DB线程继续提交”的running孤儿；回归先失败，shield领取并等待/标中断后通过。工作流最终29项。
+5. 原生脚本初次有URL缺斜线、按case_ref映射CSV误选被拒重复行两处测试工具错误，agent修正后2项原生测试通过；这些工具修正不假称业务TDD。
+6. 最终本机标准根目录命令：**288 passed, 1 warning in 17.43s**。全新临时源快照/全新Python3.12.14环境，仅requirements安装：**288 passed, 1 warning in 21.60s**。保留旧TestClient/httpx弃用提示；不把Python3.10异常兼容单测等同于实际3.10环境验收。
+
+### 实际测量与恢复
+
+使用未修改mock，默认500=0.2、hang=0.1、延迟600s；预选seed42/7/99各测四/六次预算。每组新mock，普通POSTprocess，不使用隐藏恢复参数。另做实际SIGKILL，保持mock/DB，再启动API和有限重跑；以case_ref比完整OCR字段/最终状态。
+
+最终冻结源码实验在ocr-final-20261013，前后23个源文件哈希一致。三个恢复比较全部通过：seed42干净/恢复各两轮，7/99各一轮。每种预算可读请求：seed42=61（37ok/14error500/10hang），7=60（38/16/6），99=53（38/8/7）；另各有5不可读。seed42四/六次都保留1个可读耗尽，不隐藏单轮失败。
+
+独立20请求时延样本成功min/median/max=0.939/1.128/3.384ms；选择1s本地mock预算，默认六次且退避0.1/0.2/0.4/0.5/0.5，网络/退避最多7.7s每案。六次是模型支持的保守选择，本次没有实测出相对四次的终态改善；最坏多3s/案。非真实厂商SLA；排队/SQLite/调度不在网络预算内。
+
+### 证据、范围和Git
+
+`q2_integration/evidence/OCR-ACCEPTANCE.zh-CN.md`映射Q2.1/Q2.2、完整统计、复现命令和限制。最终report/source-manifest/每轮完整案件/debug请求均保留；冻结前试验也保留为历史。测试临时数据库/进程日志已被.gitignore排除，所有实验进程清理。未修改原题README、两个mock或Q3骨架，未加依赖。
+
+同步使用说明、REFLECTION、ACCEPTANCE、PROJECT_PLAN、AI_LOG/TOOLS。基线仍是c6b8f9d，Q2工作树已保存但未提交；按原题每模块一次提交，待T5导出/交付完成统一提交Q2。不push、不发布。当前不声明Q2整体完成、Linux CI、分布式任务或用户个人理解通过。
+
+## 2026-10-13：Q2 T5 导出/交付与完整模块验收
+
+用户授权开始 Q2.3，并允许自行管理上下文/按需开新对话。本轮继续原对话，保留 OCR 既有未提交工作；三个子 agent 分别负责仅 delivery_client 和其测试、仅原生交付测试/实验、只读完整 Q2 审查。主线程负责导出事务、dispatcher、API、整合测试和文档。未建立额外用户对话，未让子 agent 提交或交叉修改文件。
+
+### 设计与实现
+
+exports 保存不可变 CSV BLOB、文件名、SHA、UUID和固定幂等键；成员唯一约束+状态变更同事务。只选二审通过，空导出200不创建文件，新审批另建新键。下载返回保存字节，11列UTF-8/LF按case_ref排序；缺完整OCR字段返回409整批保持原状态。exported与交付状态分开，失败不回退审批。
+
+delivery_client 一次请求、1s总deadline、严格回执身份/哈希/类型/64KiB上限。dispatcher单worker串行领取持久pending，每轮四次且指数退避；成功需真实匹配回执。尝试意图先入库，结果用token/status条件回写。未知收件结果一直复用原键和字节。SIGKILL后自动重排未完交付；正常关闭/任务失败置failed，明确deliver恢复。数据库不可写时先协调失败再开新网络请求。详细理由在Q2_DELIVERY_IMPLEMENTATION.zh-CN.md。
+
+### 测试驱动与缺陷记录
+
+1. 导出六项测试先缺模块RED；事务实现后五项通过，空路由404仍失败；接入API后转绿。验证八路并发、新增批准、快照稳定、事务回滚和缺OCR。
+2. 客户端子agent99项RED→GREEN，再以三项输入字典在I/O中变动测试复现身份漂移，固定入口快照后共102通过。
+3. 工作流七项初始缺模块RED；接入调度后通过。再补五项：claim取消、旧record线程、真实DB锁、回执保存失败、八路deliver。重复cancel先留下delivering导致真实失败，增加stopping幂等close后12通过。没有把原本通过的补强测试冒称RED。
+4. 三项原生测试先实际404；接入后POST丢失null receipt违反约定，改response_model_exclude_unset保留显式null。三项随后通过。全生命周期真实sample、故意lostresponse、实际SIGKILL，两个mock不修改。
+5. 独立只读审查未发现剩余P1/P2；另独立执行115项客户端/导出/初版工作流、三项原生，最后12项补强工作流。审查提醒正常关闭与SIGKILL恢复路径不同、attempts是意图计数，已写入使用说明和REFLECTION。
+
+### 最终验证与评分
+
+本机 `.venv/bin/python -m pytest q1_api/ -q`：**411 passed, 1 warning in 23.63s**。全新uv创建Python3.12.14环境，仅安装根requirements，临时源码快照清除PYTHONPATH后跑标准 `python -m pytest q1_api/`：**411 passed, 1 warning in 26.24s**。已有Starlette/httpx弃用提示保留；测试通过不等于已经实跑Python3.10/Linux。依赖实际版本已留证，最终固定仍随Q3验收处理。
+
+业务源码冻结后delivery_experiment三项均PASS：正常两份导出2/1行，各一次ingestion；lostresponse（延迟.5s、timeout.1s）两次请求仅一次ingestion；SIGKILL在远端收件、本地receipt空时returncode=-9，原mock保持运行，重启自动恢复，两次请求仍一次ingestion。耗时约.920/1.019/1.185s。CSV字节/哈希/receipt/debug均一致，33个源码文件实验前后哈希相同；测试子进程全部退出。OCR旧实测证据保留，整套回归再次覆盖OCR。
+
+Q2三个评分项10/12/13分已逐项关联证据；不代替出题方给分。正式表在q2_integration/evidence/Q2-ACCEPTANCE-20261013.md，原始delivery报告/CSV/trace和pytest/环境日志同目录。同步README、REFLECTION、规划、验收矩阵、AI_LOG和TOOLS。明确记录Q3/CI/个人理解尚待完成。
+
+### Git和后续
+
+将全部Q2代码、测试、记录和合成数据证据作为一次完整模块提交，沿用codex/assessment-implementation，不改原题README/两个mock/Q3，不改系统Python或Docker。git diff --check和暂存审阅后提交，不amend/squash/force-push。提交后实际本地clone再跑标准pytest，真实hash/日志保存在.gekko-setup/q2-final-clone-verification.json，最终答复报告。无push、公开fork或申请提交。
+
+下一步Q3：先部署/持久化/自动seed与nginx两路代理，再readiness，再在线备份保留七份/真实恢复和完整smoke；最后CI及本人讲解演练。本轮不提前宣称这些工作完成。

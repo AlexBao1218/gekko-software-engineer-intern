@@ -7,18 +7,18 @@ Complete each section before submission. Replace bracketed prompts with decision
 | Decision | Rationale |
 |---|---|
 | Database | SQLite via Python's standard library. At T1, batches and cases are stored in a single file; import metadata, rejected-row details and accepted cases commit in one short transaction. This keeps native startup simple and provides atomic import behavior at the exercise's scale. Foreign keys, required values and per-batch reference uniqueness are enforced in storage. One-second lock waits bound contention; temporary unavailability is reported as 503. |
-| Background OCR processing | Not completed: Q2 background processing and recovery are planned but not implemented. |
+| Background OCR processing | Lifespan-owned asyncio tasks with one globally serial OCR loop and at most four active/queued batches, explicitly one Uvicorn worker. Trigger returns 202; repeated active triggers reuse the run. SQLite stores runs and observed attempts; cases keep pending/retryable failure while waiting. UUID run tokens plus eligible-state guards fence late writes and preserve human approval. No network call holds a DB transaction. |
 | Review state machine | `q1_api/app/workflow.py` holds four explicit transitions keyed by current status, stage and decision; every other transition is rejected with 409. `stage2_rejected` makes rejection at either stage terminal. SQLite `BEGIN IMMEDIATE` plus an old-status conditional UPDATE prevent competing decisions from both succeeding. The case change and append-only review record are one transaction; record insertion failure rolls back the status change. |
-| Delivery idempotency key | Not completed: Q2 export/delivery has not been implemented. |
+| Delivery idempotency key | One persisted UUID export uses `export:<UUID>` on every send. CSV bytes, filename, SHA-256, unique membership and case status are saved in one transaction before HTTP. A separate delivery state distinguishes snapshot creation from confirmed ingestion. Receipt key/file/hash must match. Durable serial dispatch, token-guarded writes and same-key replay recover unknown results. |
 
 ## 2. Mock observations and retry configuration
 
 | Item | Measurement or decision |
 |---|---|
-| Observed OCR failure rates | Not measured for the application yet. The earlier contract-only diagnostic is not a Q2 failure-rate assessment. |
-| OCR timeout | Not selected: requires Q2 measurements. |
-| Retry limit | Not selected: requires Q2 measurements. |
-| Exhausted retries | Not implemented: Q2. |
+| Observed OCR failure rates | Measured against original mock with seeds 42/7/99, each using fresh four/six-attempt runs; raw attempts and actual rates are in q2_integration/evidence/OCR-ACCEPTANCE.zh-CN.md. Configured 20% HTTP 500 and 10% hang are not substituted for observations. |
+| OCR timeout | One second for phase timeouts and the whole attempt. Successful local mock requests were measured in milliseconds, while default hangs last 600s. This is an assessment-local budget, not a claim about real vendors. |
+| Retry limit | Six total attempts, exponential delay 0.1s capped at 0.5s. Network deadline/backoff budget 7.7s per case, excluding queue/SQLite/OS overhead. Four attempts cost at most 4.7s. Six is a conservative finite model-based choice; these three seeds did not show a single-round outcome improvement over four. |
+| Exhausted retries | Visible ocr_failed with safe last error/code, cumulative applied attempt count and retryability. Normal process retries pending/transient failures with another finite budget; 400/422/invalid response and reviewed states are excluded. Prior run/attempt records remain in SQLite. |
 
 ## 3. Verification evidence
 
@@ -71,11 +71,59 @@ current terminal-rejection rules. Real OCR/export race checks remain Q2.
 
 ### OCR recovery
 
-Not completed: Q2 OCR recovery has not been implemented or validated.
+Implemented and verified for Q2.1/Q2.2. Original mock default-fault measurements
+and actual API SIGKILL/restart comparisons cover seeds 42/7/99. All final
+case_ref/full OCR object/status comparisons passed within the predefined maximum
+of three recovery rounds. Seed 42 needed two clean/recovery rounds; seeds 7/99
+needed one. Seed 42 had one readable exhaustion after either four or six attempts
+in the single-round measurements; those failures remain in the evidence.
+
+Tests also cover duplicate triggers, queued capacity, partial progress, terminal
+errors, persistent transient failure, late success/failure after human approval,
+cancelled SQLite threads, old run tokens, attempt/result atomicity, old-Q1 schema
+migration, lifecycle cancellation and delayed error persistence after DB lock
+recovery. A read-only review found cancelled trigger claims could become orphaned
+running jobs; a failing regression preceded shielded claim/cleanup repair.
+
+Only a single worker is supported. Completed run means the attempt budget ended,
+not universal OCR success. In-flight calls killed before local persistence may be
+absent from local attempt history; mock debug records provide the external view.
+Disk outage recovery requires storage to return and a batch query/process (or
+restart); this is not a distributed queue, power-loss or corruption guarantee.
 
 ### Account-opening submission
 
-Not completed: Q2 application delivery has not been implemented or validated.
+Implemented and verified. Exact approved membership, rollback, concurrent exports,
+new approvals, immutable downloads, strict receipts, bounded retry and duplicate
+deliver calls are covered. All three original-mock native scenarios passed:
+full lifecycle creates two distinct exports (2 and 1 rows); response loss after
+ingestion takes two requests but one ingestion; actual SIGKILL after remote
+receipt storage and before local confirmation automatically recovers on restart,
+also with two attempts and one ingestion. CSV bytes/hash match local and remote
+receipts. No mock restart/reset occurs across recovery.
+
+Defaults are a 1s whole-attempt deadline, four total attempts and 0.1/0.2/0.4s
+backoff (4.7s network/backoff budget, excluding queue/storage overhead). Timeout,
+5xx/429 and network failure retry; 400/invalid or mismatched receipt stops the
+round. Exhausted/failed exports remain visible and require explicit deliver for
+a new finite round; their original bytes/key never change. This is an assessment
+budget, not a real-vendor SLA. The controlled lost-response experiment uses .1s
+timeout against .5s response delay, and succeeds on its second request.
+
+Graceful shutdown marks active delivery failed/retryable; explicit deliver resumes.
+SIGKILL leaves delivering, which startup automatically requeues. Durable attempt
+counts are intents recorded before I/O, not proof every request was sent. Old
+threads cannot overwrite newer results. Database-lock deferral and local receipt
+write failure also have dedicated recovery tests. A repeated cancellation test
+exposed interrupted claim cleanup; idempotent close repaired it before acceptance.
+
+Full suite: 411 passed locally and in a new Python 3.12.14 requirements-only
+environment. Existing TestClient deprecation warning remains. Full evidence,
+limits, native source fingerprints and reproduction commands are linked in
+`q2_integration/evidence/Q2-ACCEPTANCE-20261013.md`.
+
+The design supports one API worker. Mock deduplication lasts only as long as its
+process; production idempotency retention and storage corruption are not validated.
 
 ### Backup retention
 
@@ -84,10 +132,12 @@ Not completed: Q3 backup and restoration have not been implemented or validated.
 ## 4. AI-generated code requiring further review
 
 Candidate understanding has not yet been personally verified. Codex generated
-the Q1 implementation in `q1_api/app/{main,models,imports,db,workflow}.py` and its tests.
+the Q1 implementation and Q2 OCR/export/delivery modules in `q1_api/app/` and their tests.
 Alex should explain the parse-before-write boundary, SQLite rollback/constraints,
 CSV physical line numbering, the transition table, concurrent-review serialization,
-atomic audit writes, and HTTP error distinctions before this section
+atomic audit writes, HTTP error distinctions, asyncio task lifecycle, retry
+budgets, run-token fencing, immutable export identity, unknown ingestion outcomes,
+receipt verification and crash recovery before this section
 can be finalized. This records pending review, not an assertion about what Alex
 does or does not understand.
 
@@ -95,8 +145,8 @@ The assessment values accurate disclosure. The requirement to explain submitted 
 
 ## 5. Incomplete work and next steps
 
-Q1 import/query and two-stage review are implemented. The Q1-scoped lifecycle
-uses a database fixture for OCR completion. Q2 OCR/recovery/export/delivery,
+Q1 and all Q2 parts are implemented and verified. Isolated Q1 tests still use OCR
+fixtures; Q2 native tests exercise the real mocks through delivery.
 Q3 deployment/readiness/seeding/backup/restore, CI, final full-system clean-clone validation
 and candidate review remain unfinished. The installed TestClient emits a
 dependency deprecation warning; tests currently run successfully. The one-day

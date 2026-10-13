@@ -1,0 +1,728 @@
+{
+  "scenario": "lost-response",
+  "mock_seed": 7,
+  "mock_config": {
+    "ONBOARDING_FAIL_RATE": "0",
+    "ONBOARDING_LOST_RATE": "1",
+    "ONBOARDING_LOST_SECONDS": "0.5"
+  },
+  "api_config": {
+    "DELIVERY_TIMEOUT_SECONDS": "0.1",
+    "DELIVERY_MAX_ATTEMPTS": "4",
+    "DELIVERY_BACKOFF_SECONDS": "0.1",
+    "DELIVERY_BACKOFF_CAP_SECONDS": "0.5",
+    "DELIVERY_URL": "http://127.0.0.1:57772/ingest"
+  },
+  "ocr_config": {
+    "OCR_FAIL_RATE": "0",
+    "OCR_HANG_RATE": "0"
+  },
+  "api_requests": [
+    {
+      "at_epoch": 1791879793.531156,
+      "method": "POST",
+      "path": "/api/batches",
+      "status_code": 201,
+      "response": {
+        "id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.528921+00:00",
+        "total_rows": 3,
+        "accepted_count": 3,
+        "rejected_count": 0,
+        "rejected_rows": [],
+        "status_counts": {
+          "pending": 3,
+          "ocr_done": 0,
+          "ocr_failed": 0,
+          "stage1_approved": 0,
+          "stage1_rejected": 0,
+          "stage2_approved": 0,
+          "stage2_rejected": 0,
+          "exported": 0
+        },
+        "ocr_run": null
+      }
+    },
+    {
+      "at_epoch": 1791879793.5356202,
+      "method": "POST",
+      "path": "/api/batches/9b890808-a745-4748-9f36-a6f543757399/process",
+      "status_code": 202,
+      "response": {
+        "id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.528921+00:00",
+        "total_rows": 3,
+        "accepted_count": 3,
+        "rejected_count": 0,
+        "rejected_rows": [],
+        "status_counts": {
+          "pending": 3,
+          "ocr_done": 0,
+          "ocr_failed": 0,
+          "stage1_approved": 0,
+          "stage1_rejected": 0,
+          "stage2_approved": 0,
+          "stage2_rejected": 0,
+          "exported": 0
+        },
+        "ocr_run": {
+          "id": "e60f5f5e-6e51-4eff-ab27-ffd050cf7fc8",
+          "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+          "status": "running",
+          "error": null,
+          "total": 3,
+          "completed": 0,
+          "created_at": "2026-10-13T08:23:13.532745+00:00",
+          "finished_at": null
+        }
+      }
+    },
+    {
+      "at_epoch": 1791879793.538898,
+      "method": "GET",
+      "path": "/api/batches/9b890808-a745-4748-9f36-a6f543757399",
+      "status_code": 200,
+      "response": {
+        "id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.528921+00:00",
+        "total_rows": 3,
+        "accepted_count": 3,
+        "rejected_count": 0,
+        "rejected_rows": [],
+        "status_counts": {
+          "pending": 3,
+          "ocr_done": 0,
+          "ocr_failed": 0,
+          "stage1_approved": 0,
+          "stage1_rejected": 0,
+          "stage2_approved": 0,
+          "stage2_rejected": 0,
+          "exported": 0
+        },
+        "ocr_run": {
+          "id": "e60f5f5e-6e51-4eff-ab27-ffd050cf7fc8",
+          "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+          "status": "running",
+          "error": null,
+          "total": 3,
+          "completed": 0,
+          "created_at": "2026-10-13T08:23:13.532745+00:00",
+          "finished_at": null
+        }
+      }
+    },
+    {
+      "at_epoch": 1791879793.573153,
+      "method": "GET",
+      "path": "/api/batches/9b890808-a745-4748-9f36-a6f543757399",
+      "status_code": 200,
+      "response": {
+        "id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.528921+00:00",
+        "total_rows": 3,
+        "accepted_count": 3,
+        "rejected_count": 0,
+        "rejected_rows": [],
+        "status_counts": {
+          "pending": 0,
+          "ocr_done": 3,
+          "ocr_failed": 0,
+          "stage1_approved": 0,
+          "stage1_rejected": 0,
+          "stage2_approved": 0,
+          "stage2_rejected": 0,
+          "exported": 0
+        },
+        "ocr_run": {
+          "id": "e60f5f5e-6e51-4eff-ab27-ffd050cf7fc8",
+          "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+          "status": "completed",
+          "error": null,
+          "total": 3,
+          "completed": 3,
+          "created_at": "2026-10-13T08:23:13.532745+00:00",
+          "finished_at": "2026-10-13T08:23:13.571597+00:00"
+        }
+      }
+    },
+    {
+      "at_epoch": 1791879793.574611,
+      "method": "GET",
+      "path": "/api/batches/9b890808-a745-4748-9f36-a6f543757399/cases?page_size=100",
+      "status_code": 200,
+      "response": {
+        "items": [
+          {
+            "id": "9ce3e3e1-ef49-4a79-8ed3-64a7a0c9120c",
+            "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+            "row_number": 2,
+            "case_ref": "APPL-2026-0001",
+            "applicant_name": "Test Applicant 001",
+            "id_number": "TEST-ID-000001",
+            "dob": "1961-02-02",
+            "issue_date": "2021-02-02",
+            "image_ref": "id_scan_0001.jpg",
+            "status": "ocr_done",
+            "ocr_fields": {
+              "id_number": "TEST-ID-830454",
+              "full_name": "Test Applicant 0454",
+              "dob": "1969-11-19",
+              "issue_date": "2020-06-06",
+              "confidence": 0.94
+            },
+            "ocr_error": null,
+            "ocr_error_code": null,
+            "ocr_retryable": false,
+            "ocr_attempts": 1
+          },
+          {
+            "id": "9870fb64-2738-4177-b82c-32de0f65645b",
+            "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+            "row_number": 3,
+            "case_ref": "APPL-2026-0002",
+            "applicant_name": "Test Applicant 002",
+            "id_number": "TEST-ID-000002",
+            "dob": "1962-03-03",
+            "issue_date": "2022-03-03",
+            "image_ref": "id_scan_0002.jpg",
+            "status": "ocr_done",
+            "ocr_fields": {
+              "id_number": "TEST-ID-776170",
+              "full_name": "Test Applicant 6170",
+              "dob": "1955-10-12",
+              "issue_date": "2017-10-20",
+              "confidence": 0.9
+            },
+            "ocr_error": null,
+            "ocr_error_code": null,
+            "ocr_retryable": false,
+            "ocr_attempts": 1
+          },
+          {
+            "id": "de5780cb-4e77-486d-905a-4d6083fbc8e5",
+            "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+            "row_number": 4,
+            "case_ref": "APPL-2026-0003",
+            "applicant_name": "Test Applicant 003",
+            "id_number": "TEST-ID-000003",
+            "dob": "1963-04-04",
+            "issue_date": "2023-04-04",
+            "image_ref": "id_scan_0003.jpg",
+            "status": "ocr_done",
+            "ocr_fields": {
+              "id_number": "TEST-ID-225059",
+              "full_name": "Test Applicant 5059",
+              "dob": "1959-09-02",
+              "issue_date": "2024-02-05",
+              "confidence": 0.99
+            },
+            "ocr_error": null,
+            "ocr_error_code": null,
+            "ocr_retryable": false,
+            "ocr_attempts": 1
+          }
+        ],
+        "total": 3,
+        "page": 1,
+        "page_size": 100
+      }
+    },
+    {
+      "at_epoch": 1791879793.5766022,
+      "method": "POST",
+      "path": "/api/cases/9ce3e3e1-ef49-4a79-8ed3-64a7a0c9120c/review",
+      "status_code": 200,
+      "response": {
+        "id": "9ce3e3e1-ef49-4a79-8ed3-64a7a0c9120c",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "row_number": 2,
+        "case_ref": "APPL-2026-0001",
+        "applicant_name": "Test Applicant 001",
+        "id_number": "TEST-ID-000001",
+        "dob": "1961-02-02",
+        "issue_date": "2021-02-02",
+        "image_ref": "id_scan_0001.jpg",
+        "status": "stage1_approved",
+        "ocr_fields": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "ocr_error": null,
+        "ocr_error_code": null,
+        "ocr_retryable": false,
+        "ocr_attempts": 1,
+        "review": {
+          "stage": 1,
+          "decision": "approve",
+          "previous_status": "ocr_done",
+          "new_status": "stage1_approved",
+          "reviewed_at": "2026-10-13T08:23:13.575655+00:00"
+        }
+      }
+    },
+    {
+      "at_epoch": 1791879793.578497,
+      "method": "POST",
+      "path": "/api/cases/9ce3e3e1-ef49-4a79-8ed3-64a7a0c9120c/review",
+      "status_code": 200,
+      "response": {
+        "id": "9ce3e3e1-ef49-4a79-8ed3-64a7a0c9120c",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "row_number": 2,
+        "case_ref": "APPL-2026-0001",
+        "applicant_name": "Test Applicant 001",
+        "id_number": "TEST-ID-000001",
+        "dob": "1961-02-02",
+        "issue_date": "2021-02-02",
+        "image_ref": "id_scan_0001.jpg",
+        "status": "stage2_approved",
+        "ocr_fields": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "ocr_error": null,
+        "ocr_error_code": null,
+        "ocr_retryable": false,
+        "ocr_attempts": 1,
+        "review": {
+          "stage": 2,
+          "decision": "approve",
+          "previous_status": "stage1_approved",
+          "new_status": "stage2_approved",
+          "reviewed_at": "2026-10-13T08:23:13.577679+00:00"
+        }
+      }
+    },
+    {
+      "at_epoch": 1791879793.580283,
+      "method": "POST",
+      "path": "/api/batches/9b890808-a745-4748-9f36-a6f543757399/export",
+      "status_code": 202,
+      "response": {
+        "count": 1,
+        "export": {
+          "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+          "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+          "created_at": "2026-10-13T08:23:13.579293+00:00",
+          "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+          "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+          "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+          "row_count": 1,
+          "status": "pending",
+          "attempts": 0,
+          "receipt": null,
+          "error_code": null,
+          "error": null,
+          "retryable": false
+        }
+      }
+    },
+    {
+      "at_epoch": 1791879793.581397,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3/download",
+      "status_code": 200,
+      "bytes": 275,
+      "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642"
+    },
+    {
+      "at_epoch": 1791879793.583413,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivering",
+        "attempts": 1,
+        "receipt": null,
+        "error_code": null,
+        "error": null,
+        "retryable": false
+      }
+    },
+    {
+      "at_epoch": 1791879793.605825,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivering",
+        "attempts": 1,
+        "receipt": null,
+        "error_code": null,
+        "error": null,
+        "retryable": false
+      }
+    },
+    {
+      "at_epoch": 1791879793.6278841,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivering",
+        "attempts": 1,
+        "receipt": null,
+        "error_code": null,
+        "error": null,
+        "retryable": false
+      }
+    },
+    {
+      "at_epoch": 1791879793.658449,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivering",
+        "attempts": 1,
+        "receipt": null,
+        "error_code": null,
+        "error": null,
+        "retryable": false
+      }
+    },
+    {
+      "at_epoch": 1791879793.684094,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivering",
+        "attempts": 1,
+        "receipt": null,
+        "error_code": null,
+        "error": null,
+        "retryable": false
+      }
+    },
+    {
+      "at_epoch": 1791879793.709106,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivering",
+        "attempts": 1,
+        "receipt": null,
+        "error_code": "timeout",
+        "error": "Delivery request timed out; ingestion is unconfirmed",
+        "retryable": true
+      }
+    },
+    {
+      "at_epoch": 1791879793.758288,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivering",
+        "attempts": 1,
+        "receipt": null,
+        "error_code": "timeout",
+        "error": "Delivery request timed out; ingestion is unconfirmed",
+        "retryable": true
+      }
+    },
+    {
+      "at_epoch": 1791879793.8074481,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivering",
+        "attempts": 2,
+        "receipt": null,
+        "error_code": "timeout",
+        "error": "Delivery request timed out; ingestion is unconfirmed",
+        "retryable": true
+      }
+    },
+    {
+      "at_epoch": 1791879793.8395252,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "status_code": 200,
+      "response": {
+        "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "created_at": "2026-10-13T08:23:13.579293+00:00",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "row_count": 1,
+        "status": "delivered",
+        "attempts": 2,
+        "receipt": {
+          "delivery_id": "DLV-0001",
+          "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+          "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+          "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+          "ingested_at": 1791879793,
+          "attempts": 2,
+          "deduplicated": true
+        },
+        "error_code": null,
+        "error": null,
+        "retryable": false
+      }
+    },
+    {
+      "at_epoch": 1791879793.847971,
+      "method": "GET",
+      "path": "/api/exports/c6016c84-83bd-4a3d-9f11-6a866cf4b9f3/download",
+      "status_code": 200,
+      "bytes": 275,
+      "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642"
+    },
+    {
+      "at_epoch": 1791879793.855309,
+      "method": "POST",
+      "path": "/api/batches/9b890808-a745-4748-9f36-a6f543757399/export",
+      "status_code": 200,
+      "response": {
+        "count": 0,
+        "export": null
+      }
+    }
+  ],
+  "pass": true,
+  "ocr": {
+    "trigger_seconds": 0.004442625009687617,
+    "elapsed_seconds": 0.04197862499859184,
+    "batch": {
+      "id": "9b890808-a745-4748-9f36-a6f543757399",
+      "created_at": "2026-10-13T08:23:13.528921+00:00",
+      "total_rows": 3,
+      "accepted_count": 3,
+      "rejected_count": 0,
+      "rejected_rows": [],
+      "status_counts": {
+        "pending": 0,
+        "ocr_done": 3,
+        "ocr_failed": 0,
+        "stage1_approved": 0,
+        "stage1_rejected": 0,
+        "stage2_approved": 0,
+        "stage2_rejected": 0,
+        "exported": 0
+      },
+      "ocr_run": {
+        "id": "e60f5f5e-6e51-4eff-ab27-ffd050cf7fc8",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "status": "completed",
+        "error": null,
+        "total": 3,
+        "completed": 3,
+        "created_at": "2026-10-13T08:23:13.532745+00:00",
+        "finished_at": "2026-10-13T08:23:13.571597+00:00"
+      }
+    },
+    "cases": [
+      {
+        "id": "9ce3e3e1-ef49-4a79-8ed3-64a7a0c9120c",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "row_number": 2,
+        "case_ref": "APPL-2026-0001",
+        "applicant_name": "Test Applicant 001",
+        "id_number": "TEST-ID-000001",
+        "dob": "1961-02-02",
+        "issue_date": "2021-02-02",
+        "image_ref": "id_scan_0001.jpg",
+        "status": "ocr_done",
+        "ocr_fields": {
+          "id_number": "TEST-ID-830454",
+          "full_name": "Test Applicant 0454",
+          "dob": "1969-11-19",
+          "issue_date": "2020-06-06",
+          "confidence": 0.94
+        },
+        "ocr_error": null,
+        "ocr_error_code": null,
+        "ocr_retryable": false,
+        "ocr_attempts": 1
+      },
+      {
+        "id": "9870fb64-2738-4177-b82c-32de0f65645b",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "row_number": 3,
+        "case_ref": "APPL-2026-0002",
+        "applicant_name": "Test Applicant 002",
+        "id_number": "TEST-ID-000002",
+        "dob": "1962-03-03",
+        "issue_date": "2022-03-03",
+        "image_ref": "id_scan_0002.jpg",
+        "status": "ocr_done",
+        "ocr_fields": {
+          "id_number": "TEST-ID-776170",
+          "full_name": "Test Applicant 6170",
+          "dob": "1955-10-12",
+          "issue_date": "2017-10-20",
+          "confidence": 0.9
+        },
+        "ocr_error": null,
+        "ocr_error_code": null,
+        "ocr_retryable": false,
+        "ocr_attempts": 1
+      },
+      {
+        "id": "de5780cb-4e77-486d-905a-4d6083fbc8e5",
+        "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+        "row_number": 4,
+        "case_ref": "APPL-2026-0003",
+        "applicant_name": "Test Applicant 003",
+        "id_number": "TEST-ID-000003",
+        "dob": "1963-04-04",
+        "issue_date": "2023-04-04",
+        "image_ref": "id_scan_0003.jpg",
+        "status": "ocr_done",
+        "ocr_fields": {
+          "id_number": "TEST-ID-225059",
+          "full_name": "Test Applicant 5059",
+          "dob": "1959-09-02",
+          "issue_date": "2024-02-05",
+          "confidence": 0.99
+        },
+        "ocr_error": null,
+        "ocr_error_code": null,
+        "ocr_retryable": false,
+        "ocr_attempts": 1
+      }
+    ]
+  },
+  "initial_export": {
+    "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+    "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+    "created_at": "2026-10-13T08:23:13.579293+00:00",
+    "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+    "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+    "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+    "row_count": 1,
+    "status": "pending",
+    "attempts": 0,
+    "receipt": null,
+    "error_code": null,
+    "error": null,
+    "retryable": false
+  },
+  "exports": [
+    {
+      "id": "c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "batch_id": "9b890808-a745-4748-9f36-a6f543757399",
+      "created_at": "2026-10-13T08:23:13.579293+00:00",
+      "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+      "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+      "row_count": 1,
+      "status": "delivered",
+      "attempts": 2,
+      "receipt": {
+        "delivery_id": "DLV-0001",
+        "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+        "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+        "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+        "ingested_at": 1791879793,
+        "attempts": 2,
+        "deduplicated": true
+      },
+      "error_code": null,
+      "error": null,
+      "retryable": false
+    }
+  ],
+  "deliveries": [
+    {
+      "delivery_id": "DLV-0001",
+      "idempotency_key": "export:c6016c84-83bd-4a3d-9f11-6a866cf4b9f3",
+      "file_name": "export-c6016c84-83bd-4a3d-9f11-6a866cf4b9f3.csv",
+      "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+      "ingested_at": 1791879793,
+      "attempts": 2
+    }
+  ],
+  "ocr_requests": [
+    {
+      "seq": 1,
+      "case_id": "9ce3e3e1-ef49-4a79-8ed3-64a7a0c9120c",
+      "image_ref": "id_scan_0001.jpg",
+      "outcome": "ok",
+      "ts": 1791879793.538
+    },
+    {
+      "seq": 2,
+      "case_id": "9870fb64-2738-4177-b82c-32de0f65645b",
+      "image_ref": "id_scan_0002.jpg",
+      "outcome": "ok",
+      "ts": 1791879793.547
+    },
+    {
+      "seq": 3,
+      "case_id": "de5780cb-4e77-486d-905a-4d6083fbc8e5",
+      "image_ref": "id_scan_0003.jpg",
+      "outcome": "ok",
+      "ts": 1791879793.564
+    }
+  ],
+  "elapsed_seconds": 1.0190683330001775
+}

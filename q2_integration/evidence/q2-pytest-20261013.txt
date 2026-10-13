@@ -1,0 +1,7 @@
+COMMAND: .venv/bin/python -m pytest q1_api/ -q
+BASELINE: c6b8f9da0087826c9a640526bcf1acd744581f3f plus frozen Q2 implementation
+CAPTURE: final output excerpt (progress dots omitted)
+
+StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+411 passed, 1 warning in 23.63s
+EXIT_CODE: 0

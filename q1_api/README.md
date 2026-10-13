@@ -115,9 +115,10 @@ or made unique per stage, so a future return-to-review feature can keep earlier
 decisions. That feature is not currently allowed. The database CHECK enumerates
 valid states; adding a new named state also requires a schema migration.
 
-`GET /api/health` remains available. OCR, export, readiness and deployment
-seeding are **not implemented yet**. All freshly imported cases are pending;
-Q1 review tests use explicit database fixtures to establish OCR completion.
+`GET /api/health` remains available. OCR processing/recovery is now implemented;
+see [Q2 OCR and delivery usage](../q2_integration/README.md). Export/delivery are
+also implemented; readiness and deployment seeding remain Q3 work. All freshly imported cases are pending;
+isolated Q1 review tests use explicit database fixtures to establish OCR completion.
 There is no production endpoint that bypasses OCR. Approval does not claim
 the actor is authenticated: authentication/roles were not part of core Q1.
 
@@ -145,8 +146,9 @@ Review tests cover all 32 state/stage/decision combinations, two-stage success,
 terminal rejections, duplicate/reversed decisions, strict payload validation,
 simultaneous same/opposite decisions at both stages, audit-insert rollback,
 and persistence. Native HTTP tests additionally cover reviews and their records
-across actual API process restart. The OCR and export parts of the full system
-lifecycle will be verified in Q2.
+across actual API process restart. Q2 native tests now cover real OCR through
+both review stages, OCR crash recovery, exact exports and idempotent delivery
+through real response loss and API SIGKILL/restart.
 
 Additional edge-case verification covers eight-way conflicts, simultaneous
 different stages, two actual API processes sharing storage, commit-blocking

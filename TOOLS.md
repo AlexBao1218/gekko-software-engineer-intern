@@ -65,3 +65,27 @@ No new dependency installation, external code source, web lookup, remote publish
 ## Q1 T2 and module verification, 2026-10-13
 
 OpenAI Codex used the local TDD and requesting-code-review skills for inline implementation and one read-only independent reviewer. Python sqlite3, pytest/TestClient and real Uvicorn/httpx processes verified state transitions, audit atomicity and concurrency. Git and an isolated uv-created Python environment verified a clean source snapshot installed from requirements. Files influenced: q1_api/app/{workflow,models,db,main}.py, review/native tests, requirements.txt (explicit Pydantic 2 dependency already in use), module docs/reflection and evidence. No external code/document source was introduced; no public fork/push/submission occurred.
+
+## Q2 OCR/recovery, 2026-10-13
+
+OpenAI Codex and three explicitly authorized subagents used local contracts,
+TDD/debugging/verification and parallel-agent workflow guidance. Parent owned
+integration/storage; one agent owned OCRClient/tests, another original-mock native
+experiments, and a read-only agent reviewed contracts and final behavior. Python
+sqlite3/asyncio/httpx/Uvicorn/pytest, subprocess SIGKILL, SHA-256 manifests and
+uv-created isolated requirements-only environment provided behavioral/fault and
+reproducibility evidence. All source remained in the required existing app/tests
+layout; no new dependency, external code, mock modification or remote publication.
+
+## Q2.3 export/delivery and complete-module verification, 2026-10-13
+
+OpenAI Codex with the previously used local TDD/debugging/verification workflow
+and three user-authorized agents implemented/reviewed the delivery client,
+immutable export transactions, durable dispatch and native fault evidence.
+Standard csv/hashlib/sqlite3/asyncio and existing httpx/FastAPI/Uvicorn/pytest were
+used; no new application dependency. Source contracts were the original local
+README and onboarding mock. SHA-256 manifests, original mock debug endpoints,
+actual SIGKILL, a fresh uv requirements-only environment and Git clean-checkout
+verification support the evidence. Files affected: q1_api/app and tests, Q2 docs,
+reflection/process/AI disclosures and q2_integration/evidence. No external code,
+web search, changed mock, global Python/Docker change, publication or submission.

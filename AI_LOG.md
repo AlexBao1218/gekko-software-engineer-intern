@@ -106,3 +106,73 @@ success and simulated unknown commit outcome from real network/power failure.
 Authentication, role separation, reviewer identity/reasons, tamper-resistant logs,
 Q2 races and Q3 deployment checks are explicitly unfinished. Preserve the original
 module commit with a follow-up fix/verification commit; no history rewrite or push.
+
+## Q2.1/Q2.2 OCR integration and recovery, 2026-10-13
+
+User authorized OCR/recovery, approved-state protection, tests, Git/process records,
+and subagents. Parent Codex coordinated in this conversation; three agents owned
+read-only contract/final review, isolated OCR client/tests, and native fault evidence.
+Parent implemented schema migration, fenced persistence, bounded background
+scheduling, endpoints and integration tests. No agent committed or edited another
+agent's assigned code. Q2.3 export/delivery remains pending.
+
+Design adopted: original input separate from parsed fields; single Uvicorn worker,
+one serial OCR loop/four queued-active batches, per-attempt deadlines and capped
+retry delay, UUID run tokens plus original eligible state for conditional writes,
+durable run/observed attempt history, ordinary process for bounded recovery.
+No distributed queue or authentication expansion. History cannot claim attempts
+killed before local persistence; external mock debug records supplement it.
+
+TDD evidence: client91RED then implementation, one reason-cleaning regression and
+seven Unicode/timeout regressions before fixes, ultimately100client tests. Parent
+18initial workflowRED then implementation; supplemental fault tests exposed failed
+error persistence under DB lock, repaired by deferred reconciliation. Independent
+read-only reviewer found cancelled DB claims could leave running orphan jobs;
+one failing regression preceded shielded claim/cleanup fix. Workflow29 and native2
+tests bring complete suite to288. Initial native helper URL/CSV-reference errors
+were test-tool errors, not claimed production regressions.
+
+Final original-mock measurements use seeds42/7/99 and four/six-attempt budgets;
+actual API SIGKILL/restart comparisons pass full OCR fields/status within <=3
+declared rounds. Seed42 requires two rounds and retains a readable exhaustion at
+both single-round budgets; no evidence claim that six guarantees success or
+empirically beats four. Frozen-source hashes match before/after experiment.
+Final local288passed and fresh requirements-only environment288passed each retain
+one existing dependency warning. Details in WORK_LOG and q2_integration/evidence.
+
+Keep c6b8f9d history intact and Q2 work saved uncommitted until the remaining Q2.3
+module work is complete. No push, fork, delivery submission, or claim of candidate
+understanding. Source and original mocks were read locally; no external code used.
+
+## Q2.3 export/delivery and complete Q2 acceptance, 2026-10-13
+
+User authorized starting Q2.3 and context management. The existing conversation
+continued with recorded handoff/context notes; no new user-facing chat was needed.
+Three authorized subagents owned delivery_client/tests, native delivery tests and
+evidence, and independent read-only review. Parent authored the immutable export
+transaction, durable dispatcher, routes/models, integration tests and records.
+All Q2 OCR work from the prior stage was preserved for one complete module commit.
+
+Adopted: SQLite CSV BLOB plus unique case membership, UUID fixed delivery identity,
+strict local/remote hash verification, serial persistent pending queue, finite
+retry rounds and explicit failed-export retry. Network attempt intents are stored
+before calls; token/status guards fence late threads. Exported is separate from
+delivered. Graceful shutdown and SIGKILL recovery differences are documented.
+
+Actual RED/GREEN: missing export/delivery modules and routes; client99 tests then
+three mutable-input identity regressions; POST null-receipt response omission;
+repeated cancellation interrupting SQLite claim cleanup. Repairs preceded final
+GREEN. Supplemental DB lock, stale writer, failed receipt persistence and eight-way
+retry checks also passed, without claiming every supplemental test initially failed.
+Independent reviewer found no remaining P1/P2 in the supported single-worker scope.
+
+Final complete suite411passed locally and in a fresh requirements-only environment,
+with one existing dependency warning. Frozen-source native drills: two ordinary
+exports; two requests/one ingestion after a lost receipt; actual SIGKILL after
+remote ingestion and before local receipt, automatic recovery and one ingestion.
+All bytes/hashes/receipts/debug records matched; 33 source hashes unchanged.
+Evidence, exact counts and limits are in the Q2 acceptance document.
+
+No external code, modified mocks, new dependency, remote publication or submission.
+The code remains AI-generated work that Alex must personally understand and be
+able to change during interview; that understanding is not asserted by this log.
