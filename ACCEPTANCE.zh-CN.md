@@ -1,6 +1,8 @@
 # 高标准验收与评分对照
 
-2026-10-12。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。当前业务仍未实现，下列均为待验收。
+2026-10-12 制定，2026-10-13 更新。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。Q1 导入/查询/审核已验证，Q2/Q3/CI 尚待实现与验收。
+
+Q1 证据：[干净快照 pytest 输出](q1_api/evidence/q1-clean-snapshot-pytest-20261013.txt)、[审核测试](q1_api/tests/test_review.py)、[原生进程重启测试](q1_api/tests/test_native_process.py)、[模块核对表](q1_api/evidence/Q1-ACCEPTANCE-20261013.md)、[过程记录](WORK_LOG.zh-CN.md)。Q1 范围内的生命周期以数据库 fixture 提供 OCR 完成状态；实际 OCR 与导出仍待 Q2，不能宣称整个系统端到端完成。
 
 来源：[原题评分与提交要求](README.md)、[OCR](mock_ocr/README.md)、[开户](mock_onboarding/README.md)。本文中的“加强项”是为提高可信度自设的标准，不是出题方额外评分细则。
 

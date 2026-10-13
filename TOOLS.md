@@ -1,11 +1,11 @@
 # Tool usage record
 
-Complete the table before submission. Include AI assistants, search engines, documentation sources, and open-source code that influenced the implementation. Replace the example rows and add rows as needed.
+Current usage summary; the dated entries below preserve setup and implementation history.
 
 | Tool or source | Use | Files materially influenced |
 |---|---|---|
-| [AI assistant name] | [Task and contribution] | [File paths] |
-| [Documentation, search engine, or open-source source] | [Information or code used] | [File paths, or `Not applicable`] |
+| OpenAI Codex | Requirements analysis, Q1 implementation/testing, independent code review and engineering records | q1_api/app, q1_api/tests, planning/acceptance documents, REFLECTION.md and AI_LOG.md |
+| Original assessment and mock contracts | API/state rules, scope, scoring and failure behavior | Application/tests and project documentation |
 
 Record AI interactions that influenced design or generated code in [AI_LOG.md](AI_LOG.md).
 
@@ -49,3 +49,19 @@ No additional external documentation, dependency installation, business implemen
 ## Higher-standard scoring review, 2026-10-12
 
 OpenAI Codex used the local original README/module requirements/mock contracts and existing brainstorming workflow to audit scoring coverage and revise acceptance criteria. Python standard arithmetic verified explicitly labelled theoretical retry-exhaustion estimates. Files influenced: ACCEPTANCE.zh-CN.md, PROJECT_PLAN.zh-CN.md, WORK_LOG.zh-CN.md and AI_LOG.md. No new external source, dependency, business code, remote publication or submission.
+
+
+## Q1 T1 implementation, 2026-10-13
+
+| Tool/source | Use | Files materially influenced |
+|---|---|---|
+| OpenAI Codex; local writing-plans, TDD and systematic-debugging skills | Inline approved T1 implementation, test-first import/query contract, diagnosis/fix of malformed CSV edge cases, explanation and records | q1_api/app/*.py, q1_api/tests/*.py, Q1_IMPLEMENTATION.zh-CN.md and updated documentation |
+| Python standard sqlite3/csv, installed FastAPI/Pydantic/httpx/Uvicorn/pytest, Git | Actual SQLite transactions/constraints, parsing, HTTP API, isolated tests and real-process restart, branch management | Application/tests and q1_api/evidence |
+| Original assignment and approved PROJECT_PLAN/ACCEPTANCE | Scope, fixed entry point, endpoints, validation and evidence requirements | Implementation and tests |
+
+No new dependency installation, external code source, web lookup, remote publishing or submission in this session. Existing TestClient/httpx deprecation warning retained and documented.
+
+
+## Q1 T2 and module verification, 2026-10-13
+
+OpenAI Codex used the local TDD and requesting-code-review skills for inline implementation and one read-only independent reviewer. Python sqlite3, pytest/TestClient and real Uvicorn/httpx processes verified state transitions, audit atomicity and concurrency. Git and an isolated uv-created Python environment verified a clean source snapshot installed from requirements. Files influenced: q1_api/app/{workflow,models,db,main}.py, review/native tests, requirements.txt (explicit Pydantic 2 dependency already in use), module docs/reflection and evidence. No external code/document source was introduced; no public fork/push/submission occurred.

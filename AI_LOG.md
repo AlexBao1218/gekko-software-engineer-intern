@@ -2,23 +2,8 @@
 
 Record interactions that influenced architecture, implementation decisions, or generated code. Include prompt excerpts, conversation links, or exported records. Routine lookups do not require entries.
 
-Complete one entry per relevant interaction using the template below. Replace bracketed prompts and add entries as needed. If AI did not materially influence the code, state that and remove the blank entry.
-
-## Interaction 1: [Topic]
-
-| Field | Description |
-|---|---|
-| Tool or model | [Name of the AI tool or model used] |
-| Prompt or record | [Prompt summary, excerpt, conversation link, or export path] |
-| Affected files | [Files or modules influenced by the interaction] |
-
-### Adopted output
-
-[Describe the suggestion or generated code included in the implementation.]
-
-### Changes and rejected output
-
-[Describe what you changed or rejected and explain why. Enter `None` if applicable.]
+The chronological entries below record the actual interactions, accepted output,
+changes and limitations. Earlier entries describe their historical stage.
 
 ## Environment setup interaction on 2026-10-12
 
@@ -83,3 +68,21 @@ Did not implement application features, install dependencies, modify the origina
 User requested a higher-quality submission aligned with grading and a review of whether the existing plan met that standard. Codex reread the local rubric and contracts, created ACCEPTANCE.zh-CN.md with nine core sub-question gates plus CI, and revised PROJECT_PLAN.zh-CN.md. Changes include actual first-start sample seeding, stricter OCR recovery equivalence, normal-process retry eligibility, measured retry-budget selection, explicit export content/delivery states, reproducible evidence and interview exercises. WORK_LOG records the review.
 
 The 26.59% (4 attempts) and 2.73% (6 attempts) batch-exhaustion figures are calculated estimates under independent 30% per-attempt transient failures over 38 readable cases, not observed measurements. No new mock experiment or business implementation occurred. The SQLite/single-worker proposal remains a recommendation. No predicted score, architecture approval, final validation or personal understanding is asserted. Previous suggestions about sample-file-only seeding, optional retry_failed and accepting an unexplained recovery mismatch were strengthened rather than silently retained.
+
+
+## Q1 T1 implementation, 2026-10-13
+
+User authorized starting Q1 under the reviewed high-standard plan, beginning with data models and CSV import, with explanation, tests and records. Codex created Q1_IMPLEMENTATION.zh-CN.md and implemented T1 inline: models.py (API shapes/status names), imports.py (pure parsing/row errors), db.py (SQLite constraints and atomic import/read transactions), main.py (lifespan, multipart upload, batch/list endpoints and error responses). Added business, storage and native-process tests; updated q1_api/README, REFLECTION, project/acceptance records, .gitignore and this disclosure. No Q2/Q3 feature implementation.
+
+Initial helper argument duplication was corrected before interpreting failures. The meaningful initial RED was 37 failed/1 passed against missing routes; first implementation passed 38, additional storage checks passed 47, and a real-process restart check brought the suite to 48. Supplemental storage checks were post-implementation verification, not independently claimed RED cycles. Self-review exposed quoted-empty records being ignored and NUL input reaching storage as a 500. Three new tests reproduced the failures before targeted fixes; final suite: 51 passed, one unsuppressed installed TestClient/httpx deprecation warning. See q1_api/evidence and WORK_LOG for commands and source hashes.
+
+Decisions: keep native sqlite3, parse before write, per-operation connections, physical start-line errors, whole-file rejection for malformed/NUL input, one-second lock timeout with retryable HTTP 503. Preserve one commit per module: created codex/assessment-implementation, left T1 saved in the working tree for the combined Q1 commit after T2. No push or submission. Alex must personally review/understand generated code; no assertion of completed Q1 or candidate understanding. No independent reviewer was used for this partial-module delivery.
+
+
+## Q1 T2 review workflow and unified Q1 commit, 2026-10-13
+
+User asked to continue two-stage review, explain rules, test approvals/rejections/skips/repeats/concurrency, reconcile scoring, document and commit all Q1. Codex implemented workflow.py's four explicit transitions, strict review models, POST review route, SQLite serialized conditional state update and atomic append-only audit record. Added matrix, lifecycle, rejection, validation, concurrency, rollback and real-process persistence tests; updated module docs/reflection/acceptance records. Requirements explicitly declare already-used Pydantic 2.
+
+Initial 56 review tests failed against missing features, then 107 total tests passed. Native review verification brought this to 108. A read-only reviewer agent, dispatched under the requesting-code-review skill, found one P2: default framework validation serialization can turn nonfinite/surrogate inputs into 500s. Four regression tests reproduced it; a safe type/loc/msg-only validation handler fixed it. Reviewer also verified older T1 database compatibility; stale fixture comment corrected. Final suite and an independently installed clean source snapshot each passed 112 tests with one documented unsuppressed TestClient/httpx deprecation warning. No second review is claimed after the test-verified fix.
+
+Scope remains Q1; OCR is a transparent DB fixture in tests, with no production bypass. Q2/Q3/CI and personal code understanding remain open. This session unifies T1/T2 as one Q1 module commit; no push or submission. Commit-specific clone verification is recorded locally after commit to avoid circular hash edits. Details and tested-source fingerprints are in WORK_LOG and q1_api/evidence.

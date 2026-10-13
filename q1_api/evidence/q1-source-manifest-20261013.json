@@ -1,0 +1,23 @@
+{
+  "date_hkt": "2026-10-13",
+  "base_commit": "85d23478cd2161d1a75635be5228b5b784ee76c0",
+  "scope": "Complete Q1 T1+T2 pending one module commit; source hashes identify tested code independent of commit hash",
+  "sha256": {
+    "q1_api/app/__init__.py": "eb797c437db1276588b91b85b33364dc557571888bdc0c04a18a257d3603a173",
+    "q1_api/app/db.py": "aaecab0ae8c5cfccdf18c038f1bd46aec938acd8a01c76440cdd6d64f2f49626",
+    "q1_api/app/imports.py": "5561d78b312398c933be33631ae8042580b7affecf47b67124e4909dcf013321",
+    "q1_api/app/main.py": "8a2629ce4756ed11836dd658a4b4cd57835d9f20a23f3912feae96e2c720ff1a",
+    "q1_api/app/models.py": "0bcb26d978550db3ca18b860d6e8a28367dd750e03882e69108c9d3be93f1f40",
+    "q1_api/app/workflow.py": "94a9a2cee1d07e7c028986f6878bb829eb5ee0aba14cd9d2c415a3aac031bc85",
+    "q1_api/tests/conftest.py": "868d0ce981c216fb3854dc4d3eb283e7a1b68b9441764f8963c584e83237d8ab",
+    "q1_api/tests/test_app.py": "7883e47658dcb98d1d8aa6b106621c623e1267293d3f041c916eae51348ff7eb",
+    "q1_api/tests/test_batches.py": "f125927030381ad5bfab052e4f08d107570818646ac4cee9b1ade7242cd943c6",
+    "q1_api/tests/test_database.py": "374cfbb7b6fe8e409cf3b0b02ee6790e1bfb9f179cf08864cff56f88a34c4f5d",
+    "q1_api/tests/test_imports.py": "2d376d283172a13168840e0653b5bb347fc1cb9a27c54e7be55a2dd976ee99f8",
+    "q1_api/tests/test_native_process.py": "3f36bb60a6dda3a822624d12d149ef21662349ecdebb4d2b7cb051ab324fd5aa",
+    "q1_api/tests/test_review.py": "a4f063eca0e07c25cbf4182a10513ec343d0e926c67db1a34ea0e20577931665",
+    "q1_api/pytest.ini": "f214a7c1dba349847819a02ad5fb699447c48a64e13b1b67625975e9fc7b3ac8",
+    "requirements.txt": "2da68602be278a768b32729e86ce54ecff9e3cef26792a38d3459e4bd53ea950"
+  },
+  "exit_code": 0
+}

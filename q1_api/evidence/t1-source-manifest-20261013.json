@@ -1,0 +1,20 @@
+{
+  "date_hkt": "2026-10-13",
+  "base_commit": "85d23478cd2161d1a75635be5228b5b784ee76c0",
+  "state": "uncommitted T1 implementation; awaiting T2 for one Q1 module commit",
+  "command": "python -m pytest q1_api/ -q --tb=short",
+  "exit_code": 0,
+  "sha256": {
+    "q1_api/app/__init__.py": "eb797c437db1276588b91b85b33364dc557571888bdc0c04a18a257d3603a173",
+    "q1_api/app/db.py": "16e0c1732d9f87f52a585089203a2eba3f8e531d5f87427774673b1e57f93cd5",
+    "q1_api/app/imports.py": "5561d78b312398c933be33631ae8042580b7affecf47b67124e4909dcf013321",
+    "q1_api/app/main.py": "77661d8452fe95dccb2a0fd1dbe0f98af70a44115a7ad641d32665abd3a2acec",
+    "q1_api/app/models.py": "3a8c84f264953aef3f091d8dadf904ac112d6b0eddd21788b9a2983cd6e2bbf2",
+    "q1_api/tests/conftest.py": "868d0ce981c216fb3854dc4d3eb283e7a1b68b9441764f8963c584e83237d8ab",
+    "q1_api/tests/test_app.py": "7883e47658dcb98d1d8aa6b106621c623e1267293d3f041c916eae51348ff7eb",
+    "q1_api/tests/test_batches.py": "44a07c494c45be730a10e28e18ffe2e8e2d3e49c7c96c2c4efdb24803886f19e",
+    "q1_api/tests/test_database.py": "374cfbb7b6fe8e409cf3b0b02ee6790e1bfb9f179cf08864cff56f88a34c4f5d",
+    "q1_api/tests/test_imports.py": "2d376d283172a13168840e0653b5bb347fc1cb9a27c54e7be55a2dd976ee99f8",
+    "q1_api/tests/test_native_process.py": "bbe3930cccfa82e5c3f4ae152ec33e35229236189d4504b28a70d35a1253b84a"
+  }
+}
