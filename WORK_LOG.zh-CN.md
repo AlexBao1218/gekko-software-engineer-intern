@@ -289,3 +289,9 @@ Q3统一提交7095290后，重新安装依赖的干净克隆完整备份/恢复�
 按系统化排查定位为测试把正常HTTP调度预算与业务deadline混在一起。修正：正常语义测试给HTTP合理预算；专测传输timeout仍使用短期限；停滞OCR用真实HTTP配合仅替换smoke模块的可控时钟，精确验证四次轮询后deadline拒绝且无导出。独立审查补充sleep(0)回归不能无限循环的保护。没有修改业务或运维生产代码。保留7095290历史，新增必要测试修复提交；不amend/squash、不push。修复后完整复验另存证据，最终hash重新克隆验证。
 
 修复后全套：macOS478通过45.30s、非root Linux478通过64.49s；补全防零等待循环断言后针对smoke10项再次通过6.32s。均仅已有弃用警告。最终独立clone将对最终测试源码再次执行整个478项套件。
+
+## 2026-10-14：T9 GitHub Actions CI 加分项
+
+用户授权配置每次push跑测试/Compose build并实际验证最终提交，合理使用子agent。基线732b6ea工作树干净。核对GitHub账号AlexBao1218，origin仍为公开出题方仓库且无写权限，个人同名fork尚不存在。按已批准Git方案准备个人公开fork；不向出题方push，不发送PR/邮件。
+
+主线程负责工作流、文档、GitHub发布及最终SHA实测；子agent只读核对评分条款、Docker上下文、Linux非root权限测试和最终工作流。选两个独立job：Ubuntu24.04/Python3.12全套pytest；Compose配置检查及三个应用镜像build。所有push触发，无分支/路径跳过；只读token、官方action固定SHA、有限job超时。使用官方语法/checkout/setup-python文档和GitHub API验证版本。YAML已解析，独立审查无初步阻塞项；不预称远端已通过。

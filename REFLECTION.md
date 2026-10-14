@@ -250,3 +250,17 @@ outside Git to record that exact hash. CI/public fork/push/submission and candid
 review remain unfinished. The installed TestClient emits a
 dependency deprecation warning; tests currently run successfully. The one-day
 follow-up prioritization will be finalized against the completed submission.
+
+## 6. Continuous integration
+
+The CI bonus workflow runs the complete root-level pytest command and Docker
+Compose build on every push, with separate jobs, bounded timeouts and no path
+filters or ignored failures. Ubuntu24.04/Python3.12 is the tested target; tests
+run as the hosted runner's ordinary user to preserve permission-test meaning.
+Official checkout/setup-python actions use verified full SHAs, read-only
+repository permission, and no retained checkout credentials. Compose defaults
+are nonsecret, so CI needs no local.env. Build success alone is not runtime
+acceptance; the Q3 deployment and restore experiments remain separate evidence.
+
+The workflow is configured. Actual remote final-commit verification is pending
+and will be recorded in the CI acceptance file and linked GitHub Actions run.

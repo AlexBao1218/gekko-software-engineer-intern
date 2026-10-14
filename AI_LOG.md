@@ -241,3 +241,14 @@ controlled workflow clock, while keeping actual HTTP and the explicit transport
 timeout case. Review added a guard against zero-sleep infinite polling on a
 future deadline regression. Only test code changed; the original Q3 commit is
 preserved with a follow-up test fix, not rewritten or hidden.
+
+## CI bonus, 2026-10-14
+
+User requested GitHub Actions on every push, tests and Docker builds, and actual
+verification of the final commit. Codex parent prepared workflow/docs and owns
+GitHub operations; an explicitly authorized read-only subagent checked rubric
+coverage, build paths and hosted-runner test constraints. Used parallel-review
+and verification-before-completion guidance. Official actions are pinned to
+verified commit SHAs; no credentials or application dependencies were added.
+Remote success will be recorded only after matching the final SHA to a completed
+successful GitHub run. Personal code understanding is still not asserted.

@@ -146,7 +146,7 @@ CSV 的申请列与 OCR 列、稳定排序、编码/换行在高标准验收中�
 | T6 容器/代理 | 已验证（2026-10-14） | T5；约 1h 初估 | 首启自动 seed/重启不重复；Docker/Compose/nginx/env；两条路由、体积超限 413、DB 故障 ready=503、持久化和健康依赖 |
 | T7 备份/手册 | 已验证 | T6；约 1h | 在线生成至少 9 份演示保留七份；隔离恢复并核对数据；runbook 四类指令实测 |
 | T8 最终验收 | 核心复验通过，提交后记录精确hash克隆复验 | T7；约 1h | smoke 完整流程；临时干净 clone 的 pytest/Compose/smoke；原生三进程验证；证据和文档完成，提交 Q3 |
-| T9 CI | 计划交付 | 核心通过；0.5–1h 初估 | `.github/workflows/ci.yml`，每 push 跑 pytest/compose build，最终 hash 真正绿灯并记录 run URL；单独提交 |
+| T9 CI | 工作流已配置，待远端最终SHA通过 | 核心通过；0.5–1h 初估 | `.github/workflows/ci.yml`，每 push 跑 pytest/compose build，最终 hash 真正绿灯并记录 run URL；单独提交 |
 | T10 面试练习 | 待做 | 各模块后；1–2h | 解释数据流/重试/事务；练习新增审核状态、按案件开户、nginx 限流；记录仍不理解之处 |
 
 CI 的 `.github/` 是原题加分项所需的配置扩展，不是第二个应用目录。作为高标准目标纳入交付，顺序仍在核心验收之后。
