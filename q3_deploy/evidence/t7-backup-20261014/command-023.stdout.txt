@@ -1,0 +1,5 @@
+NAME                                         IMAGE                                      COMMAND                  SERVICE           CREATED          STATUS                    PORTS
+gekko-check-832333024207-api-1               gekko-check-832333024207-api               "uvicorn app.main:ap…"   api               37 seconds ago   Up 30 seconds (healthy)   8000/tcp
+gekko-check-832333024207-mock_ocr-1          gekko-check-832333024207-mock_ocr          "python server.py"       mock_ocr          37 seconds ago   Up 36 seconds (healthy)   9100/tcp
+gekko-check-832333024207-mock_onboarding-1   gekko-check-832333024207-mock_onboarding   "python server.py"       mock_onboarding   37 seconds ago   Up 36 seconds (healthy)   9200/tcp
+gekko-check-832333024207-nginx-1             nginx:1.27-alpine                          "/docker-entrypoint.…"   nginx             37 seconds ago   Up 24 seconds (healthy)   127.0.0.1:53058->80/tcp

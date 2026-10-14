@@ -1,0 +1,262 @@
+mock_ocr-1  |     self.handle()
+mock_ocr-1  |   File "/usr/local/lib/python3.12/http/server.py", line 440, in handle
+mock_ocr-1  |     self.handle_one_request()
+mock_ocr-1  |   File "/usr/local/lib/python3.12/http/server.py", line 428, in handle_one_request
+mock_ocr-1  |     method()
+mock_ocr-1  |   File "/app/server.py", line 95, in do_POST
+mock_ocr-1  |     return self._json(200, parse_fields(image_ref))
+mock_ocr-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mock_ocr-1  |   File "/app/server.py", line 53, in _json
+mock_ocr-1  |     self.wfile.write(body)
+mock_ocr-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 845, in write
+mock_ocr-1  |     self._sock.sendall(b)
+mock_ocr-1  | BrokenPipeError: [Errno 32] Broken pipe
+mock_ocr-1  | ----------------------------------------
+mock_ocr-1  | ----------------------------------------
+mock_ocr-1  | Exception occurred during processing of request from ('172.18.0.4', 49530)
+mock_ocr-1  | Traceback (most recent call last):
+mock_ocr-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 697, in process_request_thread
+mock_ocr-1  |     self.finish_request(request, client_address)
+mock_ocr-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 362, in finish_request
+mock_ocr-1  |     self.RequestHandlerClass(request, client_address, self)
+mock_ocr-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 766, in __init__
+mock_ocr-1  |     self.handle()
+mock_ocr-1  |   File "/usr/local/lib/python3.12/http/server.py", line 440, in handle
+mock_ocr-1  |     self.handle_one_request()
+mock_ocr-1  |   File "/usr/local/lib/python3.12/http/server.py", line 428, in handle_one_request
+mock_ocr-1  |     method()
+mock_ocr-1  |   File "/app/server.py", line 95, in do_POST
+mock_ocr-1  |     return self._json(200, parse_fields(image_ref))
+mock_ocr-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mock_ocr-1  |   File "/app/server.py", line 53, in _json
+mock_ocr-1  |     self.wfile.write(body)
+mock_ocr-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 845, in write
+mock_ocr-1  |     self._sock.sendall(b)
+mock_ocr-1  | BrokenPipeError: [Errno 32] Broken pipe
+mock_ocr-1  | ----------------------------------------
+mock_ocr-1  | ----------------------------------------
+mock_ocr-1  | Exception occurred during processing of request from ('172.18.0.4', 49546)
+mock_ocr-1  | Traceback (most recent call last):
+mock_onboarding-1  | ----------------------------------------
+mock_onboarding-1  | Exception occurred during processing of request from ('172.18.0.4', 45818)
+mock_onboarding-1  | Traceback (most recent call last):
+mock_onboarding-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 697, in process_request_thread
+mock_onboarding-1  |     self.finish_request(request, client_address)
+mock_onboarding-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 362, in finish_request
+mock_onboarding-1  |     self.RequestHandlerClass(request, client_address, self)
+mock_onboarding-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 766, in __init__
+mock_onboarding-1  |     self.handle()
+mock_onboarding-1  |   File "/usr/local/lib/python3.12/http/server.py", line 440, in handle
+mock_onboarding-1  |     self.handle_one_request()
+mock_onboarding-1  |   File "/usr/local/lib/python3.12/http/server.py", line 428, in handle_one_request
+mock_onboarding-1  |     method()
+mock_onboarding-1  |   File "/app/server.py", line 84, in do_POST
+mock_onboarding-1  |     return self._json(200, record)
+mock_onboarding-1  |            ^^^^^^^^^^^^^^^^^^^^^^^
+mock_onboarding-1  |   File "/app/server.py", line 42, in _json
+mock_onboarding-1  |     self.wfile.write(body)
+mock_onboarding-1  |   File "/usr/local/lib/python3.12/socketserver.py", line 845, in write
+mock_onboarding-1  |     self._sock.sendall(b)
+mock_onboarding-1  | BrokenPipeError: [Errno 32] Broken pipe
+api-1              | INFO:     172.18.0.5:34718 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:57706 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:37704 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:38036 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:37720 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:41508 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:39326 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:41518 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:39336 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:34554 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:52718 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:34572 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:52732 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:43126 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:43848 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:43154 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:43850 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:53372 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:55432 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:53382 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:54856 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:60676 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:54870 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:52764 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:33750 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:33752 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:52772 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:49798 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:44212 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:49806 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:44216 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:42200 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:42252 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:42204 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:42266 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:50616 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:35190 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:50626 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:35218 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:41560 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:48320 - "GET /api/ready HTTP/1.1" 200 OK
+mock_onboarding-1  | ----------------------------------------
+api-1              | INFO:     172.18.0.5:41576 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:48334 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:51738 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:57052 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:51750 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:57068 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:43398 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:55886 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:43412 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:55898 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:42330 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:38332 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:42338 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:58476 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:46970 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:58500 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:46976 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:49848 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:47620 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:49870 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:47630 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:52682 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:37698 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:52698 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:37708 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:49096 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:54458 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:54464 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:49110 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:55816 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:38342 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:55822 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:38352 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:45556 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:33980 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:45566 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:48112 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     172.18.0.5:33826 - "GET /api/ready HTTP/1.1" 200 OK
+api-1              | INFO:     127.0.0.1:48120 - "GET /api/ready HTTP/1.1" 200 OK
+mock_ocr-1         |   File "/usr/local/lib/python3.12/socketserver.py", line 697, in process_request_thread
+mock_ocr-1         |     self.finish_request(request, client_address)
+mock_ocr-1         |   File "/usr/local/lib/python3.12/socketserver.py", line 362, in finish_request
+mock_ocr-1         |     self.RequestHandlerClass(request, client_address, self)
+mock_ocr-1         |   File "/usr/local/lib/python3.12/socketserver.py", line 766, in __init__
+mock_ocr-1         |     self.handle()
+mock_ocr-1         |   File "/usr/local/lib/python3.12/http/server.py", line 440, in handle
+mock_ocr-1         |     self.handle_one_request()
+mock_ocr-1         |   File "/usr/local/lib/python3.12/http/server.py", line 428, in handle_one_request
+mock_ocr-1         |     method()
+mock_ocr-1         |   File "/app/server.py", line 95, in do_POST
+mock_ocr-1         |     return self._json(200, parse_fields(image_ref))
+mock_ocr-1         |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mock_ocr-1         |   File "/app/server.py", line 53, in _json
+mock_ocr-1         |     self.wfile.write(body)
+mock_ocr-1         |   File "/usr/local/lib/python3.12/socketserver.py", line 845, in write
+mock_ocr-1         |     self._sock.sendall(b)
+mock_ocr-1         | BrokenPipeError: [Errno 32] Broken pipe
+mock_ocr-1         | ----------------------------------------
+mock_ocr-1         | ----------------------------------------
+mock_ocr-1         | Exception occurred during processing of request from ('172.18.0.4', 49562)
+mock_ocr-1         | Traceback (most recent call last):
+mock_ocr-1         |   File "/usr/local/lib/python3.12/socketserver.py", line 697, in process_request_thread
+mock_ocr-1         |     self.finish_request(request, client_address)
+mock_ocr-1         |   File "/usr/local/lib/python3.12/socketserver.py", line 362, in finish_request
+mock_ocr-1         |     self.RequestHandlerClass(request, client_address, self)
+mock_ocr-1         |   File "/usr/local/lib/python3.12/socketserver.py", line 766, in __init__
+mock_ocr-1         |     self.handle()
+mock_ocr-1         |   File "/usr/local/lib/python3.12/http/server.py", line 440, in handle
+mock_ocr-1         |     self.handle_one_request()
+mock_ocr-1         |   File "/usr/local/lib/python3.12/http/server.py", line 428, in handle_one_request
+mock_ocr-1         |     method()
+mock_ocr-1         |   File "/app/server.py", line 95, in do_POST
+mock_ocr-1         |     return self._json(200, parse_fields(image_ref))
+mock_ocr-1         |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mock_ocr-1         |   File "/app/server.py", line 53, in _json
+mock_ocr-1         |     self.wfile.write(body)
+mock_ocr-1         |   File "/usr/local/lib/python3.12/socketserver.py", line 845, in write
+mock_ocr-1         |     self._sock.sendall(b)
+mock_ocr-1         | BrokenPipeError: [Errno 32] Broken pipe
+mock_ocr-1         | ----------------------------------------
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:54:29 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:54:35 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:54:41 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:54:46 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:54:51 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:54:56 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:02 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:07 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:12 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:17 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:22 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:27 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:32 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:37 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:42 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:47 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:53 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:55:59 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:04 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:09 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:14 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:19 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:24 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:29 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:34 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:40 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:45 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:50 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:56:55 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:01 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:06 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:11 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:16 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:21 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:26 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:31 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:36 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:41 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:46 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:51 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:57:56 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:01 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:06 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:11 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:17 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:22 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:27 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:32 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:37 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:43 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:48 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:53 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:58:58 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:03 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:08 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:14 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:19 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:24 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:29 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:34 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:39 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:44 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:49 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:54 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:01:59:59 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:04 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:10 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:15 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:20 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:25 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:30 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:35 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:40 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:45 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:50 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:00:56 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:01:01 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:01:07 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:01:12 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1            | 127.0.0.1 - - [14/Oct/2026:02:01:18 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"

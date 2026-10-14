@@ -1,0 +1,313 @@
+[
+    {
+        "Id": "2cec6c603dad397449af329b2514f435634a96cb239b1227b6dc7ef29c45a0b7",
+        "Created": "2026-10-14T01:58:58.937187918Z",
+        "Path": "uvicorn",
+        "Args": [
+            "app.main:app",
+            "--app-dir",
+            "q1_api",
+            "--host",
+            "0.0.0.0",
+            "--port",
+            "8000",
+            "--workers",
+            "1"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 14775,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-14T01:59:04.972226379Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 4,
+                "Log": [
+                    {
+                        "Start": "2026-10-14T09:59:15.352358634+08:00",
+                        "End": "2026-10-14T09:59:15.602437385+08:00",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-10-14T09:59:20.604215054+08:00",
+                        "End": "2026-10-14T09:59:20.846504887+08:00",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 521, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 630, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 559, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 503: Service Unavailable\n"
+                    },
+                    {
+                        "Start": "2026-10-14T09:59:25.848587014+08:00",
+                        "End": "2026-10-14T09:59:26.380120431+08:00",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 521, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 630, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 559, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 503: Service Unavailable\n"
+                    },
+                    {
+                        "Start": "2026-10-14T09:59:31.392459809+08:00",
+                        "End": "2026-10-14T09:59:31.660866101+08:00",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 521, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 630, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 559, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 503: Service Unavailable\n"
+                    },
+                    {
+                        "Start": "2026-10-14T09:59:36.664080645+08:00",
+                        "End": "2026-10-14T09:59:37.790024145+08:00",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 521, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 630, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 559, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 503: Service Unavailable\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:dc5dbb96976f7b1e4e1d1c14d2664f27dd65c0efa5bc527f807b0257e0d95353",
+        "ResolvConfPath": "/var/lib/docker/containers/2cec6c603dad397449af329b2514f435634a96cb239b1227b6dc7ef29c45a0b7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/2cec6c603dad397449af329b2514f435634a96cb239b1227b6dc7ef29c45a0b7/hostname",
+        "HostsPath": "/var/lib/docker/containers/2cec6c603dad397449af329b2514f435634a96cb239b1227b6dc7ef29c45a0b7/hosts",
+        "LogPath": "/var/lib/docker/containers/2cec6c603dad397449af329b2514f435634a96cb239b1227b6dc7ef29c45a0b7/2cec6c603dad397449af329b2514f435634a96cb239b1227b6dc7ef29c45a0b7-json.log",
+        "Name": "/gekko-check-461270ce27a0-api-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "gekko-check-461270ce27a0_api_data:/data:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "gekko-check-461270ce27a0_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "gekko-check-461270ce27a0_api_data",
+                "Source": "/var/lib/docker/volumes/gekko-check-461270ce27a0_api_data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "2cec6c603dad",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "DELIVERY_BACKOFF_CAP_SECONDS=0.5",
+                "DATABASE_PATH=/data/app.db",
+                "SEED_CSV_PATH=/srv/data/account_applications.csv",
+                "DELIVERY_URL=http://mock_onboarding:9200/ingest",
+                "OCR_MAX_ATTEMPTS=6",
+                "DELIVERY_TIMEOUT_SECONDS=1",
+                "OCR_BACKOFF_CAP_SECONDS=0.5",
+                "OCR_TIMEOUT_SECONDS=1",
+                "DELIVERY_BACKOFF_SECONDS=0.1",
+                "OCR_BACKOFF_SECONDS=0.1",
+                "DELIVERY_MAX_ATTEMPTS=4",
+                "OCR_URL=http://mock_ocr:9100/ocr/parse",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.15",
+                "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONPATH=/srv/q1_api"
+            ],
+            "Cmd": [
+                "uvicorn",
+                "app.main:app",
+                "--app-dir",
+                "q1_api",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000",
+                "--workers",
+                "1"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/ready', timeout=2).close()"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 15000000000,
+                "Retries": 6
+            },
+            "Image": "gekko-check-461270ce27a0-api",
+            "Volumes": null,
+            "WorkingDir": "/srv",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "904c5ed390b7717bac74ec868e2aa5da499571cd87e5b9690e37be862205b71c",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "mock_ocr:service_healthy:false,mock_onboarding:service_healthy:false",
+                "com.docker.compose.image": "sha256:b1d0b9d7b363f825dbfda30b0797b89f24200116f714f22340b4c5ba3ce00a7f",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "gekko-check-461270ce27a0",
+                "com.docker.compose.project.config_files": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-461270ce27a0/source/q3_deploy/docker-compose.yml",
+                "com.docker.compose.project.environment_file": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-461270ce27a0/source/q3_deploy/.env",
+                "com.docker.compose.project.working_dir": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-461270ce27a0/source/q3_deploy",
+                "com.docker.compose.service": "api",
+                "com.docker.compose.version": "5.5.1"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "b8bb76167dcb1e2ceec45589aaf7c1979a0c5c3f1026d7c972c1f5418abf2044",
+            "SandboxKey": "/var/run/docker/netns/b8bb76167dcb",
+            "Ports": {
+                "8000/tcp": null
+            },
+            "Networks": {
+                "gekko-check-461270ce27a0_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "gekko-check-461270ce27a0-api-1",
+                        "api"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "250693c6931dc3b7e58b69afe4e2f8e59c80936f6d173dec362c7a2156d66f86",
+                    "EndpointID": "eea9834c460094c1896c5e9b95995b445b9b8a66018a616070b1873350424db5",
+                    "Gateway": "172.19.0.1",
+                    "IPAddress": "172.19.0.4",
+                    "MacAddress": "be:f7:ee:82:00:ed",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "gekko-check-461270ce27a0-api-1",
+                        "api",
+                        "2cec6c603dad"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:b1d0b9d7b363f825dbfda30b0797b89f24200116f714f22340b4c5ba3ce00a7f",
+            "size": 2191,
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux"
+            }
+        }
+    }
+]

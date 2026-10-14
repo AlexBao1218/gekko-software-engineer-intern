@@ -1,0 +1,1 @@
+Restore refused: API must be stopped (not running, paused or restarting).

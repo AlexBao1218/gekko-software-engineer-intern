@@ -1,0 +1,282 @@
+[
+    {
+        "Id": "9c0d6632084d8784f62e36e78dbf126f9af95d428ca7520d1532167c8318ba03",
+        "Created": "2026-10-14T01:58:41.809263077Z",
+        "Path": "uvicorn",
+        "Args": [
+            "app.main:app",
+            "--app-dir",
+            "q1_api",
+            "--host",
+            "0.0.0.0",
+            "--port",
+            "8000",
+            "--workers",
+            "1"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 13885,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-14T01:58:41.876784243Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:dc5dbb96976f7b1e4e1d1c14d2664f27dd65c0efa5bc527f807b0257e0d95353",
+        "ResolvConfPath": "/var/lib/docker/containers/9c0d6632084d8784f62e36e78dbf126f9af95d428ca7520d1532167c8318ba03/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/9c0d6632084d8784f62e36e78dbf126f9af95d428ca7520d1532167c8318ba03/hostname",
+        "HostsPath": "/var/lib/docker/containers/9c0d6632084d8784f62e36e78dbf126f9af95d428ca7520d1532167c8318ba03/hosts",
+        "LogPath": "/var/lib/docker/containers/9c0d6632084d8784f62e36e78dbf126f9af95d428ca7520d1532167c8318ba03/9c0d6632084d8784f62e36e78dbf126f9af95d428ca7520d1532167c8318ba03-json.log",
+        "Name": "/gekko-check-461270ce27a0-api-1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "gekko-check-461270ce27a0_api_data:/data:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "gekko-check-461270ce27a0_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "gekko-check-461270ce27a0_api_data",
+                "Source": "/var/lib/docker/volumes/gekko-check-461270ce27a0_api_data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "9c0d6632084d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "DELIVERY_MAX_ATTEMPTS=4",
+                "OCR_TIMEOUT_SECONDS=1",
+                "DELIVERY_BACKOFF_CAP_SECONDS=0.5",
+                "OCR_BACKOFF_SECONDS=0.1",
+                "DELIVERY_BACKOFF_SECONDS=0.1",
+                "OCR_BACKOFF_CAP_SECONDS=0.5",
+                "OCR_MAX_ATTEMPTS=6",
+                "DATABASE_PATH=/data/app.db",
+                "DELIVERY_URL=http://mock_onboarding:9200/ingest",
+                "OCR_URL=http://mock_ocr:9100/ocr/parse",
+                "DELIVERY_TIMEOUT_SECONDS=1",
+                "SEED_CSV_PATH=/srv/data/account_applications.csv",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.15",
+                "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONPATH=/srv/q1_api"
+            ],
+            "Cmd": [
+                "uvicorn",
+                "app.main:app",
+                "--app-dir",
+                "q1_api",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000",
+                "--workers",
+                "1"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/ready', timeout=2).close()"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 15000000000,
+                "Retries": 6
+            },
+            "Image": "gekko-check-461270ce27a0-api",
+            "Volumes": null,
+            "WorkingDir": "/srv",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "904c5ed390b7717bac74ec868e2aa5da499571cd87e5b9690e37be862205b71c",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:b1d0b9d7b363f825dbfda30b0797b89f24200116f714f22340b4c5ba3ce00a7f",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "gekko-check-461270ce27a0",
+                "com.docker.compose.project.config_files": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-461270ce27a0/source/q3_deploy/docker-compose.yml",
+                "com.docker.compose.project.environment_file": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-461270ce27a0/source/q3_deploy/.env",
+                "com.docker.compose.project.working_dir": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-461270ce27a0/source/q3_deploy",
+                "com.docker.compose.service": "api",
+                "com.docker.compose.version": "5.5.1"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "166662c8a688576d539bb9e283fa2e7ec95edf46bf48a6f54119a2d5399eea4c",
+            "SandboxKey": "/var/run/docker/netns/166662c8a688",
+            "Ports": {
+                "8000/tcp": null
+            },
+            "Networks": {
+                "gekko-check-461270ce27a0_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "gekko-check-461270ce27a0-api-1",
+                        "api"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "bc3fd0284f43b196d0d71d58df7c265d0cc9aadb9c88b466a3bb5ebc02177287",
+                    "EndpointID": "3fb89e7d2d9d95a6f3c69b891c13bb9af199a3c393f813e0e5ae2075f12efa2d",
+                    "Gateway": "172.19.0.1",
+                    "IPAddress": "172.19.0.6",
+                    "MacAddress": "26:af:3b:9c:34:2e",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "gekko-check-461270ce27a0-api-1",
+                        "api",
+                        "9c0d6632084d"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:b1d0b9d7b363f825dbfda30b0797b89f24200116f714f22340b4c5ba3ce00a7f",
+            "size": 2191,
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux"
+            }
+        }
+    }
+]

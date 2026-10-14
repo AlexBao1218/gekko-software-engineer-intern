@@ -1,0 +1,272 @@
+ Image gekko-q3-t6-api Building 
+ Image gekko-q3-t6-mock_ocr Building 
+ Image gekko-q3-t6-mock_onboarding Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.50kB done
+#1 DONE 0.0s
+
+#2 [mock_onboarding internal] load build definition from Dockerfile
+#2 transferring dockerfile: 129B 0.0s done
+#2 DONE 0.0s
+
+#3 [mock_ocr internal] load build definition from Dockerfile
+#3 transferring dockerfile: 129B 0.0s done
+#3 DONE 0.1s
+
+#4 [mock_ocr internal] load metadata for docker.io/library/python:3.12-slim
+#4 ...
+
+#5 [api internal] load build definition from Dockerfile
+#5 transferring dockerfile: 668B 0.0s done
+#5 DONE 0.2s
+
+#4 [api internal] load metadata for docker.io/library/python:3.12-slim
+#4 DONE 3.2s
+
+#6 [mock_ocr internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [mock_onboarding internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [api internal] load .dockerignore
+#8 transferring context: 242B 0.0s done
+#8 DONE 0.1s
+
+#9 [mock_onboarding internal] load build context
+#9 transferring context: 31B 0.0s done
+#9 DONE 0.0s
+
+#10 [mock_ocr internal] load build context
+#10 transferring context: 4.42kB done
+#10 DONE 0.0s
+
+#11 [mock_ocr 1/3] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#11 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#11 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#11 CACHED
+
+#12 [mock_ocr 3/3] COPY server.py .
+#12 CACHED
+
+#13 [mock_onboarding 2/3] WORKDIR /app
+#13 CACHED
+
+#14 [mock_onboarding 3/3] COPY server.py .
+#14 CACHED
+
+#15 [mock_ocr] exporting to image
+#15 exporting layers done
+#15 exporting manifest sha256:7468f0a3338ab22cf15757cce43f999b000da859fe4bf83ab7dd17c82e52f561 0.0s done
+#15 exporting config sha256:e20c14ffdbad8105cf2c3de790705ca54468ffa90e257eab820a12d7022b069f 0.1s done
+#15 ...
+
+#16 [api 2/7] WORKDIR /srv
+#16 DONE 0.1s
+
+#17 [api internal] load build context
+#17 transferring context: 183.61kB 0.1s done
+#17 DONE 0.1s
+
+#15 [mock_ocr] exporting to image
+#15 exporting attestation manifest sha256:68a6bb9c7ff2a5e4f36c9b9a72fbfd9dc19dd469febc27b28380dec272425c19 0.0s done
+#15 exporting manifest list sha256:a8891601f474c54e44bd321ff0bd5791ca506b21f622aca4152fdb1b3276ed16 0.0s done
+#15 naming to docker.io/library/gekko-q3-t6-mock_ocr:latest 0.0s done
+#15 unpacking to docker.io/library/gekko-q3-t6-mock_ocr:latest
+#15 unpacking to docker.io/library/gekko-q3-t6-mock_ocr:latest 0.0s done
+#15 DONE 0.3s
+
+#18 [api 3/7] COPY requirements.txt ./requirements.txt
+#18 DONE 0.1s
+
+#19 [mock_onboarding] exporting to image
+#19 exporting layers done
+#19 exporting manifest sha256:894f39058cc9f6d3911ccbb06d56524ddcb3ddf62648423e581668637e8ff96b 0.0s done
+#19 exporting config sha256:14e64a454ab4dfbb8dc6caf473812103b7c618acd68a4a2b44c58e3b8aaf61e3 0.0s done
+#19 exporting attestation manifest sha256:d095990c43b692d5a12f68c6e1acdeb18671d5edbaef131189f4c78fc8eafe0d 0.0s done
+#19 exporting manifest list sha256:23074c890c67bd6a0db9bb8d077cdbf0a3b2733e339c4d9f23cef9da03db8d59 0.0s done
+#19 naming to docker.io/library/gekko-q3-t6-mock_onboarding:latest 0.0s done
+#19 unpacking to docker.io/library/gekko-q3-t6-mock_onboarding:latest done
+#19 DONE 0.3s
+
+#20 [api 4/7] RUN pip install --no-cache-dir -r requirements.txt     && groupadd --gid 10001 app     && useradd --uid 10001 --gid app --no-create-home app     && mkdir /data     && chown app:app /data
+#20 ...
+
+#21 [mock_onboarding] resolving provenance for metadata file
+#21 DONE 0.0s
+
+#22 [mock_ocr] resolving provenance for metadata file
+#22 DONE 0.0s
+
+#20 [api 4/7] RUN pip install --no-cache-dir -r requirements.txt     && groupadd --gid 10001 app     && useradd --uid 10001 --gid app --no-create-home app     && mkdir /data     && chown app:app /data
+#20 5.088 Collecting fastapi==0.143.0 (from -r requirements.txt (line 1))
+#20 6.215   Downloading fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+#20 7.160 Collecting pydantic==2.14.1 (from -r requirements.txt (line 2))
+#20 7.503   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+#20 8.232 Collecting uvicorn==0.54.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 8.537   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#20 8.840 Collecting python-multipart==0.0.32 (from -r requirements.txt (line 4))
+#20 9.101   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+#20 9.446 Collecting httpx==0.28.1 (from -r requirements.txt (line 5))
+#20 9.700   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#20 10.23 Collecting pytest==9.1.1 (from -r requirements.txt (line 6))
+#20 10.47   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+#20 10.96 Collecting pytest-asyncio==1.4.0 (from -r requirements.txt (line 7))
+#20 11.21   Downloading pytest_asyncio-1.4.0-py3-none-any.whl.metadata (4.1 kB)
+#20 11.94 Collecting starlette>=0.46.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+#20 12.27   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+#20 12.61 Collecting typing-extensions>=4.8.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+#20 12.87   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#20 13.13 Collecting typing-inspection>=0.4.2 (from fastapi==0.143.0->-r requirements.txt (line 1))
+#20 13.38   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#20 13.64 Collecting annotated-doc>=0.0.2 (from fastapi==0.143.0->-r requirements.txt (line 1))
+#20 13.92   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#20 14.29 Collecting opentelemetry-api>=1.44.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+#20 14.59   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+#20 14.85 Collecting annotated-types>=0.6.0 (from pydantic==2.14.1->-r requirements.txt (line 2))
+#20 15.13   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#20 16.82 Collecting pydantic-core==2.50.1 (from pydantic==2.14.1->-r requirements.txt (line 2))
+#20 17.08   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.5 kB)
+#20 17.37 Collecting click>=7.0 (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 17.62   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#20 17.87 Collecting h11>=0.8 (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 18.13   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#20 18.49 Collecting anyio (from httpx==0.28.1->-r requirements.txt (line 5))
+#20 18.85   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+#20 19.66 Collecting certifi (from httpx==0.28.1->-r requirements.txt (line 5))
+#20 19.94   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+#20 20.29 Collecting httpcore==1.* (from httpx==0.28.1->-r requirements.txt (line 5))
+#20 20.73   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#20 21.13 Collecting idna (from httpx==0.28.1->-r requirements.txt (line 5))
+#20 21.40   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#20 21.67 Collecting iniconfig>=1.0.1 (from pytest==9.1.1->-r requirements.txt (line 6))
+#20 21.93   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+#20 22.28 Collecting packaging>=22 (from pytest==9.1.1->-r requirements.txt (line 6))
+#20 22.54   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#20 22.82 Collecting pluggy<2,>=1.5 (from pytest==9.1.1->-r requirements.txt (line 6))
+#20 23.07   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#20 23.43 Collecting pygments>=2.7.2 (from pytest==9.1.1->-r requirements.txt (line 6))
+#20 23.76   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+#20 24.23 Collecting httptools>=0.8.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 24.55   Downloading httptools-0.9.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (3.5 kB)
+#20 24.83 Collecting python-dotenv>=0.13 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 25.11   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+#20 26.03 Collecting pyyaml>=5.1 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 26.40   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.4 kB)
+#20 26.87 Collecting uvloop>=0.15.1 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 27.18   Downloading uvloop-0.23.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (5.1 kB)
+#20 27.77 Collecting watchfiles>=0.20 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 28.02   Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.9 kB)
+#20 28.58 Collecting websockets>=13.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+#20 28.85   Downloading websockets-17.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (6.3 kB)
+#20 29.16 Downloading fastapi-0.143.0-py3-none-any.whl (144 kB)
+#20 29.68 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+#20 30.46 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#20 30.84 Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+#20 31.10 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#20 31.45 Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+#20 31.89 Downloading pytest_asyncio-1.4.0-py3-none-any.whl (16 kB)
+#20 32.20 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#20 32.51 Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.0 MB)
+#20 33.54    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 3.0 MB/s eta 0:00:00
+#20 33.80 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#20 34.08 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#20 34.38 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#20 34.80 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#20 35.09 Downloading httptools-0.9.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (549 kB)
+#20 35.33    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 549.2/549.2 kB 4.1 MB/s eta 0:00:00
+#20 35.65 Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+#20 35.92 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+#20 36.21 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#20 36.64 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#20 36.91 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+#20 38.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 17.8 MB/s eta 0:00:00
+#20 38.56 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+#20 38.89 Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (775 kB)
+#20 39.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 775.1/775.1 kB 1.6 MB/s eta 0:00:00
+#20 39.82 Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+#20 40.19 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+#20 40.63 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#20 40.90 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#20 41.20 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#20 41.50 Downloading uvloop-0.23.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (4.4 MB)
+#20 43.07    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 3.7 MB/s eta 0:00:00
+#20 43.43 Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (454 kB)
+#20 43.85 Downloading websockets-17.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (226 kB)
+#20 44.29 Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+#20 44.45 Installing collected packages: websockets, uvloop, typing-extensions, pyyaml, python-multipart, python-dotenv, pygments, pluggy, packaging, iniconfig, idna, httptools, h11, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic-core, opentelemetry-api, httpcore, anyio, watchfiles, starlette, pytest-asyncio, pydantic, httpx, fastapi
+#20 48.49 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 fastapi-0.143.0 h11-0.16.0 httpcore-1.0.9 httptools-0.9.0 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.6.0 pydantic-2.14.1 pydantic-core-2.50.1 pygments-2.21.0 pytest-9.1.1 pytest-asyncio-1.4.0 python-dotenv-1.2.4 python-multipart-0.0.32 pyyaml-6.0.3 starlette-1.8.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0 uvloop-0.23.0 watchfiles-1.3.0 websockets-17.2
+#20 48.49 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#20 50.12 
+#20 50.12 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+#20 50.12 [notice] To update, run: pip install --upgrade pip
+#20 DONE 50.7s
+
+#23 [api 5/7] COPY q1_api/app ./q1_api/app
+#23 DONE 0.1s
+
+#24 [api 6/7] COPY data/account_applications.csv ./data/account_applications.csv
+#24 DONE 0.0s
+
+#25 [api 7/7] COPY q3_deploy/scripts ./scripts
+#25 DONE 0.0s
+
+#26 [api] exporting to image
+#26 exporting layers
+#26 exporting layers 3.5s done
+#26 exporting manifest sha256:4e6001f94250e4788cc0959c096221013d1178eb4e19193605f33b0ad7c730a3 0.0s done
+#26 exporting config sha256:cc50819a3741f093e28495ff24bb4b99d5e293f46337d1c8119d3c9195502b71 0.0s done
+#26 exporting attestation manifest sha256:76a0394a9a426da324d4e16ee0e06cf6d8a0e739fdc8836dbe76dd6df60b649c 0.0s done
+#26 exporting manifest list sha256:126d0853d7b65a10af754a0832ae2e305a5bea8e8f6eed112780aadc157e2cd4 0.0s done
+#26 naming to docker.io/library/gekko-q3-t6-api:latest done
+#26 unpacking to docker.io/library/gekko-q3-t6-api:latest
+#26 unpacking to docker.io/library/gekko-q3-t6-api:latest 0.8s done
+#26 DONE 4.6s
+
+#27 [api] resolving provenance for metadata file
+#27 DONE 0.0s
+ Image gekko-q3-t6-api Built 
+ Image gekko-q3-t6-mock_ocr Built 
+ Image gekko-q3-t6-mock_onboarding Built 
+ Network gekko-q3-t6_default Creating 
+ Volume gekko-q3-t6_api_data Creating 
+ Volume gekko-q3-t6_api_data Creating 
+ Network gekko-q3-t6_default Creating 
+ Volume gekko-q3-t6_api_data Created 
+ Volume gekko-q3-t6_api_data Created 
+ Network gekko-q3-t6_default Created 
+ Network gekko-q3-t6_default Created 
+ Container gekko-q3-t6-mock_ocr-1 Creating 
+ Container gekko-q3-t6-mock_onboarding-1 Creating 
+ Container gekko-q3-t6-mock_onboarding-1 Created 
+ Container gekko-q3-t6-mock_ocr-1 Created 
+ Container gekko-q3-t6-api-1 Creating 
+ Container gekko-q3-t6-api-1 Created 
+ Container gekko-q3-t6-nginx-1 Creating 
+ Container gekko-q3-t6-nginx-1 Created 
+ Container gekko-q3-t6-mock_ocr-1 Starting 
+ Container gekko-q3-t6-mock_onboarding-1 Starting 
+ Container gekko-q3-t6-mock_ocr-1 Started 
+ Container gekko-q3-t6-mock_onboarding-1 Started 
+ Container gekko-q3-t6-mock_ocr-1 Waiting 
+ Container gekko-q3-t6-mock_onboarding-1 Waiting 
+ Container gekko-q3-t6-mock_ocr-1 Healthy 
+ Container gekko-q3-t6-mock_onboarding-1 Healthy 
+ Container gekko-q3-t6-api-1 Starting 
+ Container gekko-q3-t6-api-1 Started 
+ Container gekko-q3-t6-mock_ocr-1 Waiting 
+ Container gekko-q3-t6-api-1 Waiting 
+ Container gekko-q3-t6-mock_ocr-1 Healthy 
+ Container gekko-q3-t6-api-1 Healthy 
+ Container gekko-q3-t6-nginx-1 Starting 
+ Container gekko-q3-t6-nginx-1 Started 
+ Container gekko-q3-t6-mock_ocr-1 Waiting 
+ Container gekko-q3-t6-mock_onboarding-1 Waiting 
+ Container gekko-q3-t6-nginx-1 Waiting 
+ Container gekko-q3-t6-api-1 Waiting 
+ Container gekko-q3-t6-api-1 Healthy 
+ Container gekko-q3-t6-mock_ocr-1 Healthy 
+ Container gekko-q3-t6-mock_onboarding-1 Healthy 
+ Container gekko-q3-t6-nginx-1 Healthy 

@@ -1,0 +1,20 @@
+ M q1_api/app/db.py
+ M q1_api/app/main.py
+ M q3_deploy/.env.example
+ M q3_deploy/Dockerfile
+ M q3_deploy/README.md
+ M q3_deploy/RUNBOOK.md
+ M q3_deploy/docker-compose.yml
+ M q3_deploy/nginx.conf
+ M q3_deploy/scripts/smoke_test.sh
+ M requirements.txt
+?? .dockerignore
+?? Q3_DEPLOYMENT_IMPLEMENTATION.zh-CN.md
+?? q1_api/app/readiness.py
+?? q1_api/app/seed.py
+?? q1_api/tests/deploy_experiment.py
+?? q1_api/tests/test_readiness.py
+?? q1_api/tests/test_seed.py
+?? q1_api/tests/test_smoke.py
+?? q3_deploy/evidence/
+?? q3_deploy/scripts/smoke.py

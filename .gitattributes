@@ -1,0 +1,2 @@
+# Preserve raw terminal evidence, including tool-generated trailing spaces.
+q3_deploy/evidence/**/*.txt -whitespace

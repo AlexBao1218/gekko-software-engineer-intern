@@ -176,3 +176,59 @@ Evidence, exact counts and limits are in the Q2 acceptance document.
 No external code, modified mocks, new dependency, remote publication or submission.
 The code remains AI-generated work that Alex must personally understand and be
 able to change during interview; that understanding is not asserted by this log.
+
+## Q3 deployment stage (Q3.1/Q3.2), 2026-10-14
+
+User explicitly requested Docker/nginx, persistence and health first, with tests,
+Git/process records and subagents. Codex parent implemented readiness and lifespan
+integration, pinned previously verified direct dependencies, coordinated Docker
+faults and records. Bounded agents owned seed/storage refactor, container config,
+smoke implementation/testing, and a separate read-only review. Runtime Docker
+mutations were coordinated by the parent against dedicated disposable projects.
+
+Choices: non-root single-worker API, SQLite named volume, atomic hash-identified
+startup seed, a true rollback write probe for readiness, healthy startup dependency
+chain, nginx preserved URIs/Docker DNS/explicit limits, and a smoke verifying actual
+CSV identity plus unique downstream ingestion. No original mock code was changed.
+The smoke uses a separate uploaded batch and does not consume the startup sample.
+
+Observed RED/GREEN includes absent readiness, absent seed integration, missing
+smoke program, and the independent review's three missing workflow-table false
+ready responses. Corrected the latter only after regression tests returned 200
+instead of503. Complete native and Linux container suites each passed450 tests;
+the existing TestClient warning remains. First real deployment/smoke and all nine final isolated deployment/fault stages
+passed. Forced API IP replacement and full-stack restart preserved all nine
+business tables; real read-only DB/directory faults, proxy size limits and5.07s
+OCR504/no proxy retry passed. Original/snapshot53-source hashes remained stable;
+owned test resources were cleaned up. Raw evidence is in the Q3 acceptance files.
+
+Backup/restore and final Q3 module acceptance remain subsequent work. No claim
+that Alex has personally explained or modified the generated code; candidate
+review remains required. No push/fork/submission or global tool configuration
+change. Exact fault limitations and results are preserved rather than inferred
+from configuration alone.
+
+## Q3.3 backup/recovery and module closure, 2026-10-14
+
+User authorized online backup, seven-file retention, actual restoration of review
+and delivery history, and a unified Q3 commit. Parent coordinated three agents:
+backup/restore scripts plus real SQLite CLI tests; isolated Docker recovery
+experiment; independent read-only risk/code review. File ownership kept edits
+separate; only parent operated Docker and Git. TDD was used for the new helper.
+
+The design uses SQLite online backup, staged validation/publication and a shared
+operation lock. Restore stops only API, preserves a safety snapshot, then replaces
+the local database. Documentation explicitly distinguishes local rollback from
+external ingestion: old snapshots can omit export identities already received
+remotely, so reconciliation is required before restarting the dispatcher.
+Separate volumes do not provide off-host disaster protection. Candidate personal
+understanding remains unverified; results are recorded in the T7 acceptance file.
+
+Verified results: native macOS and non-root Linux each478 passing tests with one
+existing dependency warning; original native delivery experiments3/3 passed;
+Docker recovery nine stages passed. Nine online snapshots retained the newest
+seven, rejected unsafe/invalid restores left data intact, and all nine business
+tables/BLOBs matched after actual restore before/after startup. Three repeated
+deliver requests left downstream ingestion at one. Docker backups ran while the
+API was up but business idle; real active-write/WAL tests are separate evidence.
+No claim of arbitrary-point distributed rollback or production disaster recovery.

@@ -143,9 +143,9 @@ CSV 的申请列与 OCR 列、稳定排序、编码/换行在高标准验收中�
 | T3 后台 OCR | 已验证（2026-10-13） | T2；约 1h 初估 | 202返回、可查进度、五字段保存、5个badscan理由；不覆盖审批；见Q2 OCR核验 |
 | T4 重试/恢复 | 已验证（2026-10-13） | T3；1–1.5h 初估，另留演练缓冲 | 有界重试/耗尽、普通process恢复；42/7/99真实杀进程后全字段/终态比较通过；四/六次测量与seed42耗尽保留；全套288通过 |
 | T5 导出/交付 | 已验证（2026-10-13） | T2/T4；1–1.5h | 精确成员、再次导出不重复、并发导出；远端收件超时/本地重启后同键交付，1 次 ingestion；提交 Q2 |
-| T6 容器/代理 | 待做 | T5；约 1h 初估 | 首启自动 seed/重启不重复；Docker/Compose/nginx/env；两条路由、体积超限 413、DB 故障 ready=503、持久化和健康依赖 |
-| T7 备份/手册 | 待做 | T6；约 1h | 在线生成至少 9 份演示保留七份；隔离恢复并核对数据；runbook 四类指令实测 |
-| T8 最终验收 | 待做 | T7；约 1h | smoke 完整流程；临时干净 clone 的 pytest/Compose/smoke；原生三进程验证；证据和文档完成，提交 Q3 |
+| T6 容器/代理 | 已验证（2026-10-14） | T5；约 1h 初估 | 首启自动 seed/重启不重复；Docker/Compose/nginx/env；两条路由、体积超限 413、DB 故障 ready=503、持久化和健康依赖 |
+| T7 备份/手册 | 已验证 | T6；约 1h | 在线生成至少 9 份演示保留七份；隔离恢复并核对数据；runbook 四类指令实测 |
+| T8 最终验收 | 核心复验通过，提交后记录精确hash克隆复验 | T7；约 1h | smoke 完整流程；临时干净 clone 的 pytest/Compose/smoke；原生三进程验证；证据和文档完成，提交 Q3 |
 | T9 CI | 计划交付 | 核心通过；0.5–1h 初估 | `.github/workflows/ci.yml`，每 push 跑 pytest/compose build，最终 hash 真正绿灯并记录 run URL；单独提交 |
 | T10 面试练习 | 待做 | 各模块后；1–2h | 解释数据流/重试/事务；练习新增审核状态、按案件开户、nginx 限流；记录仍不理解之处 |
 
@@ -177,4 +177,4 @@ CI 的 `.github/` 是原题加分项所需的配置扩展，不是第二个应�
 
 决策用“问题 → 选项 → 选择及理由 → 验证 → 局限”记录。保留失败与修正，不把建议写成已实现，不替 Alex 声明已经理解全部 AI 代码。
 
-Q1 已统一提交并追加必要修复。Q2 的 T3/T4/T5 已在 codex/assessment-implementation 完成实施、测试和记录，统一作为完整 Q2 模块提交。见 [Q2核验](q2_integration/evidence/Q2-ACCEPTANCE-20261013.md)。下一步按 T6/T7/T8 完成 Q3 部署、readiness、在线备份/恢复和干净环境 smoke，再做 CI。Alex 的代码理解与面试演练仍需本人参与核对。
+Q1 已统一提交并追加必要修复。Q2 的 T3/T4/T5 已在 codex/assessment-implementation 完成实施、测试和记录，统一作为完整 Q2 模块提交。见 [Q2核验](q2_integration/evidence/Q2-ACCEPTANCE-20261013.md)。T6 的部署、readiness、seed、持久化与代理已完成，主机/Linux各450项通过，真实新卷部署与故障九阶段PASS，见 [T6验收](q3_deploy/evidence/T6-ACCEPTANCE-20261014.md)。T7在线备份/七份保留/九表恢复已通过；本机和Linux各478项、原生3种交付场景、Docker恢复九阶段通过，见 [T7验收](q3_deploy/evidence/T7-ACCEPTANCE-20261014.md)。本轮统一提交Q3；提交后从独立本地clone核对精确hash，记录另存 `.gekko-setup/q3-final-20261014/`。下一步CI。Alex 的代码理解与面试演练仍需本人参与核对。

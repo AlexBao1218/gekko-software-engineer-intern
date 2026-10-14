@@ -1,0 +1,211 @@
+nginx-1  | 2026-10-14T02:15:19.583875261Z /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | 2026-10-14T02:15:19.584079428Z /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | 2026-10-14T02:15:19.585051969Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 2026-10-14T02:15:19.586036844Z 10-listen-on-ipv6-by-default.sh: info: can not modify /etc/nginx/conf.d/default.conf (read-only file system?)
+nginx-1  | 2026-10-14T02:15:19.586947469Z /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | 2026-10-14T02:15:19.587011178Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | 2026-10-14T02:15:19.589059553Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | 2026-10-14T02:15:19.590087428Z /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1  | 2026-10-14T02:15:19.603988719Z 2026/10/14 02:15:19 [notice] 1#1: using the "epoll" event method
+nginx-1  | 2026-10-14T02:15:19.604036886Z 2026/10/14 02:15:19 [notice] 1#1: nginx/1.27.5
+nginx-1  | 2026-10-14T02:15:19.604039219Z 2026/10/14 02:15:19 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+nginx-1  | 2026-10-14T02:15:19.604040386Z 2026/10/14 02:15:19 [notice] 1#1: OS: Linux 6.8.0-117-generic
+nginx-1  | 2026-10-14T02:15:19.604041303Z 2026/10/14 02:15:19 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+nginx-1  | 2026-10-14T02:15:19.604866678Z 2026/10/14 02:15:19 [notice] 1#1: start worker processes
+nginx-1  | 2026-10-14T02:15:19.604872303Z 2026/10/14 02:15:19 [notice] 1#1: start worker process 21
+nginx-1  | 2026-10-14T02:15:19.604873303Z 2026/10/14 02:15:19 [notice] 1#1: start worker process 22
+nginx-1  | 2026-10-14T02:15:24.624216472Z 127.0.0.1 - - [14/Oct/2026:02:15:24 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:15:25.973190222Z 172.18.0.1 - - [14/Oct/2026:02:15:25 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:26.607471181Z 172.18.0.4 - - [14/Oct/2026:02:15:26 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:26.612823056Z 172.18.0.4 - - [14/Oct/2026:02:15:26 +0000] "GET /api/batches/45beb786-7af3-4e2d-bb5c-9a5d30aad545 HTTP/1.1" 200 1141 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:26.623146514Z 172.18.0.4 - - [14/Oct/2026:02:15:26 +0000] "POST /api/batches HTTP/1.1" 201 1141 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:26.629214931Z 172.18.0.4 - - [14/Oct/2026:02:15:26 +0000] "POST /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/process HTTP/1.1" 202 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:26.637759931Z 172.18.0.4 - - [14/Oct/2026:02:15:26 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:27.154151389Z 172.18.0.4 - - [14/Oct/2026:02:15:27 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:27.666004848Z 172.18.0.4 - - [14/Oct/2026:02:15:27 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:28.172455265Z 172.18.0.4 - - [14/Oct/2026:02:15:28 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:28.675880807Z 172.18.0.4 - - [14/Oct/2026:02:15:28 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:29.187906724Z 172.18.0.4 - - [14/Oct/2026:02:15:29 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:29.653999974Z 127.0.0.1 - - [14/Oct/2026:02:15:29 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:15:29.690478724Z 172.18.0.4 - - [14/Oct/2026:02:15:29 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:30.208986183Z 172.18.0.4 - - [14/Oct/2026:02:15:30 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:30.720726683Z 172.18.0.4 - - [14/Oct/2026:02:15:30 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:31.232968558Z 172.18.0.4 - - [14/Oct/2026:02:15:31 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:31.757569308Z 172.18.0.4 - - [14/Oct/2026:02:15:31 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:32.288956892Z 172.18.0.4 - - [14/Oct/2026:02:15:32 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1356 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:32.815015934Z 172.18.0.4 - - [14/Oct/2026:02:15:32 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:33.332945226Z 172.18.0.4 - - [14/Oct/2026:02:15:33 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:33.837883268Z 172.18.0.4 - - [14/Oct/2026:02:15:33 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:34.350559643Z 172.18.0.4 - - [14/Oct/2026:02:15:34 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:34.721552351Z 127.0.0.1 - - [14/Oct/2026:02:15:34 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:15:34.859032018Z 172.18.0.4 - - [14/Oct/2026:02:15:34 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:35.365696935Z 172.18.0.4 - - [14/Oct/2026:02:15:35 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:35.881308310Z 172.18.0.4 - - [14/Oct/2026:02:15:35 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:36.392798977Z 172.18.0.4 - - [14/Oct/2026:02:15:36 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:36.908207436Z 172.18.0.4 - - [14/Oct/2026:02:15:36 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:37.415079978Z 172.18.0.4 - - [14/Oct/2026:02:15:37 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:37.938121020Z 172.18.0.4 - - [14/Oct/2026:02:15:37 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:38.447497937Z 172.18.0.4 - - [14/Oct/2026:02:15:38 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:38.966279728Z 172.18.0.4 - - [14/Oct/2026:02:15:38 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1358 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:39.475463395Z 172.18.0.4 - - [14/Oct/2026:02:15:39 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1357 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:39.788430312Z 127.0.0.1 - - [14/Oct/2026:02:15:39 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:15:39.985445312Z 172.18.0.4 - - [14/Oct/2026:02:15:39 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1357 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:40.489282937Z 172.18.0.4 - - [14/Oct/2026:02:15:40 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1357 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:41.011559688Z 172.18.0.4 - - [14/Oct/2026:02:15:41 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1357 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:41.518231730Z 172.18.0.4 - - [14/Oct/2026:02:15:41 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1357 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:42.029624688Z 172.18.0.4 - - [14/Oct/2026:02:15:42 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 1389 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:42.050003813Z 172.18.0.4 - - [14/Oct/2026:02:15:42 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/cases?status=ocr_done&page_size=100 HTTP/1.1" 200 19352 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:42.056679022Z 172.18.0.4 - - [14/Oct/2026:02:15:42 +0000] "POST /api/cases/e573ac54-e645-4696-8bcf-43abb1124f1a/review HTTP/1.1" 200 678 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:42.061315230Z 172.18.0.4 - - [14/Oct/2026:02:15:42 +0000] "POST /api/cases/e573ac54-e645-4696-8bcf-43abb1124f1a/review HTTP/1.1" 200 685 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:42.065023855Z 172.18.0.4 - - [14/Oct/2026:02:15:42 +0000] "POST /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/export HTTP/1.1" 202 476 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:42.069348522Z 172.18.0.4 - - [14/Oct/2026:02:15:42 +0000] "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 458 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:42.577456397Z 172.18.0.4 - - [14/Oct/2026:02:15:42 +0000] "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 458 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:43.098623772Z 172.18.0.4 - - [14/Oct/2026:02:15:43 +0000] "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 512 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:43.611225439Z 172.18.0.4 - - [14/Oct/2026:02:15:43 +0000] "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 739 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:43.618445814Z 172.18.0.4 - - [14/Oct/2026:02:15:43 +0000] "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/download HTTP/1.1" 200 275 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:43.624318897Z 172.18.0.4 - - [14/Oct/2026:02:15:43 +0000] "POST /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/export HTTP/1.1" 200 25 "-" "Python-urllib/3.12" "-"
+nginx-1  | 2026-10-14T02:15:43.940061189Z 172.18.0.1 - - [14/Oct/2026:02:15:43 +0000] "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/download HTTP/1.1" 200 275 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:44.904705940Z 127.0.0.1 - - [14/Oct/2026:02:15:44 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:15:45.080191940Z 172.18.0.1 - - [14/Oct/2026:02:15:45 +0000] "POST /ocr/parse HTTP/1.1" 400 48 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:45.085168023Z 172.18.0.1 - - [14/Oct/2026:02:15:45 +0000] "GET /api/health HTTP/1.1" 200 15 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:45.089765648Z 172.18.0.1 - - [14/Oct/2026:02:15:45 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/cases?status=ocr_failed&page_size=100 HTTP/1.1" 200 2889 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:45.094716481Z 172.18.0.1 - - [14/Oct/2026:02:15:45 +0000] "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/exports HTTP/1.1" 200 741 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:45.890016940Z 172.18.0.1 - - [14/Oct/2026:02:15:45 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:46.802752274Z 172.18.0.1 - - [14/Oct/2026:02:15:46 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:47.706200941Z 172.18.0.1 - - [14/Oct/2026:02:15:47 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:48.876752483Z 172.18.0.1 - - [14/Oct/2026:02:15:48 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:49.714339775Z 172.18.0.1 - - [14/Oct/2026:02:15:49 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:50.133963400Z 127.0.0.1 - - [14/Oct/2026:02:15:50 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:15:50.788883276Z 172.18.0.1 - - [14/Oct/2026:02:15:50 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:51.612736651Z 172.18.0.1 - - [14/Oct/2026:02:15:51 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:52.375247235Z 172.18.0.1 - - [14/Oct/2026:02:15:52 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:53.096525610Z 172.18.0.1 - - [14/Oct/2026:02:15:53 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:53.326633652Z 172.18.0.1 - - [14/Oct/2026:02:15:53 +0000] "POST /api/batches HTTP/1.1" 201 1141 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:53.862328152Z 172.18.0.1 - - [14/Oct/2026:02:15:53 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:15:57.162311029Z 2026/10/14 02:15:57 [error] 22#22: *124 upstream timed out (110: Operation timed out) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://172.18.0.4:8000/api/ready", host: "127.0.0.1"
+nginx-1  | 2026-10-14T02:15:57.168996654Z 127.0.0.1 - - [14/Oct/2026:02:15:57 +0000] "GET /api/ready HTTP/1.1" 504 167 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:16:02.733864448Z 2026/10/14 02:16:02 [error] 22#22: *126 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1"
+nginx-1  | 2026-10-14T02:16:02.733952698Z 127.0.0.1 - - [14/Oct/2026:02:16:02 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:16:02.847889781Z 2026/10/14 02:16:02 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:02.849034115Z 172.18.0.1 - - [14/Oct/2026:02:16:02 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:03.372586073Z 2026/10/14 02:16:03 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:03.372712323Z 172.18.0.1 - - [14/Oct/2026:02:16:03 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:03.893362407Z 2026/10/14 02:16:03 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:03.893407782Z 172.18.0.1 - - [14/Oct/2026:02:16:03 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:04.418667574Z 172.18.0.1 - - [14/Oct/2026:02:16:04 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:04.418748741Z 2026/10/14 02:16:04 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:04.938585991Z 2026/10/14 02:16:04 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:04.938630116Z 172.18.0.1 - - [14/Oct/2026:02:16:04 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:05.458733783Z 2026/10/14 02:16:05 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:05.459113449Z 172.18.0.1 - - [14/Oct/2026:02:16:05 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:06.024304616Z 2026/10/14 02:16:06 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:06.024467200Z 172.18.0.1 - - [14/Oct/2026:02:16:06 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:06.601529950Z 2026/10/14 02:16:06 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:06.601649325Z 172.18.0.1 - - [14/Oct/2026:02:16:06 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:07.134970950Z 172.18.0.1 - - [14/Oct/2026:02:16:07 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:07.135037784Z 2026/10/14 02:16:07 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+api-1    | 2026-10-14T02:15:14.659437133Z INFO:     Started server process [1]
+api-1    | 2026-10-14T02:15:14.659508300Z INFO:     Waiting for application startup.
+api-1    | 2026-10-14T02:15:14.705671134Z INFO:     Application startup complete.
+api-1    | 2026-10-14T02:15:14.712688967Z INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1    | 2026-10-14T02:15:19.178175136Z INFO:     127.0.0.1:48704 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:24.491305638Z INFO:     127.0.0.1:34048 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:24.623634097Z INFO:     172.18.0.5:37092 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:25.973276722Z INFO:     172.18.0.5:37100 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:26.607417181Z INFO:     172.18.0.5:37102 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:26.612489848Z INFO:     172.18.0.5:37116 - "GET /api/batches/45beb786-7af3-4e2d-bb5c-9a5d30aad545 HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:26.622380056Z INFO:     172.18.0.5:37122 - "POST /api/batches HTTP/1.1" 201 Created
+api-1    | 2026-10-14T02:15:26.629074014Z INFO:     172.18.0.5:37136 - "POST /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/process HTTP/1.1" 202 Accepted
+api-1    | 2026-10-14T02:15:26.638136014Z INFO:     172.18.0.5:37152 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:27.153468389Z INFO:     172.18.0.5:37158 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:27.664896681Z INFO:     172.18.0.5:37170 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:28.171947182Z INFO:     172.18.0.5:37172 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:28.675491932Z INFO:     172.18.0.5:37174 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:29.187506474Z INFO:     172.18.0.5:37178 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:29.652310516Z INFO:     172.18.0.5:37192 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:29.690207432Z INFO:     172.18.0.5:37198 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:29.724493349Z INFO:     127.0.0.1:34062 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:30.208305766Z INFO:     172.18.0.5:37202 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:30.720434974Z INFO:     172.18.0.5:37206 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:31.232544391Z INFO:     172.18.0.5:37220 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:31.753951350Z INFO:     172.18.0.5:37222 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:32.281419017Z INFO:     172.18.0.5:37238 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:32.814134975Z INFO:     172.18.0.5:37252 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:33.332677059Z INFO:     172.18.0.5:41492 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:33.836948143Z INFO:     172.18.0.5:41500 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:34.349749560Z INFO:     172.18.0.5:41504 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:34.720460268Z INFO:     172.18.0.5:41518 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:34.858762643Z INFO:     172.18.0.5:41532 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:35.166799060Z INFO:     127.0.0.1:57488 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:35.365581685Z INFO:     172.18.0.5:41536 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:35.881204685Z INFO:     172.18.0.5:41540 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:36.392389894Z INFO:     172.18.0.5:41542 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:36.907457811Z INFO:     172.18.0.5:41558 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:37.414701603Z INFO:     172.18.0.5:41568 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:37.937587186Z INFO:     172.18.0.5:41582 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:38.447375978Z INFO:     172.18.0.5:41588 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:38.964130395Z INFO:     172.18.0.5:41602 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:39.475178312Z INFO:     172.18.0.5:41610 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:39.788158229Z INFO:     172.18.0.5:41624 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:39.984843062Z INFO:     172.18.0.5:41640 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:40.458221354Z INFO:     127.0.0.1:57502 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:40.488940521Z INFO:     172.18.0.5:41648 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:41.011559646Z INFO:     172.18.0.5:41652 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:41.517476896Z INFO:     172.18.0.5:41666 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:42.029480688Z INFO:     172.18.0.5:41676 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:42.049954355Z INFO:     172.18.0.5:41692 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/cases?status=ocr_done&page_size=100 HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:42.056330105Z INFO:     172.18.0.5:41708 - "POST /api/cases/e573ac54-e645-4696-8bcf-43abb1124f1a/review HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:42.060986188Z INFO:     172.18.0.5:41710 - "POST /api/cases/e573ac54-e645-4696-8bcf-43abb1124f1a/review HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:42.064921688Z INFO:     172.18.0.5:41714 - "POST /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/export HTTP/1.1" 202 Accepted
+api-1    | 2026-10-14T02:15:42.069144522Z INFO:     172.18.0.5:41720 - "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:42.576771938Z INFO:     172.18.0.5:41732 - "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:43.098471355Z INFO:     172.18.0.5:48638 - "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:43.610734522Z INFO:     172.18.0.5:48642 - "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:43.615375564Z INFO:     172.18.0.5:48646 - "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/download HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:43.622959314Z INFO:     172.18.0.5:48658 - "POST /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/export HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:43.939784647Z INFO:     172.18.0.5:48662 - "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/download HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:44.899976898Z INFO:     172.18.0.5:48672 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:45.085070773Z INFO:     172.18.0.5:48682 - "GET /api/health HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:45.089747481Z INFO:     172.18.0.5:48684 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/cases?status=ocr_failed&page_size=100 HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:45.094517023Z INFO:     172.18.0.5:48692 - "GET /api/batches/2ac46739-045b-47a1-9a60-01afd1c6da6a/exports HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:45.705065398Z INFO:     127.0.0.1:43660 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:45.889815440Z INFO:     172.18.0.5:48696 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:46.802323065Z INFO:     172.18.0.5:48698 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:47.705630108Z INFO:     172.18.0.5:48710 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:48.876396525Z INFO:     172.18.0.5:48722 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:49.713928942Z INFO:     172.18.0.5:48724 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:50.132475942Z INFO:     172.18.0.5:48726 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:50.786743401Z INFO:     172.18.0.5:48742 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:50.990345359Z INFO:     127.0.0.1:43672 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:51.611986984Z INFO:     172.18.0.5:48750 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:52.374873235Z INFO:     172.18.0.5:48758 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:53.096188693Z INFO:     172.18.0.5:39750 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:53.326184110Z INFO:     172.18.0.5:39764 - "POST /api/batches HTTP/1.1" 201 Created
+api-1    | 2026-10-14T02:15:53.862203527Z INFO:     172.18.0.5:39780 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:15:54.203326361Z INFO:     Shutting down
+api-1    | 2026-10-14T02:15:54.304102194Z INFO:     Waiting for application shutdown.
+api-1    | 2026-10-14T02:15:54.304878819Z INFO:     Application shutdown complete.
+api-1    | 2026-10-14T02:15:54.304982944Z INFO:     Finished server process [1]
+api-1    | 2026-10-14T02:16:03.708403157Z INFO:     Started server process [1]
+api-1    | 2026-10-14T02:16:03.708727907Z INFO:     Waiting for application startup.
+api-1    | 2026-10-14T02:16:03.748148324Z INFO:     Application startup complete.
+api-1    | 2026-10-14T02:16:03.758280657Z INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1    | 2026-10-14T02:16:08.110403451Z INFO:     127.0.0.1:52282 - "GET /api/ready HTTP/1.1" 200 OK
+nginx-1  | 2026-10-14T02:16:07.652154492Z 172.18.0.1 - - [14/Oct/2026:02:16:07 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:07.652263325Z 2026/10/14 02:16:07 [error] 22#22: *128 upstream prematurely closed connection while reading response header from upstream, client: 172.18.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1:53058"
+nginx-1  | 2026-10-14T02:16:07.807500909Z 2026/10/14 02:16:07 [error] 22#22: *139 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: , request: "GET /api/ready HTTP/1.1", upstream: "http://198.18.0.75:8000/api/ready", host: "127.0.0.1"
+nginx-1  | 2026-10-14T02:16:07.807776034Z 127.0.0.1 - - [14/Oct/2026:02:16:07 +0000] "GET /api/ready HTTP/1.1" 502 157 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:16:08.164475117Z 172.18.0.1 - - [14/Oct/2026:02:16:08 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:08.807532493Z 172.18.0.1 - - [14/Oct/2026:02:16:08 +0000] "GET /api/batches/cf2f421c-f5fe-40eb-a134-8ebfa662d655 HTTP/1.1" 404 71 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:08.828819409Z 172.18.0.1 - - [14/Oct/2026:02:16:08 +0000] "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 739 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:08.837042159Z 172.18.0.1 - - [14/Oct/2026:02:16:08 +0000] "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/download HTTP/1.1" 200 275 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:09.174472993Z 172.18.0.1 - - [14/Oct/2026:02:16:09 +0000] "POST /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/deliver HTTP/1.1" 202 739 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:09.184510118Z 172.18.0.1 - - [14/Oct/2026:02:16:09 +0000] "POST /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/deliver HTTP/1.1" 202 739 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:16:09.194997034Z 172.18.0.1 - - [14/Oct/2026:02:16:09 +0000] "POST /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/deliver HTTP/1.1" 202 739 "-" "python-httpx/0.28.1" "-"
+api-1    | 2026-10-14T02:16:08.163504951Z INFO:     172.18.0.5:56470 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:16:08.807121701Z INFO:     172.18.0.5:56482 - "GET /api/batches/cf2f421c-f5fe-40eb-a134-8ebfa662d655 HTTP/1.1" 404 Not Found
+api-1    | 2026-10-14T02:16:08.828491493Z INFO:     172.18.0.5:56494 - "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:16:08.836504868Z INFO:     172.18.0.5:56510 - "GET /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/download HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:16:09.173863659Z INFO:     172.18.0.5:56512 - "POST /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/deliver HTTP/1.1" 202 Accepted
+api-1    | 2026-10-14T02:16:09.184118118Z INFO:     172.18.0.5:56524 - "POST /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/deliver HTTP/1.1" 202 Accepted
+api-1    | 2026-10-14T02:16:09.194624909Z INFO:     172.18.0.5:56530 - "POST /api/exports/b0717c03-0f9f-48cd-8315-69e4cbc53deb/deliver HTTP/1.1" 202 Accepted

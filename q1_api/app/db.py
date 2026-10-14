@@ -71,20 +71,24 @@ class Database:
             initialize_export_schema(connection)
 
     def import_batch(self, parsed: ParsedImport) -> dict:
-        batch_id = str(uuid4())
         with self.connect() as connection:
             connection.execute('BEGIN IMMEDIATE')
-            connection.execute('INSERT INTO batches VALUES (?, ?, ?, ?, ?, ?)', (
-                batch_id, datetime.now(timezone.utc).isoformat(), parsed.total_rows,
-                len(parsed.accepted), len(parsed.rejected),
-                json.dumps([row.model_dump() for row in parsed.rejected], ensure_ascii=False)))
-            connection.executemany('''
-                INSERT INTO cases (id, batch_id, row_number, case_ref, applicant_name,
-                                   id_number, dob, issue_date, image_ref)
-                VALUES (:id, :batch_id, :row_number, :case_ref, :applicant_name,
-                        :id_number, :dob, :issue_date, :image_ref)
-            ''', ({'id': str(uuid4()), 'batch_id': batch_id, **row} for row in parsed.accepted))
-            return self._batch_details(connection, batch_id)
+            return self.insert_batch(connection, parsed)
+
+    def insert_batch(self, connection: sqlite3.Connection, parsed: ParsedImport) -> dict:
+        """Insert an import inside the caller's transaction, without committing it."""
+        batch_id = str(uuid4())
+        connection.execute('INSERT INTO batches VALUES (?, ?, ?, ?, ?, ?)', (
+            batch_id, datetime.now(timezone.utc).isoformat(), parsed.total_rows,
+            len(parsed.accepted), len(parsed.rejected),
+            json.dumps([row.model_dump() for row in parsed.rejected], ensure_ascii=False)))
+        connection.executemany('''
+            INSERT INTO cases (id, batch_id, row_number, case_ref, applicant_name,
+                               id_number, dob, issue_date, image_ref)
+            VALUES (:id, :batch_id, :row_number, :case_ref, :applicant_name,
+                    :id_number, :dob, :issue_date, :image_ref)
+        ''', ({'id': str(uuid4()), 'batch_id': batch_id, **row} for row in parsed.accepted))
+        return self._batch_details(connection, batch_id)
 
     @staticmethod
     def _batch_details(connection, batch_id: str) -> dict | None:

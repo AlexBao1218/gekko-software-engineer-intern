@@ -1,0 +1,38 @@
+COMMAND: docker --context colima-gekko exec -w /verification 3dcdead40ef56556f3a20d60ab41a1da163b382446c0fba5442ce91e1a2364cc env -u PYTHONPATH -u DATABASE_PATH -u SEED_CSV_PATH -u OCR_URL -u DELIVERY_URL python -m pytest q1_api/
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.6.0
+rootdir: /verification/q1_api
+configfile: pytest.ini
+plugins: anyio-4.15.1, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 450 items
+
+q1_api/tests/test_app.py .                                               [  0%]
+q1_api/tests/test_batches.py ..............                              [  3%]
+q1_api/tests/test_database.py .......                                    [  4%]
+q1_api/tests/test_delivery_client.py ................................... [ 12%]
+...................................................................      [ 27%]
+q1_api/tests/test_delivery_native.py ...                                 [ 28%]
+q1_api/tests/test_delivery_workflow.py ............                      [ 30%]
+q1_api/tests/test_exports.py ......                                      [ 32%]
+q1_api/tests/test_imports.py ............................                [ 38%]
+q1_api/tests/test_native_process.py ..                                   [ 38%]
+q1_api/tests/test_ocr_client.py ........................................ [ 47%]
+............................................................             [ 61%]
+q1_api/tests/test_ocr_native.py ..                                       [ 61%]
+q1_api/tests/test_ocr_workflow.py .............................          [ 68%]
+q1_api/tests/test_readiness.py ..............                            [ 71%]
+q1_api/tests/test_review.py ............................................ [ 80%]
+................                                                         [ 84%]
+q1_api/tests/test_review_edges.py ...................................... [ 92%]
+.......                                                                  [ 94%]
+q1_api/tests/test_seed.py ...............                                [ 97%]
+q1_api/tests/test_smoke.py ..........                                    [100%]
+
+=============================== warnings summary ===============================
+../usr/local/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /usr/local/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================== 450 passed, 1 warning in 80.76s (0:01:20) ===================

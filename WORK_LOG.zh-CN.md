@@ -239,3 +239,45 @@ Q2三个评分项10/12/13分已逐项关联证据；不代替出题方给分。�
 将全部Q2代码、测试、记录和合成数据证据作为一次完整模块提交，沿用codex/assessment-implementation，不改原题README/两个mock/Q3，不改系统Python或Docker。git diff --check和暂存审阅后提交，不amend/squash/force-push。提交后实际本地clone再跑标准pytest，真实hash/日志保存在.gekko-setup/q2-final-clone-verification.json，最终答复报告。无push、公开fork或申请提交。
 
 下一步Q3：先部署/持久化/自动seed与nginx两路代理，再readiness，再在线备份保留七份/真实恢复和完整smoke；最后CI及本人讲解演练。本轮不提前宣称这些工作完成。
+
+## 2026-10-14：Q3 T6 Docker/nginx、持久化与健康检查
+
+用户授权先做Q3部署、持久化和健康检查，继续讲解设计、对齐评分、测试和Git记录，并合理使用子agent/上下文。基线为完整Q2提交1a51d4a，工作区起始干净。没有改变上游原题或mock源代码，沿用既有功能分支和colima-gekko专用context，不改系统Python/Docker默认值。本阶段对应Q3.1的12分和Q3.2的8分；Q3.3备份/恢复暂不冒称完成。
+
+### 分工与设计
+
+主线程集成main/readiness、固定七项已验证依赖、真实Docker运行/故障与记录；三个明确文件边界的子agent负责原子seed+共享import、容器配置、完整smoke。第四个新上下文agent只读审查；容器运行操作由主线程统一控制，避免并行修改同一Compose环境。
+
+SQLite保存到api_data命名卷/data，API非root10001、单worker；只暴露nginx本机端口。镜像构建allowlist排除env、db、Git、测试/证据。Compose以真实healthcheck和service_healthy安排启动，不使用固定等待猜测服务就绪。nginx保留两路URI/query、用DockerDNS解析替换容器、3MiB请求体留出multipart余量、2s连接/5s读写空闲超时，并禁止POST代理重放。
+
+首次启动通过SEED_CSV_PATH复用导入逻辑：marker、哈希、批次、拒绝记录和案件同事务；重启返回原ID，保留审核和交付；来源变更/缺失/格式坏拒绝启动。原生未设置seed变量时维持原行为。ready响应提供seed_batch_id，smoke另上传新批次。
+
+health只报存活；ready用mode=rw打开现有库、不创建缺失文件，查工作流表，再实际写probe表并回滚验证journal目录可写，最多等锁0.2s；错误503不泄漏路径，不留探测表或改变业务数据。Docker每5秒检查，六次失败标unhealthy；运行期健康变化不等于自动重启。
+
+### 测试与修复
+
+readiness九项404 RED→九项GREEN。main启动集成两项RED（未seed/缺seed仍启动）→GREEN。seed子agent十五项缺模块RED，实现后连同原导入/DB共50项通过。smoke最初九项缺可执行脚本失败；实现后九项通过，再加“哈希正确但案件错误”检查，最终十项通过。
+
+独立审查实际复现三张辅助表ocr_attempts/export_cases/delivery_attempts缺失仍ready。主线程新增三项先看到错误200，再补查询验证后14项readiness全部通过。其余容器配置、种子事务、smoke契约未发现剩余P1/P2。Python3.10语法及依赖Requires-Python检查通过，不代替真正3.10运行测试。
+
+主机完整pytest：450 passed, 1 warning in70.08s；Linux/arm64 Python3.12.15容器非root10001，在独立源码副本中清除PYTHONPATH和runtime端点/seed变量，标准pytest：450 passed, 1 warning in80.76s。保留原有TestClient/httpx弃用提示。Linux重新从固定requirements安装，直接依赖与本机版本一致。
+
+首轮Docker真实build/up四healthy，API id确认10001；ready返回seed43/7。原始默认故障下smoke成功：另上传43/7，OCR37done/6failed（包括5badscan和1可读耗尽），选择成功案件完成两审/导出/交付；onboarding回执显示两次请求去重，只一次ingestion。没有把部分OCR失败说成全部成功。
+
+最终独立源码快照/新项目新卷演练九阶段全部PASS（169.001s）：APIIP172.19.0.4→.6，nginxID未变；API替换和整套重启后九表完整数据/BLOB一致；三档体积返回400/API413/nginx413；DB0444和/data0555均ready503/health200，Docker实际unhealthy后恢复healthy；直接OCR5.07s返回504，debug只有一次hang，无代理POST重放。53个源码文件前后一致，cleanup无错误，原始报告/快照/命令日志和限制已保存到q3_deploy/evidence/T6-ACCEPTANCE-20261014.md及关联目录。首轮和最终演练资源已清理，仅清本次创建的测试项目/卷；未动其他项目。T6工作保留未提交，遵循整Q3一提交，待T7/T8补齐后统一提交。不push、不发布。
+
+## 2026-10-14：T7 在线备份/恢复与 Q3 收尾
+
+用户授权继续 Q3.3、保留七份、真实恢复核对审核及交付记录，完成后统一提交 Q3。保留当前 codex/assessment-implementation 分支和 T6 未提交改动；主线程独占 Docker 运行控制，三个子 agent 分别实现脚本/测试、编写可复现实验、只读审查。
+
+设计：在线备份使用 SQLite backup API 读取已提交内容（包括 WAL），只读打开源文件避免意外创建空库；临时快照先做完整性/外键/实际 schema 校验，再发布并按严格命名保留七份。文件锁覆盖备份与恢复，数据库锁竞争有 deadline。独立备份卷和 UID10001 权限在 Compose/Dockerfile 中声明。恢复要求 API 已停止，保存当前库的安全快照，先 checkpoint 旧 WAL，再替换数据库；不重启 mock。
+
+子 agent 报告的 RED/GREEN：初始缺 helper 为11失败/6通过（其中部分拒绝用例已因缺文件满足非零返回，故不冒充这些测试已验证功能）；seed 测试暴露错误列名 source，改为 seed_key；恢复 guard 的运行/暂停/重启/不存在/inspect失败/未知状态六项先失败；配置启用 seed 却缺 marker 一项先失败。最终独立脚本28项通过。上述 RED 原始输出仅在工具对话内，没有事后制造 RED 日志；可复跑的测试随源码提交。
+
+主线程本机全套478通过（49.92s），保留一条已有 TestClient 弃用警告。原生真实 API+两个原始 mock 的完整交付、响应丢失和 SIGKILL 恢复三项回归通过，入账数分别2/1/1。只读审查未发现 P1/P2，强调 Docker 九次备份时业务为空闲，写事务/WAL证据来自单测，报告必须分开陈述。容器恢复和最终提交的结果在后续验收记录补齐。
+
+T7真实Docker结果：隔离项目gekko-check-832333024207，/data与/backups分别新卷。九阶段全部PASS，总181.308s。真实9次备份，第8/9次各移除最旧1份，最终保留最新7份；每轮独立文件列表、大小、SHA对照脚本输出。停API前恢复被拒绝；损坏快照被拒绝且现库文件不变。实际恢复后启动前/启动后/重复deliver后三次的完整九表+BLOB均等于备份前基线，后加批次404；mock未重启，远端入账仍1次。57个源码前后哈希一致，临时项目/卷清理成功。Linux非root全套478通过（64.21s），已留原始输出。全部评分项映射见T7验收表；这不是已获得分数的声明。
+
+本轮按原计划将T6+T7源码、测试、文档、实测证据统一提交Q3，不改写Q1/Q2历史、不push。提交后将在独立本地clone复验精确hash，结果写本机忽略目录 `.gekko-setup/q3-final-20261014/`，避免将自己的提交hash写入提交而形成循环。CI和候选人本人解释/修改能力仍待验证。
+
+暂存检查发现原始Docker输出自带行尾空格；用.gitattributes仅关闭q3 evidence文本的空白检查，保留原始证据字节，源码仍进行正常diff检查。凭证模式扫描及禁止运行时文件检查通过，未暂存.env/数据库/备份文件。

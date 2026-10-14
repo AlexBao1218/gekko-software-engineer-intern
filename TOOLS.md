@@ -89,3 +89,28 @@ actual SIGKILL, a fresh uv requirements-only environment and Git clean-checkout
 verification support the evidence. Files affected: q1_api/app and tests, Q2 docs,
 reflection/process/AI disclosures and q2_integration/evidence. No external code,
 web search, changed mock, global Python/Docker change, publication or submission.
+
+## Q3 Docker/nginx/persistence/health stage, 2026-10-14
+
+OpenAI Codex used local parallel-agent/TDD/verification guidance, original Q3
+requirements, existing mock contracts and installed Docker/Compose tools.
+Agents worked within explicit source-file boundaries; parent controlled actual
+Docker resources on context colima-gekko. Docker Engine/Compose, the existing
+Python3.12-slim/nginx1.27-alpine bases, stdlib SQLite/csv/urllib, pytest and httpx
+provided implementation and runtime evidence. Seven already-used dependencies
+were pinned to the Q2-tested versions and installed/tested again on Linux arm64.
+No new application dependency, external code, web source, original mock change,
+global Docker/Python change or remote publication. A standalone deployment
+experiment retains command/HTTP output, source hashes and isolated fault results.
+
+## Q3.3 online backup and recovery, 2026-10-14
+
+Codex used the local TDD, parallel-agent and verification guidance, with bounded
+agents for scripts/tests, recovery experiment and independent read-only review.
+The parent controlled Docker and Git. Existing Python sqlite3/fcntl/tempfile,
+Bash, Docker Compose, pytest/httpx and Git provided implementation and evidence;
+no new package was added. Consulted primary documentation:
+[SQLite Online Backup API](https://www.sqlite.org/backup.html) and
+[Python Connection.backup](https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.backup)
+to confirm online snapshot and progress-callback behavior. No external code was
+copied. No original mock changes, global environment changes or remote publication.

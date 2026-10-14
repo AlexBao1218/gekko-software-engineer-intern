@@ -28,6 +28,8 @@ from .delivery import DeliveryManager
 from .delivery_client import DeliverySettings
 from .exports import MissingOCRFields
 from .models import ExportDetail, ExportResult
+from .readiness import database_ready
+from .seed import bootstrap_seed
 
 
 MAX_UPLOAD_BYTES = 2 * 1024 * 1024
@@ -40,6 +42,11 @@ async def lifespan(app: FastAPI):
     database = Database(Path(os.environ.get('DATABASE_PATH', str(default))))
     database.initialize()
     app.state.database = database
+    seed_path = os.environ.get('SEED_CSV_PATH')
+    app.state.seed_batch_id = None
+    if seed_path:
+        app.state.seed_batch_id = await asyncio.to_thread(bootstrap_seed, database, Path(seed_path))
+        logger.info('Startup sample available: batch_id=%s', app.state.seed_batch_id)
     settings = OCRSettings.from_env()
     async with httpx.AsyncClient(trust_env=False) as http_client:
         manager = OCRManager(database, settings, http_client)
@@ -84,6 +91,19 @@ async def storage_error(request: Request, exc: sqlite3.DatabaseError):
 @app.get("/api/health")
 def health():
     return {"status": "ok"}
+
+
+@app.get('/api/ready')
+def ready(request: Request):
+    if not database_ready(request.app.state.database.path):
+        return JSONResponse(status_code=503, content={
+            'status': 'not_ready', 'detail': {'code': 'database_unavailable',
+            'message': 'Database is unavailable or not writable.'}}, headers={'Retry-After': '1'})
+    result = {'status': 'ready'}
+    seed_batch_id = getattr(request.app.state, 'seed_batch_id', None)
+    if seed_batch_id is not None:
+        result['seed_batch_id'] = seed_batch_id
+    return result
 
 
 @app.post('/api/batches', status_code=201, response_model=BatchDetail)

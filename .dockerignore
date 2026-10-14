@@ -1,0 +1,12 @@
+**
+!requirements.txt
+!q1_api/
+!q1_api/app/
+!q1_api/app/*.py
+!data/
+!data/account_applications.csv
+!q3_deploy/
+!q3_deploy/Dockerfile
+!q3_deploy/scripts/
+!q3_deploy/scripts/*.sh
+!q3_deploy/scripts/*.py

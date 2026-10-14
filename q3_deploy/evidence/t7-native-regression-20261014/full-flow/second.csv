@@ -1,0 +1,2 @@
+case_ref,applicant_name,id_number,dob,issue_date,image_ref,ocr_full_name,ocr_id_number,ocr_dob,ocr_issue_date,ocr_confidence
+APPL-2026-0002,Test Applicant 002,TEST-ID-000002,1962-03-03,2022-03-03,id_scan_0002.jpg,Test Applicant 6170,TEST-ID-776170,1955-10-12,2017-10-20,0.9

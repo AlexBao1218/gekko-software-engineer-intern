@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-# Drives one batch end-to-end through nginx:
-# upload -> process -> review -> export -> deliver, printing each step.
-# `bash scripts/smoke_test.sh` must pass right after a clean
-# `docker compose up --build`.
+# Run inside the API container so host Python/curl dependencies are unnecessary.
+# BASE is resolved inside the container; DOCKER_CONTEXT is inherited unchanged.
 set -euo pipefail
-BASE=${BASE:-http://localhost:8080}
-# TODO: upload data/account_applications.csv, process the batch, approve a
-# case through both stages, export, then print the batch counts.
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+exec docker compose exec -T api python /srv/scripts/smoke.py --base "${BASE:-http://nginx}" "$@"

@@ -117,7 +117,8 @@ valid states; adding a new named state also requires a schema migration.
 
 `GET /api/health` remains available. OCR processing/recovery is now implemented;
 see [Q2 OCR and delivery usage](../q2_integration/README.md). Export/delivery are
-also implemented; readiness and deployment seeding remain Q3 work. All freshly imported cases are pending;
+also implemented. Q3 now adds `/api/ready` and optional atomic startup seeding;
+see [deployment usage](../q3_deploy/README.md). Backup/restore remain pending. All freshly imported cases are pending;
 isolated Q1 review tests use explicit database fixtures to establish OCR completion.
 There is no production endpoint that bypasses OCR. Approval does not claim
 the actor is authenticated: authentication/roles were not part of core Q1.

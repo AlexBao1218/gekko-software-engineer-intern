@@ -1,0 +1,14 @@
+{
+  "python": "3.12.15",
+  "platform": "Linux-6.8.0-117-generic-aarch64-with-glibc2.41",
+  "uid": 10001,
+  "dependencies": {
+    "fastapi": "0.143.0",
+    "pydantic": "2.14.1",
+    "uvicorn": "0.54.0",
+    "python-multipart": "0.0.32",
+    "httpx": "0.28.1",
+    "pytest": "9.1.1",
+    "pytest-asyncio": "1.4.0"
+  }
+}

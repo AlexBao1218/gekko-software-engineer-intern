@@ -1,0 +1,1 @@
+{"operation": "restore", "restored": "backup-20261014T021552886860Z-7f77edc5.sqlite3", "safety_backup": "pre-restore/backup-20261014T021600486248Z-77851c6f.sqlite3"}

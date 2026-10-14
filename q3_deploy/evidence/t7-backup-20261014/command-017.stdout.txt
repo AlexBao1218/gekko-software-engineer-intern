@@ -1,0 +1,16 @@
+[
+    {
+        "CreatedAt": "2026-10-14T10:15:07+08:00",
+        "Driver": "local",
+        "Labels": {
+            "com.docker.compose.config-hash": "5ea0c11c81845ead57cdc46de59f494c0cb7da815243755ca0f48154161b37da",
+            "com.docker.compose.project": "gekko-check-832333024207",
+            "com.docker.compose.version": "5.5.1",
+            "com.docker.compose.volume": "api_backups"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/gekko-check-832333024207_api_backups/_data",
+        "Name": "gekko-check-832333024207_api_backups",
+        "Options": null,
+        "Scope": "local"
+    }
+]

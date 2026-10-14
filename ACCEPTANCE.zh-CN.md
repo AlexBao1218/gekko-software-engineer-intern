@@ -1,8 +1,8 @@
 # 高标准验收与评分对照
 
-2026-10-12 制定，2026-10-13 更新。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。Q1 与完整 Q2 已验证，Q3/CI 尚待实现与验收。
+2026-10-12 制定，2026-10-14 更新。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。Q1、完整 Q2 和 Q3 三部分核心要求已验证；CI及候选人理解仍待完成。Q3本轮统一提交，最终hash的独立克隆复验另存本机记录。
 
-Q1 历史证据：[干净快照 pytest 输出](q1_api/evidence/q1-clean-snapshot-pytest-20261013.txt)、[审核测试](q1_api/tests/test_review.py)、[原生进程重启测试](q1_api/tests/test_native_process.py)、[模块核对表](q1_api/evidence/Q1-ACCEPTANCE-20261013.md)、[过程记录](WORK_LOG.zh-CN.md)。Q1独立测试用OCR fixture；本轮已补真实OCR/两级审核和故障恢复，见 [Q2.1/Q2.2核验](q2_integration/evidence/OCR-ACCEPTANCE.zh-CN.md)。本轮完整原生流程（含导出/交付）也已验证，见 [Q2完整核验](q2_integration/evidence/Q2-ACCEPTANCE-20261013.md)；容器部署/备份仍未完成。
+Q1 历史证据：[干净快照 pytest 输出](q1_api/evidence/q1-clean-snapshot-pytest-20261013.txt)、[审核测试](q1_api/tests/test_review.py)、[原生进程重启测试](q1_api/tests/test_native_process.py)、[模块核对表](q1_api/evidence/Q1-ACCEPTANCE-20261013.md)、[过程记录](WORK_LOG.zh-CN.md)。Q1独立测试用OCR fixture；本轮已补真实OCR/两级审核和故障恢复，见 [Q2.1/Q2.2核验](q2_integration/evidence/OCR-ACCEPTANCE.zh-CN.md)。本轮完整原生流程（含导出/交付）也已验证，见 [Q2完整核验](q2_integration/evidence/Q2-ACCEPTANCE-20261013.md)；容器部署/持久化/readiness也已通过 [Q3 T6核验](q3_deploy/evidence/T6-ACCEPTANCE-20261014.md)；备份/恢复已通过 [Q3 T7核验](q3_deploy/evidence/T7-ACCEPTANCE-20261014.md)。
 
 来源：[原题评分与提交要求](README.md)、[OCR](mock_ocr/README.md)、[开户](mock_onboarding/README.md)。本文中的“加强项”是为提高可信度自设的标准，不是出题方额外评分细则。
 
@@ -39,7 +39,7 @@ Q1 后续复审：新增 45 项审批边界检查，修复重复 JSON 字段歧�
 
 采纳原题更严格的可观察含义：默认考核配置在首次启动后已有一个可查询的样本批次，而不是仅有样本文件。
 
-复用正式导入逻辑；用固定样本版本标记和唯一约束，在一个事务中创建样本批次、案件、拒绝原因及 seed 标记。崩溃后要么全部存在，要么可安全重试。既有 seed 不重复导入，不覆盖用户数据或已审核状态。初始化成功后才 ready。可用 `SEED_SAMPLE_DATA` 控制，`.env.example` 默认开启并解释。
+复用正式导入逻辑；用固定样本版本标记和唯一约束，在一个事务中创建样本批次、案件、拒绝原因及 seed 标记。崩溃后要么全部存在，要么可安全重试。既有 seed 不重复导入，不覆盖用户数据或已审核状态。初始化成功后才 ready。实际使用 `SEED_CSV_PATH` 指定来源，Compose默认配置样本；原生未设置时不自动导入。
 
 smoke test 必须另行上传一个新批次，使用响应返回的 ID 完整走流程，不能只利用 seed 批次跳过上传。验证首启、重启和持久卷恢复三种场景。
 

@@ -1,0 +1,1115 @@
+{
+  "api": {
+    "Id": "ee5b00734a6e4b712681ca60536535a7c8ab776f479891ce0dec7b336e43f79a",
+    "Created": "2026-10-14T02:15:07.659307172Z",
+    "Path": "uvicorn",
+    "Args": [
+      "app.main:app",
+      "--app-dir",
+      "q1_api",
+      "--host",
+      "0.0.0.0",
+      "--port",
+      "8000",
+      "--workers",
+      "1"
+    ],
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 19231,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-14T02:15:13.818619133Z",
+      "FinishedAt": "0001-01-01T00:00:00Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-14T10:15:18.923768052+08:00",
+            "End": "2026-10-14T10:15:19.185308302+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          },
+          {
+            "Start": "2026-10-14T10:15:24.19754418+08:00",
+            "End": "2026-10-14T10:15:24.498402888+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          }
+        ]
+      }
+    },
+    "Image": "sha256:59fce301b6002e8a23250a81bce217a6cc289fa70a17f5f802c570eb4de52699",
+    "ResolvConfPath": "/var/lib/docker/containers/ee5b00734a6e4b712681ca60536535a7c8ab776f479891ce0dec7b336e43f79a/resolv.conf",
+    "HostnamePath": "/var/lib/docker/containers/ee5b00734a6e4b712681ca60536535a7c8ab776f479891ce0dec7b336e43f79a/hostname",
+    "HostsPath": "/var/lib/docker/containers/ee5b00734a6e4b712681ca60536535a7c8ab776f479891ce0dec7b336e43f79a/hosts",
+    "LogPath": "/var/lib/docker/containers/ee5b00734a6e4b712681ca60536535a7c8ab776f479891ce0dec7b336e43f79a/ee5b00734a6e4b712681ca60536535a7c8ab776f479891ce0dec7b336e43f79a-json.log",
+    "Name": "/gekko-check-832333024207-api-1",
+    "RestartCount": 0,
+    "Driver": "overlayfs",
+    "Platform": "linux",
+    "MountLabel": "",
+    "ProcessLabel": "",
+    "AppArmorProfile": "docker-default",
+    "ExecIDs": null,
+    "HostConfig": {
+      "Binds": [
+        "gekko-check-832333024207_api_backups:/backups:rw",
+        "gekko-check-832333024207_api_data:/data:rw"
+      ],
+      "ContainerIDFile": "",
+      "LogConfig": {
+        "Type": "json-file",
+        "Config": {}
+      },
+      "NetworkMode": "gekko-check-832333024207_default",
+      "PortBindings": {},
+      "RestartPolicy": {
+        "Name": "no",
+        "MaximumRetryCount": 0
+      },
+      "AutoRemove": false,
+      "VolumeDriver": "",
+      "VolumesFrom": null,
+      "ConsoleSize": [
+        0,
+        0
+      ],
+      "CapAdd": null,
+      "CapDrop": null,
+      "CgroupnsMode": "private",
+      "Dns": null,
+      "DnsOptions": null,
+      "DnsSearch": null,
+      "ExtraHosts": [],
+      "GroupAdd": null,
+      "IpcMode": "private",
+      "Cgroup": "",
+      "Links": null,
+      "OomScoreAdj": 0,
+      "PidMode": "",
+      "Privileged": false,
+      "PublishAllPorts": false,
+      "ReadonlyRootfs": false,
+      "SecurityOpt": null,
+      "UTSMode": "",
+      "UsernsMode": "",
+      "ShmSize": 67108864,
+      "Runtime": "runc",
+      "Isolation": "",
+      "CpuShares": 0,
+      "Memory": 0,
+      "NanoCpus": 0,
+      "CgroupParent": "",
+      "BlkioWeight": 0,
+      "BlkioWeightDevice": null,
+      "BlkioDeviceReadBps": null,
+      "BlkioDeviceWriteBps": null,
+      "BlkioDeviceReadIOps": null,
+      "BlkioDeviceWriteIOps": null,
+      "CpuPeriod": 0,
+      "CpuQuota": 0,
+      "CpuRealtimePeriod": 0,
+      "CpuRealtimeRuntime": 0,
+      "CpusetCpus": "",
+      "CpusetMems": "",
+      "Devices": null,
+      "DeviceCgroupRules": null,
+      "DeviceRequests": null,
+      "MemoryReservation": 0,
+      "MemorySwap": 0,
+      "MemorySwappiness": null,
+      "OomKillDisable": null,
+      "PidsLimit": null,
+      "Ulimits": null,
+      "CpuCount": 0,
+      "CpuPercent": 0,
+      "IOMaximumIOps": 0,
+      "IOMaximumBandwidth": 0,
+      "MaskedPaths": [
+        "/proc/acpi",
+        "/proc/asound",
+        "/proc/interrupts",
+        "/proc/kcore",
+        "/proc/keys",
+        "/proc/latency_stats",
+        "/proc/sched_debug",
+        "/proc/scsi",
+        "/proc/timer_list",
+        "/proc/timer_stats",
+        "/sys/devices/virtual/powercap",
+        "/sys/firmware"
+      ],
+      "ReadonlyPaths": [
+        "/proc/bus",
+        "/proc/fs",
+        "/proc/irq",
+        "/proc/sys",
+        "/proc/sysrq-trigger"
+      ]
+    },
+    "Storage": {
+      "RootFS": {
+        "Snapshot": {
+          "Name": "overlayfs"
+        }
+      }
+    },
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "gekko-check-832333024207_api_backups",
+        "Source": "/var/lib/docker/volumes/gekko-check-832333024207_api_backups/_data",
+        "Destination": "/backups",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      },
+      {
+        "Type": "volume",
+        "Name": "gekko-check-832333024207_api_data",
+        "Source": "/var/lib/docker/volumes/gekko-check-832333024207_api_data/_data",
+        "Destination": "/data",
+        "Driver": "local",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": ""
+      }
+    ],
+    "Config": {
+      "Hostname": "ee5b00734a6e",
+      "Domainname": "",
+      "User": "10001:10001",
+      "AttachStdin": false,
+      "AttachStdout": true,
+      "AttachStderr": true,
+      "ExposedPorts": {
+        "8000/tcp": {}
+      },
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "OCR_BACKOFF_CAP_SECONDS=0.5",
+        "OCR_TIMEOUT_SECONDS=1",
+        "BACKUP_TIMEOUT_SECONDS=30",
+        "OCR_BACKOFF_SECONDS=0.1",
+        "DELIVERY_BACKOFF_SECONDS=0.1",
+        "DELIVERY_MAX_ATTEMPTS=4",
+        "SEED_CSV_PATH=/srv/data/account_applications.csv",
+        "OCR_URL=http://mock_ocr:9100/ocr/parse",
+        "DELIVERY_BACKOFF_CAP_SECONDS=0.5",
+        "DATABASE_PATH=/data/app.db",
+        "BACKUP_DIR=/backups",
+        "DELIVERY_TIMEOUT_SECONDS=1",
+        "DELIVERY_URL=http://mock_onboarding:9200/ingest",
+        "OCR_MAX_ATTEMPTS=6",
+        "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "LANG=C.UTF-8",
+        "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+        "PYTHON_VERSION=3.12.15",
+        "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "PYTHONUNBUFFERED=1",
+        "PYTHONPATH=/srv/q1_api"
+      ],
+      "Cmd": [
+        "uvicorn",
+        "app.main:app",
+        "--app-dir",
+        "q1_api",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000",
+        "--workers",
+        "1"
+      ],
+      "Healthcheck": {
+        "Test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/ready', timeout=2).close()"
+        ],
+        "Interval": 5000000000,
+        "Timeout": 3000000000,
+        "StartPeriod": 15000000000,
+        "Retries": 6
+      },
+      "Image": "gekko-check-832333024207-api",
+      "Volumes": null,
+      "WorkingDir": "/srv",
+      "Entrypoint": null,
+      "Labels": {
+        "com.docker.compose.config-hash": "0b46c43f3a6f9a539a024e237e6a7aac8b35c417f00256f44e52fa0b84bf59cb",
+        "com.docker.compose.container-number": "1",
+        "com.docker.compose.depends_on": "mock_onboarding:service_healthy:false,mock_ocr:service_healthy:false",
+        "com.docker.compose.image": "sha256:f514e45462bcd966f471c3d583603bdb3fec2da22b6c037b1d84751e982c9b8f",
+        "com.docker.compose.oneoff": "False",
+        "com.docker.compose.project": "gekko-check-832333024207",
+        "com.docker.compose.project.config_files": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/docker-compose.yml",
+        "com.docker.compose.project.environment_file": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/.env",
+        "com.docker.compose.project.working_dir": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy",
+        "com.docker.compose.service": "api",
+        "com.docker.compose.version": "5.5.1"
+      }
+    },
+    "NetworkSettings": {
+      "SandboxID": "d590c620f57b97477d15180fd62a89030198422dc20b1d6bbd98b54b2edc0f30",
+      "SandboxKey": "/var/run/docker/netns/d590c620f57b",
+      "Ports": {
+        "8000/tcp": null
+      },
+      "Networks": {
+        "gekko-check-832333024207_default": {
+          "IPAMConfig": null,
+          "Links": null,
+          "Aliases": [
+            "gekko-check-832333024207-api-1",
+            "api"
+          ],
+          "DriverOpts": null,
+          "GwPriority": 0,
+          "NetworkID": "03edb0c78d4001626a816a03651c19b29999ce03ed238268db4d999758a78f66",
+          "EndpointID": "54c5aa2a324e549b09037481cab30dd8b1f456c52b3869f6e4a5363b2da5d217",
+          "Gateway": "172.18.0.1",
+          "IPAddress": "172.18.0.4",
+          "MacAddress": "32:5e:b9:92:f9:4b",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "DNSNames": [
+            "gekko-check-832333024207-api-1",
+            "api",
+            "ee5b00734a6e"
+          ]
+        }
+      }
+    },
+    "ImageManifestDescriptor": {
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "digest": "sha256:f514e45462bcd966f471c3d583603bdb3fec2da22b6c037b1d84751e982c9b8f",
+      "size": 2191,
+      "platform": {
+        "architecture": "arm64",
+        "os": "linux"
+      }
+    }
+  },
+  "mock_ocr": {
+    "Id": "fe05ad981df1c393b810a6fdab6d0312042766f0854e8c394d5bfcaad058c41e",
+    "Created": "2026-10-14T02:15:07.32566113Z",
+    "Path": "python",
+    "Args": [
+      "server.py"
+    ],
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 19071,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-14T02:15:07.90762238Z",
+      "FinishedAt": "0001-01-01T00:00:00Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-14T10:15:13.065649466+08:00",
+            "End": "2026-10-14T10:15:13.203652133+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          },
+          {
+            "Start": "2026-10-14T10:15:18.207273052+08:00",
+            "End": "2026-10-14T10:15:18.343426344+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          },
+          {
+            "Start": "2026-10-14T10:15:23.347595846+08:00",
+            "End": "2026-10-14T10:15:23.507199096+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          }
+        ]
+      }
+    },
+    "Image": "sha256:3dc0b71dd9d154a2134c8a2b8f5b16d59d85e0399c8ccaef46e547c138af2b81",
+    "ResolvConfPath": "/var/lib/docker/containers/fe05ad981df1c393b810a6fdab6d0312042766f0854e8c394d5bfcaad058c41e/resolv.conf",
+    "HostnamePath": "/var/lib/docker/containers/fe05ad981df1c393b810a6fdab6d0312042766f0854e8c394d5bfcaad058c41e/hostname",
+    "HostsPath": "/var/lib/docker/containers/fe05ad981df1c393b810a6fdab6d0312042766f0854e8c394d5bfcaad058c41e/hosts",
+    "LogPath": "/var/lib/docker/containers/fe05ad981df1c393b810a6fdab6d0312042766f0854e8c394d5bfcaad058c41e/fe05ad981df1c393b810a6fdab6d0312042766f0854e8c394d5bfcaad058c41e-json.log",
+    "Name": "/gekko-check-832333024207-mock_ocr-1",
+    "RestartCount": 0,
+    "Driver": "overlayfs",
+    "Platform": "linux",
+    "MountLabel": "",
+    "ProcessLabel": "",
+    "AppArmorProfile": "docker-default",
+    "ExecIDs": null,
+    "HostConfig": {
+      "Binds": null,
+      "ContainerIDFile": "",
+      "LogConfig": {
+        "Type": "json-file",
+        "Config": {}
+      },
+      "NetworkMode": "gekko-check-832333024207_default",
+      "PortBindings": {},
+      "RestartPolicy": {
+        "Name": "no",
+        "MaximumRetryCount": 0
+      },
+      "AutoRemove": false,
+      "VolumeDriver": "",
+      "VolumesFrom": null,
+      "ConsoleSize": [
+        0,
+        0
+      ],
+      "CapAdd": null,
+      "CapDrop": null,
+      "CgroupnsMode": "private",
+      "Dns": null,
+      "DnsOptions": null,
+      "DnsSearch": null,
+      "ExtraHosts": [],
+      "GroupAdd": null,
+      "IpcMode": "private",
+      "Cgroup": "",
+      "Links": null,
+      "OomScoreAdj": 0,
+      "PidMode": "",
+      "Privileged": false,
+      "PublishAllPorts": false,
+      "ReadonlyRootfs": false,
+      "SecurityOpt": null,
+      "UTSMode": "",
+      "UsernsMode": "",
+      "ShmSize": 67108864,
+      "Runtime": "runc",
+      "Isolation": "",
+      "CpuShares": 0,
+      "Memory": 0,
+      "NanoCpus": 0,
+      "CgroupParent": "",
+      "BlkioWeight": 0,
+      "BlkioWeightDevice": null,
+      "BlkioDeviceReadBps": null,
+      "BlkioDeviceWriteBps": null,
+      "BlkioDeviceReadIOps": null,
+      "BlkioDeviceWriteIOps": null,
+      "CpuPeriod": 0,
+      "CpuQuota": 0,
+      "CpuRealtimePeriod": 0,
+      "CpuRealtimeRuntime": 0,
+      "CpusetCpus": "",
+      "CpusetMems": "",
+      "Devices": null,
+      "DeviceCgroupRules": null,
+      "DeviceRequests": null,
+      "MemoryReservation": 0,
+      "MemorySwap": 0,
+      "MemorySwappiness": null,
+      "OomKillDisable": null,
+      "PidsLimit": null,
+      "Ulimits": null,
+      "CpuCount": 0,
+      "CpuPercent": 0,
+      "IOMaximumIOps": 0,
+      "IOMaximumBandwidth": 0,
+      "MaskedPaths": [
+        "/proc/acpi",
+        "/proc/asound",
+        "/proc/interrupts",
+        "/proc/kcore",
+        "/proc/keys",
+        "/proc/latency_stats",
+        "/proc/sched_debug",
+        "/proc/scsi",
+        "/proc/timer_list",
+        "/proc/timer_stats",
+        "/sys/devices/virtual/powercap",
+        "/sys/firmware"
+      ],
+      "ReadonlyPaths": [
+        "/proc/bus",
+        "/proc/fs",
+        "/proc/irq",
+        "/proc/sys",
+        "/proc/sysrq-trigger"
+      ]
+    },
+    "Storage": {
+      "RootFS": {
+        "Snapshot": {
+          "Name": "overlayfs"
+        }
+      }
+    },
+    "Mounts": [],
+    "Config": {
+      "Hostname": "fe05ad981df1",
+      "Domainname": "",
+      "User": "",
+      "AttachStdin": false,
+      "AttachStdout": true,
+      "AttachStderr": true,
+      "ExposedPorts": {
+        "9100/tcp": {}
+      },
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "OCR_HANG_RATE=0.1",
+        "OCR_HANG_SECONDS=600",
+        "OCR_SEED=42",
+        "OCR_FAIL_RATE=0.2",
+        "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "LANG=C.UTF-8",
+        "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+        "PYTHON_VERSION=3.12.15",
+        "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a"
+      ],
+      "Cmd": [
+        "python",
+        "server.py"
+      ],
+      "Healthcheck": {
+        "Test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:9100/online', timeout=2).close()"
+        ],
+        "Interval": 5000000000,
+        "Timeout": 3000000000,
+        "StartPeriod": 5000000000,
+        "Retries": 6
+      },
+      "Image": "gekko-check-832333024207-mock_ocr",
+      "Volumes": null,
+      "WorkingDir": "/app",
+      "Entrypoint": null,
+      "Labels": {
+        "com.docker.compose.config-hash": "dcb3420c93b6c7c6c25ad5d87b0385ebcda12ff138828b0e33d2ae351fdf6a0e",
+        "com.docker.compose.container-number": "1",
+        "com.docker.compose.depends_on": "",
+        "com.docker.compose.image": "sha256:aa61fdcd375c89ecee1747bd18a69fb6746603d74f2f68fcc311b0038a45d85a",
+        "com.docker.compose.oneoff": "False",
+        "com.docker.compose.project": "gekko-check-832333024207",
+        "com.docker.compose.project.config_files": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/docker-compose.yml",
+        "com.docker.compose.project.environment_file": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/.env",
+        "com.docker.compose.project.working_dir": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy",
+        "com.docker.compose.service": "mock_ocr",
+        "com.docker.compose.version": "5.5.1"
+      }
+    },
+    "NetworkSettings": {
+      "SandboxID": "0091601f67dafa54f794f92f938ca8d6cffa0bd621bce153e86ed3f953b59b24",
+      "SandboxKey": "/var/run/docker/netns/0091601f67da",
+      "Ports": {
+        "9100/tcp": null
+      },
+      "Networks": {
+        "gekko-check-832333024207_default": {
+          "IPAMConfig": null,
+          "Links": null,
+          "Aliases": [
+            "gekko-check-832333024207-mock_ocr-1",
+            "mock_ocr"
+          ],
+          "DriverOpts": null,
+          "GwPriority": 0,
+          "NetworkID": "03edb0c78d4001626a816a03651c19b29999ce03ed238268db4d999758a78f66",
+          "EndpointID": "d9d1ba0e2c8065ca67bfe0e1bc96620e1ce3bdbe49e88e5ed0a6f9cbc1ec8497",
+          "Gateway": "172.18.0.1",
+          "IPAddress": "172.18.0.2",
+          "MacAddress": "7a:8a:4a:ad:9b:19",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "DNSNames": [
+            "gekko-check-832333024207-mock_ocr-1",
+            "mock_ocr",
+            "fe05ad981df1"
+          ]
+        }
+      }
+    },
+    "ImageManifestDescriptor": {
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "digest": "sha256:aa61fdcd375c89ecee1747bd18a69fb6746603d74f2f68fcc311b0038a45d85a",
+      "size": 1431,
+      "platform": {
+        "architecture": "arm64",
+        "os": "linux"
+      }
+    }
+  },
+  "mock_onboarding": {
+    "Id": "60bfbdb833536c28586b7cc0cdd586ba20a6ee51257638d0f8a6a00ded84038b",
+    "Created": "2026-10-14T02:15:07.324227713Z",
+    "Path": "python",
+    "Args": [
+      "server.py"
+    ],
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 19134,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-14T02:15:08.120845839Z",
+      "FinishedAt": "0001-01-01T00:00:00Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-14T10:15:13.284303758+08:00",
+            "End": "2026-10-14T10:15:13.378168675+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          },
+          {
+            "Start": "2026-10-14T10:15:18.383434844+08:00",
+            "End": "2026-10-14T10:15:18.500269135+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          },
+          {
+            "Start": "2026-10-14T10:15:23.502914929+08:00",
+            "End": "2026-10-14T10:15:23.582670929+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          }
+        ]
+      }
+    },
+    "Image": "sha256:6ad42d60465a0e82317a2077e84fe8bcda60196faf64cf7d97ecd984c59105be",
+    "ResolvConfPath": "/var/lib/docker/containers/60bfbdb833536c28586b7cc0cdd586ba20a6ee51257638d0f8a6a00ded84038b/resolv.conf",
+    "HostnamePath": "/var/lib/docker/containers/60bfbdb833536c28586b7cc0cdd586ba20a6ee51257638d0f8a6a00ded84038b/hostname",
+    "HostsPath": "/var/lib/docker/containers/60bfbdb833536c28586b7cc0cdd586ba20a6ee51257638d0f8a6a00ded84038b/hosts",
+    "LogPath": "/var/lib/docker/containers/60bfbdb833536c28586b7cc0cdd586ba20a6ee51257638d0f8a6a00ded84038b/60bfbdb833536c28586b7cc0cdd586ba20a6ee51257638d0f8a6a00ded84038b-json.log",
+    "Name": "/gekko-check-832333024207-mock_onboarding-1",
+    "RestartCount": 0,
+    "Driver": "overlayfs",
+    "Platform": "linux",
+    "MountLabel": "",
+    "ProcessLabel": "",
+    "AppArmorProfile": "docker-default",
+    "ExecIDs": null,
+    "HostConfig": {
+      "Binds": null,
+      "ContainerIDFile": "",
+      "LogConfig": {
+        "Type": "json-file",
+        "Config": {}
+      },
+      "NetworkMode": "gekko-check-832333024207_default",
+      "PortBindings": {},
+      "RestartPolicy": {
+        "Name": "no",
+        "MaximumRetryCount": 0
+      },
+      "AutoRemove": false,
+      "VolumeDriver": "",
+      "VolumesFrom": null,
+      "ConsoleSize": [
+        0,
+        0
+      ],
+      "CapAdd": null,
+      "CapDrop": null,
+      "CgroupnsMode": "private",
+      "Dns": null,
+      "DnsOptions": null,
+      "DnsSearch": null,
+      "ExtraHosts": [],
+      "GroupAdd": null,
+      "IpcMode": "private",
+      "Cgroup": "",
+      "Links": null,
+      "OomScoreAdj": 0,
+      "PidMode": "",
+      "Privileged": false,
+      "PublishAllPorts": false,
+      "ReadonlyRootfs": false,
+      "SecurityOpt": null,
+      "UTSMode": "",
+      "UsernsMode": "",
+      "ShmSize": 67108864,
+      "Runtime": "runc",
+      "Isolation": "",
+      "CpuShares": 0,
+      "Memory": 0,
+      "NanoCpus": 0,
+      "CgroupParent": "",
+      "BlkioWeight": 0,
+      "BlkioWeightDevice": null,
+      "BlkioDeviceReadBps": null,
+      "BlkioDeviceWriteBps": null,
+      "BlkioDeviceReadIOps": null,
+      "BlkioDeviceWriteIOps": null,
+      "CpuPeriod": 0,
+      "CpuQuota": 0,
+      "CpuRealtimePeriod": 0,
+      "CpuRealtimeRuntime": 0,
+      "CpusetCpus": "",
+      "CpusetMems": "",
+      "Devices": null,
+      "DeviceCgroupRules": null,
+      "DeviceRequests": null,
+      "MemoryReservation": 0,
+      "MemorySwap": 0,
+      "MemorySwappiness": null,
+      "OomKillDisable": null,
+      "PidsLimit": null,
+      "Ulimits": null,
+      "CpuCount": 0,
+      "CpuPercent": 0,
+      "IOMaximumIOps": 0,
+      "IOMaximumBandwidth": 0,
+      "MaskedPaths": [
+        "/proc/acpi",
+        "/proc/asound",
+        "/proc/interrupts",
+        "/proc/kcore",
+        "/proc/keys",
+        "/proc/latency_stats",
+        "/proc/sched_debug",
+        "/proc/scsi",
+        "/proc/timer_list",
+        "/proc/timer_stats",
+        "/sys/devices/virtual/powercap",
+        "/sys/firmware"
+      ],
+      "ReadonlyPaths": [
+        "/proc/bus",
+        "/proc/fs",
+        "/proc/irq",
+        "/proc/sys",
+        "/proc/sysrq-trigger"
+      ]
+    },
+    "Storage": {
+      "RootFS": {
+        "Snapshot": {
+          "Name": "overlayfs"
+        }
+      }
+    },
+    "Mounts": [],
+    "Config": {
+      "Hostname": "60bfbdb83353",
+      "Domainname": "",
+      "User": "",
+      "AttachStdin": false,
+      "AttachStdout": true,
+      "AttachStderr": true,
+      "ExposedPorts": {
+        "9200/tcp": {}
+      },
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "ONBOARDING_SEED=7",
+        "ONBOARDING_FAIL_RATE=0.2",
+        "ONBOARDING_LOST_RATE=0.15",
+        "ONBOARDING_LOST_SECONDS=120",
+        "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "LANG=C.UTF-8",
+        "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+        "PYTHON_VERSION=3.12.15",
+        "PYTHON_SHA256=c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a"
+      ],
+      "Cmd": [
+        "python",
+        "server.py"
+      ],
+      "Healthcheck": {
+        "Test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:9200/online', timeout=2).close()"
+        ],
+        "Interval": 5000000000,
+        "Timeout": 3000000000,
+        "StartPeriod": 5000000000,
+        "Retries": 6
+      },
+      "Image": "gekko-check-832333024207-mock_onboarding",
+      "Volumes": null,
+      "WorkingDir": "/app",
+      "Entrypoint": null,
+      "Labels": {
+        "com.docker.compose.config-hash": "032c9172e88d1e008bf241e914b0b3a5d3c4b7e6d3b550229b3a562f973897f4",
+        "com.docker.compose.container-number": "1",
+        "com.docker.compose.depends_on": "",
+        "com.docker.compose.image": "sha256:01a94ed8cacdf5934abe41ee606a681fcac4e7baef20fd6e8a0e18109aa2372f",
+        "com.docker.compose.oneoff": "False",
+        "com.docker.compose.project": "gekko-check-832333024207",
+        "com.docker.compose.project.config_files": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/docker-compose.yml",
+        "com.docker.compose.project.environment_file": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/.env",
+        "com.docker.compose.project.working_dir": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy",
+        "com.docker.compose.service": "mock_onboarding",
+        "com.docker.compose.version": "5.5.1"
+      }
+    },
+    "NetworkSettings": {
+      "SandboxID": "d89dbc83521563da1a51aeb5d8c0d21a8c39e4723a83d7b398a2a5656b8a228e",
+      "SandboxKey": "/var/run/docker/netns/d89dbc835215",
+      "Ports": {
+        "9200/tcp": null
+      },
+      "Networks": {
+        "gekko-check-832333024207_default": {
+          "IPAMConfig": null,
+          "Links": null,
+          "Aliases": [
+            "gekko-check-832333024207-mock_onboarding-1",
+            "mock_onboarding"
+          ],
+          "DriverOpts": null,
+          "GwPriority": 0,
+          "NetworkID": "03edb0c78d4001626a816a03651c19b29999ce03ed238268db4d999758a78f66",
+          "EndpointID": "c17619b450127f7e3213b310e9fccaaf2fe1ffacb477b8068942da903b7f1494",
+          "Gateway": "172.18.0.1",
+          "IPAddress": "172.18.0.3",
+          "MacAddress": "b6:9c:3f:f6:cc:78",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "DNSNames": [
+            "gekko-check-832333024207-mock_onboarding-1",
+            "mock_onboarding",
+            "60bfbdb83353"
+          ]
+        }
+      }
+    },
+    "ImageManifestDescriptor": {
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "digest": "sha256:01a94ed8cacdf5934abe41ee606a681fcac4e7baef20fd6e8a0e18109aa2372f",
+      "size": 1431,
+      "platform": {
+        "architecture": "arm64",
+        "os": "linux"
+      }
+    }
+  },
+  "nginx": {
+    "Id": "3fd7f5ef6767b83ec809a0b25e618626f4a0ce6a3376a4c02f99d899c16aa465",
+    "Created": "2026-10-14T02:15:07.79408163Z",
+    "Path": "/docker-entrypoint.sh",
+    "Args": [
+      "nginx",
+      "-g",
+      "daemon off;"
+    ],
+    "State": {
+      "Status": "running",
+      "Running": true,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 19353,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-14T02:15:19.461401094Z",
+      "FinishedAt": "0001-01-01T00:00:00Z",
+      "Health": {
+        "Status": "healthy",
+        "FailingStreak": 0,
+        "Log": [
+          {
+            "Start": "2026-10-14T10:15:24.590595513+08:00",
+            "End": "2026-10-14T10:15:24.624917638+08:00",
+            "ExitCode": 0,
+            "Output": ""
+          }
+        ]
+      }
+    },
+    "Image": "sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
+    "ResolvConfPath": "/var/lib/docker/containers/3fd7f5ef6767b83ec809a0b25e618626f4a0ce6a3376a4c02f99d899c16aa465/resolv.conf",
+    "HostnamePath": "/var/lib/docker/containers/3fd7f5ef6767b83ec809a0b25e618626f4a0ce6a3376a4c02f99d899c16aa465/hostname",
+    "HostsPath": "/var/lib/docker/containers/3fd7f5ef6767b83ec809a0b25e618626f4a0ce6a3376a4c02f99d899c16aa465/hosts",
+    "LogPath": "/var/lib/docker/containers/3fd7f5ef6767b83ec809a0b25e618626f4a0ce6a3376a4c02f99d899c16aa465/3fd7f5ef6767b83ec809a0b25e618626f4a0ce6a3376a4c02f99d899c16aa465-json.log",
+    "Name": "/gekko-check-832333024207-nginx-1",
+    "RestartCount": 0,
+    "Driver": "overlayfs",
+    "Platform": "linux",
+    "MountLabel": "",
+    "ProcessLabel": "",
+    "AppArmorProfile": "docker-default",
+    "ExecIDs": null,
+    "HostConfig": {
+      "Binds": [
+        "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro"
+      ],
+      "ContainerIDFile": "",
+      "LogConfig": {
+        "Type": "json-file",
+        "Config": {}
+      },
+      "NetworkMode": "gekko-check-832333024207_default",
+      "PortBindings": {
+        "80/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "53058"
+          }
+        ]
+      },
+      "RestartPolicy": {
+        "Name": "no",
+        "MaximumRetryCount": 0
+      },
+      "AutoRemove": false,
+      "VolumeDriver": "",
+      "VolumesFrom": null,
+      "ConsoleSize": [
+        0,
+        0
+      ],
+      "CapAdd": null,
+      "CapDrop": null,
+      "CgroupnsMode": "private",
+      "Dns": null,
+      "DnsOptions": null,
+      "DnsSearch": null,
+      "ExtraHosts": [],
+      "GroupAdd": null,
+      "IpcMode": "private",
+      "Cgroup": "",
+      "Links": null,
+      "OomScoreAdj": 0,
+      "PidMode": "",
+      "Privileged": false,
+      "PublishAllPorts": false,
+      "ReadonlyRootfs": false,
+      "SecurityOpt": null,
+      "UTSMode": "",
+      "UsernsMode": "",
+      "ShmSize": 67108864,
+      "Runtime": "runc",
+      "Isolation": "",
+      "CpuShares": 0,
+      "Memory": 0,
+      "NanoCpus": 0,
+      "CgroupParent": "",
+      "BlkioWeight": 0,
+      "BlkioWeightDevice": null,
+      "BlkioDeviceReadBps": null,
+      "BlkioDeviceWriteBps": null,
+      "BlkioDeviceReadIOps": null,
+      "BlkioDeviceWriteIOps": null,
+      "CpuPeriod": 0,
+      "CpuQuota": 0,
+      "CpuRealtimePeriod": 0,
+      "CpuRealtimeRuntime": 0,
+      "CpusetCpus": "",
+      "CpusetMems": "",
+      "Devices": null,
+      "DeviceCgroupRules": null,
+      "DeviceRequests": null,
+      "MemoryReservation": 0,
+      "MemorySwap": 0,
+      "MemorySwappiness": null,
+      "OomKillDisable": null,
+      "PidsLimit": null,
+      "Ulimits": null,
+      "CpuCount": 0,
+      "CpuPercent": 0,
+      "IOMaximumIOps": 0,
+      "IOMaximumBandwidth": 0,
+      "MaskedPaths": [
+        "/proc/acpi",
+        "/proc/asound",
+        "/proc/interrupts",
+        "/proc/kcore",
+        "/proc/keys",
+        "/proc/latency_stats",
+        "/proc/sched_debug",
+        "/proc/scsi",
+        "/proc/timer_list",
+        "/proc/timer_stats",
+        "/sys/devices/virtual/powercap",
+        "/sys/firmware"
+      ],
+      "ReadonlyPaths": [
+        "/proc/bus",
+        "/proc/fs",
+        "/proc/irq",
+        "/proc/sys",
+        "/proc/sysrq-trigger"
+      ]
+    },
+    "Storage": {
+      "RootFS": {
+        "Snapshot": {
+          "Name": "overlayfs"
+        }
+      }
+    },
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/nginx.conf",
+        "Destination": "/etc/nginx/conf.d/default.conf",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ],
+    "Config": {
+      "Hostname": "3fd7f5ef6767",
+      "Domainname": "",
+      "User": "",
+      "AttachStdin": false,
+      "AttachStdout": true,
+      "AttachStderr": true,
+      "ExposedPorts": {
+        "80/tcp": {}
+      },
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "NGINX_VERSION=1.27.5",
+        "PKG_RELEASE=1",
+        "DYNPKG_RELEASE=1",
+        "NJS_VERSION=0.8.10",
+        "NJS_RELEASE=1"
+      ],
+      "Cmd": [
+        "nginx",
+        "-g",
+        "daemon off;"
+      ],
+      "Healthcheck": {
+        "Test": [
+          "CMD",
+          "wget",
+          "-q",
+          "-O",
+          "/dev/null",
+          "-T",
+          "2",
+          "http://127.0.0.1/api/ready"
+        ],
+        "Interval": 5000000000,
+        "Timeout": 3000000000,
+        "StartPeriod": 5000000000,
+        "Retries": 6
+      },
+      "Image": "nginx:1.27-alpine",
+      "Volumes": null,
+      "WorkingDir": "/",
+      "Entrypoint": [
+        "/docker-entrypoint.sh"
+      ],
+      "Labels": {
+        "com.docker.compose.config-hash": "8737b373a99d0876642f722b77e87a54bde3f8a7e061b84fe9daf23f71db155b",
+        "com.docker.compose.container-number": "1",
+        "com.docker.compose.depends_on": "api:service_healthy:false,mock_ocr:service_healthy:false",
+        "com.docker.compose.image": "sha256:63ffc0d1f14e4082b832c6a42e606e9a0384a526f16ddd720af7c1f018f2f7c4",
+        "com.docker.compose.oneoff": "False",
+        "com.docker.compose.project": "gekko-check-832333024207",
+        "com.docker.compose.project.config_files": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/docker-compose.yml",
+        "com.docker.compose.project.environment_file": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/.env",
+        "com.docker.compose.project.working_dir": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy",
+        "com.docker.compose.service": "nginx",
+        "com.docker.compose.version": "5.5.1",
+        "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+      },
+      "StopSignal": "SIGQUIT"
+    },
+    "NetworkSettings": {
+      "SandboxID": "380c180c703513eab512335487c56d190062a6298d81aca983e13c6d4b8d6571",
+      "SandboxKey": "/var/run/docker/netns/380c180c7035",
+      "Ports": {
+        "80/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "53058"
+          }
+        ]
+      },
+      "Networks": {
+        "gekko-check-832333024207_default": {
+          "IPAMConfig": null,
+          "Links": null,
+          "Aliases": [
+            "gekko-check-832333024207-nginx-1",
+            "nginx"
+          ],
+          "DriverOpts": null,
+          "GwPriority": 0,
+          "NetworkID": "03edb0c78d4001626a816a03651c19b29999ce03ed238268db4d999758a78f66",
+          "EndpointID": "072c4a8c6911077743233b99ca6fa25796092289b16211e0338e5b83ae106785",
+          "Gateway": "172.18.0.1",
+          "IPAddress": "172.18.0.5",
+          "MacAddress": "56:62:f0:1b:cc:c1",
+          "IPPrefixLen": 16,
+          "IPv6Gateway": "",
+          "GlobalIPv6Address": "",
+          "GlobalIPv6PrefixLen": 0,
+          "DNSNames": [
+            "gekko-check-832333024207-nginx-1",
+            "nginx",
+            "3fd7f5ef6767"
+          ]
+        }
+      }
+    },
+    "ImageManifestDescriptor": {
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "digest": "sha256:63ffc0d1f14e4082b832c6a42e606e9a0384a526f16ddd720af7c1f018f2f7c4",
+      "size": 2497,
+      "annotations": {
+        "com.docker.official-images.bashbrew.arch": "arm64v8",
+        "org.opencontainers.image.base.digest": "sha256:81c453ddf0370ef54dc7ee207c334df7efa3c452138212eebfe3717f494adc4e",
+        "org.opencontainers.image.base.name": "nginx:1.27.5-alpine-slim",
+        "org.opencontainers.image.created": "2025-04-16T17:07:57Z",
+        "org.opencontainers.image.revision": "eaf8875a1967d24cea6ed8b37109075e39ed9e43",
+        "org.opencontainers.image.source": "https://github.com/nginx/docker-nginx.git#eaf8875a1967d24cea6ed8b37109075e39ed9e43:mainline/alpine",
+        "org.opencontainers.image.url": "https://hub.docker.com/_/nginx",
+        "org.opencontainers.image.version": "1.27.5-alpine"
+      },
+      "platform": {
+        "architecture": "arm64",
+        "os": "linux",
+        "variant": "v8"
+      }
+    }
+  }
+}

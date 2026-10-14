@@ -125,19 +125,110 @@ limits, native source fingerprints and reproduction commands are linked in
 The design supports one API worker. Mock deduplication lasts only as long as its
 process; production idempotency retention and storage corruption are not validated.
 
+### Deployment, persistence and health (Q3.1/Q3.2)
+
+Implemented and verified on 2026-10-14. The API runs as UID10001 with one worker,
+SQLite in a named /data volume, and nginx as the only published localhost port.
+Compose health checks and service_healthy dependencies control startup. The
+configured sample is imported atomically with a hash-identified marker, so
+restarts preserve its batch ID, approvals and delivery receipts. A changed or
+missing configured seed source fails startup rather than replacing records.
+
+Liveness is separate from readiness. Readiness opens an existing database without
+creating it, reads all eight non-seed workflow tables and performs a real write
+that is rolled back, testing journal-directory access as well as the file. It
+waits at most0.2s for a write lock. An independent review reproduced three omitted
+tables reporting ready; failing tests preceded the correction. Missing/corrupt,
+read-only and lock cases are tested, without business changes from the probe.
+
+Full suites passed450 tests on macOS and450 on Linux/arm64 Python3.12.15 as the
+non-root API user, each with the existing TestClient warning. Seven direct
+requirements are pinned and reinstalled in the image. This is not a tested
+Python3.10 environment or a full transitive/image-digest lock.
+
+A standalone experiment in a fresh source snapshot/project/volume passed nine
+stages. It verified seeded startup, real API/OCR nginx routing, default-fault
+smoke, forced API IP replacement without nginx restart, and entire-stack restart
+with all nine stored business tables unchanged. Three request-size boundaries,
+DB/directory chmod failures (ready503/live200 and Docker unhealthy-to-healthy),
+and a direct delayed OCR504 at5.07s with exactly one upstream request also passed.
+The source and snapshot hashes stayed unchanged across the experiment; owned
+test resources were cleaned up. See q3_deploy/evidence/T6-ACCEPTANCE-20261014.md
+and linked raw report/SQL snapshots/commands for exact results and limits.
+
+The smoke's default OCR run had37 successes and6 failures including5badscans;
+it proves the selected successful case lifecycle, not that transient failures
+never exhaust. A full mock restart erases its remote idempotency memory; that
+restart test proves local persistence and no resend of already delivered exports,
+not permanent downstream deduplication. Runtime unhealthy does not auto-repair
+or restart services. nginx timeouts are idle timeouts, and DNS replacement may
+briefly produce502. Backup/restoration are verified below; the earlier T6 results remain historical evidence.
+
 ### Backup retention
 
-Not completed: Q3 backup and restoration have not been implemented or validated.
+Implemented using SQLite's online backup API, validated staging files, a shared
+operation lock and a separate backup volume. A successful snapshot is published
+before rotation removes old owned files. A failed backup does not prune; UTC
+microsecond timestamps plus random suffixes avoid accidental name reuse.
+Restore requires a stopped API and preserves a safety copy before replacement.
+
+Actual Docker execution created nine online backups and retained the newest
+seven. Below are independent directory listings before/after the ninth run:
+
+```text
+Before ninth backup (7 files):
+backup-20261014T021546554150Z-2604db31.sqlite3
+backup-20261014T021547462249Z-7164b96d.sqlite3
+backup-20261014T021548245087Z-9987fa4d.sqlite3
+backup-20261014T021549509703Z-7adbb1bd.sqlite3
+backup-20261014T021550553206Z-db053429.sqlite3
+backup-20261014T021551377638Z-f80548b0.sqlite3
+backup-20261014T021552140186Z-03ea8db8.sqlite3
+
+After ninth backup (7 files):
+backup-20261014T021547462249Z-7164b96d.sqlite3
+backup-20261014T021548245087Z-9987fa4d.sqlite3
+backup-20261014T021549509703Z-7adbb1bd.sqlite3
+backup-20261014T021550553206Z-db053429.sqlite3
+backup-20261014T021551377638Z-f80548b0.sqlite3
+backup-20261014T021552140186Z-03ea8db8.sqlite3
+backup-20261014T021552886860Z-7f77edc5.sqlite3
+```
+
+The source remained live during backups; active WAL/uncommitted-write behavior
+was tested separately against real SQLite. This is not a concurrency load test.
+A later43/7 upload was rolled back by actual restore. All nine tables, including
+two reviews, CSV BLOB, export identity/key, delivery attempts and receipt, matched
+before restart, after restart and after three repeated deliver requests. Both
+mock processes stayed alive and downstream ingestion remained exactly one.
+A corrupt backup and a restore attempted while API was running were refused
+without changing existing data. Safety copies are separate from seven-file
+rotation and require operator cleanup after verification.
+
+macOS and non-root Linux each passed478 tests; native complete/lost-response/
+SIGKILL delivery scenarios passed again. The isolated Docker recovery experiment
+passed nine stages, with57 source hashes unchanged and no cleanup errors. See
+[q3_deploy/evidence/T7-ACCEPTANCE-20261014.md](q3_deploy/evidence/T7-ACCEPTANCE-20261014.md)
+for raw command output, per-run listings, full database comparisons and limits.
+
+Restoring an old snapshot cannot undo downstream ingestion. Exports absent from
+that snapshot can be recreated with new identities, so operators must reconcile
+post-snapshot deliveries before restart; saved pending/delivering exports resume
+automatically. Backups on the same host are not off-host disaster protection.
+No automatic schedule is installed; restore requires exclusive offline access.
+
 
 ## 4. AI-generated code requiring further review
 
 Candidate understanding has not yet been personally verified. Codex generated
-the Q1 implementation and Q2 OCR/export/delivery modules in `q1_api/app/` and their tests.
+the Q1/Q2 implementation and Q3 deployment/seed/readiness/smoke/backup/recovery code in `q1_api/app/` and their tests.
 Alex should explain the parse-before-write boundary, SQLite rollback/constraints,
 CSV physical line numbering, the transition table, concurrent-review serialization,
 atomic audit writes, HTTP error distinctions, asyncio task lifecycle, retry
 budgets, run-token fencing, immutable export identity, unknown ingestion outcomes,
-receipt verification and crash recovery before this section
+receipt verification, atomic seeding, Docker volumes, readiness versus liveness,
+nginx routing/timeouts, online SQLite snapshots, retention, offline recovery
+and post-snapshot delivery reconciliation before this section
 can be finalized. This records pending review, not an assertion about what Alex
 does or does not understand.
 
@@ -147,7 +238,9 @@ The assessment values accurate disclosure. The requirement to explain submitted 
 
 Q1 and all Q2 parts are implemented and verified. Isolated Q1 tests still use OCR
 fixtures; Q2 native tests exercise the real mocks through delivery.
-Q3 deployment/readiness/seeding/backup/restore, CI, final full-system clean-clone validation
-and candidate review remain unfinished. The installed TestClient emits a
+Q3 core deployment and backup/recovery are implemented and verified. The Q3
+module commit closes this work; post-commit clean-clone verification is planned, with receipts to be saved locally
+outside Git to record that exact hash. CI/public fork/push/submission and candidate
+review remain unfinished. The installed TestClient emits a
 dependency deprecation warning; tests currently run successfully. The one-day
 follow-up prioritization will be finalized against the completed submission.

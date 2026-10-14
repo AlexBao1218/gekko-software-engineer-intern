@@ -1,0 +1,6 @@
+ Container gekko-check-461270ce27a0-mock_ocr-1 Recreate 
+ Container gekko-check-461270ce27a0-mock_ocr-1 Recreated 
+ Container gekko-check-461270ce27a0-mock_ocr-1 Starting 
+ Container gekko-check-461270ce27a0-mock_ocr-1 Started 
+ Container gekko-check-461270ce27a0-mock_ocr-1 Waiting 
+ Container gekko-check-461270ce27a0-mock_ocr-1 Healthy 

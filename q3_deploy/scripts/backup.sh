@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# TODO Q3.3: back up the database to a timestamped file and keep only the
-# 7 most recent backups. Must work while the system is running.
+# The online SQLite helper and Python runtime live in the API image.
 set -euo pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+exec docker compose exec -T api python /srv/scripts/database_backup.py backup "$@"

@@ -1,0 +1,2 @@
+drwxr-xr-x 2 app app 4096 Oct 14 02:15 /backups
+drwxr-xr-x 2 app app 4096 Oct 14 02:15 /data

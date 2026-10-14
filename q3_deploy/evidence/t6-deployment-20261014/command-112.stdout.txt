@@ -1,0 +1,95 @@
+api-1  | 2026-10-14T01:59:06.142650005Z INFO:     Started server process [1]
+api-1  | 2026-10-14T01:59:06.142738713Z INFO:     Waiting for application startup.
+api-1  | 2026-10-14T01:59:06.185272588Z INFO:     Application startup complete.
+api-1  | 2026-10-14T01:59:06.200480297Z INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1  | 2026-10-14T01:59:10.341213965Z INFO:     127.0.0.1:44222 - "GET /api/ready HTTP/1.1" 200 OK
+api-1  | 2026-10-14T01:59:15.594585843Z INFO:     127.0.0.1:42254 - "GET /api/ready HTTP/1.1" 200 OK
+api-1  | 2026-10-14T01:59:15.802247385Z INFO:     172.19.0.5:37128 - "GET /api/ready HTTP/1.1" 200 OK
+api-1  | 2026-10-14T01:59:16.304723427Z INFO:     172.19.0.5:37144 - "GET /api/ready HTTP/1.1" 200 OK
+api-1  | 2026-10-14T01:59:16.763967718Z INFO:     172.19.0.5:37146 - "GET /api/exports/eb2fca7b-2763-43fa-9769-e783f2130bf1 HTTP/1.1" 200 OK
+api-1  | 2026-10-14T01:59:17.139712052Z INFO:     172.19.0.5:37156 - "POST /api/batches HTTP/1.1" 400 Bad Request
+api-1  | 2026-10-14T01:59:17.322827677Z INFO:     172.19.0.5:37172 - "POST /api/batches HTTP/1.1" 413 Request Entity Too Large
+api-1  | 2026-10-14T01:59:17.871764844Z INFO:     172.19.0.5:37184 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:17.876761594Z INFO:     172.19.0.5:37192 - "GET /api/health HTTP/1.1" 200 OK
+api-1  | 2026-10-14T01:59:20.833580679Z INFO:     127.0.0.1:42278 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:20.842152762Z INFO:     172.19.0.5:37206 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:25.932774098Z INFO:     172.19.0.5:57736 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:26.369868556Z INFO:     127.0.0.1:35202 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:30.962451975Z INFO:     172.19.0.5:57748 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:31.651500517Z INFO:     127.0.0.1:35222 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:36.049656936Z INFO:     172.19.0.5:58434 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:37.748390853Z INFO:     127.0.0.1:48326 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:41.123048938Z INFO:     172.19.0.5:58440 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:43.073214981Z INFO:     127.0.0.1:57036 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:46.178440607Z INFO:     172.19.0.5:40104 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:48.392664900Z INFO:     127.0.0.1:57058 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+api-1  | 2026-10-14T01:59:49.075111817Z INFO:     172.19.0.5:40116 - "GET /api/ready HTTP/1.1" 200 OK
+api-1  | 2026-10-14T01:59:51.285206193Z INFO:     172.19.0.5:40128 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T01:59:53.666245903Z INFO:     127.0.0.1:55874 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T01:59:54.460043528Z INFO:     172.19.0.5:41212 - "GET /api/ready HTTP/1.1" 503 Service Unavailable
+nginx-1  | 2026-10-14T01:59:10.769083174Z /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | 2026-10-14T01:59:10.769096716Z /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | 2026-10-14T01:59:10.769581132Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 2026-10-14T01:59:10.770569132Z 10-listen-on-ipv6-by-default.sh: info: can not modify /etc/nginx/conf.d/default.conf (read-only file system?)
+nginx-1  | 2026-10-14T01:59:10.770775924Z /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | 2026-10-14T01:59:10.770896549Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | 2026-10-14T01:59:10.772602966Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | 2026-10-14T01:59:10.773592674Z /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1  | 2026-10-14T01:59:10.805700591Z 2026/10/14 01:59:10 [notice] 1#1: using the "epoll" event method
+nginx-1  | 2026-10-14T01:59:10.805851549Z 2026/10/14 01:59:10 [notice] 1#1: nginx/1.27.5
+nginx-1  | 2026-10-14T01:59:10.805956466Z 2026/10/14 01:59:10 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+nginx-1  | 2026-10-14T01:59:10.805959257Z 2026/10/14 01:59:10 [notice] 1#1: OS: Linux 6.8.0-117-generic
+nginx-1  | 2026-10-14T01:59:10.805960257Z 2026/10/14 01:59:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+nginx-1  | 2026-10-14T01:59:10.808834424Z 2026/10/14 01:59:10 [notice] 1#1: start worker processes
+nginx-1  | 2026-10-14T01:59:10.809247549Z 2026/10/14 01:59:10 [notice] 1#1: start worker process 21
+nginx-1  | 2026-10-14T01:59:10.809468382Z 2026/10/14 01:59:10 [notice] 1#1: start worker process 22
+nginx-1  | 2026-10-14T01:59:15.803113885Z 127.0.0.1 - - [14/Oct/2026:01:59:15 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+api-1    | 2026-10-14T01:59:54.469106528Z INFO:     172.19.0.5:41216 - "GET /api/health HTTP/1.1" 200 OK
+api-1    | 2026-10-14T01:59:54.606852611Z INFO:     172.19.0.5:41218 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T01:59:56.355522696Z INFO:     172.19.0.5:41228 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T01:59:58.950617447Z INFO:     127.0.0.1:55890 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:01.458512448Z INFO:     172.19.0.5:41236 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:04.221692283Z INFO:     127.0.0.1:38328 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:06.505186575Z INFO:     172.19.0.5:57320 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:09.539829369Z INFO:     127.0.0.1:38334 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:11.539273661Z INFO:     172.19.0.5:57334 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:15.067847288Z INFO:     127.0.0.1:58484 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:16.575437289Z INFO:     172.19.0.5:39776 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:20.384221374Z INFO:     127.0.0.1:58506 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:22.047546375Z INFO:     172.19.0.5:39784 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:25.691599418Z INFO:     127.0.0.1:49854 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:27.559595335Z INFO:     172.19.0.5:52034 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:31.396143546Z INFO:     127.0.0.1:49878 - "GET /api/ready HTTP/1.1" 200 OK
+api-1    | 2026-10-14T02:00:32.746972255Z INFO:     172.19.0.5:52040 - "GET /api/ready HTTP/1.1" 200 OK
+nginx-1  | 2026-10-14T01:59:16.305334260Z 172.19.0.1 - - [14/Oct/2026:01:59:16 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:16.764051885Z 172.19.0.1 - - [14/Oct/2026:01:59:16 +0000] "GET /api/exports/eb2fca7b-2763-43fa-9769-e783f2130bf1 HTTP/1.1" 200 739 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:17.108835385Z 2026/10/14 01:59:17 [warn] 22#22: *4 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000001, client: 172.19.0.1, server: , request: "POST /api/batches HTTP/1.1", host: "127.0.0.1:65380"
+nginx-1  | 2026-10-14T01:59:17.140096260Z 172.19.0.1 - - [14/Oct/2026:01:59:17 +0000] "POST /api/batches HTTP/1.1" 400 115 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:17.154082385Z 2026/10/14 01:59:17 [warn] 22#22: *4 a client request body is buffered to a temporary file /var/cache/nginx/client_temp/0000000002, client: 172.19.0.1, server: , request: "POST /api/batches HTTP/1.1", host: "127.0.0.1:65380"
+nginx-1  | 2026-10-14T01:59:17.323342594Z 172.19.0.1 - - [14/Oct/2026:01:59:17 +0000] "POST /api/batches HTTP/1.1" 413 70 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:17.360537052Z 2026/10/14 01:59:17 [error] 22#22: *4 client intended to send too large body: 3145729 bytes, client: 172.19.0.1, server: , request: "POST /api/batches HTTP/1.1", host: "127.0.0.1:65380"
+nginx-1  | 2026-10-14T01:59:17.391345344Z 172.19.0.1 - - [14/Oct/2026:01:59:17 +0000] "POST /api/batches HTTP/1.1" 413 183 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:17.871987719Z 172.19.0.1 - - [14/Oct/2026:01:59:17 +0000] "GET /api/ready HTTP/1.1" 503 116 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:17.876846136Z 172.19.0.1 - - [14/Oct/2026:01:59:17 +0000] "GET /api/health HTTP/1.1" 200 15 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:20.842342304Z 127.0.0.1 - - [14/Oct/2026:01:59:20 +0000] "GET /api/ready HTTP/1.1" 503 116 "-" "Wget" "-"
+nginx-1  | 2026-10-14T01:59:25.933319139Z 127.0.0.1 - - [14/Oct/2026:01:59:25 +0000] "GET /api/ready HTTP/1.1" 503 116 "-" "Wget" "-"
+nginx-1  | 2026-10-14T01:59:30.962830017Z 127.0.0.1 - - [14/Oct/2026:01:59:30 +0000] "GET /api/ready HTTP/1.1" 503 116 "-" "Wget" "-"
+nginx-1  | 2026-10-14T01:59:36.049552019Z 127.0.0.1 - - [14/Oct/2026:01:59:36 +0000] "GET /api/ready HTTP/1.1" 503 116 "-" "Wget" "-"
+nginx-1  | 2026-10-14T01:59:41.123258688Z 127.0.0.1 - - [14/Oct/2026:01:59:41 +0000] "GET /api/ready HTTP/1.1" 503 116 "-" "Wget" "-"
+nginx-1  | 2026-10-14T01:59:46.178464107Z 127.0.0.1 - - [14/Oct/2026:01:59:46 +0000] "GET /api/ready HTTP/1.1" 503 116 "-" "Wget" "-"
+nginx-1  | 2026-10-14T01:59:49.075109942Z 172.19.0.1 - - [14/Oct/2026:01:59:49 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:51.289430943Z 127.0.0.1 - - [14/Oct/2026:01:59:51 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T01:59:54.460167070Z 172.19.0.1 - - [14/Oct/2026:01:59:54 +0000] "GET /api/ready HTTP/1.1" 503 116 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:54.469345570Z 172.19.0.1 - - [14/Oct/2026:01:59:54 +0000] "GET /api/health HTTP/1.1" 200 15 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:54.606992111Z 172.19.0.1 - - [14/Oct/2026:01:59:54 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T01:59:56.357102779Z 127.0.0.1 - - [14/Oct/2026:01:59:56 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:00:01.458818323Z 127.0.0.1 - - [14/Oct/2026:02:00:01 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:00:06.505494950Z 127.0.0.1 - - [14/Oct/2026:02:00:06 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:00:11.539651995Z 127.0.0.1 - - [14/Oct/2026:02:00:11 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:00:11.900750578Z 172.19.0.1 - - [14/Oct/2026:02:00:11 +0000] "POST /ocr/parse HTTP/1.1" 400 48 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:00:16.575186705Z 127.0.0.1 - - [14/Oct/2026:02:00:16 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:00:16.925971080Z 2026/10/14 02:00:16 [error] 21#21: *41 upstream timed out (110: Operation timed out) while reading response header from upstream, client: 172.19.0.1, server: , request: "POST /ocr/parse HTTP/1.1", upstream: "http://172.19.0.3:9100/ocr/parse", host: "127.0.0.1:65380"
+nginx-1  | 2026-10-14T02:00:16.928638122Z 172.19.0.1 - - [14/Oct/2026:02:00:16 +0000] "POST /ocr/parse HTTP/1.1" 504 167 "-" "python-httpx/0.28.1" "-"
+nginx-1  | 2026-10-14T02:00:22.050068791Z 127.0.0.1 - - [14/Oct/2026:02:00:22 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:00:27.559336544Z 127.0.0.1 - - [14/Oct/2026:02:00:27 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"
+nginx-1  | 2026-10-14T02:00:32.744290755Z 127.0.0.1 - - [14/Oct/2026:02:00:32 +0000] "GET /api/ready HTTP/1.1" 200 73 "-" "Wget" "-"

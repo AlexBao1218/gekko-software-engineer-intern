@@ -1,0 +1,9 @@
+[
+  {
+    "seq": 1,
+    "case_id": "hang-probe",
+    "image_ref": "hang.png",
+    "outcome": "hang",
+    "ts": 1791943211.922
+  }
+]

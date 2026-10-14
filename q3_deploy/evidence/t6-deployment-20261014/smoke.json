@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "seed_batch_id": "0863dab5-6953-480a-838d-9b0d343234a0",
+  "batch_id": "d3929210-8d32-46b9-bdad-8a00d56622d5",
+  "ocr_status_counts": {
+    "pending": 0,
+    "ocr_done": 37,
+    "ocr_failed": 6,
+    "stage1_approved": 0,
+    "stage1_rejected": 0,
+    "stage2_approved": 0,
+    "stage2_rejected": 0,
+    "exported": 0
+  },
+  "case_ref": "APPL-2026-0001",
+  "export_id": "eb2fca7b-2763-43fa-9769-e783f2130bf1",
+  "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+  "receipt": {
+    "delivery_id": "DLV-0001",
+    "idempotency_key": "export:eb2fca7b-2763-43fa-9769-e783f2130bf1",
+    "file_name": "export-eb2fca7b-2763-43fa-9769-e783f2130bf1.csv",
+    "sha256": "3b427834411424d44890de0942371008c18a4ba61d1dfb018788ff09fcd6a642",
+    "ingested_at": 1791943118,
+    "attempts": 2,
+    "deduplicated": true
+  }
+}
