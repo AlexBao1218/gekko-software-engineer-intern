@@ -137,6 +137,13 @@ live database file directly. A temporary snapshot must pass integrity, foreign
 key and application-schema checks before publication. Names contain UTC time
 and a random suffix; rotation retains the seven newest recognized regular
 `backup-*.sqlite3` files. Other files, temporary files and symlinks are excluded.
+The timestamp is an ordering watermark: under the operation lock, a new name
+uses the later of the current UTC clock and the last retained timestamp plus one
+microsecond. Equal or backward clock readings therefore cannot delete the newest
+snapshot. The watermark comes from disk on every invocation, including process
+restarts and existing backups. During clock correction, a filename can be ahead
+of real UTC; it records order, not a guaranteed wall-clock creation time. An
+invalid or exhausted timestamp fails explicitly without pruning backups.
 An operation lock serializes backup/rotation/restore and concurrent operations
 fail explicitly. Failed copies do not prune existing backups.
 

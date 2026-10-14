@@ -1,0 +1,30 @@
+{
+  "kind": "Path-redacted test-output views",
+  "files": [
+    {
+      "path": "backup-clock-red-confirmed.txt",
+      "original_sha256": "377c56f44dea4d7e4f3c8cb9086ad1dfbaef5e73dcfa89f0627cb714963dd4d2",
+      "redacted_sha256": "32d67c8d7d1e5773faefa5f6c25117a486bc1cf13044168e6eba526a7684ee61"
+    },
+    {
+      "path": "backup-regression.txt",
+      "original_sha256": "f0434462cf6c4fb78247e729b5593d1ad74c95cf99e4ed22a75129645d45d53e",
+      "redacted_sha256": "24b4932b7828f56384d475e47b322c1022982a5f2544cde73b34b5efde706b9b"
+    },
+    {
+      "path": "pytest-full.txt",
+      "original_sha256": "ffe5c0bdb42053bde39c7f5bd500dec3bd90ef0e921c0a9aa9ec9e26a135ece1",
+      "redacted_sha256": "dd4267596ced258c13f5f8d2d52098cbc053cf4b7d7f57bb742bafc23c523c41"
+    },
+    {
+      "path": "pytest-serial.txt",
+      "original_sha256": "f1a10d1c7aec4a8f16ae61b632dae80a1c0306620b7391f4e1d3ba3924995a98",
+      "redacted_sha256": "a2139ba8f59f74d2563e4e9ae6ccfc6e39716a5694a18dfaaf497aea959b1e25"
+    },
+    {
+      "path": "backup-runtime.txt",
+      "original_sha256": "9dfe7e99def736cae44cba632c86f603cc7c557bce48563bd009b6fd60b21cac",
+      "redacted_sha256": "cbf2d32964b9557affcec4375664f4e0509741fe97e19704400b54ef37aeb123"
+    }
+  ]
+}

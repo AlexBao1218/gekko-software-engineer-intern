@@ -1,5 +1,7 @@
 """Exercise the operational CLI on real SQLite files, including WAL and locks."""
 import fcntl
+from datetime import datetime, timezone
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -83,6 +85,75 @@ def test_nine_backups_keep_latest_seven_without_touching_other_files(storage):
     assert all((backups / name).is_file() for name in names[2:])
     assert unrelated.read_text() == 'keep me'
     assert symlink.is_symlink() and folder.is_dir()
+
+
+@pytest.mark.parametrize('clock_behavior', ['rollback', 'frozen'])
+def test_clock_rollback_keeps_latest_seven_successful_snapshots(storage, monkeypatch, clock_behavior):
+    # Only the wall clock is controlled; snapshots and restore use real SQLite.
+    spec = importlib.util.spec_from_file_location('backup_clock_test', SCRIPT)
+    helper = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(helper)
+    source, backups = storage
+
+    class Clock(datetime):
+        instant = datetime(2027, 1, 1, tzinfo=timezone.utc)
+
+        @classmethod
+        def now(cls, tz=None):
+            return cls.instant
+
+    monkeypatch.setattr(helper, 'datetime', Clock)
+    names = []
+    for index in range(16):
+        # First fill the directory normally, then repeatedly rewind/freeze time.
+        Clock.instant = (datetime(2027, 1, 1, second=index, tzinfo=timezone.utc)
+                         if index < 7 else
+                         datetime(2026 - index if clock_behavior == 'rollback' else 2027,
+                                  1, 1, second=6, tzinfo=timezone.utc))
+        with sqlite3.connect(source) as db:
+            db.execute('UPDATE evidence SET value=?', (str(index),))
+        result = helper.backup(source, backups, time.monotonic() + 2)
+        names.append(result['backup'])
+        assert (backups / result['backup']).is_file()
+        assert result['after'] == names[-7:]
+        assert [values(backups / name) for name in result['after']] == [
+            [(str(value),)] for value in range(max(0, index - 6), index + 1)]
+    helper.restore(source, backups, names[-1], time.monotonic() + 2)
+    assert values(source) == [('15',)]
+
+
+def test_future_dated_legacy_backups_keep_order_across_cli_restarts(storage):
+    source, backups = storage
+    names = []
+    for index in range(7):
+        name = f'backup-99980101T00000{index}000000Z-00000000.sqlite3'
+        shutil.copyfile(source, backups / name)
+        names.append(name)
+    for index in range(9):
+        with sqlite3.connect(source) as db:
+            db.execute('UPDATE evidence SET value=?', (str(index),))
+        # Each invocation is a new OS process, so ordering cannot rely on memory.
+        result = success(run(storage, 'backup'))
+        assert result['before'] == names[-7:]
+        names.append(result['backup'])
+        assert result['after'] == names[-7:]
+        assert values(backups / result['backup']) == [(str(index),)]
+    source.write_bytes(b'corrupt')
+    assert run(storage, 'backup').returncode != 0
+    assert sorted(p.name for p in backups.glob('*.sqlite3')) == names[-7:]
+    assert [values(backups / name) for name in names[-7:]] == [[(str(i),)] for i in range(2, 9)]
+
+
+@pytest.mark.parametrize('timestamp', ['99991231T235959999999Z', '20261301T000000000000Z'])
+def test_unusable_timestamp_refuses_without_pruning(storage, timestamp):
+    source, backups = storage
+    name = f'backup-{timestamp}-00000000.sqlite3'
+    shutil.copyfile(source, backups / name)
+    result = run(storage, 'backup')
+    assert result.returncode != 0
+    assert json.loads(result.stderr)['error']
+    assert list(backups.glob('*.sqlite3')) == [backups / name]
+    assert values(backups / name) == [('original',)]
 
 
 @pytest.mark.parametrize('damage', ['missing', 'empty', 'corrupt', 'schema', 'column', 'foreign_key'])

@@ -1,0 +1,23 @@
+........................................................................ [ 14%]
+........................................................................ [ 29%]
+........................................................................ [ 44%]
+........................................................................ [ 59%]
+........................................................................ [ 74%]
+........................................................................ [ 89%]
+...................................................                      [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  <WORKSPACE>/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 8 durations ==============================
+4.38s call     tests/test_ocr_native.py::test_native_sigkill_late_result_recovers_to_clean_fields_and_status
+2.30s call     tests/test_backup.py::test_shell_backup_and_stopped_restore_work_from_another_directory
+1.76s call     tests/test_review_edges.py::test_two_real_api_processes_cannot_both_decide[approve]
+1.57s call     tests/test_delivery_native.py::test_native_full_sample_export_delivers_only_new_stage2_approved_cases
+1.40s call     tests/test_native_process.py::test_native_two_stage_review_survives_process_restart
+1.38s call     tests/test_delivery_native.py::test_native_sigkill_after_ingestion_recovers_automatically_without_duplicate
+1.37s call     tests/test_review_edges.py::test_two_real_api_processes_cannot_both_decide[reject]
+1.36s call     tests/test_delivery_native.py::test_native_lost_receipt_retries_one_ingestion_with_same_bytes_and_key
+483 passed, 1 warning in 43.50s

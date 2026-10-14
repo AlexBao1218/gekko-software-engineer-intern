@@ -5,6 +5,25 @@ Record interactions that influenced architecture, implementation decisions, or g
 The chronological entries below record the actual interactions, accepted output,
 changes and limitations. Earlier entries describe their historical stage.
 
+## Final audit remediation on 2026-10-14
+
+User instruction: fix clock rollback in backup retention, update the startup
+guide, redact unnecessary workstation paths, add tests/process records and make
+local Git commits only. Do not push or publish; leave personal reflection to Alex.
+
+Codex added failing real-SQLite rollback/frozen-clock regressions, then made backup
+timestamps advance beyond the on-disk watermark under the existing operation
+lock. It added restart/legacy/timestamp-boundary coverage, updated runbook and
+quickstart instructions, and preserved private originals while creating labelled
+path-redacted evidence with hash receipts. No personal understanding answer or
+REFLECTION edit was generated in this remediation.
+
+A parallel full test run had one outer shell-process timeout (482 passed); it was
+preserved, not erased. The serial run passed all 483 tests; no production timeout
+or assertion was weakened. Real Docker backup/restore passed nine stages.
+See DELIVERY_FIXES.zh-CN.md for reasoning, limits and evidence. Final local commit
+verification is recorded separately; no new remote CI result is claimed.
+
 ## Environment setup interaction on 2026-10-12
 
 | Field | Description |

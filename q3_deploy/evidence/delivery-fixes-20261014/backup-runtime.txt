@@ -1,0 +1,11 @@
+[prepare_source]
+[fresh_isolated_start]
+[real_smoke_with_default_faults]
+[runbook_diagnostics]
+[nine_online_backups_and_newest_seven_retention]
+[real_post_backup_mutation_and_running_restore_refusal]
+[stopped_api_corrupt_restore_refused_without_database_change]
+[restore_known_backup_with_mocks_kept_alive]
+[restored_export_bytes_receipt_and_no_duplicate_ingestion]
+[cleanup_owned_project]
+{"pass": true, "report": "<WORKSPACE>/.gekko-setup/delivery-fixes-20261014/backup-runtime/report.json"}

@@ -2,7 +2,7 @@
 """Online SQLite snapshots and offline restoration. Invoke restore through restore.sh."""
 import argparse
 from contextlib import closing, contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import fcntl
 import json
 import math
@@ -93,8 +93,16 @@ def operation_lock(directory):
         os.close(fd)  # Never unlink: all contenders must lock the same inode.
 
 
-def backup_name():
-    return f'backup-{datetime.now(timezone.utc):%Y%m%dT%H%M%S%fZ}-{uuid4().hex[:8]}.sqlite3'
+def backup_name(after=None):
+    timestamp = datetime.now(timezone.utc)
+    if after is not None:
+        previous = datetime.strptime(after.split('-')[1], '%Y%m%dT%H%M%S%fZ').replace(tzinfo=timezone.utc)
+        if timestamp <= previous:
+            try:
+                timestamp = previous + timedelta(microseconds=1)
+            except OverflowError:
+                raise ValueError('Backup timestamp exhausted; inspect existing backup names') from None
+    return f'backup-{timestamp:%Y%m%dT%H%M%S%fZ}-{uuid4().hex[:8]}.sqlite3'
 
 
 def listing(directory):
@@ -104,7 +112,9 @@ def listing(directory):
 
 def backup(source, directory, deadline):
     before = listing(directory)
-    name = backup_name()
+    # The operation lock serializes this watermark with publication/rotation.
+    # Advance from disk, not process memory: restarts and clock rollback are safe.
+    name = backup_name(after=before[-1] if before else None)
     with staging(directory) as temporary:
         snapshot(source, temporary, deadline)
         os.replace(temporary, directory / name)

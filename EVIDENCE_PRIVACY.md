@@ -3,7 +3,7 @@
 The evidence directories contain recorded test output, including failed runs.
 Some files are now **path-redacted views**, not byte-for-byte original logs.
 [EVIDENCE_REDACTION.json](EVIDENCE_REDACTION.json) identifies every changed file,
-its original SHA-256 and its redacted SHA-256 at the time of this cleanup.
+its original SHA-256 and its redacted SHA-256 at local cleanup commit `ff03e2f`.
 Later editorial updates to a document can change its hash again; historical log
 views must remain frozen. New verification output has a separate receipt.
 

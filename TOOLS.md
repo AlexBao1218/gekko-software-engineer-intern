@@ -4,7 +4,7 @@ Current usage summary; the dated entries below preserve setup and implementation
 
 | Tool or source | Use | Files materially influenced |
 |---|---|---|
-| OpenAI Codex | Requirements analysis, Q1 implementation/testing, independent code review and engineering records | q1_api/app, q1_api/tests, planning/acceptance documents, REFLECTION.md and AI_LOG.md |
+| OpenAI Codex | Requirements analysis, Q1/Q2 implementation, Q3 deployment/recovery, CI, testing, independent review, clock-rollback fix and evidence redaction | q1_api/app, q1_api/tests, q3_deploy, .github/workflows, planning/acceptance documents and AI_LOG.md; factual technical sections of REFLECTION.md, with personal understanding left to the candidate |
 | Original assessment and mock contracts | API/state rules, scope, scoring and failure behavior | Application/tests and project documentation |
 
 Record AI interactions that influenced design or generated code in [AI_LOG.md](AI_LOG.md).

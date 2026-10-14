@@ -53,7 +53,10 @@ docker compose exec -T api ls -1 /backups  # newest seven backup-*.sqlite3 snaps
 # Optional off-host copy: mkdir -p backups; docker compose cp api:/backups/. ./backups/
 ```
 
-Choose an exact basename from the successful backup output. Before restarting a
+Choose an exact basename from the successful backup output. Names remain strictly
+increasing even if the clock is corrected backward: their timestamps may temporarily
+lead real UTC. Retention keeps the last seven backup operations. Do not rename
+snapshots to change order. Before restarting a
 restored DB, reconcile deliveries after that snapshot with the downstream service:
 local rollback does not undo ingestion, and an export missing from the snapshot
 could otherwise receive a new key. Startup retries saved pending/delivering
