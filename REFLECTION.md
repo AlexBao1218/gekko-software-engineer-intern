@@ -245,9 +245,11 @@ The assessment values accurate disclosure. The requirement to explain submitted 
 Q1 and all Q2 parts are implemented and verified. Isolated Q1 tests still use OCR
 fixtures; Q2 native tests exercise the real mocks through delivery.
 Q3 core deployment and backup/recovery are implemented and verified. The Q3
-module commit closes this work; post-commit clean-clone verification is planned, with receipts to be saved locally
-outside Git to record that exact hash. CI/public fork/push/submission and candidate
-review remain unfinished. The installed TestClient emits a
+module and test-fix commits were verified at732b6ea in a clean clone:478 tests
+and nine Docker restore stages passed, with exact-hash receipts saved locally.
+The public personal fork and push are complete. CI has passed its first real
+push run; the final documentation commit must also be verified at its own SHA.
+Email submission and candidate review remain unfinished. The installed TestClient emits a
 dependency deprecation warning; tests currently run successfully. The one-day
 follow-up prioritization will be finalized against the completed submission.
 
@@ -262,5 +264,9 @@ repository permission, and no retained checkout credentials. Compose defaults
 are nonsecret, so CI needs no local.env. Build success alone is not runtime
 acceptance; the Q3 deployment and restore experiments remain separate evidence.
 
-The workflow is configured. Actual remote final-commit verification is pending
-and will be recorded in the CI acceptance file and linked GitHub Actions run.
+The first actual push run38501842241 passed atb6d07e5 on the personal public
+fork:478 tests in40.43s (one existing warning) and all three application-image
+builds succeeded. Raw metadata/logs are inq3_deploy/evidence/ci-first-run-20261014.*.
+See [CI acceptance](q3_deploy/evidence/CI-ACCEPTANCE-20261014.md). The documentation
+commit creates a new SHA and must pass too; its final run URL/receipt will be
+recorded separately instead of treating the earlier green run as final proof.

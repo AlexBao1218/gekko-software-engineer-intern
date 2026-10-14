@@ -252,3 +252,11 @@ and verification-before-completion guidance. Official actions are pinned to
 verified commit SHAs; no credentials or application dependencies were added.
 Remote success will be recorded only after matching the final SHA to a completed
 successful GitHub run. Personal code understanding is still not asserted.
+
+Actual first push run38501842241 for b6d07e5 completed successfully on the personal
+public fork. All478 tests passed on hosted Python3.12.15 x64, with the known
+TestClient warning; API and both mock images built successfully. Raw GitHub
+metadata/logs are retained. Root verified fork parent/public visibility and
+fast-forward ancestry before publishing the existing history. No upstream writes,
+PR or email. The documentation commit must also pass on its own SHA; that final
+receipt will be kept outside a further commit to avoid hash self-reference.

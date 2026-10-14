@@ -295,3 +295,9 @@ Q3统一提交7095290后，重新安装依赖的干净克隆完整备份/恢复�
 用户授权配置每次push跑测试/Compose build并实际验证最终提交，合理使用子agent。基线732b6ea工作树干净。核对GitHub账号AlexBao1218，origin仍为公开出题方仓库且无写权限，个人同名fork尚不存在。按已批准Git方案准备个人公开fork；不向出题方push，不发送PR/邮件。
 
 主线程负责工作流、文档、GitHub发布及最终SHA实测；子agent只读核对评分条款、Docker上下文、Linux非root权限测试和最终工作流。选两个独立job：Ubuntu24.04/Python3.12全套pytest；Compose配置检查及三个应用镜像build。所有push触发，无分支/路径跳过；只读token、官方action固定SHA、有限job超时。使用官方语法/checkout/setup-python文档和GitHub API验证版本。YAML已解析，独立审查无初步阻塞项；不预称远端已通过。
+
+T9首轮远端实测：公开fork AlexBao1218/software-engineer-intern已创建，parent/visibility/admin权限再次核对。origin重命名为upstream，添加个人fork为origin；fetch后验证origin/main为当前HEAD祖先，再将本地功能分支HEAD正常快进推到fork main，没有force-push。本地codex/assessment-implementation跟踪origin/main，后续使用明确的 `git push origin HEAD:main`。
+
+CI提交b6d07e5由push触发GitHub run38501842241，head_sha完全匹配；两个job及全部步骤success。Python3.12.15 x64，478通过/1既有警告，测试40.43s；Docker Compose真实构建API/两个mock成功。run URL及原始JSON/完整日志已保存CI验收表/evidence。原有Q3最终732b6ea干净克隆478通过与恢复九阶段PASS的本机回执也已复核。CI首轮无失败或重跑。
+
+本次补齐过程记录后将再提交文档并push；必须等新的最终SHA运行通过，不能拿b6d07e5绿灯顶替。最终回执另存.gitignore目录，避免hash自引用循环。未向出题方推送、未开PR、未发邮件；候选人本人理解和最终提交准备仍是下一阶段。

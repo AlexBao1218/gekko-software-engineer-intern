@@ -18,10 +18,10 @@
 
 ## Git 与公开运行
 
-GitHub CLI核对账号为AlexBao1218；出题方Anthony-Gekko/software-engineer-intern为公开仓库且当前账号无push权限；个人同名仓库尚不存在。遵循已批准计划，准备个人公开fork，保留出题方为upstream，个人fork为origin，保留已有提交历史。先完成配置审查与凭证/运行时文件检查，再推送。不会向出题方提交PR、发送邮件或改变其仓库。
+GitHub CLI核对账号为AlexBao1218；出题方Anthony-Gekko/software-engineer-intern为公开仓库且当前账号无push权限；创建前个人同名仓库不存在。现已遵循已批准计划建立个人公开fork，保留出题方为upstream，个人fork为origin，保留已有提交历史。已完成配置审查与凭证/运行时文件检查后正常快进推送到个人fork的main。本地功能分支跟踪origin/main，后续明确使用`git push origin HEAD:main`。不会向出题方提交PR、发送邮件或改变其仓库。
 
 GitHub运行必须同时检查repository、event、branch和head_sha；完成后读取两个job的conclusion及步骤日志，保留run URL和原始结果。首次运行结果可随记录提交；记录提交也必须再跑CI。最终SHA的运行回执保存在本机`.gekko-setup/ci-20261014/`并在最终答复给出GitHub链接，避免为了把自身hash写进提交而产生无限追加提交。
 
 ## 来源与当前状态
 
-参考官方[工作流语法](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)、[checkout](https://github.com/actions/checkout)、[setup-python](https://github.com/actions/setup-python)，并由独立子agent检查评分覆盖和配置风险。没有添加应用依赖或修改业务代码。工作流已配置；远端通过状态仅以实际运行结果为准，结果将记录于`q3_deploy/evidence/CI-ACCEPTANCE-20261014.md`。
+参考官方[工作流语法](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)、[checkout](https://github.com/actions/checkout)、[setup-python](https://github.com/actions/setup-python)，并由独立子agent检查评分覆盖和配置风险。没有添加应用依赖或修改业务代码。工作流已配置，首轮push运行38501842241实际通过：478项测试及三个服务镜像构建成功。详见[CI验收](q3_deploy/evidence/CI-ACCEPTANCE-20261014.md)。本次记录提交后还要核对最终SHA的运行，不能把首轮SHA当成最终结果。

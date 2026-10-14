@@ -1,6 +1,6 @@
 # 高标准验收与评分对照
 
-2026-10-12 制定，2026-10-14 更新。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。Q1、完整 Q2 和 Q3 三部分核心要求已验证；CI及候选人理解仍待完成。Q3本轮统一提交，最终hash的独立克隆复验另存本机记录。
+2026-10-12 制定，2026-10-14 更新。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。Q1、完整 Q2 和 Q3 三部分核心要求已验证；CI工作流已实现且首轮push远端通过，最终提交仍须核对对应Actions；候选人理解仍待完成。Q3本轮统一提交，最终hash的独立克隆复验另存本机记录。
 
 Q1 历史证据：[干净快照 pytest 输出](q1_api/evidence/q1-clean-snapshot-pytest-20261013.txt)、[审核测试](q1_api/tests/test_review.py)、[原生进程重启测试](q1_api/tests/test_native_process.py)、[模块核对表](q1_api/evidence/Q1-ACCEPTANCE-20261013.md)、[过程记录](WORK_LOG.zh-CN.md)。Q1独立测试用OCR fixture；本轮已补真实OCR/两级审核和故障恢复，见 [Q2.1/Q2.2核验](q2_integration/evidence/OCR-ACCEPTANCE.zh-CN.md)。本轮完整原生流程（含导出/交付）也已验证，见 [Q2完整核验](q2_integration/evidence/Q2-ACCEPTANCE-20261013.md)；容器部署/持久化/readiness也已通过 [Q3 T6核验](q3_deploy/evidence/T6-ACCEPTANCE-20261014.md)；备份/恢复已通过 [Q3 T7核验](q3_deploy/evidence/T7-ACCEPTANCE-20261014.md)。
 
@@ -97,3 +97,5 @@ Q1 根目录 pytest 可独立运行；Q2 有真实原生 API+mocks 完整流程�
 面试至少能解释并演示三个修改：增加退回一级审核的状态及测试；把批量文件交付改为按案件交付时，重新确定幂等单位；加入 nginx 限流并验证正常请求/被限请求。练习改动在本地练习分支上，验收提交保持原题范围。
 
 Git 继续沿用每模块一提交、保留真实历史、不 force-push。分析/验收文档的修订单独提交，不冒充模块完成。任何未达到项写入 REFLECTION，但准确披露并不等于该项已得分。
+
+CI加分项首轮已实测478项pytest及Compose build通过，见[CI核验](q3_deploy/evidence/CI-ACCEPTANCE-20261014.md)。最后文档提交会再触发CI，最终答复须附同一SHA的成功run URL。

@@ -126,3 +126,9 @@ release/tag/action.yml checks resolved checkoutv7.0.1 to
 3d3c42e5aac5ba805825da76410c181273ba90b1 and setup-pythonv7.0.0 to
 5fda3b95a4ea91299a34e894583c3862153e4b97. These actions execute on GitHub-hosted
 runners; no new runtime dependency, original mock changes or global tool changes.
+
+Publication and execution: GitHub CLI created the authorized public assessment
+fork, verified parent/visibility, and pushed the preserved history normally to
+its main branch. GitHub hosted Ubuntu24.04 runners executed both jobs. First
+run38501842241 metadata and raw logs were downloaded as evidence; local checks
+were not substituted for remote CI. No PR, email, deployment or image publication.

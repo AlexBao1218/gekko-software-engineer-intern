@@ -1,0 +1,750 @@
+Python tests	Set up job	﻿2026-10-14T02:35:39.7101917Z Current runner version: '2.337.0'
+Python tests	Set up job	2026-10-14T02:35:39.7125574Z ##[group]Runner Image Provisioner
+Python tests	Set up job	2026-10-14T02:35:39.7126749Z Hosted Compute Agent
+Python tests	Set up job	2026-10-14T02:35:39.7127323Z Version: 20261002.596
+Python tests	Set up job	2026-10-14T02:35:39.7128056Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+Python tests	Set up job	2026-10-14T02:35:39.7128767Z Build Date: 2026-10-02T22:28:27Z
+Python tests	Set up job	2026-10-14T02:35:39.7129469Z Worker ID: {b8dbeccd-243b-47ef-9040-eaf5534e65db}
+Python tests	Set up job	2026-10-14T02:35:39.7130188Z Region: westus3
+Python tests	Set up job	2026-10-14T02:35:39.7130711Z Cloud: Azure
+Python tests	Set up job	2026-10-14T02:35:39.7131239Z ##[endgroup]
+Python tests	Set up job	2026-10-14T02:35:39.7132614Z ##[group]Operating System
+Python tests	Set up job	2026-10-14T02:35:39.7133192Z Ubuntu
+Python tests	Set up job	2026-10-14T02:35:39.7133743Z 24.04.5
+Python tests	Set up job	2026-10-14T02:35:39.7134230Z LTS
+Python tests	Set up job	2026-10-14T02:35:39.7134732Z ##[endgroup]
+Python tests	Set up job	2026-10-14T02:35:39.7135268Z ##[group]Runner Image
+Python tests	Set up job	2026-10-14T02:35:39.7136099Z Image: ubuntu-24.04
+Python tests	Set up job	2026-10-14T02:35:39.7136735Z Version: 20261004.327.1
+Python tests	Set up job	2026-10-14T02:35:39.7137746Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+Python tests	Set up job	2026-10-14T02:35:39.7139455Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+Python tests	Set up job	2026-10-14T02:35:39.7140504Z ##[endgroup]
+Python tests	Set up job	2026-10-14T02:35:39.7141557Z ##[group]GITHUB_TOKEN Permissions
+Python tests	Set up job	2026-10-14T02:35:39.7143467Z Contents: read
+Python tests	Set up job	2026-10-14T02:35:39.7144060Z Metadata: read
+Python tests	Set up job	2026-10-14T02:35:39.7144591Z ##[endgroup]
+Python tests	Set up job	2026-10-14T02:35:39.7146713Z Secret source: Actions
+Python tests	Set up job	2026-10-14T02:35:39.7147628Z Cache mode: write
+Python tests	Set up job	2026-10-14T02:35:39.7148284Z Prepare workflow directory
+Python tests	Set up job	2026-10-14T02:35:39.7565171Z Prepare all required actions
+Python tests	Set up job	2026-10-14T02:35:39.7612388Z Getting action download info
+Python tests	Set up job	2026-10-14T02:35:40.0713705Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Python tests	Set up job	2026-10-14T02:35:40.1715759Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+Python tests	Set up job	2026-10-14T02:35:40.3497662Z Complete job name: Python tests
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-14T02:35:40.4139879Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4140779Z with:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4141290Z   persist-credentials: false
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4141852Z   repository: AlexBao1218/software-engineer-intern
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4145497Z   token: ***
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4146066Z   ssh-strict: true
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4146528Z   ssh-user: git
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4147018Z   clean: true
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4147512Z   sparse-checkout-cone-mode: true
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4148087Z   fetch-depth: 1
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4148576Z   fetch-tags: false
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4149063Z   show-progress: true
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4149555Z   lfs: false
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4150039Z   submodules: false
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4150542Z   set-safe-directory: true
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4151083Z   allow-unsafe-pr-checkout: false
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4151792Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5014562Z Syncing repository: AlexBao1218/software-engineer-intern
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5016363Z ##[group]Getting Git version info
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5017309Z Working directory is '/home/runner/work/software-engineer-intern/software-engineer-intern'
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5018623Z [command]/usr/bin/git version
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5098867Z git version 2.55.0
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5115501Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5127712Z Temporarily overriding HOME='/home/runner/work/_temp/83771af1-db05-42d1-8353-c9e3e00c2d84' before making global git config changes
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5129769Z Adding repository directory to the temporary git global config as a safe directory
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5131619Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-engineer-intern/software-engineer-intern
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5177580Z Deleting the contents of '/home/runner/work/software-engineer-intern/software-engineer-intern'
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5180760Z ##[group]Determining repository object format
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5183068Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5185267Z ##[group]Initializing the repository
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5187356Z [command]/usr/bin/git init /home/runner/work/software-engineer-intern/software-engineer-intern
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5281305Z hint: Using 'master' as the name for the initial branch. This default branch name
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5282843Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5284334Z hint: to use in all of your new repositories, which will suppress this warning,
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5292466Z hint: call:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5304544Z hint:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5306240Z hint: 	git config --global init.defaultBranch <name>
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5307580Z hint:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5308300Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5309204Z hint: 'development'. The just-created branch can be renamed via this command:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5309956Z hint:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5310476Z hint: 	git branch -m <name>
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5311008Z hint:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5311761Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5312944Z Initialized empty Git repository in /home/runner/work/software-engineer-intern/software-engineer-intern/.git/
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5315185Z [command]/usr/bin/git remote add origin https://github.com/AlexBao1218/software-engineer-intern
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5344319Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5345717Z ##[group]Disabling automatic garbage collection
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5347291Z [command]/usr/bin/git config --local gc.auto 0
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5371732Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5373122Z ##[group]Setting up auth
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5374051Z Removing SSH command configuration
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5376031Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5400830Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5709470Z Removing HTTP extra header
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5714070Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5739972Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5925595Z Removing includeIf entries pointing to credentials config files
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5929524Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5953407Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6121386Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6149139Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6176323Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6203064Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6229016Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6251729Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6252909Z ##[group]Fetching the repository
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6258600Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b6d07e5f463f5e54750181bd7f26c99cee35bf15:refs/remotes/origin/main
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4472442Z From https://github.com/AlexBao1218/software-engineer-intern
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4474058Z  * [new ref]         b6d07e5f463f5e54750181bd7f26c99cee35bf15 -> origin/main
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4481322Z [command]/usr/bin/git branch --list --remote origin/main
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4504852Z   origin/main
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4512904Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4532902Z b6d07e5f463f5e54750181bd7f26c99cee35bf15
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4537447Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4538659Z ##[group]Determining the checkout info
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4539912Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4540640Z [command]/usr/bin/git sparse-checkout disable
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4588452Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4616989Z ##[group]Checking out the ref
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4621503Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4994416Z Switched to a new branch 'main'
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4998748Z branch 'main' set up to track 'origin/main'.
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5006474Z ##[endgroup]
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5039145Z [command]/usr/bin/git log -1 --format=%H
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5060455Z b6d07e5f463f5e54750181bd7f26c99cee35bf15
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5066983Z ##[group]Removing auth
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5067944Z Removing SSH command configuration
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5070751Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5097727Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5270051Z Removing HTTP extra header
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5272334Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5297083Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5452669Z Removing includeIf entries pointing to credentials config files
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5455118Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5476711Z includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5480446Z includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5483340Z includeif.gitdir:/github/workspace/.git.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5485097Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5490213Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5501089Z /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5513061Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5542050Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5566171Z /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5575957Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5609361Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5631190Z /github/runner_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5649324Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5712403Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5730121Z /github/runner_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5735957Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5760611Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5928839Z Removing credentials config '/home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config'
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5935247Z ##[endgroup]
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-14T02:35:41.6242276Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6243864Z with:
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6244672Z   python-version: 3.12
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6245583Z   cache: pip
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6246593Z   cache-dependency-path: requirements.txt
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6247644Z   check-latest: false
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6256360Z   token: ***
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6257245Z   update-environment: true
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6258236Z   allow-prereleases: false
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6259161Z   freethreaded: false
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6260003Z ##[endgroup]
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.7304071Z ##[group]Installed versions
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.7371064Z Successfully set up CPython (3.12.15)
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.7372908Z ##[endgroup]
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.7604675Z [command]/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:42.0141711Z /home/runner/.cache/pip
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:42.2497187Z pip cache is not found
+Python tests	Install dependencies	﻿2026-10-14T02:35:42.2624420Z ##[group]Run python -m pip install -r requirements.txt
+Python tests	Install dependencies	2026-10-14T02:35:42.2625373Z [36;1mpython -m pip install -r requirements.txt[0m
+Python tests	Install dependencies	2026-10-14T02:35:42.2800849Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Python tests	Install dependencies	2026-10-14T02:35:42.2801648Z env:
+Python tests	Install dependencies	2026-10-14T02:35:42.2802227Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+Python tests	Install dependencies	2026-10-14T02:35:42.2802933Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+Python tests	Install dependencies	2026-10-14T02:35:42.2803627Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Python tests	Install dependencies	2026-10-14T02:35:42.2804251Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Python tests	Install dependencies	2026-10-14T02:35:42.2804884Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Python tests	Install dependencies	2026-10-14T02:35:42.2805632Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+Python tests	Install dependencies	2026-10-14T02:35:42.2806601Z ##[endgroup]
+Python tests	Install dependencies	2026-10-14T02:35:42.9111649Z Collecting fastapi==0.143.0 (from -r requirements.txt (line 1))
+Python tests	Install dependencies	2026-10-14T02:35:42.9615392Z   Downloading fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.0791238Z Collecting pydantic==2.14.1 (from -r requirements.txt (line 2))
+Python tests	Install dependencies	2026-10-14T02:35:43.0826620Z   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.1288475Z Collecting uvicorn==0.54.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:43.1318217Z   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.1503519Z Collecting python-multipart==0.0.32 (from -r requirements.txt (line 4))
+Python tests	Install dependencies	2026-10-14T02:35:43.1537812Z   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.1737437Z Collecting httpx==0.28.1 (from -r requirements.txt (line 5))
+Python tests	Install dependencies	2026-10-14T02:35:43.1766370Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.2045263Z Collecting pytest==9.1.1 (from -r requirements.txt (line 6))
+Python tests	Install dependencies	2026-10-14T02:35:43.2080657Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.2299528Z Collecting pytest-asyncio==1.4.0 (from -r requirements.txt (line 7))
+Python tests	Install dependencies	2026-10-14T02:35:43.2332708Z   Downloading pytest_asyncio-1.4.0-py3-none-any.whl.metadata (4.1 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.2591635Z Collecting starlette>=0.46.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Python tests	Install dependencies	2026-10-14T02:35:43.2628440Z   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.2839531Z Collecting typing-extensions>=4.8.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Python tests	Install dependencies	2026-10-14T02:35:43.2870440Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.3030109Z Collecting typing-inspection>=0.4.2 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Python tests	Install dependencies	2026-10-14T02:35:43.3061648Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.3214637Z Collecting annotated-doc>=0.0.2 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Python tests	Install dependencies	2026-10-14T02:35:43.3244142Z   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.3464143Z Collecting opentelemetry-api>=1.44.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Python tests	Install dependencies	2026-10-14T02:35:43.3496892Z   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.3653374Z Collecting annotated-types>=0.6.0 (from pydantic==2.14.1->-r requirements.txt (line 2))
+Python tests	Install dependencies	2026-10-14T02:35:43.3686965Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.9487349Z Collecting pydantic-core==2.50.1 (from pydantic==2.14.1->-r requirements.txt (line 2))
+Python tests	Install dependencies	2026-10-14T02:35:43.9526129Z   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.9739951Z Collecting click>=7.0 (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:43.9795556Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Python tests	Install dependencies	2026-10-14T02:35:43.9957878Z Collecting h11>=0.8 (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:43.9988584Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.0205592Z Collecting anyio (from httpx==0.28.1->-r requirements.txt (line 5))
+Python tests	Install dependencies	2026-10-14T02:35:44.0237530Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.0457624Z Collecting certifi (from httpx==0.28.1->-r requirements.txt (line 5))
+Python tests	Install dependencies	2026-10-14T02:35:44.0491820Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.0683556Z Collecting httpcore==1.* (from httpx==0.28.1->-r requirements.txt (line 5))
+Python tests	Install dependencies	2026-10-14T02:35:44.0713882Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.0911700Z Collecting idna (from httpx==0.28.1->-r requirements.txt (line 5))
+Python tests	Install dependencies	2026-10-14T02:35:44.0945076Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.1109920Z Collecting iniconfig>=1.0.1 (from pytest==9.1.1->-r requirements.txt (line 6))
+Python tests	Install dependencies	2026-10-14T02:35:44.1142737Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.1327143Z Collecting packaging>=22 (from pytest==9.1.1->-r requirements.txt (line 6))
+Python tests	Install dependencies	2026-10-14T02:35:44.1358046Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.1533498Z Collecting pluggy<2,>=1.5 (from pytest==9.1.1->-r requirements.txt (line 6))
+Python tests	Install dependencies	2026-10-14T02:35:44.1564524Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.1775768Z Collecting pygments>=2.7.2 (from pytest==9.1.1->-r requirements.txt (line 6))
+Python tests	Install dependencies	2026-10-14T02:35:44.1807955Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.2182802Z Collecting httptools>=0.8.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:44.2214877Z   Downloading httptools-0.9.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.2397684Z Collecting python-dotenv>=0.13 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:44.2428463Z   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.2784598Z Collecting pyyaml>=5.1 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:44.2816216Z   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.3179748Z Collecting uvloop>=0.15.1 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:44.3211810Z   Downloading uvloop-0.23.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.1 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.3847362Z Collecting watchfiles>=0.20 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:44.3884191Z   Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.4888517Z Collecting websockets>=13.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Python tests	Install dependencies	2026-10-14T02:35:44.4921805Z   Downloading websockets-17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.5095979Z Downloading fastapi-0.143.0-py3-none-any.whl (144 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.5182235Z Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.5397162Z Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.5447075Z Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.5499426Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.5551511Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.5652092Z Downloading pytest_asyncio-1.4.0-py3-none-any.whl (16 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.5699656Z Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6026551Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 69.2 MB/s  0:00:00
+Python tests	Install dependencies	2026-10-14T02:35:44.6065429Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6121652Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6173932Z Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6222136Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6270543Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6324635Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6376701Z Downloading httptools-0.9.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (552 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6490159Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 552.8/552.8 kB 52.0 MB/s  0:00:00
+Python tests	Install dependencies	2026-10-14T02:35:44.6525521Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6577222Z Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6661793Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6709997Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6830548Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 112.5 MB/s  0:00:00
+Python tests	Install dependencies	2026-10-14T02:35:44.6861638Z Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6912791Z Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.6983414Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 106.7 MB/s  0:00:00
+Python tests	Install dependencies	2026-10-14T02:35:44.7026174Z Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.7076402Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.7128297Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.7176318Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.7227380Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.7278534Z Downloading uvloop-0.23.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.5 MB)
+Python tests	Install dependencies	2026-10-14T02:35:44.7626634Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 130.2 MB/s  0:00:00
+Python tests	Install dependencies	2026-10-14T02:35:44.7674711Z Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (458 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.7783650Z Downloading websockets-17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (225 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.7873827Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Python tests	Install dependencies	2026-10-14T02:35:44.9171588Z Installing collected packages: websockets, uvloop, typing-extensions, pyyaml, python-multipart, python-dotenv, pygments, pluggy, packaging, iniconfig, idna, httptools, h11, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic-core, opentelemetry-api, httpcore, anyio, watchfiles, starlette, pytest-asyncio, pydantic, httpx, fastapi
+Python tests	Install dependencies	2026-10-14T02:35:46.8160729Z 
+Python tests	Install dependencies	2026-10-14T02:35:46.8197277Z Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 fastapi-0.143.0 h11-0.16.0 httpcore-1.0.9 httptools-0.9.0 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.6.0 pydantic-2.14.1 pydantic-core-2.50.1 pygments-2.21.0 pytest-9.1.1 pytest-asyncio-1.4.0 python-dotenv-1.2.4 python-multipart-0.0.32 pyyaml-6.0.3 starlette-1.8.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0 uvloop-0.23.0 watchfiles-1.3.0 websockets-17.2
+Python tests	Run complete test suite	﻿2026-10-14T02:35:46.9089345Z ##[group]Run python -m pytest q1_api/
+Python tests	Run complete test suite	2026-10-14T02:35:46.9089764Z [36;1mpython -m pytest q1_api/[0m
+Python tests	Run complete test suite	2026-10-14T02:35:46.9130262Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Python tests	Run complete test suite	2026-10-14T02:35:46.9130731Z env:
+Python tests	Run complete test suite	2026-10-14T02:35:46.9131063Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+Python tests	Run complete test suite	2026-10-14T02:35:46.9131552Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+Python tests	Run complete test suite	2026-10-14T02:35:46.9132025Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Python tests	Run complete test suite	2026-10-14T02:35:46.9132410Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Python tests	Run complete test suite	2026-10-14T02:35:46.9132781Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Python tests	Run complete test suite	2026-10-14T02:35:46.9133211Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+Python tests	Run complete test suite	2026-10-14T02:35:46.9133594Z ##[endgroup]
+Python tests	Run complete test suite	2026-10-14T02:35:48.6251375Z ============================= test session starts ==============================
+Python tests	Run complete test suite	2026-10-14T02:35:48.6252097Z platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.6.0
+Python tests	Run complete test suite	2026-10-14T02:35:48.6253213Z rootdir: /home/runner/work/software-engineer-intern/software-engineer-intern/q1_api
+Python tests	Run complete test suite	2026-10-14T02:35:48.6253824Z configfile: pytest.ini
+Python tests	Run complete test suite	2026-10-14T02:35:48.6254269Z plugins: asyncio-1.4.0, anyio-4.15.1
+Python tests	Run complete test suite	2026-10-14T02:35:48.6254951Z asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+Python tests	Run complete test suite	2026-10-14T02:35:48.6255772Z collected 478 items
+Python tests	Run complete test suite	2026-10-14T02:35:48.6256328Z 
+Python tests	Run complete test suite	2026-10-14T02:35:48.6764441Z q1_api/tests/test_app.py .                                               [  0%]
+Python tests	Run complete test suite	2026-10-14T02:35:51.0477884Z q1_api/tests/test_backup.py ............................                 [  6%]
+Python tests	Run complete test suite	2026-10-14T02:35:51.5257644Z q1_api/tests/test_batches.py ..............                              [  8%]
+Python tests	Run complete test suite	2026-10-14T02:35:52.7879039Z q1_api/tests/test_database.py .......                                    [ 10%]
+Python tests	Run complete test suite	2026-10-14T02:35:52.8396960Z q1_api/tests/test_delivery_client.py ................................... [ 17%]
+Python tests	Run complete test suite	2026-10-14T02:35:52.9530348Z ...................................................................      [ 31%]
+Python tests	Run complete test suite	2026-10-14T02:35:57.8769116Z q1_api/tests/test_delivery_native.py ...                                 [ 32%]
+Python tests	Run complete test suite	2026-10-14T02:36:00.4406374Z q1_api/tests/test_delivery_workflow.py ............                      [ 34%]
+Python tests	Run complete test suite	2026-10-14T02:36:00.6829068Z q1_api/tests/test_exports.py ......                                      [ 36%]
+Python tests	Run complete test suite	2026-10-14T02:36:01.5353271Z q1_api/tests/test_imports.py ............................                [ 42%]
+Python tests	Run complete test suite	2026-10-14T02:36:04.0827955Z q1_api/tests/test_native_process.py ..                                   [ 42%]
+Python tests	Run complete test suite	2026-10-14T02:36:04.1359679Z q1_api/tests/test_ocr_client.py ........................................ [ 50%]
+Python tests	Run complete test suite	2026-10-14T02:36:04.2349709Z ............................................................             [ 63%]
+Python tests	Run complete test suite	2026-10-14T02:36:10.0629314Z q1_api/tests/test_ocr_native.py ..                                       [ 63%]
+Python tests	Run complete test suite	2026-10-14T02:36:12.8486314Z q1_api/tests/test_ocr_workflow.py .............................          [ 69%]
+Python tests	Run complete test suite	2026-10-14T02:36:13.5932440Z q1_api/tests/test_readiness.py ..............                            [ 72%]
+Python tests	Run complete test suite	2026-10-14T02:36:15.3884102Z q1_api/tests/test_review.py ............................................ [ 82%]
+Python tests	Run complete test suite	2026-10-14T02:36:16.0362518Z ................                                                         [ 85%]
+Python tests	Run complete test suite	2026-10-14T02:36:17.6181124Z q1_api/tests/test_review_edges.py ...................................... [ 93%]
+Python tests	Run complete test suite	2026-10-14T02:36:22.6570793Z .......                                                                  [ 94%]
+Python tests	Run complete test suite	2026-10-14T02:36:22.8267483Z q1_api/tests/test_seed.py ...............                                [ 97%]
+Python tests	Run complete test suite	2026-10-14T02:36:28.6711509Z q1_api/tests/test_smoke.py ..........                                    [100%]
+Python tests	Run complete test suite	2026-10-14T02:36:28.6713303Z 
+Python tests	Run complete test suite	2026-10-14T02:36:28.6714299Z =============================== warnings summary ===============================
+Python tests	Run complete test suite	2026-10-14T02:36:28.6715574Z ../../../../../opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1
+Python tests	Run complete test suite	2026-10-14T02:36:28.6718415Z   /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+Python tests	Run complete test suite	2026-10-14T02:36:28.6720426Z     from starlette.testclient import TestClient as TestClient  # noqa
+Python tests	Run complete test suite	2026-10-14T02:36:28.6721062Z 
+Python tests	Run complete test suite	2026-10-14T02:36:28.6721476Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+Python tests	Run complete test suite	2026-10-14T02:36:28.6722436Z ======================= 478 passed, 1 warning in 40.43s ========================
+Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-14T02:36:28.7709522Z Post job cleanup.
+Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:36:28.8827683Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/software-engineer-intern/software-engineer-intern --files-from manifest.txt --use-compress-program zstdmt
+Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:36:30.1485006Z Sent 15130669 of 15130669 (100.0%), 16.2 MBs/sec
+Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:36:30.4134488Z Cache saved with the key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-ade691e554a92e5143695a3870b6262ec1a8573a27fa7e45bd5e4ad9c6bbde21
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-14T02:36:30.4254555Z Post job cleanup.
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.4959269Z [command]/usr/bin/git version
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5005524Z git version 2.55.0
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5038316Z Temporarily overriding HOME='/home/runner/work/_temp/a3a9652a-c1ba-4d8f-a210-297e67258520' before making global git config changes
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5039396Z Adding repository directory to the temporary git global config as a safe directory
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5044102Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-engineer-intern/software-engineer-intern
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5070455Z Removing SSH command configuration
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5076259Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5104832Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5295424Z Removing HTTP extra header
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5299676Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5334845Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5530187Z Removing includeIf entries pointing to credentials config files
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5534426Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5592659Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Python tests	Complete job	﻿2026-10-14T02:36:30.5876691Z Cleaning up orphan processes
+Docker Compose build	Set up job	﻿2026-10-14T02:35:40.0384049Z Current runner version: '2.337.0'
+Docker Compose build	Set up job	2026-10-14T02:35:40.0404912Z ##[group]Runner Image Provisioner
+Docker Compose build	Set up job	2026-10-14T02:35:40.0405653Z Hosted Compute Agent
+Docker Compose build	Set up job	2026-10-14T02:35:40.0406224Z Version: 20261002.596
+Docker Compose build	Set up job	2026-10-14T02:35:40.0406752Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+Docker Compose build	Set up job	2026-10-14T02:35:40.0407338Z Build Date: 2026-10-02T22:28:27Z
+Docker Compose build	Set up job	2026-10-14T02:35:40.0407964Z Worker ID: {bc8bcf2f-f637-4cd7-b45c-7871c0ec3642}
+Docker Compose build	Set up job	2026-10-14T02:35:40.0408567Z Region: westus
+Docker Compose build	Set up job	2026-10-14T02:35:40.0409045Z Cloud: Azure
+Docker Compose build	Set up job	2026-10-14T02:35:40.0409504Z ##[endgroup]
+Docker Compose build	Set up job	2026-10-14T02:35:40.0410657Z ##[group]Operating System
+Docker Compose build	Set up job	2026-10-14T02:35:40.0411231Z Ubuntu
+Docker Compose build	Set up job	2026-10-14T02:35:40.0411696Z 24.04.5
+Docker Compose build	Set up job	2026-10-14T02:35:40.0412160Z LTS
+Docker Compose build	Set up job	2026-10-14T02:35:40.0412599Z ##[endgroup]
+Docker Compose build	Set up job	2026-10-14T02:35:40.0413062Z ##[group]Runner Image
+Docker Compose build	Set up job	2026-10-14T02:35:40.0413582Z Image: ubuntu-24.04
+Docker Compose build	Set up job	2026-10-14T02:35:40.0414081Z Version: 20261004.327.1
+Docker Compose build	Set up job	2026-10-14T02:35:40.0415087Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+Docker Compose build	Set up job	2026-10-14T02:35:40.0416551Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+Docker Compose build	Set up job	2026-10-14T02:35:40.0417384Z ##[endgroup]
+Docker Compose build	Set up job	2026-10-14T02:35:40.0418319Z ##[group]GITHUB_TOKEN Permissions
+Docker Compose build	Set up job	2026-10-14T02:35:40.0419813Z Contents: read
+Docker Compose build	Set up job	2026-10-14T02:35:40.0420309Z Metadata: read
+Docker Compose build	Set up job	2026-10-14T02:35:40.0420857Z ##[endgroup]
+Docker Compose build	Set up job	2026-10-14T02:35:40.0422516Z Secret source: Actions
+Docker Compose build	Set up job	2026-10-14T02:35:40.0423249Z Cache mode: write
+Docker Compose build	Set up job	2026-10-14T02:35:40.0423890Z Prepare workflow directory
+Docker Compose build	Set up job	2026-10-14T02:35:40.0727128Z Prepare all required actions
+Docker Compose build	Set up job	2026-10-14T02:35:40.0765009Z Getting action download info
+Docker Compose build	Set up job	2026-10-14T02:35:40.4121128Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Docker Compose build	Set up job	2026-10-14T02:35:40.5945988Z Complete job name: Docker Compose build
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-14T02:35:40.6528414Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6529217Z with:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6529594Z   persist-credentials: false
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6530061Z   repository: AlexBao1218/software-engineer-intern
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6533324Z   token: ***
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6533683Z   ssh-strict: true
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6534042Z   ssh-user: git
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6534377Z   clean: true
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6534927Z   sparse-checkout-cone-mode: true
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6535354Z   fetch-depth: 1
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6535766Z   fetch-tags: false
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6536162Z   show-progress: true
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6536522Z   lfs: false
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6536847Z   submodules: false
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6537201Z   set-safe-directory: true
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6537603Z   allow-unsafe-pr-checkout: false
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6538182Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7328195Z Syncing repository: AlexBao1218/software-engineer-intern
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7329802Z ##[group]Getting Git version info
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7330585Z Working directory is '/home/runner/work/software-engineer-intern/software-engineer-intern'
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7343589Z [command]/usr/bin/git version
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7434113Z git version 2.55.0
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7452525Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7462011Z Temporarily overriding HOME='/home/runner/work/_temp/b332a675-8f94-44fe-ac94-ad20c9a78c88' before making global git config changes
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7463614Z Adding repository directory to the temporary git global config as a safe directory
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7466872Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-engineer-intern/software-engineer-intern
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7575221Z Deleting the contents of '/home/runner/work/software-engineer-intern/software-engineer-intern'
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7577758Z ##[group]Determining repository object format
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7579089Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7579682Z ##[group]Initializing the repository
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7583518Z [command]/usr/bin/git init /home/runner/work/software-engineer-intern/software-engineer-intern
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7685397Z hint: Using 'master' as the name for the initial branch. This default branch name
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7686863Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7688046Z hint: to use in all of your new repositories, which will suppress this warning,
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7688919Z hint: call:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7689394Z hint:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7690006Z hint: 	git config --global init.defaultBranch <name>
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7690774Z hint:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7691467Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7692602Z hint: 'development'. The just-created branch can be renamed via this command:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7693459Z hint:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7693879Z hint: 	git branch -m <name>
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7694331Z hint:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7695174Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7696445Z Initialized empty Git repository in /home/runner/work/software-engineer-intern/software-engineer-intern/.git/
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7708253Z [command]/usr/bin/git remote add origin https://github.com/AlexBao1218/software-engineer-intern
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7741316Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7742268Z ##[group]Disabling automatic garbage collection
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7745079Z [command]/usr/bin/git config --local gc.auto 0
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7776658Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7777562Z ##[group]Setting up auth
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7778196Z Removing SSH command configuration
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7782317Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7812688Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8086329Z Removing HTTP extra header
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8091217Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8121357Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8305595Z Removing includeIf entries pointing to credentials config files
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8308963Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8338592Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8526719Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8559811Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8588914Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8620447Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8649930Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8676336Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8681294Z ##[group]Fetching the repository
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8682343Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b6d07e5f463f5e54750181bd7f26c99cee35bf15:refs/remotes/origin/main
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4461702Z From https://github.com/AlexBao1218/software-engineer-intern
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4463091Z  * [new ref]         b6d07e5f463f5e54750181bd7f26c99cee35bf15 -> origin/main
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4470075Z [command]/usr/bin/git branch --list --remote origin/main
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4497626Z   origin/main
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4504133Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4526984Z b6d07e5f463f5e54750181bd7f26c99cee35bf15
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4530091Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4530984Z ##[group]Determining the checkout info
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4531906Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4533542Z [command]/usr/bin/git sparse-checkout disable
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4582002Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4622408Z ##[group]Checking out the ref
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.4646536Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5550544Z Switched to a new branch 'main'
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5553462Z branch 'main' set up to track 'origin/main'.
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5563196Z ##[endgroup]
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5607417Z [command]/usr/bin/git log -1 --format=%H
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5632723Z b6d07e5f463f5e54750181bd7f26c99cee35bf15
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5640782Z ##[group]Removing auth
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5641433Z Removing SSH command configuration
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5644034Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5679801Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5874551Z Removing HTTP extra header
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5877553Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5908288Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6095429Z Removing includeIf entries pointing to credentials config files
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6097631Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6123571Z includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6125500Z includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6150139Z includeif.gitdir:/github/workspace/.git.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6151119Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6153426Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6158370Z /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6165932Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6198945Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6224687Z /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6232947Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6271865Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6297154Z /github/runner_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6306493Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6336611Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6360681Z /github/runner_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6375584Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6400714Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6587748Z Removing credentials config '/home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config'
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6595292Z ##[endgroup]
+Docker Compose build	Validate Compose configuration	﻿2026-10-14T02:35:41.6774992Z ##[group]Run docker compose config --quiet
+Docker Compose build	Validate Compose configuration	2026-10-14T02:35:41.6775819Z [36;1mdocker compose config --quiet[0m
+Docker Compose build	Validate Compose configuration	2026-10-14T02:35:41.6968489Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Docker Compose build	Validate Compose configuration	2026-10-14T02:35:41.6969343Z ##[endgroup]
+Docker Compose build	Build all application images	﻿2026-10-14T02:35:41.9899886Z ##[group]Run docker compose build
+Docker Compose build	Build all application images	2026-10-14T02:35:41.9901052Z [36;1mdocker compose build[0m
+Docker Compose build	Build all application images	2026-10-14T02:35:41.9959271Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Docker Compose build	Build all application images	2026-10-14T02:35:41.9960582Z ##[endgroup]
+Docker Compose build	Build all application images	2026-10-14T02:35:42.6159451Z #1 [internal] load local bake definitions
+Docker Compose build	Build all application images	2026-10-14T02:35:42.7665232Z #1 reading from stdin 1.23kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:42.7666423Z #1 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:43.0617586Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:43.0619706Z #2 [mock_onboarding internal] load build definition from Dockerfile
+Docker Compose build	Build all application images	2026-10-14T02:35:43.0623310Z #2 transferring dockerfile:
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2306165Z #2 transferring dockerfile: 129B 0.0s done
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2306885Z #2 DONE 0.1s
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2307086Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2307262Z #3 [api internal] load build definition from Dockerfile
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2307654Z #3 transferring dockerfile: 686B 0.0s done
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2308049Z #3 DONE 0.1s
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2308260Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2308486Z #4 [mock_ocr internal] load build definition from Dockerfile
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2309023Z #4 transferring dockerfile: 129B done
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2309371Z #4 DONE 0.1s
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2309504Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:43.2309752Z #5 [mock_ocr internal] load metadata for docker.io/library/python:3.12-slim
+Docker Compose build	Build all application images	2026-10-14T02:35:43.5193427Z #5 ...
+Docker Compose build	Build all application images	2026-10-14T02:35:43.5193733Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:43.5193902Z #6 [auth] library/python:pull token for registry-1.docker.io
+Docker Compose build	Build all application images	2026-10-14T02:35:43.5194199Z #6 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:43.6695569Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:43.6696199Z #5 [mock_ocr internal] load metadata for docker.io/library/python:3.12-slim
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6802597Z #5 DONE 1.5s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6803158Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6803303Z #7 [api internal] load .dockerignore
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6803775Z #7 transferring context: 242B done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6804105Z #7 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6804360Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6804652Z #8 [mock_onboarding internal] load .dockerignore
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6805038Z #8 transferring context: 2B done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6805384Z #8 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6805526Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6805654Z #9 [mock_ocr internal] load .dockerignore
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6805995Z #9 transferring context: 2B done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6806285Z #9 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6806413Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6806568Z #10 [mock_onboarding internal] load build context
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6806937Z #10 transferring context: 3.93kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6807277Z #10 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6864376Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6871772Z #11 [mock_ocr internal] load build context
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6872283Z #11 transferring context: 4.42kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6872992Z #11 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6873143Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6874336Z #12 [api internal] load build context
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6874879Z #12 transferring context: 88.97kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6875211Z #12 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6875356Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6875883Z #13 [api 1/3] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6877885Z #13 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6879747Z #13 sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 10.37kB / 10.37kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6880644Z #13 sha256:2b4f19dae3a777dfc3b76730bda1e82e1f66ab2a2686fa93ca78edbfb4f04ffe 1.75kB / 1.75kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6881529Z #13 sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316 5.66kB / 5.66kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6882360Z #13 sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 7.34MB / 29.84MB 0.1s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6883228Z #13 sha256:75b6a36c64a1cf3520fc4b4aae4739d5caa8a6a05c27835a920a61784c9c32f8 0B / 1.29MB 0.1s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.6884619Z #13 sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4 0B / 12.12MB 0.1s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.7803049Z #13 sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 10.37kB / 10.37kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.7804287Z #13 sha256:2b4f19dae3a777dfc3b76730bda1e82e1f66ab2a2686fa93ca78edbfb4f04ffe 1.75kB / 1.75kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.7805090Z #13 sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316 5.66kB / 5.66kB done
+Docker Compose build	Build all application images	2026-10-14T02:35:44.7805681Z #13 sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 29.84MB / 29.84MB 0.2s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.7806361Z #13 sha256:75b6a36c64a1cf3520fc4b4aae4739d5caa8a6a05c27835a920a61784c9c32f8 1.29MB / 1.29MB 0.2s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.9742466Z #13 sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4 12.12MB / 12.12MB 0.3s
+Docker Compose build	Build all application images	2026-10-14T02:35:44.9743362Z #13 extracting sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e
+Docker Compose build	Build all application images	2026-10-14T02:35:45.0775878Z #13 sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 29.84MB / 29.84MB 0.4s done
+Docker Compose build	Build all application images	2026-10-14T02:35:45.0777087Z #13 sha256:75b6a36c64a1cf3520fc4b4aae4739d5caa8a6a05c27835a920a61784c9c32f8 1.29MB / 1.29MB 0.3s done
+Docker Compose build	Build all application images	2026-10-14T02:35:45.0778426Z #13 sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4 12.12MB / 12.12MB 0.4s done
+Docker Compose build	Build all application images	2026-10-14T02:35:45.0779515Z #13 sha256:bbc5a12237474ec0b23b5051260d56d6436a24d70d9cad961adebe7a037ed813 0B / 249B 0.4s
+Docker Compose build	Build all application images	2026-10-14T02:35:45.1783500Z #13 sha256:bbc5a12237474ec0b23b5051260d56d6436a24d70d9cad961adebe7a037ed813 249B / 249B 0.4s done
+Docker Compose build	Build all application images	2026-10-14T02:35:45.7751167Z #13 extracting sha256:ecc510c1e359bdc007b39802570bb7e4dec7d6ebccf357c3201a74299113e05e 0.7s done
+Docker Compose build	Build all application images	2026-10-14T02:35:45.7752245Z #13 extracting sha256:75b6a36c64a1cf3520fc4b4aae4739d5caa8a6a05c27835a920a61784c9c32f8 0.1s done
+Docker Compose build	Build all application images	2026-10-14T02:35:45.9255366Z #13 extracting sha256:75b6a36c64a1cf3520fc4b4aae4739d5caa8a6a05c27835a920a61784c9c32f8 0.1s done
+Docker Compose build	Build all application images	2026-10-14T02:35:46.4013805Z #13 extracting sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4
+Docker Compose build	Build all application images	2026-10-14T02:35:46.9598281Z #13 extracting sha256:6912e23eb44595b44dc6d9882b34f305ad6f6e9667cec70b13e5dbc4f8cd97f4 0.4s done
+Docker Compose build	Build all application images	2026-10-14T02:35:47.0570699Z #13 extracting sha256:bbc5a12237474ec0b23b5051260d56d6436a24d70d9cad961adebe7a037ed813
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2643452Z #13 extracting sha256:bbc5a12237474ec0b23b5051260d56d6436a24d70d9cad961adebe7a037ed813 done
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2644383Z #13 DONE 2.5s
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2644939Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2645478Z #14 [api 2/7] WORKDIR /srv
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2645776Z #14 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2645943Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2646082Z #15 [mock_onboarding 2/3] WORKDIR /app
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2670416Z #15 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2685576Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2715051Z #16 [mock_ocr 3/3] COPY server.py .
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2744948Z #16 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2764786Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2774751Z #17 [api 3/7] COPY requirements.txt ./requirements.txt
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2804899Z #17 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2835038Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2850226Z #18 [mock_onboarding 3/3] COPY server.py .
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2861435Z #18 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2862017Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2862405Z #19 [mock_onboarding] exporting to image
+Docker Compose build	Build all application images	2026-10-14T02:35:47.2863459Z #19 exporting layers
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1911748Z #19 exporting layers 0.9s done
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1912457Z #19 writing image sha256:462dc86ee54150bc0847b0fc9e2cbf044c095733f15db40f127e3fa2c099a142 done
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1913182Z #19 naming to docker.io/library/q3_deploy-mock_onboarding done
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1913693Z #19 DONE 0.9s
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1913851Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1913973Z #20 [mock_ocr] exporting to image
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1914311Z #20 exporting layers 0.9s done
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1915174Z #20 writing image sha256:8e8f8b5879d374234a3a992fc0504714f927bd74f3d568673e184ebe60918e84 done
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1915855Z #20 naming to docker.io/library/q3_deploy-mock_ocr done
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1916225Z #20 DONE 0.9s
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1916365Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1916531Z #21 [mock_ocr] resolving provenance for metadata file
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1916900Z #21 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1917405Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1917597Z #22 [mock_onboarding] resolving provenance for metadata file
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1918008Z #22 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1918157Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:48.1918989Z #23 [api 4/7] RUN pip install --no-cache-dir -r requirements.txt     && groupadd --gid 10001 app     && useradd --uid 10001 --gid app --no-create-home app     && mkdir /data /backups     && chown app:app /data /backups
+Docker Compose build	Build all application images	2026-10-14T02:35:48.3422546Z #23 1.243 Collecting fastapi==0.143.0 (from -r requirements.txt (line 1))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.5112562Z #23 1.310   Downloading fastapi-0.143.0-py3-none-any.whl.metadata (26 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.5113088Z #23 1.412 Collecting pydantic==2.14.1 (from -r requirements.txt (line 2))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.6402851Z #23 1.425   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.6403643Z #23 1.469 Collecting uvicorn==0.54.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.6404866Z #23 1.480   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.6405724Z #23 1.497 Collecting python-multipart==0.0.32 (from -r requirements.txt (line 4))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.6406418Z #23 1.511   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.6406984Z #23 1.541 Collecting httpx==0.28.1 (from -r requirements.txt (line 5))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.7594802Z #23 1.554   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.7595290Z #23 1.584 Collecting pytest==9.1.1 (from -r requirements.txt (line 6))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.7595664Z #23 1.596   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.7596076Z #23 1.616 Collecting pytest-asyncio==1.4.0 (from -r requirements.txt (line 7))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.7596466Z #23 1.632   Downloading pytest_asyncio-1.4.0-py3-none-any.whl.metadata (4.1 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.7597105Z #23 1.661 Collecting starlette>=0.46.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.8620160Z #23 1.672   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.8620711Z #23 1.699 Collecting typing-extensions>=4.8.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.8621408Z #23 1.711   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.8622082Z #23 1.725 Collecting typing-inspection>=0.4.2 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.8622691Z #23 1.738   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:48.8623361Z #23 1.751 Collecting annotated-doc>=0.0.2 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Docker Compose build	Build all application images	2026-10-14T02:35:48.8624175Z #23 1.763   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.0754618Z #23 1.784 Collecting opentelemetry-api>=1.44.0 (from fastapi==0.143.0->-r requirements.txt (line 1))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.0755522Z #23 1.797   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.0756330Z #23 1.812 Collecting annotated-types>=0.6.0 (from pydantic==2.14.1->-r requirements.txt (line 2))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.0757062Z #23 1.826   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.4064963Z #23 2.308 Collecting pydantic-core==2.50.1 (from pydantic==2.14.1->-r requirements.txt (line 2))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.5235401Z #23 2.326   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.5236473Z #23 2.350 Collecting click>=7.0 (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.5237266Z #23 2.361   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.5237956Z #23 2.391 Collecting h11>=0.8 (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.5238382Z #23 2.404   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.5239005Z #23 2.425 Collecting anyio (from httpx==0.28.1->-r requirements.txt (line 5))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.6293902Z #23 2.436   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.6294811Z #23 2.457 Collecting certifi (from httpx==0.28.1->-r requirements.txt (line 5))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.6295464Z #23 2.469   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.6296095Z #23 2.488 Collecting httpcore==1.* (from httpx==0.28.1->-r requirements.txt (line 5))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.6296736Z #23 2.501   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.6297392Z #23 2.518 Collecting idna (from httpx==0.28.1->-r requirements.txt (line 5))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.6297991Z #23 2.531   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.7358418Z #23 2.547 Collecting iniconfig>=1.0.1 (from pytest==9.1.1->-r requirements.txt (line 6))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.7359405Z #23 2.559   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.7360392Z #23 2.577 Collecting packaging>=22 (from pytest==9.1.1->-r requirements.txt (line 6))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.7361292Z #23 2.589   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.7362144Z #23 2.604 Collecting pluggy<2,>=1.5 (from pytest==9.1.1->-r requirements.txt (line 6))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.7362595Z #23 2.617   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.7363006Z #23 2.637 Collecting pygments>=2.7.2 (from pytest==9.1.1->-r requirements.txt (line 6))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.8642051Z #23 2.650   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.8642797Z #23 2.693 Collecting httptools>=0.8.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.8643407Z #23 2.705   Downloading httptools-0.9.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.8643975Z #23 2.723 Collecting python-dotenv>=0.13 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.8644627Z #23 2.735   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.8645054Z #23 2.765 Collecting pyyaml>=5.1 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.9753999Z #23 2.777   Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.9755297Z #23 2.810 Collecting uvloop>=0.15.1 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:49.9756533Z #23 2.822   Downloading uvloop-0.23.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.1 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:49.9757395Z #23 2.876 Collecting watchfiles>=0.20 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:50.0782505Z #23 2.888   Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.0783160Z #23 2.967 Collecting websockets>=13.0 (from uvicorn[standard]==0.54.0->-r requirements.txt (line 3))
+Docker Compose build	Build all application images	2026-10-14T02:35:50.1824754Z #23 2.979   Downloading websockets-17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.1825662Z #23 3.028 Downloading fastapi-0.143.0-py3-none-any.whl (144 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.1826188Z #23 3.051 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.1826727Z #23 3.084 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.2978469Z #23 3.096 Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.2979231Z #23 3.108 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.2980024Z #23 3.121 Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.2980870Z #23 3.136 Downloading pytest_asyncio-1.4.0-py3-none-any.whl (16 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.2981285Z #23 3.163 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.2981967Z #23 3.175 Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3983435Z #23 3.199    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 89.5 MB/s eta 0:00:00
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3984037Z #23 3.211 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3984700Z #23 3.224 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3985139Z #23 3.236 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3985542Z #23 3.247 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3986218Z #23 3.259 Downloading httptools-0.9.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (552 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3987070Z #23 3.262    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 552.8/552.8 kB 408.2 MB/s eta 0:00:00
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3987561Z #23 3.275 Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3988083Z #23 3.287 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.3988720Z #23 3.299 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5037086Z #23 3.315 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5037648Z #23 3.327 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5038226Z #23 3.332    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 305.8 MB/s eta 0:00:00
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5038599Z #23 3.344 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5039099Z #23 3.355 Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5039685Z #23 3.358    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 968.3 MB/s eta 0:00:00
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5040010Z #23 3.369 Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5040308Z #23 3.381 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5040598Z #23 3.393 Downloading idna-3.20-py3-none-any.whl (69 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.5040907Z #23 3.405 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.6441922Z #23 3.417 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.6442814Z #23 3.429 Downloading uvloop-0.23.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.5 MB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.6443622Z #23 3.446    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 294.3 MB/s eta 0:00:00
+Docker Compose build	Build all application images	2026-10-14T02:35:50.6444080Z #23 3.459 Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (458 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.6445153Z #23 3.472 Downloading websockets-17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (225 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.6445642Z #23 3.484 Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Docker Compose build	Build all application images	2026-10-14T02:35:50.6446765Z #23 3.545 Installing collected packages: websockets, uvloop, typing-extensions, pyyaml, python-multipart, python-dotenv, pygments, pluggy, packaging, iniconfig, idna, httptools, h11, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pytest, pydantic-core, opentelemetry-api, httpcore, anyio, watchfiles, starlette, pytest-asyncio, pydantic, httpx, fastapi
+Docker Compose build	Build all application images	2026-10-14T02:35:52.7069281Z #23 5.608 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 fastapi-0.143.0 h11-0.16.0 httpcore-1.0.9 httptools-0.9.0 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.6.0 pydantic-2.14.1 pydantic-core-2.50.1 pygments-2.21.0 pytest-9.1.1 pytest-asyncio-1.4.0 python-dotenv-1.2.4 python-multipart-0.0.32 pyyaml-6.0.3 starlette-1.8.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0 uvloop-0.23.0 watchfiles-1.3.0 websockets-17.2
+Docker Compose build	Build all application images	2026-10-14T02:35:52.9375159Z #23 5.608 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Docker Compose build	Build all application images	2026-10-14T02:35:52.9377437Z #23 5.688 
+Docker Compose build	Build all application images	2026-10-14T02:35:52.9377784Z #23 5.688 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+Docker Compose build	Build all application images	2026-10-14T02:35:52.9378249Z #23 5.688 [notice] To update, run: pip install --upgrade pip
+Docker Compose build	Build all application images	2026-10-14T02:35:53.3560342Z #23 DONE 6.3s
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5302800Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5303386Z #24 [api 5/7] COPY q1_api/app ./q1_api/app
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5303812Z #24 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5303955Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5304232Z #25 [api 6/7] COPY data/account_applications.csv ./data/account_applications.csv
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5304837Z #25 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5304984Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5305130Z #26 [api 7/7] COPY q3_deploy/scripts ./scripts
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5305489Z #26 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5305629Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5305739Z #27 [api] exporting to image
+Docker Compose build	Build all application images	2026-10-14T02:35:53.5306038Z #27 exporting layers
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0195203Z #27 exporting layers 0.6s done
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0587304Z #27 writing image sha256:db1ca9bcd18ed47ac31ad36f3d893b3412d35eeff8ffda8a20080b468003e5b5 done
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0588033Z #27 naming to docker.io/library/q3_deploy-api done
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0588328Z #27 DONE 0.7s
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0588429Z 
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0588538Z #28 [api] resolving provenance for metadata file
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0588885Z #28 DONE 0.0s
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0589161Z  api  Built
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0589318Z  mock_ocr  Built
+Docker Compose build	Build all application images	2026-10-14T02:35:54.0589559Z  mock_onboarding  Built
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-14T02:35:54.0717991Z Post job cleanup.
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1384555Z [command]/usr/bin/git version
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1427694Z git version 2.55.0
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1458255Z Temporarily overriding HOME='/home/runner/work/_temp/f7c5433a-aa98-4b0c-8577-fe08830b6f0a' before making global git config changes
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1459177Z Adding repository directory to the temporary git global config as a safe directory
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1462998Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-engineer-intern/software-engineer-intern
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1488782Z Removing SSH command configuration
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1493925Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1522099Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1735675Z Removing HTTP extra header
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1740797Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1770788Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1976828Z Removing includeIf entries pointing to credentials config files
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1977531Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.2007620Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Docker Compose build	Complete job	﻿2026-10-14T02:35:54.2347071Z Cleaning up orphan processes
