@@ -232,3 +232,12 @@ tables/BLOBs matched after actual restore before/after startup. Three repeated
 deliver requests left downstream ingestion at one. Docker backups ran while the
 API was up but business idle; real active-write/WAL tests are separate evidence.
 No claim of arbitrary-point distributed rollback or production disaster recovery.
+
+Post-commit clean-clone check exposed a smoke-test timing flaw: its50ms HTTP
+budget timed out on readiness before the stalled OCR deadline branch. The
+original failure is retained. A100ms readiness delay reproduced it deterministically.
+Codex used systematic debugging to separate normal network budgets from a
+controlled workflow clock, while keeping actual HTTP and the explicit transport
+timeout case. Review added a guard against zero-sleep infinite polling on a
+future deadline regression. Only test code changed; the original Q3 commit is
+preserved with a follow-up test fix, not rewritten or hidden.

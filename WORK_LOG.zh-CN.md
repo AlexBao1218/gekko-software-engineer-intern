@@ -281,3 +281,11 @@ T7真实Docker结果：隔离项目gekko-check-832333024207，/data与/backups�
 本轮按原计划将T6+T7源码、测试、文档、实测证据统一提交Q3，不改写Q1/Q2历史、不push。提交后将在独立本地clone复验精确hash，结果写本机忽略目录 `.gekko-setup/q3-final-20261014/`，避免将自己的提交hash写入提交而形成循环。CI和候选人本人解释/修改能力仍待验证。
 
 暂存检查发现原始Docker输出自带行尾空格；用.gitattributes仅关闭q3 evidence文本的空白检查，保留原始证据字节，源码仍进行正常diff检查。凭证模式扫描及禁止运行时文件检查通过，未暂存.env/数据库/备份文件。
+
+### 提交后干净克隆发现并修正测试时序问题
+
+Q3统一提交7095290后，重新安装依赖的干净克隆完整备份/恢复九阶段PASS；但pytest出现477通过/1失败：test_smoke的stalled-deadline用例先在/api/ready触发50ms传输超时，尚未进入它要验证的OCR期限分支。原始失败保存在t7-clean-clone-initial-failure-20261014.txt，未以重跑掩盖。用正常ready响应增加100ms延迟稳定复现该问题（t7-smoke-timing-red）。
+
+按系统化排查定位为测试把正常HTTP调度预算与业务deadline混在一起。修正：正常语义测试给HTTP合理预算；专测传输timeout仍使用短期限；停滞OCR用真实HTTP配合仅替换smoke模块的可控时钟，精确验证四次轮询后deadline拒绝且无导出。独立审查补充sleep(0)回归不能无限循环的保护。没有修改业务或运维生产代码。保留7095290历史，新增必要测试修复提交；不amend/squash、不push。修复后完整复验另存证据，最终hash重新克隆验证。
+
+修复后全套：macOS478通过45.30s、非root Linux478通过64.49s；补全防零等待循环断言后针对smoke10项再次通过6.32s。均仅已有弃用警告。最终独立clone将对最终测试源码再次执行整个478项套件。

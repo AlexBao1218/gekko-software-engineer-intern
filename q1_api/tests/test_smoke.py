@@ -4,6 +4,7 @@ These tests protect its failure detection, not the API business implementation;
 the native lifecycle tests and the real Compose smoke cover that implementation.
 """
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -11,6 +12,7 @@ import subprocess
 import sys
 import threading
 import time
+from types import SimpleNamespace
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import pytest
@@ -67,6 +69,7 @@ def endpoint():
                 payload['sha256'] = hashlib.sha256(CSV.replace(b'A-1,', b'B-2,')).hexdigest()
                 payload['receipt']['sha256'] = payload['sha256']
             if self.path == '/api/ready':
+                time.sleep(state.get('ready_delay', 0))
                 if fault == 'timeout':
                     time.sleep(0.2)
                 status = 503 if fault == 'http' else 200
@@ -128,15 +131,20 @@ def endpoint():
 
 def run_smoke(endpoint):
     base, state = endpoint
+    # Only the transport-timeout test uses a tiny request budget. Other tests
+    # exercise content/state validation, not the host scheduler's latency.
+    request_timeout = '0.05' if state['fault'] == 'timeout' else '2'
     return subprocess.run(
         [sys.executable, str(SCRIPT), '--base', base, '--csv', str(ROOT / 'data/account_applications.csv'),
-         '--request-timeout', '0.05', '--ocr-timeout', '0.1', '--delivery-timeout', '0.1',
+         '--request-timeout', request_timeout, '--ocr-timeout', '2', '--delivery-timeout', '2',
          '--poll-interval', '0.01'],
         env={**os.environ, 'DELIVERY_URL': base + '/ingest'},
-        capture_output=True, text=True, timeout=4)
+        capture_output=True, text=True, timeout=10)
 
 
 def test_smoke_verifies_exact_export_receipt_and_single_ingestion(endpoint):
+    # Ordinary scheduling/HTTP latency must not become the fault under test.
+    endpoint[1]['ready_delay'] = .1
     result = run_smoke(endpoint)
     assert result.returncode == 0, result.stderr
     summary = json.loads(result.stdout)
@@ -152,7 +160,7 @@ def test_smoke_verifies_exact_export_receipt_and_single_ingestion(endpoint):
 @pytest.mark.parametrize(('fault', 'message'), [
     ('receipt', 'receipt'), ('download', 'SHA-256'), ('duplicate', 'one ingestion'),
     ('debug-hash', 'downstream'), ('http', 'HTTP 503'), ('timeout', 'request failed'),
-    ('stalled', 'deadline'), ('ocr-failed', 'OCR run'), ('wrong-case', 'exactly the approved case'),
+    ('ocr-failed', 'OCR run'), ('wrong-case', 'exactly the approved case'),
 ])
 def test_smoke_fails_with_actionable_error_on_broken_evidence(endpoint, fault, message):
     endpoint[1]['fault'] = fault
@@ -161,5 +169,35 @@ def test_smoke_fails_with_actionable_error_on_broken_evidence(endpoint, fault, m
     summary = json.loads(result.stderr)
     assert summary['pass'] is False
     assert message in summary['error']
-    if fault in {'http', 'timeout', 'stalled', 'ocr-failed'}:
+    if fault in {'http', 'timeout', 'ocr-failed'}:
         assert endpoint[1]['exports'] == 0
+
+
+def test_stalled_ocr_hits_workflow_deadline_without_exporting(endpoint):
+    # Advance only the workflow clock; HTTP still crosses the real socket.
+    # Removing the deadline or accepting a running OCR result breaks this test.
+    spec = importlib.util.spec_from_file_location('smoke_under_test', SCRIPT)
+    smoke = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(smoke)
+
+    class Clock:
+        elapsed = 0
+
+        def monotonic(self):
+            return self.elapsed
+
+        def sleep(self, seconds):
+            assert seconds > 0, 'Smoke kept polling after its workflow deadline'
+            self.elapsed += seconds
+            assert self.elapsed <= 1, 'Smoke continued polling beyond its workflow deadline'
+
+    smoke.time = Clock()
+    endpoint[1]['fault'] = 'stalled'
+    args = SimpleNamespace(base=endpoint[0], request_timeout=2, ocr_timeout=1,
+                           delivery_timeout=2, poll_interval=.25,
+                           csv=ROOT / 'data/account_applications.csv',
+                           delivery_url=endpoint[0] + '/ingest')
+    with pytest.raises(smoke.SmokeFailure, match='OCR run deadline exceeded; last status=running'):
+        smoke.run(args, {})
+    assert endpoint[1]['exports'] == 0
+    assert sum(path == f'/api/batches/{BATCH_ID}' for _, path, _ in endpoint[1]['requests']) == 4

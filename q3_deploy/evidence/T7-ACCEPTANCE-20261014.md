@@ -67,3 +67,14 @@ backup-20261014T021552886860Z-7f77edc5.sqlite3
 - safety副本位于pre-restore子目录，不属于七份日常备份，恢复确认后需人工清理。演练额外创建一份故意损坏的旧名文件用于拒绝测试，发生在九份保留验收之后，随隔离卷清理。
 - shell守卫不阻止人为并发启动另一个writer；停止所有writer是恢复前提。数据库I/O的操作系统级卡死不在Python deadline保证内。
 - 独立备份卷不等于异地备份；无自动定时任务。Python3.10、远端CI及候选人理解尚未验证。
+
+## 提交后复验发现的测试修正
+
+Q3模块提交`7095290`的干净克隆恢复九阶段PASS；pytest却为477通过/1失败：
+stalled-deadline用例的50ms HTTP预算先在ready请求耗尽。
+[初始失败](t7-clean-clone-initial-failure-20261014.txt)予以保留；
+[100ms正常响应延迟复现RED](t7-smoke-timing-red-20261014.txt)证明测试预算混淆。
+修正仅涉及测试：正常网络预算与受控工作流时钟分离，实际HTTP仍执行，
+传输超时专用例仍保留。旧57文件指纹对应旧提交，后续测试修正不冒充其原始源码。
+最后复验见t7-pytest-macos-final-20261014.txt与t7-pytest-linux-final-20261014.txt；
+最终提交hash的独立克隆回执仍存本机`.gekko-setup/q3-final-20261014/`。

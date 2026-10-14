@@ -195,6 +195,12 @@ backup-20261014T021552140186Z-03ea8db8.sqlite3
 backup-20261014T021552886860Z-7f77edc5.sqlite3
 ```
 
+A post-commit clean-clone check exposed one flaky smoke test: its50ms HTTP
+budget could expire on readiness before the intended OCR deadline check. The
+failed run was retained and the test was changed to separate a controlled
+workflow clock from real HTTP. Production code was unchanged; a follow-up test
+fix preserves the original Q3 commit history.
+
 The source remained live during backups; active WAL/uncommitted-write behavior
 was tested separately against real SQLite. This is not a concurrency load test.
 A later43/7 upload was rolled back by actual restore. All nine tables, including
