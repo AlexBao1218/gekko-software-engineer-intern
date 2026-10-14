@@ -50,18 +50,18 @@ Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.4151792Z ##[endgroup]
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5014562Z Syncing repository: AlexBao1218/software-engineer-intern
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5016363Z ##[group]Getting Git version info
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5017309Z Working directory is '/home/runner/work/software-engineer-intern/software-engineer-intern'
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5017309Z Working directory is '<CI_WORKSPACE>'
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5018623Z [command]/usr/bin/git version
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5098867Z git version 2.55.0
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5115501Z ##[endgroup]
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5127712Z Temporarily overriding HOME='/home/runner/work/_temp/83771af1-db05-42d1-8353-c9e3e00c2d84' before making global git config changes
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5127712Z Temporarily overriding HOME='<CI_TEMP>/83771af1-db05-42d1-8353-c9e3e00c2d84' before making global git config changes
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5129769Z Adding repository directory to the temporary git global config as a safe directory
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5131619Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-engineer-intern/software-engineer-intern
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5177580Z Deleting the contents of '/home/runner/work/software-engineer-intern/software-engineer-intern'
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5131619Z [command]/usr/bin/git config --global --add safe.directory <CI_WORKSPACE>
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5177580Z Deleting the contents of '<CI_WORKSPACE>'
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5180760Z ##[group]Determining repository object format
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5183068Z ##[endgroup]
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5185267Z ##[group]Initializing the repository
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5187356Z [command]/usr/bin/git init /home/runner/work/software-engineer-intern/software-engineer-intern
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5187356Z [command]/usr/bin/git init <CI_WORKSPACE>
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5281305Z hint: Using 'master' as the name for the initial branch. This default branch name
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5282843Z hint: will change to "main" in Git 3.0. To configure the initial branch name
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5284334Z hint: to use in all of your new repositories, which will suppress this warning,
@@ -75,7 +75,7 @@ Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5310476Z hint: 	git branch -m <name>
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5311008Z hint:
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5311761Z hint: Disable this message with "git config set advice.defaultBranchName false"
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5312944Z Initialized empty Git repository in /home/runner/work/software-engineer-intern/software-engineer-intern/.git/
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5312944Z Initialized empty Git repository in <CI_WORKSPACE>/.git/
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5315185Z [command]/usr/bin/git remote add origin https://github.com/AlexBao1218/software-engineer-intern
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5344319Z ##[endgroup]
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5345717Z ##[group]Disabling automatic garbage collection
@@ -91,9 +91,9 @@ Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5925595Z Removing includeIf entries pointing to credentials config files
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5929524Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.5953407Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6121386Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6149139Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6176323Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6121386Z [command]/usr/bin/git config --file <CI_TEMP>/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6149139Z [command]/usr/bin/git config --local includeIf.gitdir:<CI_WORKSPACE>/.git.path <CI_TEMP>/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6176323Z [command]/usr/bin/git config --local includeIf.gitdir:<CI_WORKSPACE>/.git/worktrees/*.path <CI_TEMP>/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6203064Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6229016Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6251729Z ##[endgroup]
@@ -126,16 +126,16 @@ Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5297083Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5452669Z Removing includeIf entries pointing to credentials config files
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5455118Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5476711Z includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5480446Z includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5476711Z includeif.gitdir:<CI_WORKSPACE>/.git.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5480446Z includeif.gitdir:<CI_WORKSPACE>/.git/worktrees/*.path
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5483340Z includeif.gitdir:/github/workspace/.git.path
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5485097Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5490213Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5501089Z /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5513061Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5542050Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5566171Z /home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5575957Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5490213Z [command]/usr/bin/git config --local --get-all includeif.gitdir:<CI_WORKSPACE>/.git.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5501089Z <CI_TEMP>/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5513061Z [command]/usr/bin/git config --local --unset includeif.gitdir:<CI_WORKSPACE>/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5542050Z [command]/usr/bin/git config --local --get-all includeif.gitdir:<CI_WORKSPACE>/.git/worktrees/*.path
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5566171Z <CI_TEMP>/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5575957Z [command]/usr/bin/git config --local --unset includeif.gitdir:<CI_WORKSPACE>/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5609361Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5631190Z /github/runner_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5649324Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
@@ -143,7 +143,7 @@ Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5730121Z /github/runner_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5735957Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-86a148c0\-4cce\-4461\-a14d\-992f0c13d13a\.config
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5760611Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5928839Z Removing credentials config '/home/runner/work/_temp/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config'
+Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5928839Z Removing credentials config '<CI_TEMP>/git-credentials-86a148c0-4cce-4461-a14d-992f0c13d13a.config'
 Python tests	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5935247Z ##[endgroup]
 Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-14T02:35:41.6242276Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
 Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.6243864Z with:
@@ -160,7 +160,7 @@ Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2
 Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.7371064Z Successfully set up CPython (3.12.15)
 Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.7372908Z ##[endgroup]
 Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:41.7604675Z [command]/opt/hostedtoolcache/Python/3.12.15/x64/bin/pip cache dir
-Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:42.0141711Z /home/runner/.cache/pip
+Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:42.0141711Z <CI_HOME>/.cache/pip
 Python tests	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:35:42.2497187Z pip cache is not found
 Python tests	Install dependencies	﻿2026-10-14T02:35:42.2624420Z ##[group]Run python -m pip install -r requirements.txt
 Python tests	Install dependencies	2026-10-14T02:35:42.2625373Z [36;1mpython -m pip install -r requirements.txt[0m
@@ -284,7 +284,7 @@ Python tests	Run complete test suite	2026-10-14T02:35:46.9133211Z   LD_LIBRARY_P
 Python tests	Run complete test suite	2026-10-14T02:35:46.9133594Z ##[endgroup]
 Python tests	Run complete test suite	2026-10-14T02:35:48.6251375Z ============================= test session starts ==============================
 Python tests	Run complete test suite	2026-10-14T02:35:48.6252097Z platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.6.0
-Python tests	Run complete test suite	2026-10-14T02:35:48.6253213Z rootdir: /home/runner/work/software-engineer-intern/software-engineer-intern/q1_api
+Python tests	Run complete test suite	2026-10-14T02:35:48.6253213Z rootdir: <CI_WORKSPACE>/q1_api
 Python tests	Run complete test suite	2026-10-14T02:35:48.6253824Z configfile: pytest.ini
 Python tests	Run complete test suite	2026-10-14T02:35:48.6254269Z plugins: asyncio-1.4.0, anyio-4.15.1
 Python tests	Run complete test suite	2026-10-14T02:35:48.6254951Z asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
@@ -321,15 +321,15 @@ Python tests	Run complete test suite	2026-10-14T02:36:28.6721062Z
 Python tests	Run complete test suite	2026-10-14T02:36:28.6721476Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 Python tests	Run complete test suite	2026-10-14T02:36:28.6722436Z ======================= 478 passed, 1 warning in 40.43s ========================
 Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-10-14T02:36:28.7709522Z Post job cleanup.
-Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:36:28.8827683Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/software-engineer-intern/software-engineer-intern --files-from manifest.txt --use-compress-program zstdmt
+Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:36:28.8827683Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C <CI_WORKSPACE> --files-from manifest.txt --use-compress-program zstdmt
 Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:36:30.1485006Z Sent 15130669 of 15130669 (100.0%), 16.2 MBs/sec
 Python tests	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-10-14T02:36:30.4134488Z Cache saved with the key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.15-pip-ade691e554a92e5143695a3870b6262ec1a8573a27fa7e45bd5e4ad9c6bbde21
 Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-14T02:36:30.4254555Z Post job cleanup.
 Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.4959269Z [command]/usr/bin/git version
 Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5005524Z git version 2.55.0
-Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5038316Z Temporarily overriding HOME='/home/runner/work/_temp/a3a9652a-c1ba-4d8f-a210-297e67258520' before making global git config changes
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5038316Z Temporarily overriding HOME='<CI_TEMP>/a3a9652a-c1ba-4d8f-a210-297e67258520' before making global git config changes
 Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5039396Z Adding repository directory to the temporary git global config as a safe directory
-Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5044102Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-engineer-intern/software-engineer-intern
+Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5044102Z [command]/usr/bin/git config --global --add safe.directory <CI_WORKSPACE>
 Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5070455Z Removing SSH command configuration
 Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5076259Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
 Python tests	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:36:30.5104832Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
@@ -391,18 +391,18 @@ Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.6538182Z ##[endgroup]
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7328195Z Syncing repository: AlexBao1218/software-engineer-intern
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7329802Z ##[group]Getting Git version info
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7330585Z Working directory is '/home/runner/work/software-engineer-intern/software-engineer-intern'
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7330585Z Working directory is '<CI_WORKSPACE>'
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7343589Z [command]/usr/bin/git version
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7434113Z git version 2.55.0
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7452525Z ##[endgroup]
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7462011Z Temporarily overriding HOME='/home/runner/work/_temp/b332a675-8f94-44fe-ac94-ad20c9a78c88' before making global git config changes
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7462011Z Temporarily overriding HOME='<CI_TEMP>/b332a675-8f94-44fe-ac94-ad20c9a78c88' before making global git config changes
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7463614Z Adding repository directory to the temporary git global config as a safe directory
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7466872Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-engineer-intern/software-engineer-intern
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7575221Z Deleting the contents of '/home/runner/work/software-engineer-intern/software-engineer-intern'
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7466872Z [command]/usr/bin/git config --global --add safe.directory <CI_WORKSPACE>
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7575221Z Deleting the contents of '<CI_WORKSPACE>'
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7577758Z ##[group]Determining repository object format
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7579089Z ##[endgroup]
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7579682Z ##[group]Initializing the repository
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7583518Z [command]/usr/bin/git init /home/runner/work/software-engineer-intern/software-engineer-intern
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7583518Z [command]/usr/bin/git init <CI_WORKSPACE>
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7685397Z hint: Using 'master' as the name for the initial branch. This default branch name
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7686863Z hint: will change to "main" in Git 3.0. To configure the initial branch name
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7688046Z hint: to use in all of your new repositories, which will suppress this warning,
@@ -416,7 +416,7 @@ Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7693879Z hint: 	git branch -m <name>
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7694331Z hint:
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7695174Z hint: Disable this message with "git config set advice.defaultBranchName false"
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7696445Z Initialized empty Git repository in /home/runner/work/software-engineer-intern/software-engineer-intern/.git/
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7696445Z Initialized empty Git repository in <CI_WORKSPACE>/.git/
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7708253Z [command]/usr/bin/git remote add origin https://github.com/AlexBao1218/software-engineer-intern
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7741316Z ##[endgroup]
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.7742268Z ##[group]Disabling automatic garbage collection
@@ -432,9 +432,9 @@ Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8305595Z Removing includeIf entries pointing to credentials config files
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8308963Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8338592Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8526719Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8559811Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8588914Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8526719Z [command]/usr/bin/git config --file <CI_TEMP>/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8559811Z [command]/usr/bin/git config --local includeIf.gitdir:<CI_WORKSPACE>/.git.path <CI_TEMP>/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8588914Z [command]/usr/bin/git config --local includeIf.gitdir:<CI_WORKSPACE>/.git/worktrees/*.path <CI_TEMP>/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8620447Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8649930Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:40.8676336Z ##[endgroup]
@@ -467,16 +467,16 @@ Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.5908288Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6095429Z Removing includeIf entries pointing to credentials config files
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6097631Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6123571Z includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6125500Z includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6123571Z includeif.gitdir:<CI_WORKSPACE>/.git.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6125500Z includeif.gitdir:<CI_WORKSPACE>/.git/worktrees/*.path
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6150139Z includeif.gitdir:/github/workspace/.git.path
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6151119Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6153426Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6158370Z /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6165932Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6198945Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6224687Z /home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6232947Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/software-engineer-intern/software-engineer-intern/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6153426Z [command]/usr/bin/git config --local --get-all includeif.gitdir:<CI_WORKSPACE>/.git.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6158370Z <CI_TEMP>/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6165932Z [command]/usr/bin/git config --local --unset includeif.gitdir:<CI_WORKSPACE>/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6198945Z [command]/usr/bin/git config --local --get-all includeif.gitdir:<CI_WORKSPACE>/.git/worktrees/*.path
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6224687Z <CI_TEMP>/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6232947Z [command]/usr/bin/git config --local --unset includeif.gitdir:<CI_WORKSPACE>/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6271865Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6297154Z /github/runner_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6306493Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
@@ -484,7 +484,7 @@ Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6360681Z /github/runner_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6375584Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-5b9275f0\-eaf7\-4afc\-bdda\-df3495a3e15b\.config
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6400714Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6587748Z Removing credentials config '/home/runner/work/_temp/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config'
+Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6587748Z Removing credentials config '<CI_TEMP>/git-credentials-5b9275f0-eaf7-4afc-bdda-df3495a3e15b.config'
 Docker Compose build	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:41.6595292Z ##[endgroup]
 Docker Compose build	Validate Compose configuration	﻿2026-10-14T02:35:41.6774992Z ##[group]Run docker compose config --quiet
 Docker Compose build	Validate Compose configuration	2026-10-14T02:35:41.6775819Z [36;1mdocker compose config --quiet[0m
@@ -735,9 +735,9 @@ Docker Compose build	Build all application images	2026-10-14T02:35:54.0589559Z  
 Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-14T02:35:54.0717991Z Post job cleanup.
 Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1384555Z [command]/usr/bin/git version
 Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1427694Z git version 2.55.0
-Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1458255Z Temporarily overriding HOME='/home/runner/work/_temp/f7c5433a-aa98-4b0c-8577-fe08830b6f0a' before making global git config changes
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1458255Z Temporarily overriding HOME='<CI_TEMP>/f7c5433a-aa98-4b0c-8577-fe08830b6f0a' before making global git config changes
 Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1459177Z Adding repository directory to the temporary git global config as a safe directory
-Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1462998Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/software-engineer-intern/software-engineer-intern
+Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1462998Z [command]/usr/bin/git config --global --add safe.directory <CI_WORKSPACE>
 Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1488782Z Removing SSH command configuration
 Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1493925Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
 Docker Compose build	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-14T02:35:54.1522099Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"

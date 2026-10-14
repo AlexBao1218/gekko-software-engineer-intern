@@ -1,8 +1,8 @@
 ........................................................................ [ 64%]
 ........................................                                 [100%]
 =============================== warnings summary ===============================
-../../../../../../../../var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q1-clean-xipkip6p/venv/lib/python3.12/site-packages/fastapi/testclient.py:1
-  /var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q1-clean-xipkip6p/venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+../../../../../../../..<TEMP>/gekko-q1-clean-xipkip6p/venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  <TEMP>/gekko-q1-clean-xipkip6p/venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html

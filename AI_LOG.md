@@ -10,7 +10,7 @@ changes and limitations. Earlier entries describe their historical stage.
 | Field | Description |
 |---|---|
 | Tool or model | OpenAI Codex; exact model build is not asserted |
-| Prompt or record | Set up Alex's Gekko internship assessment workspace in `/Users/asuna/Desktop/项目/Gekko`; read current assignment; install and verify isolated Python/Docker tools; preserve requirements; write a Chinese guide; do not implement the assessment. Evidence: local `.gekko-setup/` reports and `ENVIRONMENT_REPORT.zh-CN.md`. |
+| Prompt or record | Set up Alex's Gekko internship assessment workspace in `<WORKSPACE>`; read current assignment; install and verify isolated Python/Docker tools; preserve requirements; write a Chinese guide; do not implement the assessment. Evidence: local `.gekko-setup/` reports and `ENVIRONMENT_REPORT.zh-CN.md`. |
 | Affected files | `.python-version`, `.gitignore`, `START_HERE.zh-CN.md`, `ENVIRONMENT_REPORT.zh-CN.md`, `TOOLS.md`, this record; ignored local setup launchers, lock and verification files |
 
 ### Adopted output

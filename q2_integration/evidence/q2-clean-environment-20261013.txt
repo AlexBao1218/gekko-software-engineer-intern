@@ -1,9 +1,9 @@
-COMMAND: /opt/homebrew/bin/uv venv /var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q2-final-1uzr_ag6/venv --python /Users/asuna/Desktop/项目/Gekko/.venv/bin/python
+COMMAND: /opt/homebrew/bin/uv venv <TEMP>/gekko-q2-final-1uzr_ag6/venv --python <WORKSPACE>/.venv/bin/python
 Using CPython 3.12.14 interpreter at: .venv/bin/python
-Creating virtual environment at: /var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q2-final-1uzr_ag6/venv
-Activate with: source /var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q2-final-1uzr_ag6/venv/bin/activate
-COMMAND: /opt/homebrew/bin/uv pip install --python /var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q2-final-1uzr_ag6/venv/bin/python -r /Users/asuna/Desktop/项目/Gekko/requirements.txt
-Using Python 3.12.14 environment at: /var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q2-final-1uzr_ag6/venv
+Creating virtual environment at: <TEMP>/gekko-q2-final-1uzr_ag6/venv
+Activate with: source <TEMP>/gekko-q2-final-1uzr_ag6/venv/bin/activate
+COMMAND: /opt/homebrew/bin/uv pip install --python <TEMP>/gekko-q2-final-1uzr_ag6/venv/bin/python -r <WORKSPACE>/requirements.txt
+Using Python 3.12.14 environment at: <TEMP>/gekko-q2-final-1uzr_ag6/venv
 Resolved 30 packages in 3.69s
 Prepared 1 package in 934ms
 Installed 30 packages in 44ms
@@ -37,8 +37,8 @@ Installed 30 packages in 44ms
  + uvloop==0.23.0
  + watchfiles==1.3.0
  + websockets==17.2
-COMMAND: /opt/homebrew/bin/uv pip freeze --python /var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q2-final-1uzr_ag6/venv/bin/python
-Using Python 3.12.14 environment at: /var/folders/hz/5kvt_rgn0tg8lv0kz23yykqw0000gn/T/gekko-q2-final-1uzr_ag6/venv
+COMMAND: /opt/homebrew/bin/uv pip freeze --python <TEMP>/gekko-q2-final-1uzr_ag6/venv/bin/python
+Using Python 3.12.14 environment at: <TEMP>/gekko-q2-final-1uzr_ag6/venv
 annotated-doc==0.0.5
 annotated-types==0.8.0
 anyio==4.15.1

@@ -1,6 +1,6 @@
 ============================= test session starts ==============================
 platform darwin -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0
-rootdir: /Users/asuna/Desktop/项目/Gekko/q1_api
+rootdir: <WORKSPACE>/q1_api
 configfile: pytest.ini
 plugins: asyncio-1.4.0, anyio-4.15.1
 asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
@@ -21,12 +21,12 @@ endpoint = ('http://127.0.0.1:56038', {'fault': None, 'exports': 0, 'requests': 
 E       AssertionError: {"pass":false,"error":"GET /api/ready: request failed: timed out"}
 E         
 E       assert 1 == 0
-E        +  where 1 = CompletedProcess(args=['/Users/asuna/Desktop/项目/Gekko/.venv/bin/python', '/Users/asuna/Desktop/项目/Gekko/q3_deploy/scri...rval', '0.01'], returncode=1, stdout='', stderr='{"pass":false,"error":"GET /api/ready: request failed: timed out"}\n').returncode
+E        +  where 1 = CompletedProcess(args=['<WORKSPACE>/.venv/bin/python', '<WORKSPACE>/q3_deploy/scri...rval', '0.01'], returncode=1, stdout='', stderr='{"pass":false,"error":"GET /api/ready: request failed: timed out"}\n').returncode
 
 q1_api/tests/test_smoke.py:144: AssertionError
 =============================== warnings summary ===============================
 .venv/lib/python3.12/site-packages/fastapi/testclient.py:1
-  /Users/asuna/Desktop/项目/Gekko/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  <WORKSPACE>/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html

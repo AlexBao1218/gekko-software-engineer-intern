@@ -208,9 +208,9 @@
                 "com.docker.compose.image": "sha256:01a94ed8cacdf5934abe41ee606a681fcac4e7baef20fd6e8a0e18109aa2372f",
                 "com.docker.compose.oneoff": "False",
                 "com.docker.compose.project": "gekko-check-832333024207",
-                "com.docker.compose.project.config_files": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/docker-compose.yml",
-                "com.docker.compose.project.environment_file": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy/.env",
-                "com.docker.compose.project.working_dir": "/Users/asuna/Desktop/项目/Gekko/.gekko-setup/q3-832333024207/source/q3_deploy",
+                "com.docker.compose.project.config_files": "<WORKSPACE>/.gekko-setup/q3-832333024207/source/q3_deploy/docker-compose.yml",
+                "com.docker.compose.project.environment_file": "<WORKSPACE>/.gekko-setup/q3-832333024207/source/q3_deploy/.env",
+                "com.docker.compose.project.working_dir": "<WORKSPACE>/.gekko-setup/q3-832333024207/source/q3_deploy",
                 "com.docker.compose.service": "mock_onboarding",
                 "com.docker.compose.version": "5.5.1"
             }
