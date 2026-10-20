@@ -1,5 +1,13 @@
 # CI 加分项实施与核验
 
+## 当前交付状态（2026-10-20，香港）
+
+Q1、Q2、Q3 已实现，备份时钟回拨修复已在 `db82592` 本地提交。此前完整套件为 483 项；本轮对最终提交重新进行干净克隆验证，准确 SHA、命令、退出码及报告保存在独立本地交付回执，不用历史通过结果代替最终结果。
+
+GitHub 仓库本轮只读核对为 **PRIVATE，isFork=false**；不推送、不公开。历史 `d5fa831` 的 Actions 通过不代表本轮最终提交通过。公开 fork、最终 SHA 的远端 CI、邮件提交仍待后续授权执行。个人反思与理解由候选人本人完成。交付入口见 [交付清单](DELIVERY_PACKAGE.zh-CN.md)。
+
+以下保留按日期记录的历史规划和实施证据；其中旧测试数量、公开状态不代表当前状态。
+
 2026-10-14；基线 `732b6ea`，分支 `codex/assessment-implementation`。
 原题要求：每次 push 执行测试和 `docker compose build`，最终提交必须在 GitHub Actions 上通过。配置文件存在、本机通过或旧提交绿灯均不能替代最终 SHA 的实际结果。
 
@@ -16,9 +24,9 @@
 
 这里验证的是CI评分要求，不把build当成实际运行/恢复测试。真实Docker启动、持久化、故障与备份恢复已有Q3证据；手动实验脚本没有放进每次push的job。Python3.10、多架构镜像发布或部署不属于本次已验证范围。
 
-## Git 与公开运行
+## 历史 Git 与公开运行（2026-10-14，之后已转为私有）
 
-GitHub CLI核对账号为AlexBao1218；出题方Anthony-Gekko/software-engineer-intern为公开仓库且当前账号无push权限；创建前个人同名仓库不存在。现已遵循已批准计划建立个人公开fork，保留出题方为upstream，个人fork为origin，保留已有提交历史。已完成配置审查与凭证/运行时文件检查后正常快进推送到个人fork的main。本地功能分支跟踪origin/main，后续明确使用`git push origin HEAD:main`。不会向出题方提交PR、发送邮件或改变其仓库。
+GitHub CLI核对账号为AlexBao1218；出题方Anthony-Gekko/software-engineer-intern为公开仓库且当前账号无push权限；创建前个人同名仓库不存在。现已遵循已批准计划建立个人公开fork，保留出题方为upstream，个人fork为origin，保留已有提交历史。已完成配置审查与凭证/运行时文件检查后正常快进推送到个人fork的main。本地功能分支跟踪origin/main，当时使用`git push origin HEAD:main`；当前禁止继续推送。不会向出题方提交PR、发送邮件或改变其仓库。
 
 GitHub运行必须同时检查repository、event、branch和head_sha；完成后读取两个job的conclusion及步骤日志，保留run URL和原始结果。首次运行结果可随记录提交；记录提交也必须再跑CI。最终SHA的运行回执保存在本机`.gekko-setup/ci-20261014/`并在最终答复给出GitHub链接，避免为了把自身hash写进提交而产生无限追加提交。
 

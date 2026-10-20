@@ -1,5 +1,13 @@
 # 高标准验收与评分对照
 
+## 当前交付状态（2026-10-20，香港）
+
+Q1、Q2、Q3 已实现，备份时钟回拨修复已在 `db82592` 本地提交。此前完整套件为 483 项；本轮对最终提交重新进行干净克隆验证，准确 SHA、命令、退出码及报告保存在独立本地交付回执，不用历史通过结果代替最终结果。
+
+GitHub 仓库本轮只读核对为 **PRIVATE，isFork=false**；不推送、不公开。历史 `d5fa831` 的 Actions 通过不代表本轮最终提交通过。公开 fork、最终 SHA 的远端 CI、邮件提交仍待后续授权执行。个人反思与理解由候选人本人完成。交付入口见 [交付清单](DELIVERY_PACKAGE.zh-CN.md)。
+
+以下保留按日期记录的历史规划和实施证据；其中旧测试数量、公开状态不代表当前状态。
+
 2026-10-12 制定，2026-10-14 更新。目标是完整覆盖 **100 分核心 + 10 分 CI 加分**，并能当场解释、修改和复现；这是交付目标，不是预计得分。Q1、完整 Q2 和 Q3 三部分核心要求已验证；CI工作流已实现且首轮push远端通过，最终提交仍须核对对应Actions；候选人理解仍待完成。Q3本轮统一提交，最终hash的独立克隆复验另存本机记录。
 
 Q1 历史证据：[干净快照 pytest 输出](q1_api/evidence/q1-clean-snapshot-pytest-20261013.txt)、[审核测试](q1_api/tests/test_review.py)、[原生进程重启测试](q1_api/tests/test_native_process.py)、[模块核对表](q1_api/evidence/Q1-ACCEPTANCE-20261013.md)、[过程记录](WORK_LOG.zh-CN.md)。Q1独立测试用OCR fixture；本轮已补真实OCR/两级审核和故障恢复，见 [Q2.1/Q2.2核验](q2_integration/evidence/OCR-ACCEPTANCE.zh-CN.md)。本轮完整原生流程（含导出/交付）也已验证，见 [Q2完整核验](q2_integration/evidence/Q2-ACCEPTANCE-20261013.md)；容器部署/持久化/readiness也已通过 [Q3 T6核验](q3_deploy/evidence/T6-ACCEPTANCE-20261014.md)；备份/恢复已通过 [Q3 T7核验](q3_deploy/evidence/T7-ACCEPTANCE-20261014.md)。

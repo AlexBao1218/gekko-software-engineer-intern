@@ -242,16 +242,19 @@ The assessment values accurate disclosure. The requirement to explain submitted 
 
 ## 5. Incomplete work and next steps
 
-Q1 and all Q2 parts are implemented and verified. Isolated Q1 tests still use OCR
-fixtures; Q2 native tests exercise the real mocks through delivery.
-Q3 core deployment and backup/recovery are implemented and verified. The Q3
-module and test-fix commits were verified at732b6ea in a clean clone:478 tests
-and nine Docker restore stages passed, with exact-hash receipts saved locally.
-The public personal fork and push are complete. CI has passed its first real
-push run; the final documentation commit must also be verified at its own SHA.
-Email submission and candidate review remain unfinished. The installed TestClient emits a
-dependency deprecation warning; tests currently run successfully. The one-day
-follow-up prioritization will be finalized against the completed submission.
+Q1, Q2 and Q3 are implemented. The backup clock-rollback fix was committed
+locally at `db82592`; its previous clean-clone suite passed 483 tests.
+The final delivery candidate is checked again with an exact-SHA local receipt;
+see [delivery checklist](DELIVERY_PACKAGE.zh-CN.md). Earlier counts in section 3
+are dated historical experiments, not the current suite size.
+
+As checked on 2026-10-20, the personal repository is private and is no longer
+marked as a fork. No push or publication is authorized for this closeout.
+Public-fork submission, GitHub Actions success for the final SHA, and email
+submission remain outstanding. Candidate reflection and understanding remain
+for Alex to complete personally; section 4 has not been filled on his behalf.
+The existing Starlette/httpx TestClient deprecation warning is documented.
+One-day follow-up prioritization remains for the candidate to finalize.
 
 ## 6. Continuous integration
 
@@ -270,3 +273,7 @@ builds succeeded. Raw metadata/logs are inq3_deploy/evidence/ci-first-run-202610
 See [CI acceptance](q3_deploy/evidence/CI-ACCEPTANCE-20261014.md). The documentation
 commit creates a new SHA and must pass too; its final run URL/receipt will be
 recorded separately instead of treating the earlier green run as final proof.
+
+Current CI status (2026-10-20): the later historical run 38502205548 passed
+for `d5fa831`. Subsequent local commits have not been pushed. Neither that
+historical run nor local Docker verification proves final-SHA remote CI success.
