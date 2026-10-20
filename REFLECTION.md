@@ -248,11 +248,12 @@ The final delivery candidate is checked again with an exact-SHA local receipt;
 see [delivery checklist](DELIVERY_PACKAGE.zh-CN.md). Earlier counts in section 3
 are dated historical experiments, not the current suite size.
 
-As checked on 2026-10-20, the personal repository is private and is no longer
-marked as a fork. No push or publication is authorized for this closeout.
-Public-fork submission, GitHub Actions success for the final SHA, and email
-submission remain outstanding. Candidate reflection and understanding remain
-for Alex to complete personally; section 4 has not been filled on his behalf.
+Publication was authorized on 2026-10-20. The submission repository is
+https://github.com/AlexBao1218/gekko-software-engineer-intern, a verified public fork. The original private repository is retained.
+The submission branch preserves the original development history; no force push
+is used. Final-SHA Actions results are verified before the submission email is
+sent. Candidate understanding and personal reflection remain for Alex to confirm;
+section 4 remains an explicit disclosure, not a claim of personal mastery.
 The existing Starlette/httpx TestClient deprecation warning is documented.
 One-day follow-up prioritization remains for the candidate to finalize.
 
@@ -277,3 +278,9 @@ recorded separately instead of treating the earlier green run as final proof.
 Current CI status (2026-10-20): the later historical run 38502205548 passed
 for `d5fa831`. Subsequent local commits have not been pushed. Neither that
 historical run nor local Docker verification proves final-SHA remote CI success.
+
+Publication follow-up: the final technical baseline `4f4e044` passed 483 tests,
+three native delivery scenarios, nine Docker deployment stages and nine backup/
+restore stages in a clean clone. This publication update changes documentation
+only. Final-SHA remote CI and email receipts are kept separately to avoid a
+self-referential commit hash. Historical CI paragraphs above describe past runs.

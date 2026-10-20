@@ -330,3 +330,8 @@ START_HERE 已改用相对路径和已提交脚本；TOOLS 当前摘要更新；
 本轮环境异常：旧虚拟环境的 pytest 在收集时读取 FastAPI `.pyc` 长时间阻塞，尚未进入测试；用 macOS sample 保留栈后终止该进程。切换到临时目录的新 Python 环境和 Git 克隆，不调整测试阈值。Git 对象读取亦较慢，准确最终运行结果仍由独立回执给出。
 
 最终 SHA 首轮：`8f6ac04` 干净克隆 483 项测试通过（39.82 秒，1 条已知弃用警告），原生交付正常/丢响应/SIGKILL 三场景通过。Docker 镜像构建成功，但临时克隆位于专用 Colima 未共享的 `/private/tmp`，nginx 配置绑定挂载失败；读取现有 Colima 配置确认仅共享原项目目录。未改虚拟机全局配置，改为共享目录内的独立克隆，补充通用启动指南说明。保留首轮失败和清理结果，新 SHA 重新验收，回执不覆盖旧结果。
+
+
+## 2026-10-20 公开提交授权与准备
+
+用户明确授权推送、公开及回复 Gekko 邮件。使用 GitHub CLI 新建公开 fork `https://github.com/AlexBao1218/gekko-software-engineer-intern`，保留旧私有仓库。上游更换初始提交，差异核对仅为题目措辞/评分数字/注释，因此使用独立 `assessment-submission` 分支保存原始开发历史，不强推。Outlook 连接器读取原邀请并按原线程准备回复；邮件仅包含验证后的 URL、最终 SHA、测试与 CI 事实，不声称候选人已掌握代码。个人反思原文保留。最终 Actions 和邮件发送回执保存在忽略目录 `.gekko-setup/publication-20261020/`；未有回执前不宣称成功。

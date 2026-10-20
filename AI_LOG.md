@@ -286,3 +286,8 @@ receipt will be kept outside a further commit to avoid hash self-reference.
 按用户要求自主完成技术材料与最终核验，继续遵守不推送、不公开的约束。Codex 使用完成前验证技能、现有 Python/pytest、Git、专用 colima-gekko Docker 和只读 GitHub CLI。更新当前状态入口，区分历史测试与最终 SHA、历史公开 fork 与当前私有非 fork；REFLECTION 只改客观技术状态，保留第 4 节个人理解原文。原题、合约 mock 和数据不改。最终独立克隆验证及源码归档回执保存在被忽略的 `.gekko-setup/final-delivery-20261020/`，实际结果以回执和进程退出码为准；不把计划运行写成通过。
 
 Final verification follow-up: Codex used systematic-debugging guidance to trace a Docker bind-mount failure to the isolated Colima profile's shared paths. The temporary clone was outside those paths. No application change or VM configuration change; the startup guide now documents this prerequisite and the final candidate is rechecked in a shared-path clean clone. The unsuccessful attempt remains in local evidence.
+
+
+## 2026-10-20 公开提交授权与准备
+
+用户明确授权推送、公开及回复 Gekko 邮件。使用 GitHub CLI 新建公开 fork `https://github.com/AlexBao1218/gekko-software-engineer-intern`，保留旧私有仓库。上游更换初始提交，差异核对仅为题目措辞/评分数字/注释，因此使用独立 `assessment-submission` 分支保存原始开发历史，不强推。Outlook 连接器读取原邀请并按原线程准备回复；邮件仅包含验证后的 URL、最终 SHA、测试与 CI 事实，不声称候选人已掌握代码。个人反思原文保留。最终 Actions 和邮件发送回执保存在忽略目录 `.gekko-setup/publication-20261020/`；未有回执前不宣称成功。
