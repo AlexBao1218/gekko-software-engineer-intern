@@ -284,3 +284,5 @@ receipt will be kept outside a further commit to avoid hash self-reference.
 ## 2026-10-20 本地交付收口
 
 按用户要求自主完成技术材料与最终核验，继续遵守不推送、不公开的约束。Codex 使用完成前验证技能、现有 Python/pytest、Git、专用 colima-gekko Docker 和只读 GitHub CLI。更新当前状态入口，区分历史测试与最终 SHA、历史公开 fork 与当前私有非 fork；REFLECTION 只改客观技术状态，保留第 4 节个人理解原文。原题、合约 mock 和数据不改。最终独立克隆验证及源码归档回执保存在被忽略的 `.gekko-setup/final-delivery-20261020/`，实际结果以回执和进程退出码为准；不把计划运行写成通过。
+
+Final verification follow-up: Codex used systematic-debugging guidance to trace a Docker bind-mount failure to the isolated Colima profile's shared paths. The temporary clone was outside those paths. No application change or VM configuration change; the startup guide now documents this prerequisite and the final candidate is rechecked in a shared-path clean clone. The unsuccessful attempt remains in local evidence.

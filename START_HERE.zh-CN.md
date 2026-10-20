@@ -69,6 +69,8 @@ curl --max-time 5 -f -X POST http://127.0.0.1:8000/api/batches \
 
 ## 3. Docker 运行：不需要本机 Python
 
+macOS 使用 Colima 或 Docker Desktop 时，克隆目录必须位于该 Docker 虚拟机允许共享的路径内。nginx 会绑定挂载仓库中的 `q3_deploy/nginx.conf`；镜像构建成功并不证明该路径可挂载。若出现 “not a directory” 挂载错误，先核对共享目录和文件是否存在；不要在未共享的 `/tmp` 中运行 Compose。
+
 需要可工作的 Docker Engine 和 Compose。在本项目原开发 Mac 使用专用 context：`export DOCKER_CONTEXT=colima-gekko`；其他机器使用自己的 Docker 配置，不必创建同名 context。
 
 ```bash
